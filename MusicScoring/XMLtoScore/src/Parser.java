@@ -32,7 +32,7 @@ public class Parser {
 	public void start(File xmlFile) {
 		setXmlFile(xmlFile);
 		start();
-		parseMeasures();
+		//parseMeasures();
 	}
 	
 	public void start() {
@@ -86,12 +86,13 @@ public class Parser {
 		return;
 	}
 	
-	private void parseMeasures() {
+	public boolean parseMeasures() {
 		if (measures == null) {
 			System.out.println("ERROR: No measures to parse in the xml.");
-			return;
+			return false;
 		}
 		
 		System.out.println("Found some measures.");
+		return false;
 	}
 }
