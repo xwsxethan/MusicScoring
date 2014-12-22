@@ -1,0 +1,4 @@
+# ignore the xmlsamples.zip and folder
+xmlsamples.zip
+xmlsamples/
+xmlsamples*
