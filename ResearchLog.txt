@@ -1,0 +1,65 @@
+Research Log
+
+
+Finale offers a free version of NotePad 2012.
+Sibelius's editor is a free trial, good for 30 days.
+Sticking with NotePad for now and will double check with Sibelius later.
+
+
+What is called MusicXML is not actually xml at all. It is not encoded as
+text in fact. The file format is actually mxl (not xml). However, opening
+it in NotePad works fine and produces the full sheet music. NotePad can
+then export it to xml which is very easy to work with.
+
+Most online cites do not offer the xml but offer mxl instead. Also, the
+music offered is typically a full score for an orchestra/band with
+multiple parts or a score for piano that blends them. I'm working on
+specifically single part/voice scores for Bb (B flat) Clarinet. This 
+assumptions means that only one note can be played at a time. The proto-
+type I produce should be made to easily scale to percussion instruments
+that can play multiple notes at once. This means including the logic
+to process multiple parallel rather than serial notes in a measure as
+well as a system to quantify the difficulty of correctly harmonizing
+with other sections/parts/voices.
+
+
+In the xml version the part is organized by measures. Measures contain
+"print", "attributes", "direction", and "note" subtypes. "print" is
+specifying some margins and other relevant aesthetic notes for rendering
+the score in pdf. It is not useful to us. "attributes" are useful. They
+specify key and time signature as well as clef and transpose (not sure
+what the transpose marks are for yet). "direction" is useful, although
+it is presented as a marking for whether to place something above or 
+below the measure. What it contains is often changes in tempo or
+dynamics, as well as instructor markings. "note" is of course the
+most useful which specifies everything about an individual note, such
+as pitch, duration, type (which is functionally the same as duration,
+but is in the more familiar language of quarter/eighth rather than 
+milliseconds), and notations (ties, slurs, articulation markings).
+"print", "attributes", and "direction" are not always present, but
+"note" is always present, even when specifying rests rather than notes.
+More notes about less frequent markings will appear below.
+
+Fermata can occur as a notation attached to a "note".
+Accidentals are also within the "note".
+Time modification is also present within the "note" for several notes
+played in one time unit, such as a triplet played within the time of
+a quarter note.
+
+Slurs occur on the "note" as notation and have type attached to them,
+which is either "start" or "stop". However, the slurs always seem to
+"stop" on the note immediately following a "start". So it would appear
+that all slurs only cover two notes, however in the pdf and score,
+they can and do cover multiple notes. I'm not sure if this is an error
+in the xml export or some strange representation. I would expect there
+to be a tertiary marking, such as "continue", for notes being slurred,
+but not at the end of the slur. This may not necessarily affect our
+difficulty measurement, but it is an odd point worth bringing up for
+future work.
+*Correction* I downloaded a separate mxl and pdf document originally 
+for the score I'm examining. The pdf showed slurs of multiple notes.
+I cannot examine the mxl however, but I have opened it in NotePad, and
+seen that actually the mxl (or NotePad representation) is incorrect
+which in turn generated incorrect xml that I'm parsing. This is either
+an error in the mxl or an error/limitation of NotePad in parsing the
+mxl.
