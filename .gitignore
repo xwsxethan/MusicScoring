@@ -4,6 +4,9 @@ xmlsamples/
 xmlsamples*
 
 # ignore extra eclipse nonsense
+.metadata
+.metadata/
+.metadata/*
 MusicScoring/.metadata
 MusicScoring/.metadata/
 MusicScoring/.metadata/*
