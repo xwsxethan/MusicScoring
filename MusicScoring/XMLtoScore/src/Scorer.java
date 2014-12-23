@@ -25,5 +25,6 @@ public class Scorer {
 		
 		
 		//Apply level to parsed measures.
+		
 	}
 }
