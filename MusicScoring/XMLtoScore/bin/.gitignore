@@ -3,3 +3,6 @@
 /Main.class
 /Parser.class
 /Scorer.class
+/DifficultyLevels/
+/DifficultyLevelEnum.class
+/DifficultyReader.class
