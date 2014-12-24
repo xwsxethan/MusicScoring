@@ -16,12 +16,34 @@ public class Parser {
 	private static final String SCORE_NODE = "score-partwise";
 	private static final String PART_NODE = "part";
 	private static final int SCORE_REQUIRED = 2;
-	//private static final String MEASURE_NODE = "measure";
-	//private static final String NOTE_NODE = "note";
+	
+	private static final String MEASURE_NODE = "measure";
+	private static final String NOTE_NODE = "note";
+	
+	private static final String PITCH_NODE = "pitch";
+
+	private static final String STEP_NODE = "step";
+	private static final String OCTAVE_NODE = "octave";
+	private static final String ALTER_NODE = "alter";
+	
+	private static final int NOTES_IN_OCTAVE = 12;
+	
 	private NodeList measures;
+	private int measureCount;
+	private int realMeasures;
+	private int currentMeasure;
+	private int noteCount;
+	private int lowNote;
+	private int highNote;
 	
 	public Parser(File xmlFile) {
 		measures = null;
+		measureCount = 0;
+		realMeasures = 0;
+		currentMeasure = 0;
+		noteCount = 0;
+		lowNote = Integer.MAX_VALUE;
+		highNote = 0;
 		start(xmlFile);
 	}
 	
@@ -83,16 +105,136 @@ public class Parser {
 			return;
 		}
 		measures = elem.getChildNodes();
+		measureCount = measures.getLength();
+		realMeasures = measures.getLength();
 		return;
 	}
 	
-	public boolean parseMeasures() {
-		if (measures == null) {
+	public boolean hasMeasure() {
+		return measures != null && currentMeasure < measureCount;
+	}
+	
+	public void parseMeasure() {
+		if (!hasMeasure()) {
 			System.out.println("ERROR: No measures to parse in the xml.");
-			return false;
+			return;
 		}
 		
-		System.out.println("Found some measures.");
-		return false;
+		Node elem = measures.item(currentMeasure);
+		if (elem == null) {
+			System.out.println("ERROR: A node turned up null for some reason. Stopping.");
+			measures = null;
+			return;
+		}
+		
+		if (!elem.getNodeName().trim().equalsIgnoreCase(MEASURE_NODE)) {
+			//System.out.println("ERROR: A random non-measure node turned up. Skipping it.");
+			realMeasures--;
+			currentMeasure++;
+			return;
+		}
+		
+		NodeList list = elem.getChildNodes();
+		
+		//System.out.println("Current measure: " + currentMeasure);
+		
+		for (int i = 0; i < list.getLength(); i++) {
+			elem = list.item(i);
+			String name = elem.getNodeName().trim();
+			if (name.equalsIgnoreCase(NOTE_NODE)) {
+				noteCount++;
+				parseNote(elem);
+			}
+		}
+		
+		currentMeasure++;
+		
+		return;
+	}
+	
+	private void parseNote(Node elem) {
+		String noteName = "";
+		String octave = "";
+		String alter = "";
+		NodeList noteVals = elem.getChildNodes();
+		for (int j = 0; j < noteVals.getLength(); j++) {
+			Node noteVal = noteVals.item(j);
+			if (noteVal.getNodeName().trim().equalsIgnoreCase(PITCH_NODE)) {
+				NodeList pitch = noteVal.getChildNodes();
+				for (int k = 0; k < pitch.getLength(); k++) {
+					Node pitchPart = pitch.item(k);
+					if (pitchPart.getNodeName().trim().equalsIgnoreCase(STEP_NODE)) {
+						noteName = pitchPart.getTextContent().trim();
+					}
+					else if (pitchPart.getNodeName().trim().equalsIgnoreCase(OCTAVE_NODE)) {
+						octave = pitchPart.getTextContent().trim();									
+					}
+					else if (pitchPart.getNodeName().trim().equalsIgnoreCase(ALTER_NODE)) {
+						alter = pitchPart.getTextContent().trim();	
+					}
+				}
+			}
+		}
+		int noteNum = noteToNum(noteName, octave, alter);
+		if (noteNum < lowNote) {
+			lowNote = noteNum;
+		}
+		if (noteNum > highNote) {
+			highNote = noteNum;
+		}
+	}
+	
+	private int noteToNum(String noteName, String octave, String alter) {
+		int base = 0;
+		if (octave != null && !octave.isEmpty()) {
+			try {
+				base = NOTES_IN_OCTAVE*Integer.parseInt(octave);
+			} catch (NumberFormatException e) {
+				System.out.println("ERROR: Note octave not formatted correctly.");
+				base = 0;
+			}
+		}
+		
+		base = base + noteLetterToNum(noteName);
+
+		if (alter != null && !alter.isEmpty()) {
+			try {
+				base = base + Integer.parseInt(alter);
+			} catch (NumberFormatException e) {
+				System.out.println("ERROR: Note alter not formatted correctly.");
+			}
+		}
+		
+		return base;
+	}
+	
+	private int noteLetterToNum(String noteLetter) {
+		if (noteLetter == null || noteLetter.length() != 1) {
+			return 0;
+		}
+		switch (noteLetter.toUpperCase()) {
+		case "A":
+			return 2;
+		case "B":
+			return 4;
+		case "C":
+			return 5;
+		case "D":
+			return 7;
+		case "E":
+			return 9;
+		case "F":
+			return 10;
+		case "G":
+			return 12;
+		default:
+			return 0;
+		}
+	}
+
+	public void statusReport() {
+		System.out.println("Total objects: " + measureCount +
+				"\tTotal real measures: " + realMeasures + "\tTotal notes: " + noteCount);
+		System.out.println("Range: " + (highNote - lowNote));
 	}
 }

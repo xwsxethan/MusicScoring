@@ -19,9 +19,12 @@ public class Scorer {
 				" range " + values.getRangeDifficulty());
 		
 		
-		while (parse.parseMeasures()) {
-			System.out.println("Still more measures to read.");
-		}		
+		while (parse.hasMeasure()) {
+			//System.out.println("Still more measures to read.");
+			parse.parseMeasure();
+		}
+		
+		parse.statusReport();
 		
 		
 		//Apply level to parsed measures.
