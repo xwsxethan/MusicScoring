@@ -63,3 +63,41 @@ seen that actually the mxl (or NotePad representation) is incorrect
 which in turn generated incorrect xml that I'm parsing. This is either
 an error in the mxl or an error/limitation of NotePad in parsing the
 mxl.
+
+
+
+
+I'm writing the notes into numbers based on octave, but not actually
+sure what the lowest feasible note is. I would think A would be the
+lowest (in 0 octave), but then again, it might be A flat since that is
+a lower note (even though I always think of it as G#). Note sure, but
+for now I'm assuming the following structure, which simply gets
+repeated with 12 added on for every octave.
+
+01 A b (G #)
+02 A
+03 A # (B b)
+04 B
+05 C
+06 C # (D b)
+07 D
+08 D # (E b)
+09 E
+10 F
+11 F # (G b)
+12 G
+
+
+
+I need to double check that powerpoint presentation as well as go
+over the proposal again to see what musical elements to focus on
+first. I know what elements to pull out and what they mean, but
+I'm not sure how to quantify them. For example, when looking at
+intervals, obviously larger ones pose more difficulty. However,
+once each individual interval is quantified, how do I combine
+those into one measurement? Is it simply the average or does the
+range of possible intervals matter? Is it the spread of intervals?
+Is it some sort of threshold between them that quantifies 
+difficulty? I need to figure this out. Each of these is doable,
+but I don't know which is more relevant/useful and thus where to
+start.
