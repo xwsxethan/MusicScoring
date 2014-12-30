@@ -87,6 +87,20 @@ repeated with 12 added on for every octave.
 11 F # (G b)
 12 G
 
+The above is wrong; the below is correct.
+
+00 C
+01 C# / Db
+02 D
+03 D# / Eb
+04 E
+05 F
+06 F# / Gb
+07 G
+08 G# / Ab
+09 A
+10 A# / Bb
+11 B
 
 
 I need to double check that powerpoint presentation as well as go

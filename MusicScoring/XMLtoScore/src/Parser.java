@@ -19,8 +19,9 @@ public class Parser {
 	
 	private static final String MEASURE_NODE = "measure";
 	private static final String NOTE_NODE = "note";
-	
+
 	private static final String PITCH_NODE = "pitch";
+	private static final String REST_NODE = "rest";
 
 	private static final String STEP_NODE = "step";
 	private static final String OCTAVE_NODE = "octave";
@@ -153,6 +154,7 @@ public class Parser {
 	}
 	
 	private void parseNote(Node elem) {
+		boolean foundNote = false;
 		String noteName = "";
 		String octave = "";
 		String alter = "";
@@ -160,6 +162,7 @@ public class Parser {
 		for (int j = 0; j < noteVals.getLength(); j++) {
 			Node noteVal = noteVals.item(j);
 			if (noteVal.getNodeName().trim().equalsIgnoreCase(PITCH_NODE)) {
+				foundNote = true;
 				NodeList pitch = noteVal.getChildNodes();
 				for (int k = 0; k < pitch.getLength(); k++) {
 					Node pitchPart = pitch.item(k);
@@ -174,13 +177,23 @@ public class Parser {
 					}
 				}
 			}
+			else if (noteVal.getNodeName().trim().equalsIgnoreCase(REST_NODE)) {
+				return;
+			}
 		}
-		int noteNum = noteToNum(noteName, octave, alter);
-		if (noteNum < lowNote) {
-			lowNote = noteNum;
-		}
-		if (noteNum > highNote) {
-			highNote = noteNum;
+		
+		if (foundNote) {
+			int noteNum = noteToNum(noteName, octave, alter);
+			if (noteNum < lowNote) {
+				System.out.println("Low note updated to " + noteNum + " in measure "
+						+ (currentMeasure - (measureCount - realMeasures) + 1));
+				lowNote = noteNum;
+			}
+			if (noteNum > highNote) {
+				System.out.println("High note updated to " + noteNum + " in measure "
+						+ (currentMeasure - (measureCount - realMeasures) + 1));
+				highNote = noteNum;
+			}
 		}
 	}
 	
@@ -213,20 +226,20 @@ public class Parser {
 			return 0;
 		}
 		switch (noteLetter.toUpperCase()) {
-		case "A":
-			return 2;
-		case "B":
-			return 4;
 		case "C":
-			return 5;
+			return 0;
 		case "D":
-			return 7;
+			return 2;
 		case "E":
-			return 9;
+			return 4;
 		case "F":
-			return 10;
+			return 5;
 		case "G":
-			return 12;
+			return 7;
+		case "A":
+			return 9;
+		case "B":
+			return 11;
 		default:
 			return 0;
 		}
@@ -236,5 +249,7 @@ public class Parser {
 		System.out.println("Total objects: " + measureCount +
 				"\tTotal real measures: " + realMeasures + "\tTotal notes: " + noteCount);
 		System.out.println("Range: " + (highNote - lowNote));
+		System.out.println("High Note: " + highNote);
+		System.out.println("Low Note: " + lowNote);
 	}
 }
