@@ -12,7 +12,6 @@ import org.xml.sax.SAXException;
 
 
 public class Parser {
-	private File xmlToParse;
 	private static final String SCORE_NODE = "score-partwise";
 	private static final String PART_NODE = "part";
 	private static final int SCORE_REQUIRED = 2;
@@ -28,7 +27,8 @@ public class Parser {
 	private static final String ALTER_NODE = "alter";
 	
 	private static final int NOTES_IN_OCTAVE = 12;
-	
+
+	private File xmlToParse;
 	private NodeList measures;
 	private int measureCount;
 	private int realMeasures;
@@ -55,7 +55,6 @@ public class Parser {
 	public void start(File xmlFile) {
 		setXmlFile(xmlFile);
 		start();
-		//parseMeasures();
 	}
 	
 	public void start() {
@@ -185,13 +184,13 @@ public class Parser {
 		if (foundNote) {
 			int noteNum = noteToNum(noteName, octave, alter);
 			if (noteNum < lowNote) {
-				System.out.println("Low note updated to " + noteNum + " in measure "
-						+ (currentMeasure - (measureCount - realMeasures) + 1));
+				/*System.out.println("Low note updated to " + noteNum + " in measure "
+						+ (currentMeasure - (measureCount - realMeasures) + 1));*/
 				lowNote = noteNum;
 			}
 			if (noteNum > highNote) {
-				System.out.println("High note updated to " + noteNum + " in measure "
-						+ (currentMeasure - (measureCount - realMeasures) + 1));
+				/*System.out.println("High note updated to " + noteNum + " in measure "
+						+ (currentMeasure - (measureCount - realMeasures) + 1));*/
 				highNote = noteNum;
 			}
 		}
@@ -244,12 +243,64 @@ public class Parser {
 			return 0;
 		}
 	}
+	
+	private String numToNote(int note) {
+		int letter = note % NOTES_IN_OCTAVE;
+		int octave = note / NOTES_IN_OCTAVE;
+		String toReturn = "";
+		switch (letter) {
+		case 0:
+			toReturn = "C";
+			break;
+		case 1:
+			toReturn = "C#(Db)";
+			break;
+		case 2:
+			toReturn = "D";
+			break;
+		case 3:
+			toReturn = "D#(Eb)";
+			break;
+		case 4:
+			toReturn = "E";
+			break;
+		case 5:
+			toReturn = "F";
+			break;
+		case 6:
+			toReturn = "F#(Gb)";
+			break;
+		case 7:
+			toReturn = "G";
+			break;
+		case 8:
+			toReturn = "G#(Ab)";
+			break;
+		case 9:
+			toReturn = "A";
+			break;
+		case 10:
+			toReturn = "A#(Bb)";
+			break;
+		case 11:
+			toReturn = "B";
+			break;
+		default:
+			toReturn = "C";
+			break;
+		}
+		
+		toReturn = toReturn + octave;
+		return toReturn;
+	}
 
 	public void statusReport() {
-		System.out.println("Total objects: " + measureCount +
-				"\tTotal real measures: " + realMeasures + "\tTotal notes: " + noteCount);
-		System.out.println("Range: " + (highNote - lowNote));
-		System.out.println("High Note: " + highNote);
-		System.out.println("Low Note: " + lowNote);
+		System.out.println("Total real measures: " + realMeasures + "\tTotal notes: " + noteCount);
+		System.out.println("Range: " + (highNote - lowNote) + " chromatic steps");
+		if (Main.LOGGING) {
+			System.out.println("Total objects: " + measureCount);
+			System.out.println("High Note: " + highNote + " or " + numToNote(highNote));
+			System.out.println("Low Note: " + lowNote + " or " + numToNote(lowNote));
+		}
 	}
 }
