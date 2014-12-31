@@ -21,6 +21,7 @@ public class Parser {
 
 	private static final String PITCH_NODE = "pitch";
 	private static final String REST_NODE = "rest";
+	private static final String DURATION_NODE = "duration";
 
 	private static final String STEP_NODE = "step";
 	private static final String OCTAVE_NODE = "octave";
@@ -36,6 +37,9 @@ public class Parser {
 	private int noteCount;
 	private int lowNote;
 	private int highNote;
+	private int lowDuration;
+	private int highDuration;
+	private int totalDuration;
 	
 	public Parser(File xmlFile) {
 		measures = null;
@@ -45,6 +49,10 @@ public class Parser {
 		noteCount = 0;
 		lowNote = Integer.MAX_VALUE;
 		highNote = 0;
+		lowDuration = Integer.MAX_VALUE;
+		highDuration = 0;
+		totalDuration = 0;
+		
 		start(xmlFile);
 	}
 	
@@ -160,7 +168,8 @@ public class Parser {
 		NodeList noteVals = elem.getChildNodes();
 		for (int j = 0; j < noteVals.getLength(); j++) {
 			Node noteVal = noteVals.item(j);
-			if (noteVal.getNodeName().trim().equalsIgnoreCase(PITCH_NODE)) {
+			String nodeNameForComparison = noteVal.getNodeName().trim();
+			if (nodeNameForComparison.equalsIgnoreCase(PITCH_NODE)) {
 				foundNote = true;
 				NodeList pitch = noteVal.getChildNodes();
 				for (int k = 0; k < pitch.getLength(); k++) {
@@ -176,21 +185,47 @@ public class Parser {
 					}
 				}
 			}
-			else if (noteVal.getNodeName().trim().equalsIgnoreCase(REST_NODE)) {
+			else if (nodeNameForComparison.equalsIgnoreCase(REST_NODE)) {
 				return;
+			}
+			else if (nodeNameForComparison.equalsIgnoreCase(DURATION_NODE)) {
+				try {
+					int dur = Integer.parseInt(noteVal.getTextContent().trim());
+					if (dur < lowDuration) {
+						if (Main.LOGGING) {
+							System.out.println("Low duration updated to " + dur + " in measure "
+								+ (currentMeasure - (measureCount - realMeasures) + 1));
+						}
+						lowDuration = dur;
+					}
+					if (dur > highDuration) {
+						if (Main.LOGGING) {
+							System.out.println("High duration updated to " + dur + " in measure "
+								+ (currentMeasure - (measureCount - realMeasures) + 1));
+						}
+						highDuration = dur;
+					}
+					totalDuration += dur;
+				} catch (NumberFormatException e) {
+					continue;
+				}
 			}
 		}
 		
 		if (foundNote) {
 			int noteNum = noteToNum(noteName, octave, alter);
 			if (noteNum < lowNote) {
-				/*System.out.println("Low note updated to " + noteNum + " in measure "
-						+ (currentMeasure - (measureCount - realMeasures) + 1));*/
+				if (Main.LOGGING) {
+					System.out.println("Low note updated to " + noteNum + " in measure "
+						+ (currentMeasure - (measureCount - realMeasures) + 1));
+				}
 				lowNote = noteNum;
 			}
 			if (noteNum > highNote) {
-				/*System.out.println("High note updated to " + noteNum + " in measure "
-						+ (currentMeasure - (measureCount - realMeasures) + 1));*/
+				if (Main.LOGGING) {
+					System.out.println("High note updated to " + noteNum + " in measure "
+						+ (currentMeasure - (measureCount - realMeasures) + 1));
+				}
 				highNote = noteNum;
 			}
 		}
@@ -297,10 +332,13 @@ public class Parser {
 	public void statusReport() {
 		System.out.println("Total real measures: " + realMeasures + "\tTotal notes: " + noteCount);
 		System.out.println("Range: " + (highNote - lowNote) + " chromatic steps");
+		System.out.println("Total note duration: " + totalDuration + "\tAverage note duration: " + (totalDuration / noteCount));
 		if (Main.LOGGING) {
 			System.out.println("Total objects: " + measureCount);
 			System.out.println("High Note: " + highNote + " or " + numToNote(highNote));
 			System.out.println("Low Note: " + lowNote + " or " + numToNote(lowNote));
+			System.out.println("High Duration: " + highDuration);
+			System.out.println("Low Duration: " + lowDuration);
 		}
 	}
 }
