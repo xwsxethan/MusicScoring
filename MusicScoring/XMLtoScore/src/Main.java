@@ -4,7 +4,7 @@ import DifficultyLevels.*;
 
 
 public class Main {
-	public static final boolean LOGGING = true;
+	public static final boolean LOGGING = false;
 	
 	private static final String FOLDER_NAME = System.getProperty("user.dir") + File.separator;
 	private static final String FILE_NAME =

@@ -28,30 +28,46 @@ public class Parser {
 	private static final String ALTER_NODE = "alter";
 	
 	private static final int NOTES_IN_OCTAVE = 12;
+	
+	private static final int INITIAL_LAST_NOTE_VALUE = -1;
 
 	private File xmlToParse;
 	private NodeList measures;
 	private int measureCount;
 	private int realMeasures;
 	private int currentMeasure;
+	
 	private int noteCount;
 	private int lowNote;
 	private int highNote;
+	
 	private int lowDuration;
 	private int highDuration;
 	private int totalDuration;
+	
+	private int lastNote;
+	private int lowInterval;
+	private int highInterval;
+	private int totalInterval;
 	
 	public Parser(File xmlFile) {
 		measures = null;
 		measureCount = 0;
 		realMeasures = 0;
 		currentMeasure = 0;
+		
 		noteCount = 0;
 		lowNote = Integer.MAX_VALUE;
 		highNote = 0;
+		
 		lowDuration = Integer.MAX_VALUE;
 		highDuration = 0;
 		totalDuration = 0;
+		
+		lastNote = INITIAL_LAST_NOTE_VALUE;
+		lowInterval = Integer.MAX_VALUE;
+		highInterval = 0;
+		totalInterval = 0;
 		
 		start(xmlFile);
 	}
@@ -213,21 +229,46 @@ public class Parser {
 		}
 		
 		if (foundNote) {
-			int noteNum = noteToNum(noteName, octave, alter);
-			if (noteNum < lowNote) {
+			updateNoteTracking(noteToNum(noteName, octave, alter));
+		}
+	}
+	
+	private void updateNoteTracking(int noteNum) {
+		if (noteNum < lowNote) {
+			if (Main.LOGGING) {
+				System.out.println("Low note updated to " + noteNum + " in measure "
+					+ (currentMeasure - (measureCount - realMeasures) + 1));
+			}
+			lowNote = noteNum;
+		}
+		if (noteNum > highNote) {
+			if (Main.LOGGING) {
+				System.out.println("High note updated to " + noteNum + " in measure "
+					+ (currentMeasure - (measureCount - realMeasures) + 1));
+			}
+			highNote = noteNum;
+		}
+		
+		if (lastNote == INITIAL_LAST_NOTE_VALUE) {
+			lastNote = noteNum;
+		}
+		else {
+			int interval = Math.abs(noteNum - lastNote);
+			if (interval < lowInterval) {
 				if (Main.LOGGING) {
-					System.out.println("Low note updated to " + noteNum + " in measure "
+					System.out.println("Low interval updated to " + interval + " in measure "
 						+ (currentMeasure - (measureCount - realMeasures) + 1));
 				}
-				lowNote = noteNum;
+				lowInterval = interval;
 			}
-			if (noteNum > highNote) {
+			if (interval > highInterval) {
 				if (Main.LOGGING) {
-					System.out.println("High note updated to " + noteNum + " in measure "
+					System.out.println("High interval updated to " + interval + " in measure "
 						+ (currentMeasure - (measureCount - realMeasures) + 1));
 				}
-				highNote = noteNum;
+				highInterval = interval;
 			}
+			totalInterval += interval;
 		}
 	}
 	
@@ -330,15 +371,21 @@ public class Parser {
 	}
 
 	public void statusReport() {
-		System.out.println("Total real measures: " + realMeasures + "\tTotal notes: " + noteCount);
+		System.out.println("Total measures: " + realMeasures);
+		System.out.println("Total notes: " + noteCount);
 		System.out.println("Range: " + (highNote - lowNote) + " chromatic steps");
-		System.out.println("Total note duration: " + totalDuration + "\tAverage note duration: " + (totalDuration / noteCount));
+		System.out.println("Average Note Duration: " + (totalDuration / noteCount) + " milliseconds (I think)");
+		System.out.println("Average Interval: " + (totalInterval / (noteCount - 1)) + " chromatic steps");
 		if (Main.LOGGING) {
 			System.out.println("Total objects: " + measureCount);
 			System.out.println("High Note: " + highNote + " or " + numToNote(highNote));
 			System.out.println("Low Note: " + lowNote + " or " + numToNote(lowNote));
-			System.out.println("High Duration: " + highDuration);
-			System.out.println("Low Duration: " + lowDuration);
+			System.out.println("Total Note Duration: " + totalDuration + " milliseconds (I think)");
+			System.out.println("High Duration: " + highDuration + " milliseconds (I think)");
+			System.out.println("Low Duration: " + lowDuration + " milliseconds (I think)");
+			System.out.println("Total Interval: " + totalInterval + " chromatic steps");
+			System.out.println("High Interval: " + highInterval + " chromatic steps");
+			System.out.println("Low Interval: " + lowInterval + " chromatic steps");
 		}
 	}
 }
