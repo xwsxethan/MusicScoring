@@ -18,11 +18,15 @@ public class Parser {
 	
 	private static final String MEASURE_NODE = "measure";
 	private static final String NOTE_NODE = "note";
+	private static final String ATTRIBUTES_NODE = "attributes";
 
+	private static final String KEY_NODE = "key";
+	private static final String FIFTHS_NODE = "fifths";
+	
 	private static final String PITCH_NODE = "pitch";
 	private static final String REST_NODE = "rest";
 	private static final String DURATION_NODE = "duration";
-
+	
 	private static final String STEP_NODE = "step";
 	private static final String OCTAVE_NODE = "octave";
 	private static final String ALTER_NODE = "alter";
@@ -30,7 +34,7 @@ public class Parser {
 	private static final int NOTES_IN_OCTAVE = 12;
 	
 	private static final int INITIAL_LAST_NOTE_VALUE = -1;
-
+	
 	private File xmlToParse;
 	private NodeList measures;
 	private int measureCount;
@@ -50,6 +54,10 @@ public class Parser {
 	private int highInterval;
 	private int totalInterval;
 	
+	private int totalNoteChanges;
+	private int currentKey;
+	private int keyChanges;
+	
 	public Parser(File xmlFile) {
 		measures = null;
 		measureCount = 0;
@@ -68,6 +76,10 @@ public class Parser {
 		lowInterval = Integer.MAX_VALUE;
 		highInterval = 0;
 		totalInterval = 0;
+		
+		totalNoteChanges = 0;
+		currentKey = 0;
+		keyChanges = 0;
 		
 		start(xmlFile);
 	}
@@ -169,11 +181,41 @@ public class Parser {
 				noteCount++;
 				parseNote(elem);
 			}
+			else if (name.equalsIgnoreCase(ATTRIBUTES_NODE)) {
+				parseAttributes(elem);
+			}
 		}
 		
 		currentMeasure++;
 		
 		return;
+	}
+	
+	private void parseAttributes(Node elem) {
+		NodeList attributes = elem.getChildNodes();
+		for (int j = 0; j < attributes.getLength(); j++) {
+			Node attribute = attributes.item(j);
+			String nodeNameForComparison = attribute.getNodeName().trim();
+			if (nodeNameForComparison.equalsIgnoreCase(KEY_NODE)) {
+				NodeList keyStuff = attribute.getChildNodes();
+				for (int k = 0; k < keyStuff.getLength(); k++) {
+					Node keyElem = keyStuff.item(k);
+					String keyElemName = keyElem.getNodeName().trim();
+					if (keyElemName.equalsIgnoreCase(FIFTHS_NODE)) {
+						try {
+							int key = Integer.parseInt(keyElem.getTextContent().trim());
+							//Not sure what else to do with the key yet...
+							if (key != currentKey) {
+								keyChanges++;
+								currentKey = key;
+							}
+						} catch (NumberFormatException e) {
+							continue;
+						}
+					}
+				}				
+			}
+		}
 	}
 	
 	private void parseNote(Node elem) {
@@ -287,7 +329,11 @@ public class Parser {
 
 		if (alter != null && !alter.isEmpty()) {
 			try {
-				base = base + Integer.parseInt(alter);
+				int changeAmount = Integer.parseInt(alter);
+				base = base + changeAmount;
+				if (changeAmount != 0) {
+					totalNoteChanges++;
+				}
 			} catch (NumberFormatException e) {
 				System.out.println("ERROR: Note alter not formatted correctly.");
 			}
@@ -376,6 +422,8 @@ public class Parser {
 		System.out.println("Range: " + (highNote - lowNote) + " chromatic steps");
 		System.out.println("Average Note Duration: " + (totalDuration / noteCount) + " milliseconds (I think)");
 		System.out.println("Average Interval: " + (totalInterval / (noteCount - 1)) + " chromatic steps");
+		System.out.println("Total altered notes (key or accidental): " + totalNoteChanges);
+		System.out.println("Total key changes: " + ((keyChanges - 1) == -1 ? 0 : (keyChanges - 1)));
 		if (Main.LOGGING) {
 			System.out.println("Total objects: " + measureCount);
 			System.out.println("High Note: " + highNote + " or " + numToNote(highNote));
