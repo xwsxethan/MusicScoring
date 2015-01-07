@@ -31,8 +31,6 @@ public class Parser {
 	private static final String OCTAVE_NODE = "octave";
 	private static final String ALTER_NODE = "alter";
 	
-	private static final int NOTES_IN_OCTAVE = 12;
-	
 	private static final int INITIAL_LAST_NOTE_VALUE = -1;
 	
 	private File xmlToParse;
@@ -78,7 +76,7 @@ public class Parser {
 		totalInterval = 0;
 		
 		totalNoteChanges = 0;
-		currentKey = 0;
+		currentKey = Integer.MAX_VALUE;
 		keyChanges = 0;
 		
 		start(xmlFile);
@@ -207,6 +205,9 @@ public class Parser {
 							//Not sure what else to do with the key yet...
 							if (key != currentKey) {
 								keyChanges++;
+								if (Main.LOGGING) {
+									System.out.println("Old Key: " + currentKey + "\tNew Key: " + key);
+								}
 								currentKey = key;
 							}
 						} catch (NumberFormatException e) {
@@ -271,11 +272,12 @@ public class Parser {
 		}
 		
 		if (foundNote) {
-			updateNoteTracking(noteToNum(noteName, octave, alter));
+			updateNoteTracking(Utils.noteToNum(noteName, octave, alter));
 		}
 	}
 	
 	private void updateNoteTracking(int noteNum) {
+		totalNoteChanges = totalNoteChanges + (Utils.getAlteration() != 0 ? 1 : 0);
 		if (noteNum < lowNote) {
 			if (Main.LOGGING) {
 				System.out.println("Low note updated to " + noteNum + " in measure "
@@ -313,108 +315,6 @@ public class Parser {
 			totalInterval += interval;
 		}
 	}
-	
-	private int noteToNum(String noteName, String octave, String alter) {
-		int base = 0;
-		if (octave != null && !octave.isEmpty()) {
-			try {
-				base = NOTES_IN_OCTAVE*Integer.parseInt(octave);
-			} catch (NumberFormatException e) {
-				System.out.println("ERROR: Note octave not formatted correctly.");
-				base = 0;
-			}
-		}
-		
-		base = base + noteLetterToNum(noteName);
-
-		if (alter != null && !alter.isEmpty()) {
-			try {
-				int changeAmount = Integer.parseInt(alter);
-				base = base + changeAmount;
-				if (changeAmount != 0) {
-					totalNoteChanges++;
-				}
-			} catch (NumberFormatException e) {
-				System.out.println("ERROR: Note alter not formatted correctly.");
-			}
-		}
-		
-		return base;
-	}
-	
-	private int noteLetterToNum(String noteLetter) {
-		if (noteLetter == null || noteLetter.length() != 1) {
-			return 0;
-		}
-		switch (noteLetter.toUpperCase()) {
-		case "C":
-			return 0;
-		case "D":
-			return 2;
-		case "E":
-			return 4;
-		case "F":
-			return 5;
-		case "G":
-			return 7;
-		case "A":
-			return 9;
-		case "B":
-			return 11;
-		default:
-			return 0;
-		}
-	}
-	
-	private String numToNote(int note) {
-		int letter = note % NOTES_IN_OCTAVE;
-		int octave = note / NOTES_IN_OCTAVE;
-		String toReturn = "";
-		switch (letter) {
-		case 0:
-			toReturn = "C";
-			break;
-		case 1:
-			toReturn = "C#(Db)";
-			break;
-		case 2:
-			toReturn = "D";
-			break;
-		case 3:
-			toReturn = "D#(Eb)";
-			break;
-		case 4:
-			toReturn = "E";
-			break;
-		case 5:
-			toReturn = "F";
-			break;
-		case 6:
-			toReturn = "F#(Gb)";
-			break;
-		case 7:
-			toReturn = "G";
-			break;
-		case 8:
-			toReturn = "G#(Ab)";
-			break;
-		case 9:
-			toReturn = "A";
-			break;
-		case 10:
-			toReturn = "A#(Bb)";
-			break;
-		case 11:
-			toReturn = "B";
-			break;
-		default:
-			toReturn = "C";
-			break;
-		}
-		
-		toReturn = toReturn + octave;
-		return toReturn;
-	}
 
 	public void statusReport() {
 		System.out.println("Total measures: " + realMeasures);
@@ -426,14 +326,15 @@ public class Parser {
 		System.out.println("Total key changes: " + ((keyChanges - 1) == -1 ? 0 : (keyChanges - 1)));
 		if (Main.LOGGING) {
 			System.out.println("Total objects: " + measureCount);
-			System.out.println("High Note: " + highNote + " or " + numToNote(highNote));
-			System.out.println("Low Note: " + lowNote + " or " + numToNote(lowNote));
+			System.out.println("High Note: " + highNote + " or " + Utils.numToNote(highNote));
+			System.out.println("Low Note: " + lowNote + " or " + Utils.numToNote(lowNote));
 			System.out.println("Total Note Duration: " + totalDuration + " milliseconds (I think)");
 			System.out.println("High Duration: " + highDuration + " milliseconds (I think)");
 			System.out.println("Low Duration: " + lowDuration + " milliseconds (I think)");
 			System.out.println("Total Interval: " + totalInterval + " chromatic steps");
 			System.out.println("High Interval: " + highInterval + " chromatic steps");
 			System.out.println("Low Interval: " + lowInterval + " chromatic steps");
+			System.out.println("Current Key: " + currentKey);
 		}
 	}
 }
