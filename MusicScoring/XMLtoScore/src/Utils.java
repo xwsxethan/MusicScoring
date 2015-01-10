@@ -1,3 +1,5 @@
+import Dynamics.*;
+
 
 public class Utils {
 	private static int alteration;
@@ -202,5 +204,24 @@ public class Utils {
 		
 		double duration = beats / ((double)beatsPerMinute / SECONDS_IN_MINUTE);
 		return duration;
+	}
+
+	public static dynamic stringToDynamic(String dynamicName) {
+		if (dynamicName == null || dynamicName.isEmpty()) {
+			return dynamic.ERROR;
+		}
+		
+		dynamic[] dynamics = dynamic.values();
+		for (int j = 0; j < dynamics.length; j++) {
+			if (dynamics[j].name().equalsIgnoreCase(dynamicName.trim())) {
+				return dynamics[j];
+			}
+		}
+		
+		return dynamic.ERROR;
+	}
+
+	public static String dynamicToString(dynamic dynam) {
+		return dynam.name();
 	}
 }

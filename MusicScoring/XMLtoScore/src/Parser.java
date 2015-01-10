@@ -10,6 +10,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import Dynamics.dynamic;
+
 
 public class Parser {
 	private static final String SCORE_NODE = "score-partwise";
@@ -20,7 +22,10 @@ public class Parser {
 	private static final String NOTE_NODE = "note";
 	private static final String ATTRIBUTES_NODE = "attributes";
 	private static final String DIRECTION_NODE = "direction";
-
+	
+	private static final String DIRECTION_TYPE_NODE = "direction-type";
+	private static final String DYNAMICS_NODE = "dynamics";
+	
 	private static final String KEY_NODE = "key";
 	private static final String FIFTHS_NODE = "fifths";
 	
@@ -69,6 +74,9 @@ public class Parser {
 	
 	private int tempo;
 	private int tempoChanges;
+	
+	private dynamic dynamics;
+	private int dynamicChanges;
 
 	public Parser(File xmlFile) {
 		measures = null;
@@ -98,6 +106,9 @@ public class Parser {
 		
 		tempo = 0;
 		tempoChanges = 0;
+		
+		dynamics = null;
+		dynamicChanges = 0;
 		
 		start(xmlFile);
 	}
@@ -284,6 +295,44 @@ public class Parser {
 							continue;
 						}
 					}
+					/*else if (sound.getNodeName().trim().equalsIgnoreCase(DYNAMICS_NODE)) {
+						try {
+							int newDynamic = Integer.parseInt(sound.getNodeValue());
+							if (dynamic != newDynamic) {
+								dynamicChanges++;
+								if (Main.LOGGING) {
+									System.out.println("Old Dynamic: " + dynamic + "\tNew Dynamic: " + newDynamic);
+								}
+								dynamic = newDynamic;
+							}
+						} catch (NumberFormatException e) {
+							continue;
+						}
+					}*/
+				}			
+			}
+			else if (nodeNameForComparison.equalsIgnoreCase(DIRECTION_TYPE_NODE)) {
+				NodeList directionStuff = direction.getChildNodes();
+				for (int k = 0; k < directionStuff.getLength(); k++) {
+					Node dynamElem = directionStuff.item(k);
+					String dynamElemName = dynamElem.getNodeName().trim();
+					if (dynamElemName.equalsIgnoreCase(DYNAMICS_NODE)) {
+						NodeList dynamElems = dynamElem.getChildNodes();
+						for (int f = 0; f < dynamElems.getLength(); f++) {
+							dynamic dynam = Utils.stringToDynamic(dynamElems.item(f).getNodeName());
+							if (dynam == dynamic.ERROR) {
+								continue;
+							}
+							if (dynamics != dynam) {
+								dynamicChanges++;
+								if (Main.LOGGING) {
+									System.out.println("Old Dynamics: " + dynamics + "\tNew Dynamics: " + dynam);
+								}
+								dynamics = dynam;
+							}
+							break;
+						}
+					}
 				}			
 			}
 		}
@@ -395,6 +444,7 @@ public class Parser {
 		System.out.println("Total key changes: " + ((keyChanges - 1) == -1 ? 0 : (keyChanges - 1)));
 		System.out.println("Total beats per measure changes: " + ((timeChanges - 1) == -1 ? 0 : (timeChanges - 1)));
 		System.out.println("Total tempo changes: " + ((tempoChanges - 1) == -1 ? 0 : (tempoChanges - 1)));
+		System.out.println("Total dynamic changes: " + ((dynamicChanges - 1) == -1 ? 0 : (dynamicChanges - 1)));
 		if (Main.LOGGING) {
 			System.out.println("Total objects: " + measureCount);
 			System.out.println("High Note: " + highNote + " or " + Utils.numToNote(highNote));
@@ -408,6 +458,7 @@ public class Parser {
 			System.out.println("Current Key: " + currentKey);
 			System.out.println("Current beats per measure: " + beatsPerMeasure);
 			System.out.println("Current tempo: " + tempo);
+			System.out.println("Current dynamics: " + dynamics.name());
 		}
 	}
 }
