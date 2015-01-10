@@ -115,3 +115,55 @@ Is it some sort of threshold between them that quantifies
 difficulty? I need to figure this out. Each of these is doable,
 but I don't know which is more relevant/useful and thus where to
 start.
+
+
+
+How to specify intervals in the xml:
+<intervals>
+	<interval>
+		<difference>
+		1
+		</difference>
+		<location1>
+		-1
+		</location1>
+		<location2>
+		-1
+		</location2>
+		<difficulty>
+		1
+		</difficulty>
+	</interval>
+	<interval>
+	...
+	</interval>
+	<interval>
+	...
+	</interval>
+</intervals>
+
+intervals is the overall grouping that will hold multiple
+individual interval specifications.
+interval is one specific interval that has properties
+associated with it.
+difference, location1, location2, and difficulty are each
+properties of an interval.
+difference specifies the actual space between notes, based
+on musical notation. 1 is unison or a first (even though
+this would more accurately be a difference of 0). Similarly,
+2 is seconds, 3 third, 4 is fourth, etc. These can be
+represented as ranges with a dash, such as 3-5 for third to
+fifth, similarly to how notes are specified. Additionally,
+these can be specified with greater than or less than
+notation, such as >8 or 8< to show a difference greater
+than an octave. This includes >0 and 0< to show any 
+interval (which can also be shown with -1).
+location1 and location2 specify the range this interval
+applies to. They can be specified in any order (with 1
+being higher or 2 being higher). These can be represented
+as ranges themselves with dashes (similar to how note
+difficulties can be specified). -1 is the default value
+for anywhere. 
+difficulty specifies the actual difficulty number
+associated with this interval, such as an integer between
+1 and 10.
