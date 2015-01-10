@@ -3,8 +3,20 @@ public class Utils {
 	private static int alteration;
 	
 	private static final int NOTES_IN_OCTAVE = 12;
+	private static final int SECONDS_IN_MINUTE = 60;
+	
 	private static final String SHARP = "#";
 	private static final String FLAT = "b";
+	
+	private static final String WHOLE = "whole";
+	private static final String HALF = "half";
+	private static final String QUARTER = "quarter";
+	private static final String EIGHTH = "eighth";
+	private static final String SIXTEENTH = "16th";
+	private static final String THIRTYSECOND = "32nd";
+	
+	private static final int REGULAR = 4;
+	private static final int COMPOUND = 8;
 	
 	public static int noteToNum(String noteLetterAccidentalOctave) {
 		if (noteLetterAccidentalOctave == null || noteLetterAccidentalOctave.isEmpty()) {
@@ -138,5 +150,57 @@ public class Utils {
 		
 		toReturn = toReturn + octave;
 		return toReturn;
+	}
+
+	public static double typeAndTempoToDuration(String noteType, int beatsPerMinute, int beatsPerMeasure) {
+		if (noteType == null || noteType.isEmpty()) {
+			return 0;
+		}
+		
+		double beats;
+		switch(noteType.trim().toLowerCase()) {
+		case (WHOLE) : {
+			beats = 4;
+			break;
+		}
+		case (HALF) : {
+			beats = 2;
+			break;
+		}
+		case (QUARTER) : {
+			beats = 1;
+			break;
+		}
+		case (EIGHTH) : {
+			beats = 0.5;
+			break;
+		}
+		case (SIXTEENTH) : {
+			beats = 0.25;
+			break;
+		}
+		case (THIRTYSECOND) : {
+			beats = 0.125;
+			break;
+		}
+		default : {
+			if (beatsPerMeasure == COMPOUND) {
+				beats = 0.5;
+			}
+			else if (beatsPerMeasure == REGULAR) {
+				beats = 1;
+			}
+			else {
+				beats = 1;
+			}
+		}			
+		}
+		
+		if (beatsPerMeasure == COMPOUND) {
+			beats = beats * 2;
+		}
+		
+		double duration = beats / ((double)beatsPerMinute / SECONDS_IN_MINUTE);
+		return duration;
 	}
 }

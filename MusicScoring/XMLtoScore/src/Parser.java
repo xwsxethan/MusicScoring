@@ -19,13 +19,21 @@ public class Parser {
 	private static final String MEASURE_NODE = "measure";
 	private static final String NOTE_NODE = "note";
 	private static final String ATTRIBUTES_NODE = "attributes";
+	private static final String DIRECTION_NODE = "direction";
 
 	private static final String KEY_NODE = "key";
 	private static final String FIFTHS_NODE = "fifths";
 	
+	private static final String TIME_NODE = "time";
+	private static final String BEAT_TYPE_NODE = "beat-type";
+	
+	private static final String SOUND_NODE = "sound";
+	private static final String TEMPO_NODE = "tempo";
+	
 	private static final String PITCH_NODE = "pitch";
 	private static final String REST_NODE = "rest";
-	private static final String DURATION_NODE = "duration";
+	//private static final String DURATION_NODE = "duration";
+	private static final String NOTE_TYPE_NODE = "type";
 	
 	private static final String STEP_NODE = "step";
 	private static final String OCTAVE_NODE = "octave";
@@ -43,9 +51,9 @@ public class Parser {
 	private int lowNote;
 	private int highNote;
 	
-	private int lowDuration;
-	private int highDuration;
-	private int totalDuration;
+	private double lowDuration;
+	private double highDuration;
+	private double totalDuration;
 	
 	private int lastNote;
 	private int lowInterval;
@@ -56,6 +64,12 @@ public class Parser {
 	private int currentKey;
 	private int keyChanges;
 	
+	private int beatsPerMeasure;
+	private int timeChanges;
+	
+	private int tempo;
+	private int tempoChanges;
+
 	public Parser(File xmlFile) {
 		measures = null;
 		measureCount = 0;
@@ -78,6 +92,12 @@ public class Parser {
 		totalNoteChanges = 0;
 		currentKey = Integer.MAX_VALUE;
 		keyChanges = 0;
+		
+		beatsPerMeasure = Integer.MAX_VALUE;
+		timeChanges = 0;
+		
+		tempo = 0;
+		tempoChanges = 0;
 		
 		start(xmlFile);
 	}
@@ -170,8 +190,6 @@ public class Parser {
 		
 		NodeList list = elem.getChildNodes();
 		
-		//System.out.println("Current measure: " + currentMeasure);
-		
 		for (int i = 0; i < list.getLength(); i++) {
 			elem = list.item(i);
 			String name = elem.getNodeName().trim();
@@ -181,6 +199,9 @@ public class Parser {
 			}
 			else if (name.equalsIgnoreCase(ATTRIBUTES_NODE)) {
 				parseAttributes(elem);
+			}
+			else if (name.equalsIgnoreCase(DIRECTION_NODE)) {
+				parseDirection(elem);
 			}
 		}
 		
@@ -216,6 +237,55 @@ public class Parser {
 					}
 				}				
 			}
+			else if (nodeNameForComparison.equalsIgnoreCase(TIME_NODE)) {
+				NodeList timeStuff = attribute.getChildNodes();
+				for (int k = 0; k < timeStuff.getLength(); k++) {
+					Node timeElem = timeStuff.item(k);
+					String timeElemName = timeElem.getNodeName().trim();
+					if (timeElemName.equalsIgnoreCase(BEAT_TYPE_NODE)) {
+						try {
+							int time = Integer.parseInt(timeElem.getTextContent().trim());
+							//Not sure what else to do with the time yet...
+							if (time != beatsPerMeasure) {
+								timeChanges++;
+								if (Main.LOGGING) {
+									System.out.println("Old beats per measure: " + beatsPerMeasure + "\tNew beats per measure: " + time);
+								}
+								beatsPerMeasure = time;
+							}
+						} catch (NumberFormatException e) {
+							continue;
+						}
+					}
+				}				
+			}
+		}
+	}
+	
+	private void parseDirection(Node elem) {
+		NodeList directions = elem.getChildNodes();
+		for (int j = 0; j < directions.getLength(); j++) {
+			Node direction = directions.item(j);
+			String nodeNameForComparison = direction.getNodeName().trim();
+			if (nodeNameForComparison.equalsIgnoreCase(SOUND_NODE)) {
+				if (direction.hasAttributes()) {
+					Node sound = direction.getAttributes().item(0);
+					if (sound.getNodeName().trim().equalsIgnoreCase(TEMPO_NODE)) {
+						try {
+							int newTempo = Integer.parseInt(sound.getNodeValue());
+							if (tempo != newTempo) {
+								tempoChanges++;
+								if (Main.LOGGING) {
+									System.out.println("Old Tempo: " + tempo + "\tNew Tempo: " + newTempo);
+								}
+								tempo = newTempo;
+							}
+						} catch (NumberFormatException e) {
+							continue;
+						}
+					}
+				}			
+			}
 		}
 	}
 	
@@ -247,27 +317,25 @@ public class Parser {
 			else if (nodeNameForComparison.equalsIgnoreCase(REST_NODE)) {
 				return;
 			}
-			else if (nodeNameForComparison.equalsIgnoreCase(DURATION_NODE)) {
-				try {
-					int dur = Integer.parseInt(noteVal.getTextContent().trim());
-					if (dur < lowDuration) {
-						if (Main.LOGGING) {
-							System.out.println("Low duration updated to " + dur + " in measure "
-								+ (currentMeasure - (measureCount - realMeasures) + 1));
-						}
-						lowDuration = dur;
+			//else if (nodeNameForComparison.equalsIgnoreCase(DURATION_NODE)) {
+			else if (nodeNameForComparison.equalsIgnoreCase(NOTE_TYPE_NODE)) {
+				String noteType = noteVal.getTextContent().trim();
+				double dur = Utils.typeAndTempoToDuration(noteType, tempo, beatsPerMeasure);
+				if (dur < lowDuration) {
+					if (Main.LOGGING) {
+						System.out.println("Low duration updated to " + dur + " in measure "
+							+ (currentMeasure - (measureCount - realMeasures) + 1));
 					}
-					if (dur > highDuration) {
-						if (Main.LOGGING) {
-							System.out.println("High duration updated to " + dur + " in measure "
-								+ (currentMeasure - (measureCount - realMeasures) + 1));
-						}
-						highDuration = dur;
-					}
-					totalDuration += dur;
-				} catch (NumberFormatException e) {
-					continue;
+					lowDuration = dur;
 				}
+				if (dur > highDuration) {
+					if (Main.LOGGING) {
+						System.out.println("High duration updated to " + dur + " in measure "
+							+ (currentMeasure - (measureCount - realMeasures) + 1));
+					}
+					highDuration = dur;
+				}
+				totalDuration += dur;
 			}
 		}
 		
@@ -315,26 +383,31 @@ public class Parser {
 			totalInterval += interval;
 		}
 	}
+	
 
 	public void statusReport() {
 		System.out.println("Total measures: " + realMeasures);
 		System.out.println("Total notes: " + noteCount);
 		System.out.println("Range: " + (highNote - lowNote) + " chromatic steps");
-		System.out.println("Average Note Duration: " + (totalDuration / noteCount) + " milliseconds (I think)");
+		System.out.println("Average Note Duration: " + (totalDuration / noteCount) + " seconds (I think)");
 		System.out.println("Average Interval: " + (totalInterval / (noteCount - 1)) + " chromatic steps");
 		System.out.println("Total altered notes (key or accidental): " + totalNoteChanges);
 		System.out.println("Total key changes: " + ((keyChanges - 1) == -1 ? 0 : (keyChanges - 1)));
+		System.out.println("Total beats per measure changes: " + ((timeChanges - 1) == -1 ? 0 : (timeChanges - 1)));
+		System.out.println("Total tempo changes: " + ((tempoChanges - 1) == -1 ? 0 : (tempoChanges - 1)));
 		if (Main.LOGGING) {
 			System.out.println("Total objects: " + measureCount);
 			System.out.println("High Note: " + highNote + " or " + Utils.numToNote(highNote));
 			System.out.println("Low Note: " + lowNote + " or " + Utils.numToNote(lowNote));
-			System.out.println("Total Note Duration: " + totalDuration + " milliseconds (I think)");
-			System.out.println("High Duration: " + highDuration + " milliseconds (I think)");
-			System.out.println("Low Duration: " + lowDuration + " milliseconds (I think)");
+			System.out.println("Total Note Duration: " + totalDuration + " seconds (I think)");
+			System.out.println("High Duration: " + highDuration + " seconds (I think)");
+			System.out.println("Low Duration: " + lowDuration + " seconds (I think)");
 			System.out.println("Total Interval: " + totalInterval + " chromatic steps");
 			System.out.println("High Interval: " + highInterval + " chromatic steps");
 			System.out.println("Low Interval: " + lowInterval + " chromatic steps");
 			System.out.println("Current Key: " + currentKey);
+			System.out.println("Current beats per measure: " + beatsPerMeasure);
+			System.out.println("Current tempo: " + tempo);
 		}
 	}
 }
