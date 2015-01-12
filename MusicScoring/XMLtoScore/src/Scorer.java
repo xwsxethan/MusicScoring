@@ -14,9 +14,10 @@ public class Scorer {
 		level = aLevel;
 		
 		//Read difficulty level file.
+		@SuppressWarnings("unused")
 		DifficultyReader values = new DifficultyReader(level.getXMLFile());
-		System.out.println("Difficulty values: interval " + values.getIntervalDifficulty() +
-				" range " + values.getRangeDifficulty());
+		/*System.out.println("Difficulty values: interval " + values.getIntervalDifficulty() +
+				" range " + values.getRangeDifficulty());*/
 		
 		
 		while (parse.hasMeasure()) {

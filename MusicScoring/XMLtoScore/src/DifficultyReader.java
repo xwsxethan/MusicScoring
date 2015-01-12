@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -17,18 +19,23 @@ public class DifficultyReader {
 	
 	private static final String LEVELS_NAME = "levels";
 	private static final String INTERVAL_NAME = "interval";
-	private static final String RANGE_NAME = "range";
+	//private static final String RANGE_NAME = "range";
 	private static final String NOTES_NAME = "notes";
 	private static final String DASH = "-";
 	
-	private int interval;
-	private int range;
+	private static final int DEFAULT_INTERVAL_DIFFICULTY = 10;
+	
+	/*private int interval;
+	private int range;*/
 	private HashMap<Integer, Integer> individualNotes;
+	private List<Interval> intervalDifficulties;
 	
 	public DifficultyReader(File xmlFile) {
-		interval = -1;
-		range = -1;
+		/*interval = -1;
+		range = -1;*/
 		individualNotes = new HashMap<Integer, Integer>();
+		//intervalDifficulties = new ArrayList<Interval>();
+		setDefaultIntervals();
 		setXmlFile(xmlFile);
 		start();
 	}
@@ -75,19 +82,15 @@ public class DifficultyReader {
 
 			switch(name) {
 			case INTERVAL_NAME:
-				try {
-					interval = Integer.parseInt(elem.getTextContent());
-				} catch (NumberFormatException e) {
-					interval = -1;
-				}				
+				setDefaultIntervals();			
 				break;
-			case RANGE_NAME:
+			/*case RANGE_NAME:
 				try {
 					range = Integer.parseInt(elem.getTextContent());
 				} catch (NumberFormatException e) {
 					range = -1;
 				}
-				break;
+				break;*/
 			case NOTES_NAME:
 				parseNoteDifficulty(elem.getChildNodes());
 				break;
@@ -130,13 +133,13 @@ public class DifficultyReader {
 		}
 	}
 
-	public int getIntervalDifficulty() {
+	/*public int getIntervalDifficulty() {
 		return interval;
 	}
 
 	public int getRangeDifficulty() {
 		return range;
-	}	
+	}*/
 	
 	public int getNoteDifficulty(int noteNum) {
 		Integer output = individualNotes.get(noteNum);
@@ -146,5 +149,46 @@ public class DifficultyReader {
 		else {
 			return output.intValue();
 		}
+	}
+
+	public int getIntervalDifficulty(int note1, int note2, int key) {
+		for(Interval inter : intervalDifficulties) {
+			if (inter.matches(note1, note2, key)) {
+				return inter.getDifficulty();
+			}
+		}
+		
+		return DEFAULT_INTERVAL_DIFFICULTY;
+	}
+	
+	private void setDefaultIntervals() {
+		Interval unisons = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 1, 1);
+		int g3 = Utils.noteToNum("G", "3", "0");
+		int g4 = Utils.noteToNum("G", "4", "0");
+		Interval seconds = new Interval(g3, g4, g3, g4, 2, 2);
+		Interval thirds = new Interval(g3, g4, g3, g4, 3, 3);
+		Interval fourths = new Interval(g3, g4, g3, g4, 4, 4);
+		Interval fifths = new Interval(g3, g4, g3, g4, 5, 5);
+		int b4 = Utils.noteToNum("B", "4", "0");
+		int c5 = Utils.noteToNum("C", "5", "0");
+		Interval jumps = new Interval(g3, g4, b4, c5, Interval.ANY_INTERVAL, 8);
+		int csharp5 = Utils.noteToNum("C", "5", "1");
+		Interval highs = new Interval(b4, c5, csharp5, Interval.ANY_NOTE, Interval.ANY_INTERVAL, 10);
+		Interval sixths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 6, 9);
+		Interval sevenths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 7, 9);
+		Interval octaves = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 8, 9);
+		Interval larges = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, -8, 10);
+		intervalDifficulties = new ArrayList<Interval>();
+		intervalDifficulties.add(unisons);
+		intervalDifficulties.add(seconds);
+		intervalDifficulties.add(thirds);
+		intervalDifficulties.add(fourths);
+		intervalDifficulties.add(fifths);
+		intervalDifficulties.add(jumps);
+		intervalDifficulties.add(highs);
+		intervalDifficulties.add(sixths);
+		intervalDifficulties.add(sevenths);
+		intervalDifficulties.add(octaves);
+		intervalDifficulties.add(larges);
 	}
 }

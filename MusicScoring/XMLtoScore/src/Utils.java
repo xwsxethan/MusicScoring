@@ -4,7 +4,8 @@ import Dynamics.*;
 public class Utils {
 	private static int alteration;
 	
-	private static final int NOTES_IN_OCTAVE = 12;
+	public static final int NOTES_IN_OCTAVE = 12;
+	private static final int DIFFERENCE_BETWEEN_SCALE_STARTS = 7;
 	private static final int SECONDS_IN_MINUTE = 60;
 	
 	private static final String SHARP = "#";
@@ -223,5 +224,62 @@ public class Utils {
 
 	public static String dynamicToString(dynamic dynam) {
 		return dynam.name();
+	}
+
+	/**
+	 * Determines the chromatic start position of the scale for this key based on the integer
+	 * notation being used.
+	 * @param key specifies how many sharps (positive) or flats (negative) there are.
+	 * @return is the starting note for a scale of this key mod 12.
+	 */
+	public static int keyToScaleStart(int key) {
+		int c20 = NOTES_IN_OCTAVE*20; //Making a really high number that is still 0 (mod 12).
+		int transition = key*DIFFERENCE_BETWEEN_SCALE_STARTS; //Could be positive or negative
+		int position = (c20 + transition) % NOTES_IN_OCTAVE; //This ensures a positive is modded, resulting in positive.
+		return position;
+	}
+
+	public static boolean onKey(int key, int note) {
+		int scaleStart = keyToScaleStart(key);
+		int diff = ((note + NOTES_IN_OCTAVE) - scaleStart) % NOTES_IN_OCTAVE; //Force this to positive
+		switch (diff) {
+		case 0 :
+		case 2 :
+		case 4 :
+		case 5 :
+		case 7 :
+		case 9 :
+		case 11 :
+		case 12 :
+			return true;
+		default :
+			return false;
+		}
+	}
+
+	public static int nextScaledNote(int key, int note) {
+		if (!onKey(key, note)) {
+			System.out.println("ERROR: Note not on key. Unclear how to proceed. Returning original note.");
+			return note;
+		}
+		
+		int scaleStart = keyToScaleStart(key);
+		int diff = (NOTES_IN_OCTAVE + (note - scaleStart)) % NOTES_IN_OCTAVE;
+		
+		switch (diff) {
+		case 0 :
+		case 2 :
+		case 5 :
+		case 7 :
+		case 9 :
+		case 12 :
+			return note + 2;
+		case 4 :
+		case 11 :
+			return note + 1;
+		default :
+			System.out.println("ERROR: Note not on key. Unclear how to proceed. Returning original note.");
+			return note;
+		}
 	}
 }
