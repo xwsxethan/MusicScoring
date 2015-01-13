@@ -13,6 +13,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import Dynamics.dynamic;
+
 
 public class DifficultyReader {
 	private File xmlToParse;
@@ -24,18 +26,22 @@ public class DifficultyReader {
 	private static final String DASH = "-";
 	
 	private static final int DEFAULT_INTERVAL_DIFFICULTY = 10;
+	private static final double DEFAULT_DYNAMIC_DIFFICULTY = 1.5;
 	
 	/*private int interval;
 	private int range;*/
 	private HashMap<Integer, Integer> individualNotes;
 	private List<Interval> intervalDifficulties;
+	private HashMap<dynamic, Double> dynamicDifficulties;
 	
 	public DifficultyReader(File xmlFile) {
 		/*interval = -1;
 		range = -1;*/
 		individualNotes = new HashMap<Integer, Integer>();
 		//intervalDifficulties = new ArrayList<Interval>();
+		//dynamicDifficulties = new HashMap<dynamic, Double>();
 		setDefaultIntervals();
+		setDefaultDynamics();
 		setXmlFile(xmlFile);
 		start();
 	}
@@ -161,6 +167,16 @@ public class DifficultyReader {
 		return DEFAULT_INTERVAL_DIFFICULTY;
 	}
 	
+	public double getDynamicDifficulty(dynamic dynam) {
+		Double output = dynamicDifficulties.get(dynam);
+		if (output == null) {
+			return DEFAULT_DYNAMIC_DIFFICULTY;
+		}
+		else {
+			return output.doubleValue();
+		}
+	}
+
 	private void setDefaultIntervals() {
 		Interval unisons = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 1, 1);
 		int g3 = Utils.noteToNum("G", "3", "0");
@@ -190,5 +206,15 @@ public class DifficultyReader {
 		intervalDifficulties.add(sevenths);
 		intervalDifficulties.add(octaves);
 		intervalDifficulties.add(larges);
+	}
+
+	private void setDefaultDynamics() {
+		dynamicDifficulties = new HashMap<dynamic, Double>();
+		dynamicDifficulties.put(dynamic.MF, (double) 1);
+		dynamicDifficulties.put(dynamic.MP, (double) 1);
+		dynamicDifficulties.put(dynamic.F, 1.1);
+		dynamicDifficulties.put(dynamic.FF, 1.2);
+		dynamicDifficulties.put(dynamic.P, 1.3);
+		dynamicDifficulties.put(dynamic.PP, 1.5);
 	}
 }

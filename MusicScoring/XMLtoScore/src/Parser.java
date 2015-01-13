@@ -77,6 +77,8 @@ public class Parser {
 	
 	private dynamic dynamics;
 	private int dynamicChanges;
+	
+	private int currentScore;
 
 	public Parser(File xmlFile) {
 		measures = null;
@@ -109,6 +111,8 @@ public class Parser {
 		
 		dynamics = null;
 		dynamicChanges = 0;
+		
+		currentScore = 0;
 		
 		start(xmlFile);
 	}
