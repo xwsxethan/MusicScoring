@@ -27,6 +27,7 @@ public class DifficultyReader {
 	
 	private static final int DEFAULT_INTERVAL_DIFFICULTY = 10;
 	private static final double DEFAULT_DYNAMIC_DIFFICULTY = 1.5;
+	private static final int DEFAULT_TEMPO_PER_SECOND_DIFFICULTY = 60;
 	
 	/*private int interval;
 	private int range;*/
@@ -175,6 +176,10 @@ public class DifficultyReader {
 		else {
 			return output.doubleValue();
 		}
+	}
+
+	public double getTempoDifficulty(int tempo) {
+		return (double)(tempo / DEFAULT_TEMPO_PER_SECOND_DIFFICULTY);
 	}
 
 	private void setDefaultIntervals() {
