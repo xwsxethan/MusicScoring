@@ -185,7 +185,14 @@ public class DifficultyReader {
 	}
 
 	public double getTempoDifficulty(double duration, int notes) {
-		return (double)notes / duration;
+		double initial = (double)notes / duration;
+		if (initial < 1) {
+			//If 1 note for 2 seconds, initial should be the inverse.
+			//Instead of 0.5, you should get 2, because that is also difficult.
+			initial = 1 / initial;
+		}
+		
+		return initial;
 	}
 
 	private boolean setDefaultNotes() {
