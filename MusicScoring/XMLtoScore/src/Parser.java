@@ -40,7 +40,11 @@ public class Parser {
 	private static final String PITCH_NODE = "pitch";
 	private static final String REST_NODE = "rest";
 	//private static final String DURATION_NODE = "duration";
-	private static final String NOTE_TYPE_NODE = "type";
+	private static final String TYPE_NODE = "type";
+	private static final String DOTTED_NODE = "dot";
+	private static final String TIED_NODE = "tie";
+	private static final String START_NODE = "start";
+	private static final String STOP_NODE = "stop";
 	
 	private static final String STEP_NODE = "step";
 	private static final String OCTAVE_NODE = "octave";
@@ -82,6 +86,9 @@ public class Parser {
 	
 	private double currentScore;
 	private DifficultyReader diffs;
+	
+	private boolean tied;
+	private double tieDuration;
 
 	public Parser(File xmlFile, DifficultyLevel difficulty) {
 		measures = null;
@@ -118,6 +125,9 @@ public class Parser {
 		currentScore = 0;
 
 		diffs = new DifficultyReader(difficulty.getXMLFile());
+		
+		tied = false;
+		tieDuration = 0;
 		
 		start(xmlFile);
 	}
@@ -349,6 +359,9 @@ public class Parser {
 	
 	private void parseNote(Node elem) {
 		boolean foundNote = false;
+		boolean dotted = false;
+		boolean justUntied = false;
+		Double dur = null;
 		String noteName = "";
 		String octave = "";
 		String alter = "";
@@ -376,29 +389,67 @@ public class Parser {
 				return;
 			}
 			//else if (nodeNameForComparison.equalsIgnoreCase(DURATION_NODE)) {
-			else if (nodeNameForComparison.equalsIgnoreCase(NOTE_TYPE_NODE)) {
+			else if (nodeNameForComparison.equalsIgnoreCase(TYPE_NODE)) {
 				String noteType = noteVal.getTextContent().trim();
-				double dur = Utils.typeAndTempoToDuration(noteType, tempo, beatsPerMeasure);
-				if (dur < lowDuration) {
-					if (Main.LOGGING) {
-						System.out.println("Low duration updated to " + dur + " in measure "
-							+ (currentMeasure - (measureCount - realMeasures) + 1));
+				dur = Utils.typeAndTempoToDuration(noteType, tempo, beatsPerMeasure);
+			}
+			else if (nodeNameForComparison.equalsIgnoreCase(DOTTED_NODE)) {
+				dotted = true;
+			}
+			else if (nodeNameForComparison.equalsIgnoreCase(TIED_NODE)) {
+				if (noteVal.hasAttributes()) {
+					Node startStop = noteVal.getAttributes().item(0);
+					if (startStop.getNodeName().trim().equalsIgnoreCase(TYPE_NODE)) {
+						switch (startStop.getNodeValue()) {
+						case (START_NODE) :
+							tied = true;
+							break;
+						case (STOP_NODE) :
+							tied = false;
+							justUntied = true;
+							break;
+						}
 					}
-					lowDuration = dur;
 				}
-				if (dur > highDuration) {
-					if (Main.LOGGING) {
-						System.out.println("High duration updated to " + dur + " in measure "
-							+ (currentMeasure - (measureCount - realMeasures) + 1));
-					}
-					highDuration = dur;
-				}
-				totalDuration += dur;
 			}
 		}
 		
 		if (foundNote) {
-			updateNoteTracking(Utils.noteToNum(noteName, octave, alter));
+			if (dur != null) {
+				if (dotted) {
+					dur = 1.5 * dur;
+				}
+				
+				if (!tied) {
+					if (justUntied) {
+						tieDuration += dur;
+						dur = tieDuration;
+					}
+					
+					if (dur < lowDuration) {
+						if (Main.LOGGING) {
+							System.out.println("Low duration updated to " + dur + " in measure "
+								+ (currentMeasure - (measureCount - realMeasures) + 1));
+						}
+						lowDuration = dur;
+					}
+					if (dur > highDuration) {
+						if (Main.LOGGING) {
+							System.out.println("High duration updated to " + dur + " in measure "
+								+ (currentMeasure - (measureCount - realMeasures) + 1));
+						}
+						highDuration = dur;
+					}
+					totalDuration += dur;
+				}
+				else {
+					tieDuration += dur;
+				}
+			}
+			
+			if (!tied) {
+				updateNoteTracking(Utils.noteToNum(noteName, octave, alter));
+			}
 		}
 	}
 	

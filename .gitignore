@@ -13,3 +13,6 @@ MusicScoring/.metadata/*
 MusicScoring/.recommenders
 MusicScoring/.recommenders/
 MusicScoring/.recommenders/*
+
+# ignore temp files when PowerPoint is open
+Onward\Related Work\~$ScoreAnalysis.pptx
