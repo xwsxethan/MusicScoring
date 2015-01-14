@@ -1,6 +1,6 @@
-package Dynamics;
+package MusicalElements;
 
-public enum dynamic {
+public enum Dynamic {
 	PPPPPPPPPP, PPPPPPPPP, PPPPPPPP, PPPPPPP, PPPPPP, PPPPP, PPPP, PPP, PP, P, MP,
 	MF, F, FF, FFF, FFFF, FFFFF, FFFFFF, FFFFFFF, FFFFFFFF, FFFFFFFFF, FFFFFFFFFF,
 	ERROR

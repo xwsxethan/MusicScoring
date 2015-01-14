@@ -6,16 +6,13 @@ import DifficultyLevels.*;
 public class Scorer {
 	private File xml;
 	private Parser parse;
-	private DifficultyLevel level;
+	//private DifficultyLevel level;
 	
 	public Scorer (DifficultyLevel aLevel, File xmlFile) {
 		xml = xmlFile;
-		parse = new Parser(xml);
-		level = aLevel;
+		parse = new Parser(xml, aLevel);
+		//level = aLevel;
 		
-		//Read difficulty level file.
-		@SuppressWarnings("unused")
-		DifficultyReader values = new DifficultyReader(level.getXMLFile());
 		/*System.out.println("Difficulty values: interval " + values.getIntervalDifficulty() +
 				" range " + values.getRangeDifficulty());*/
 		
@@ -25,7 +22,9 @@ public class Scorer {
 			parse.parseMeasure();
 		}
 		
-		parse.statusReport();
+		//parse.statusReport();
+		
+		System.out.println("Current score: " + parse.getScore());
 		
 		
 		//Apply level to parsed measures.

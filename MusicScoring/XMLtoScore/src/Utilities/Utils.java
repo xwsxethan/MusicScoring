@@ -1,4 +1,5 @@
-import Dynamics.*;
+package Utilities;
+import MusicalElements.*;
 
 
 public class Utils {
@@ -207,22 +208,22 @@ public class Utils {
 		return duration;
 	}
 
-	public static dynamic stringToDynamic(String dynamicName) {
+	public static Dynamic stringToDynamic(String dynamicName) {
 		if (dynamicName == null || dynamicName.isEmpty()) {
-			return dynamic.ERROR;
+			return Dynamic.ERROR;
 		}
 		
-		dynamic[] dynamics = dynamic.values();
+		Dynamic[] dynamics = Dynamic.values();
 		for (int j = 0; j < dynamics.length; j++) {
 			if (dynamics[j].name().equalsIgnoreCase(dynamicName.trim())) {
 				return dynamics[j];
 			}
 		}
 		
-		return dynamic.ERROR;
+		return Dynamic.ERROR;
 	}
 
-	public static String dynamicToString(dynamic dynam) {
+	public static String dynamicToString(Dynamic dynam) {
 		return dynam.name();
 	}
 

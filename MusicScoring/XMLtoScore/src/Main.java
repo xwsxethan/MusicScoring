@@ -8,7 +8,8 @@ public class Main {
 	
 	private static final String FOLDER_NAME = System.getProperty("user.dir") + File.separator;
 	private static final String DEFAULT_FILE_NAME =
-			"The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet.xml";
+			//"The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet.xml";
+			"level1.xml";
 	private static final DifficultyLevel DEFAULT_LEVEL = new Beginner();
 	private static final String xmlEnding = ".xml";
 

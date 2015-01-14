@@ -167,3 +167,20 @@ for anywhere.
 difficulty specifies the actual difficulty number
 associated with this interval, such as an integer between
 1 and 10.
+
+
+
+
+
+		<G3-G4>
+		1
+		</G3-G4>
+		<A4>
+		2
+		</A4>
+		<B4-C5>
+		5
+		</B4-C5>
+		<C#5>
+		10
+		</C#5>

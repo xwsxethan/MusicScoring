@@ -13,7 +13,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import Dynamics.dynamic;
+import MusicalElements.Dynamic;
+import MusicalElements.Interval;
+import Utilities.Utils;
 
 
 public class DifficultyReader {
@@ -25,15 +27,17 @@ public class DifficultyReader {
 	private static final String NOTES_NAME = "notes";
 	private static final String DASH = "-";
 	
+	private static final int DEFAULT_NOTE_DIFFICULTY = 1;
 	private static final int DEFAULT_INTERVAL_DIFFICULTY = 10;
 	private static final double DEFAULT_DYNAMIC_DIFFICULTY = 1.5;
-	private static final int DEFAULT_TEMPO_PER_SECOND_DIFFICULTY = 60;
 	
 	/*private int interval;
 	private int range;*/
 	private HashMap<Integer, Integer> individualNotes;
 	private List<Interval> intervalDifficulties;
-	private HashMap<dynamic, Double> dynamicDifficulties;
+	private HashMap<Dynamic, Double> dynamicDifficulties;
+	
+	private static final boolean TRUE_FOR_SAX_FALSE_FOR_CLARINET = false;
 	
 	public DifficultyReader(File xmlFile) {
 		/*interval = -1;
@@ -41,6 +45,7 @@ public class DifficultyReader {
 		individualNotes = new HashMap<Integer, Integer>();
 		//intervalDifficulties = new ArrayList<Interval>();
 		//dynamicDifficulties = new HashMap<dynamic, Double>();
+		setDefaultNotes();
 		setDefaultIntervals();
 		setDefaultDynamics();
 		setXmlFile(xmlFile);
@@ -99,13 +104,14 @@ public class DifficultyReader {
 				}
 				break;*/
 			case NOTES_NAME:
-				parseNoteDifficulty(elem.getChildNodes());
+				//parseNoteDifficulty(elem.getChildNodes());
 				break;
 			}
 		}
 	}
 	
-	private void parseNoteDifficulty(NodeList notes) {
+	@SuppressWarnings("unused")
+	private void parseNoteDifficulty(NodeList notes) {		
 		if (notes == null || notes.getLength() == 0) {
 			return;
 		}
@@ -151,7 +157,7 @@ public class DifficultyReader {
 	public int getNoteDifficulty(int noteNum) {
 		Integer output = individualNotes.get(noteNum);
 		if (output == null) {
-			return 1;
+			return DEFAULT_NOTE_DIFFICULTY;
 		}
 		else {
 			return output.intValue();
@@ -168,7 +174,7 @@ public class DifficultyReader {
 		return DEFAULT_INTERVAL_DIFFICULTY;
 	}
 	
-	public double getDynamicDifficulty(dynamic dynam) {
+	public double getDynamicDifficulty(Dynamic dynam) {
 		Double output = dynamicDifficulties.get(dynam);
 		if (output == null) {
 			return DEFAULT_DYNAMIC_DIFFICULTY;
@@ -178,48 +184,167 @@ public class DifficultyReader {
 		}
 	}
 
-	public double getTempoDifficulty(int tempo) {
-		return (double)(tempo / DEFAULT_TEMPO_PER_SECOND_DIFFICULTY);
+	public double getTempoDifficulty(double duration, int notes) {
+		return (double)notes / duration;
 	}
 
+	private boolean setDefaultNotes() {
+		individualNotes = new HashMap<Integer, Integer>();
+		
+		if (TRUE_FOR_SAX_FALSE_FOR_CLARINET) {
+			int i;
+			int bflat3 = Utils.noteToNum("B", "3", "-1");
+			int csharp3 = Utils.noteToNum("C", "3", "1");
+			for (i = bflat3; i <= csharp3; i++) {
+				individualNotes.put(i, 10);
+			}
+			
+			int d3 = Utils.noteToNum("D", "3", "0");
+			int fsharp3 = Utils.noteToNum("F", "3", "1");
+			for (i = d3; i <= fsharp3; i++) {
+				individualNotes.put(i, 8);
+			}
+			
+			int g3 = Utils.noteToNum("G", "3", "0");
+			int csharp4 = Utils.noteToNum("C", "4", "1");
+			for (i = g3; i <= csharp4; i++) {
+				individualNotes.put(i, 1);
+			}			
+			
+			int d4 = Utils.noteToNum("D", "4", "0");
+			int g4 = Utils.noteToNum("G", "4", "0");
+			for (i = d4; i <= g4; i++) {
+				individualNotes.put(i, 6);
+			}
+			
+			int gsharp4 = Utils.noteToNum("G", "4", "1");
+			int csharp5 = Utils.noteToNum("C", "5", "1");
+			for (i = gsharp4; i <= csharp5; i++) {
+				individualNotes.put(i, 8);
+			}			
+			
+			int d5 = Utils.noteToNum("D", "5", "0");
+			int fsharp5 = Utils.noteToNum("F", "5", "1");
+			for (i = d5; i <= fsharp5; i++) {
+				individualNotes.put(i, 10);
+			}			
+		}
+		else {
+			int g3 = Utils.noteToNum("G", "3", "0");
+			int g4 = Utils.noteToNum("G", "4", "0");
+			for (int i = g3; i <= g4; i++) {
+				individualNotes.put(i, 1);
+			}
+			
+			int a4 = Utils.noteToNum("A", "4", "0");
+			individualNotes.put(a4, 2);
+			
+			int b4 = Utils.noteToNum("B", "4", "0");
+			int c5 = Utils.noteToNum("C", "5", "0");
+			for (int j = b4; j <= c5; j++) {
+				individualNotes.put(j, 5);
+			}
+			
+			int csharp5 = Utils.noteToNum("C", "5", "1");
+			int high = 10000;
+			for (int k = csharp5; k <= high; k++) {
+				individualNotes.put(k, 10);
+			}
+		}		
+		
+		return true;
+	}
+	
 	private void setDefaultIntervals() {
-		Interval unisons = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 1, 1);
-		int g3 = Utils.noteToNum("G", "3", "0");
-		int g4 = Utils.noteToNum("G", "4", "0");
-		Interval seconds = new Interval(g3, g4, g3, g4, 2, 2);
-		Interval thirds = new Interval(g3, g4, g3, g4, 3, 3);
-		Interval fourths = new Interval(g3, g4, g3, g4, 4, 4);
-		Interval fifths = new Interval(g3, g4, g3, g4, 5, 5);
-		int b4 = Utils.noteToNum("B", "4", "0");
-		int c5 = Utils.noteToNum("C", "5", "0");
-		Interval jumps = new Interval(g3, g4, b4, c5, Interval.ANY_INTERVAL, 8);
-		int csharp5 = Utils.noteToNum("C", "5", "1");
-		Interval highs = new Interval(b4, c5, csharp5, Interval.ANY_NOTE, Interval.ANY_INTERVAL, 10);
-		Interval sixths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 6, 9);
-		Interval sevenths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 7, 9);
-		Interval octaves = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 8, 9);
-		Interval larges = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, -8, 10);
-		intervalDifficulties = new ArrayList<Interval>();
-		intervalDifficulties.add(unisons);
-		intervalDifficulties.add(seconds);
-		intervalDifficulties.add(thirds);
-		intervalDifficulties.add(fourths);
-		intervalDifficulties.add(fifths);
-		intervalDifficulties.add(jumps);
-		intervalDifficulties.add(highs);
-		intervalDifficulties.add(sixths);
-		intervalDifficulties.add(sevenths);
-		intervalDifficulties.add(octaves);
-		intervalDifficulties.add(larges);
+		if (TRUE_FOR_SAX_FALSE_FOR_CLARINET) {
+			Interval unisons = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 1, 1);
+			int bflat3 = Utils.noteToNum("B", "3", "-1");
+			int dflat3 = Utils.noteToNum("D", "3", "-1");
+			Interval superLowSeconds = new Interval(bflat3, dflat3, bflat3, dflat3, 2, 5);
+			Interval superLowThirds = new Interval(bflat3, dflat3, bflat3, dflat3, 3, 5);
+			int d3 = Utils.noteToNum("D", "3", "0");
+			int fsharp3 = Utils.noteToNum("F", "3", "1");
+			Interval lowSeconds = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, d3, fsharp3, 2, 3);	
+			Interval lowThirds = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, d3, fsharp3, 3, 3);		
+			int g3 = Utils.noteToNum("G", "3", "0");
+			int csharp4 = Utils.noteToNum("C", "4", "1");
+			Interval seconds = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, g3, csharp4, 2, 1);
+			Interval thirds = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, g3, csharp4, 3, 1);
+			Interval fourths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, g3, csharp4, 4, 1);			
+			int d4 = Utils.noteToNum("D", "4", "0");
+			int g4 = Utils.noteToNum("G", "4", "0");
+			Interval highSeconds = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, d4, g4, 2, 5);
+			Interval highThirds = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, d4, g4, 3, 5);
+			Interval highFourths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, d4, g4, 4, 5);
+			Interval highFifths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, d4, g4, 5, 5);			
+			int gsharp4 = Utils.noteToNum("G", "4", "1");
+			int csharp5 = Utils.noteToNum("C", "5", "1");
+			Interval highs = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, gsharp4, csharp5, Interval.ANY_INTERVAL, 8);			
+			int d5 = Utils.noteToNum("D", "5", "0");
+			Interval superHighs = new Interval(d5, Interval.ANY_NOTE, d5, Interval.ANY_NOTE, Interval.ANY_INTERVAL, 10);
+			Interval sixths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 6, 9);
+			Interval sevenths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 7, 9);
+			Interval octaves = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 8, 9);
+			Interval larges = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, -8, 10);
+			intervalDifficulties = new ArrayList<Interval>();
+			intervalDifficulties.add(unisons);
+			intervalDifficulties.add(superLowSeconds);
+			intervalDifficulties.add(superLowThirds);
+			intervalDifficulties.add(lowSeconds);
+			intervalDifficulties.add(lowThirds);
+			intervalDifficulties.add(seconds);
+			intervalDifficulties.add(thirds);
+			intervalDifficulties.add(fourths);
+			intervalDifficulties.add(highSeconds);
+			intervalDifficulties.add(highThirds);
+			intervalDifficulties.add(highFourths);
+			intervalDifficulties.add(highFifths);
+			intervalDifficulties.add(highs);			
+			intervalDifficulties.add(superHighs);
+			intervalDifficulties.add(sixths);
+			intervalDifficulties.add(sevenths);
+			intervalDifficulties.add(octaves);
+			intervalDifficulties.add(larges);
+		}
+		else {
+			Interval unisons = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 1, 1);
+			int g3 = Utils.noteToNum("G", "3", "0");
+			int g4 = Utils.noteToNum("G", "4", "0");
+			Interval seconds = new Interval(g3, g4, g3, g4, 2, 2);
+			Interval thirds = new Interval(g3, g4, g3, g4, 3, 3);
+			Interval fourths = new Interval(g3, g4, g3, g4, 4, 4);
+			Interval fifths = new Interval(g3, g4, g3, g4, 5, 5);
+			int b4 = Utils.noteToNum("B", "4", "0");
+			int c5 = Utils.noteToNum("C", "5", "0");
+			Interval jumps = new Interval(g3, g4, b4, c5, Interval.ANY_INTERVAL, 8);
+			int csharp5 = Utils.noteToNum("C", "5", "1");
+			Interval highs = new Interval(b4, c5, csharp5, Interval.ANY_NOTE, Interval.ANY_INTERVAL, 10);
+			Interval sixths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 6, 9);
+			Interval sevenths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 7, 9);
+			Interval octaves = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 8, 9);
+			Interval larges = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, -8, 10);
+			intervalDifficulties = new ArrayList<Interval>();
+			intervalDifficulties.add(unisons);
+			intervalDifficulties.add(seconds);
+			intervalDifficulties.add(thirds);
+			intervalDifficulties.add(fourths);
+			intervalDifficulties.add(fifths);
+			intervalDifficulties.add(jumps);
+			intervalDifficulties.add(highs);
+			intervalDifficulties.add(sixths);
+			intervalDifficulties.add(sevenths);
+			intervalDifficulties.add(octaves);
+			intervalDifficulties.add(larges);
+		}
 	}
 
 	private void setDefaultDynamics() {
-		dynamicDifficulties = new HashMap<dynamic, Double>();
-		dynamicDifficulties.put(dynamic.MF, (double) 1);
-		dynamicDifficulties.put(dynamic.MP, (double) 1);
-		dynamicDifficulties.put(dynamic.F, 1.1);
-		dynamicDifficulties.put(dynamic.FF, 1.2);
-		dynamicDifficulties.put(dynamic.P, 1.3);
-		dynamicDifficulties.put(dynamic.PP, 1.5);
+		dynamicDifficulties = new HashMap<Dynamic, Double>();
+		dynamicDifficulties.put(Dynamic.MF, (double) 1);
+		dynamicDifficulties.put(Dynamic.MP, (double) 1);
+		dynamicDifficulties.put(Dynamic.F, 1.1);
+		dynamicDifficulties.put(Dynamic.FF, 1.2);
+		dynamicDifficulties.put(Dynamic.P, 1.3);
+		dynamicDifficulties.put(Dynamic.PP, 1.5);
 	}
 }

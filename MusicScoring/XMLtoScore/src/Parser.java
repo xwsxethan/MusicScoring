@@ -10,7 +10,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import Dynamics.dynamic;
+import DifficultyLevels.DifficultyLevel;
+import MusicalElements.Dynamic;
+import Utilities.Utils;
 
 
 public class Parser {
@@ -75,12 +77,13 @@ public class Parser {
 	private int tempo;
 	private int tempoChanges;
 	
-	private dynamic dynamics;
+	private Dynamic dynamics;
 	private int dynamicChanges;
 	
-	private int currentScore;
+	private double currentScore;
+	private DifficultyReader diffs;
 
-	public Parser(File xmlFile) {
+	public Parser(File xmlFile, DifficultyLevel difficulty) {
 		measures = null;
 		measureCount = 0;
 		realMeasures = 0;
@@ -113,6 +116,8 @@ public class Parser {
 		dynamicChanges = 0;
 		
 		currentScore = 0;
+
+		diffs = new DifficultyReader(difficulty.getXMLFile());
 		
 		start(xmlFile);
 	}
@@ -126,7 +131,7 @@ public class Parser {
 		start();
 	}
 	
-	public void start() {
+	public void start() {		
 		DocumentBuilder builder;
 		Document toRead;
 		NodeList list;
@@ -137,7 +142,7 @@ public class Parser {
 			System.out.println("ERROR: Couldn't open the xml file to read. Possibly an incorrect name.");
 			e.printStackTrace();
 			return;
-		}
+		}		
 		
 		list = toRead.getChildNodes();		
 		Node elem = null;
@@ -323,8 +328,8 @@ public class Parser {
 					if (dynamElemName.equalsIgnoreCase(DYNAMICS_NODE)) {
 						NodeList dynamElems = dynamElem.getChildNodes();
 						for (int f = 0; f < dynamElems.getLength(); f++) {
-							dynamic dynam = Utils.stringToDynamic(dynamElems.item(f).getNodeName());
-							if (dynam == dynamic.ERROR) {
+							Dynamic dynam = Utils.stringToDynamic(dynamElems.item(f).getNodeName());
+							if (dynam == Dynamic.ERROR) {
 								continue;
 							}
 							if (dynamics != dynam) {
@@ -414,6 +419,14 @@ public class Parser {
 			highNote = noteNum;
 		}
 		
+		double dynamicMult = diffs.getDynamicDifficulty(dynamics);		
+		double noteTotal = diffs.getNoteDifficulty(noteNum) * dynamicMult;
+		currentScore += noteTotal;
+		
+		if (Main.LOGGING) {
+			System.out.println("Current Score: " + currentScore + "\tNote total: " + noteTotal);
+		}
+		
 		if (lastNote == INITIAL_LAST_NOTE_VALUE) {
 			lastNote = noteNum;
 		}
@@ -434,11 +447,25 @@ public class Parser {
 				highInterval = interval;
 			}
 			totalInterval += interval;
-		}
+
+			double intervalTotal = diffs.getIntervalDifficulty(lastNote, noteNum, currentKey) * dynamicMult;
+			currentScore += intervalTotal;
+			
+			if (Main.LOGGING) {
+				System.out.println("Current Score: " + currentScore + "\tInterval total: " + intervalTotal);
+			}
+			
+			lastNote = noteNum;
+		}		
+	}
+	
+	public double getScore() {
+		return currentScore * diffs.getTempoDifficulty(totalDuration, noteCount);		
 	}
 	
 
 	public void statusReport() {
+		System.out.println("Current score: " + currentScore);
 		System.out.println("Total measures: " + realMeasures);
 		System.out.println("Total notes: " + noteCount);
 		System.out.println("Range: " + (highNote - lowNote) + " chromatic steps");
