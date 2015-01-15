@@ -30,24 +30,27 @@ public class DifficultyReader {
 	private static final int DEFAULT_NOTE_DIFFICULTY = 1;
 	private static final int DEFAULT_INTERVAL_DIFFICULTY = 10;
 	private static final double DEFAULT_DYNAMIC_DIFFICULTY = 1.5;
+	private static final double DEFAULT_KEY_DIFFICULTY = 1;
 	
 	/*private int interval;
 	private int range;*/
-	private HashMap<Integer, Integer> individualNotes;
+	private HashMap<Integer, Integer> noteDifficulties;
 	private List<Interval> intervalDifficulties;
 	private HashMap<Dynamic, Double> dynamicDifficulties;
+	private HashMap<Integer, Double> keyDifficulties;
 	
 	private static final boolean TRUE_FOR_SAX_FALSE_FOR_CLARINET = false;
 	
 	public DifficultyReader(File xmlFile) {
 		/*interval = -1;
 		range = -1;*/
-		individualNotes = new HashMap<Integer, Integer>();
+		noteDifficulties = new HashMap<Integer, Integer>();
 		//intervalDifficulties = new ArrayList<Interval>();
 		//dynamicDifficulties = new HashMap<dynamic, Double>();
 		setDefaultNotes();
 		setDefaultIntervals();
 		setDefaultDynamics();
+		setDefaultKeySignatures();
 		setXmlFile(xmlFile);
 		start();
 	}
@@ -135,12 +138,12 @@ public class DifficultyReader {
 				int firstNote = Utils.noteToNum(note.substring(0, index));
 				int secondNote = Utils.noteToNum(note.substring(index + 1));
 				for (int j = firstNote; j <= secondNote; j++) {
-					individualNotes.put(j, diff);
+					noteDifficulties.put(j, diff);
 				}
 			}
 			else {
 				int noteNum = Utils.noteToNum(note);
-				individualNotes.put(noteNum, diff);
+				noteDifficulties.put(noteNum, diff);
 			}
 			
 		}
@@ -155,7 +158,7 @@ public class DifficultyReader {
 	}*/
 	
 	public int getNoteDifficulty(int noteNum) {
-		Integer output = individualNotes.get(noteNum);
+		Integer output = noteDifficulties.get(noteNum);
 		if (output == null) {
 			return DEFAULT_NOTE_DIFFICULTY;
 		}
@@ -195,67 +198,77 @@ public class DifficultyReader {
 		return initial;
 	}
 
+	public double getKeySignatureDifficulty(int key) {
+		Double output = keyDifficulties.get(key);
+		if (output == null) {
+			return DEFAULT_KEY_DIFFICULTY;
+		}
+		else {
+			return output.doubleValue();
+		}
+	}
+	
 	private boolean setDefaultNotes() {
-		individualNotes = new HashMap<Integer, Integer>();
+		noteDifficulties = new HashMap<Integer, Integer>();
 		
 		if (TRUE_FOR_SAX_FALSE_FOR_CLARINET) {
 			int i;
 			int bflat3 = Utils.noteToNum("B", "3", "-1");
 			int csharp3 = Utils.noteToNum("C", "3", "1");
 			for (i = bflat3; i <= csharp3; i++) {
-				individualNotes.put(i, 10);
+				noteDifficulties.put(i, 10);
 			}
 			
 			int d3 = Utils.noteToNum("D", "3", "0");
 			int fsharp3 = Utils.noteToNum("F", "3", "1");
 			for (i = d3; i <= fsharp3; i++) {
-				individualNotes.put(i, 8);
+				noteDifficulties.put(i, 8);
 			}
 			
 			int g3 = Utils.noteToNum("G", "3", "0");
 			int csharp4 = Utils.noteToNum("C", "4", "1");
 			for (i = g3; i <= csharp4; i++) {
-				individualNotes.put(i, 1);
+				noteDifficulties.put(i, 1);
 			}			
 			
 			int d4 = Utils.noteToNum("D", "4", "0");
 			int g4 = Utils.noteToNum("G", "4", "0");
 			for (i = d4; i <= g4; i++) {
-				individualNotes.put(i, 6);
+				noteDifficulties.put(i, 6);
 			}
 			
 			int gsharp4 = Utils.noteToNum("G", "4", "1");
 			int csharp5 = Utils.noteToNum("C", "5", "1");
 			for (i = gsharp4; i <= csharp5; i++) {
-				individualNotes.put(i, 8);
+				noteDifficulties.put(i, 8);
 			}			
 			
 			int d5 = Utils.noteToNum("D", "5", "0");
 			int fsharp5 = Utils.noteToNum("F", "5", "1");
 			for (i = d5; i <= fsharp5; i++) {
-				individualNotes.put(i, 10);
+				noteDifficulties.put(i, 10);
 			}			
 		}
 		else {
 			int g3 = Utils.noteToNum("G", "3", "0");
 			int g4 = Utils.noteToNum("G", "4", "0");
 			for (int i = g3; i <= g4; i++) {
-				individualNotes.put(i, 1);
+				noteDifficulties.put(i, 1);
 			}
 			
 			int a4 = Utils.noteToNum("A", "4", "0");
-			individualNotes.put(a4, 2);
+			noteDifficulties.put(a4, 2);
 			
 			int b4 = Utils.noteToNum("B", "4", "0");
 			int c5 = Utils.noteToNum("C", "5", "0");
 			for (int j = b4; j <= c5; j++) {
-				individualNotes.put(j, 5);
+				noteDifficulties.put(j, 5);
 			}
 			
 			int csharp5 = Utils.noteToNum("C", "5", "1");
 			int high = 10000;
 			for (int k = csharp5; k <= high; k++) {
-				individualNotes.put(k, 10);
+				noteDifficulties.put(k, 10);
 			}
 		}		
 		
@@ -353,5 +366,39 @@ public class DifficultyReader {
 		dynamicDifficulties.put(Dynamic.FF, 1.2);
 		dynamicDifficulties.put(Dynamic.P, 1.3);
 		dynamicDifficulties.put(Dynamic.PP, 1.5);
+	}
+
+	private void setDefaultKeySignatures() {
+		keyDifficulties = new HashMap<Integer, Double>();
+		int c = 0;
+		keyDifficulties.put(c, (double)1);
+		int g = 1;
+		keyDifficulties.put(g, 1.1);
+		int d = 2;
+		keyDifficulties.put(d, 1.1);
+		int a = 3;
+		keyDifficulties.put(a, 1.2);
+		int e = 4;
+		keyDifficulties.put(e, 1.3);
+		int b = 5;
+		keyDifficulties.put(b, 1.4);
+		int fsharp = 6;
+		keyDifficulties.put(fsharp, 1.5);
+		int csharp = 7;
+		keyDifficulties.put(csharp, 1.6);
+		int f = -1;
+		keyDifficulties.put(f, 1.1);
+		int bb = -2;
+		keyDifficulties.put(bb, 1.1);
+		int eb = -3;
+		keyDifficulties.put(eb, 1.2);
+		int ab = -4;
+		keyDifficulties.put(ab, 1.3);
+		int db = -5;
+		keyDifficulties.put(db, 1.4);
+		int gb = -6;
+		keyDifficulties.put(gb, 1.5);
+		int cb = -7;
+		keyDifficulties.put(cb, 1.6);
 	}
 }

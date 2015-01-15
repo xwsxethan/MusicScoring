@@ -15,5 +15,5 @@ MusicScoring/.recommenders/
 MusicScoring/.recommenders/*
 
 # ignore temp files when PowerPoint is open and workout files
-Onward/Related\ Work/~$ScoreAnalysis.pptx
-Onward/Related\ Work/PowerPointWorkout.png
+"Onward/Related\ Work/~$ScoreAnalysis.pptx"
+"Onward/Related\ Work/PowerPointWorkout.png"

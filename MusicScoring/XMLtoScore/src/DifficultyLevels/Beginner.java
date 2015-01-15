@@ -7,4 +7,5 @@ public class Beginner extends DifficultyLevel {
 	public String getXMLFileLocation() {
 		return CONFIG_FOLDER + BEGINNER_FILE;
 	}
+	
 }

@@ -470,8 +470,10 @@ public class Parser {
 			highNote = noteNum;
 		}
 		
-		double dynamicMult = diffs.getDynamicDifficulty(dynamics);		
-		double noteTotal = diffs.getNoteDifficulty(noteNum) * dynamicMult;
+		double dynamicMult = diffs.getDynamicDifficulty(dynamics);
+		double keyMult = diffs.getKeySignatureDifficulty(currentKey);
+		
+		double noteTotal = diffs.getNoteDifficulty(noteNum) * dynamicMult * keyMult;
 		currentScore += noteTotal;
 		
 		if (Main.LOGGING) {
@@ -499,7 +501,7 @@ public class Parser {
 			}
 			totalInterval += interval;
 
-			double intervalTotal = diffs.getIntervalDifficulty(lastNote, noteNum, currentKey) * dynamicMult;
+			double intervalTotal = diffs.getIntervalDifficulty(lastNote, noteNum, currentKey) * dynamicMult * keyMult;
 			currentScore += intervalTotal;
 			
 			if (Main.LOGGING) {
@@ -514,7 +516,6 @@ public class Parser {
 		return currentScore * diffs.getTempoDifficulty(totalDuration, noteCount);		
 	}
 	
-
 	public void statusReport() {
 		System.out.println("Current score: " + currentScore);
 		System.out.println("Total measures: " + realMeasures);
