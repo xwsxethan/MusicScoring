@@ -14,9 +14,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import MusicalElements.Dynamic;
-import MusicalElements.Interval;
-import Utilities.Utils;
+import MusicalElements.*;
+import Utilities.*;
 
 
 public class DifficultyReader {
@@ -32,6 +31,7 @@ public class DifficultyReader {
 	private static final int DEFAULT_INTERVAL_DIFFICULTY = 10;
 	private static final double DEFAULT_DYNAMIC_DIFFICULTY = 1.5;
 	private static final double DEFAULT_KEY_DIFFICULTY = 1;
+	private static final double DEFAULT_ARTICULATION_DIFFICULTY = 1;
 	
 	/*private int interval;
 	private int range;*/
@@ -39,6 +39,7 @@ public class DifficultyReader {
 	private List<Interval> intervalDifficulties;
 	private HashMap<Dynamic, Double> dynamicDifficulties;
 	private HashMap<Integer, Double> keyDifficulties;
+	private HashMap<Articulation, Double> articulationDifficulties;
 	
 	private static final boolean TRUE_FOR_SAX_FALSE_FOR_CLARINET = false;
 	
@@ -52,6 +53,7 @@ public class DifficultyReader {
 		setDefaultIntervals();
 		setDefaultDynamics();
 		setDefaultKeySignatures();
+		setDefaultArticulations();
 		setXmlFile(xmlFile);
 		start();
 	}
@@ -203,6 +205,16 @@ public class DifficultyReader {
 		Double output = keyDifficulties.get(key);
 		if (output == null) {
 			return DEFAULT_KEY_DIFFICULTY;
+		}
+		else {
+			return output.doubleValue();
+		}
+	}
+	
+	public double getArticulationDifficulty(Articulation artic) {
+		Double output = articulationDifficulties.get(artic);
+		if (output == null) {
+			return DEFAULT_ARTICULATION_DIFFICULTY;
 		}
 		else {
 			return output.doubleValue();
@@ -401,5 +413,14 @@ public class DifficultyReader {
 		keyDifficulties.put(gb, 1.5);
 		int cb = -7;
 		keyDifficulties.put(cb, 1.6);
+	}
+
+	private void setDefaultArticulations() {
+		articulationDifficulties = new HashMap<Articulation, Double>();
+		articulationDifficulties.put(Articulation.Normal, (double) 1);
+		articulationDifficulties.put(Articulation.Slur, 0.5);
+		articulationDifficulties.put(Articulation.Accent, 1.1);
+		articulationDifficulties.put(Articulation.Staccato, 1.2);
+		articulationDifficulties.put(Articulation.Tenuto, 1.2);
 	}
 }

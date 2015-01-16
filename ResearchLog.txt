@@ -225,3 +225,9 @@ Articulations:
 	  <slur number="1" placement="above" type="start"/>
 	</notations>
 </note>
+
+Slur: 0.5
+Nothing: 1
+Accent: 1.1
+Staccato: 1.2
+Tenuto: 1.2

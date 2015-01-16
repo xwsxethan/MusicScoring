@@ -8,12 +8,13 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import ClarinetDifficultyLevels.DifficultyLevel;
-import MusicalElements.Dynamic;
+import MusicalElements.*;
 import Utilities.*;
 
 
@@ -53,6 +54,10 @@ public class ParserStarter {
 	
 	private Dynamic dynamics;
 	private int dynamicChanges;
+	
+	private Articulation oldArticulations;
+	private Articulation articulations;
+	private int articulationChanges;
 	
 	private double currentScore;
 	private DifficultyReader diffs;
@@ -101,6 +106,10 @@ public class ParserStarter {
 		
 		dynamics = null;
 		dynamicChanges = 0;
+		
+		oldArticulations = null;
+		articulations = null;
+		articulationChanges = 0;
 		
 		currentScore = 0;
 
@@ -340,6 +349,8 @@ public class ParserStarter {
 	}
 	
 	private void parseNote(Node elem) {
+		oldArticulations = articulations;
+		articulations = Articulation.Normal;
 		boolean foundNote = false;
 		boolean dotted = false;
 		boolean justUntied = false;
@@ -394,6 +405,9 @@ public class ParserStarter {
 					}
 				}
 			}
+			else if (nodeNameForComparison.equalsIgnoreCase(Constants.NOTATIONS_NODE)) {
+				parseArticulations(noteVal);
+			}
 		}
 		
 		if (foundNote) {
@@ -432,6 +446,67 @@ public class ParserStarter {
 			if (!tied) {
 				updateNoteTracking(Utils.noteToNum(noteName, octave, alter));
 			}
+			
+			updateArticulations();
+		}
+	}
+
+	private void parseArticulations(Node base) {		
+		if (base == null) {
+			System.out.println("ERROR: Notations node was null.");
+			return;
+		}
+		
+		NodeList children = base.getChildNodes();
+		Node elem = null;
+		
+		for (int i = 0; i < children.getLength(); i++) {
+			elem = children.item(i);
+			String name = elem.getNodeName().trim();
+			if (name.equalsIgnoreCase(Constants.SLUR_NODE)) {
+				if (elem.hasAttributes()) {
+					NamedNodeMap attributes = elem.getAttributes();
+					for (int j = 0; j < attributes.getLength(); j++) {
+						Node attrib = attributes.item(j);
+						if (attrib.getNodeName().trim().equalsIgnoreCase(Constants.TYPE_NODE)) {
+							if (!attrib.getNodeValue().trim().equalsIgnoreCase(Constants.START_NODE)) {
+								articulations = Articulation.Slur;
+								return;
+							}
+						}
+					}
+				}
+			}
+			else if (name.equalsIgnoreCase(Constants.ARTICULATIONS_NODE)) {
+				NodeList artics = elem.getChildNodes();
+				Node artic = null;
+				for (int k = 0; k < artics.getLength(); k++) {
+					artic = artics.item(k);
+					String articName = artic.getNodeName().trim();
+					if (articName.equalsIgnoreCase(Constants.ACCENT_NODE)) {
+						articulations = Articulation.Accent;
+						return;
+					}
+					else if (articName.equalsIgnoreCase(Constants.STACCATO_NODE)) {
+						articulations = Articulation.Staccato;
+						return;
+					}
+					else if (articName.equalsIgnoreCase(Constants.TENUTO_NODE)) {
+						articulations = Articulation.Tenuto;
+						return;
+					}
+				}
+			}
+		}
+	}
+	
+	private void updateArticulations() {
+		if (oldArticulations != articulations) {
+			if (Main.LOGGING) {
+				System.out.println("Articulation updated to " + articulations + " in measure "
+						+ (currentMeasure - (measureCount - realMeasures) + 1));
+			}
+			articulationChanges++;
 		}
 	}
 	
@@ -454,8 +529,9 @@ public class ParserStarter {
 		
 		double dynamicMult = diffs.getDynamicDifficulty(dynamics);
 		double keyMult = diffs.getKeySignatureDifficulty(currentKey);
+		double articulationsMult = diffs.getArticulationDifficulty(articulations);
 		
-		double noteTotal = diffs.getNoteDifficulty(noteNum) * dynamicMult * keyMult;
+		double noteTotal = diffs.getNoteDifficulty(noteNum) * dynamicMult * keyMult * articulationsMult;
 		currentScore += noteTotal;
 		
 		if (Main.LOGGING) {
@@ -483,7 +559,7 @@ public class ParserStarter {
 			}
 			totalInterval += interval;
 
-			double intervalTotal = diffs.getIntervalDifficulty(lastNote, noteNum, currentKey) * dynamicMult * keyMult;
+			double intervalTotal = diffs.getIntervalDifficulty(lastNote, noteNum, currentKey) * dynamicMult * keyMult * articulationsMult;
 			currentScore += intervalTotal;
 			
 			if (Main.LOGGING) {
@@ -510,6 +586,7 @@ public class ParserStarter {
 		System.out.println("Total beats per measure changes: " + ((timeChanges - 1) == -1 ? 0 : (timeChanges - 1)));
 		System.out.println("Total tempo changes: " + ((tempoChanges - 1) == -1 ? 0 : (tempoChanges - 1)));
 		System.out.println("Total dynamic changes: " + ((dynamicChanges - 1) == -1 ? 0 : (dynamicChanges - 1)));
+		System.out.println("Total articulation changes: " + ((articulationChanges - 1) == -1 ? 0 : (articulationChanges - 1)));
 		if (Main.LOGGING) {
 			System.out.println("Total objects: " + measureCount);
 			System.out.println("High Note: " + highNote + " or " + Utils.numToNote(highNote));
@@ -524,6 +601,7 @@ public class ParserStarter {
 			System.out.println("Current beats per measure: " + beatsPerMeasure);
 			System.out.println("Current tempo: " + tempo);
 			System.out.println("Current dynamics: " + dynamics.name());
+			System.out.println("Current articulations: " + articulations.name());
 		}
 	}
 }
