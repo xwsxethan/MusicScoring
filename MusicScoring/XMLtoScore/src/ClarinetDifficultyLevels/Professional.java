@@ -1,4 +1,4 @@
-package DifficultyLevels;
+package ClarinetDifficultyLevels;
 
 public class Professional extends DifficultyLevel {
 	public static final String PROFESSIONAL_FILE = "Professional.xml";

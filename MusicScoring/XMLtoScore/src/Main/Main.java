@@ -1,6 +1,7 @@
+package Main;
 import java.io.File;
 
-import DifficultyLevels.*;
+import ClarinetDifficultyLevels.*;
 
 
 public class Main {

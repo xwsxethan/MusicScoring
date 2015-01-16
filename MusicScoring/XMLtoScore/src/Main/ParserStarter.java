@@ -1,3 +1,5 @@
+package Main;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -10,45 +12,13 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import DifficultyLevels.DifficultyLevel;
+import ClarinetDifficultyLevels.DifficultyLevel;
 import MusicalElements.Dynamic;
-import Utilities.Utils;
+import Utilities.*;
 
 
-public class Parser {
-	private static final String SCORE_NODE = "score-partwise";
-	private static final String PART_NODE = "part";
+public class ParserStarter {
 	private static final int SCORE_REQUIRED = 2;
-	
-	private static final String MEASURE_NODE = "measure";
-	private static final String NOTE_NODE = "note";
-	private static final String ATTRIBUTES_NODE = "attributes";
-	private static final String DIRECTION_NODE = "direction";
-	
-	private static final String DIRECTION_TYPE_NODE = "direction-type";
-	private static final String DYNAMICS_NODE = "dynamics";
-	
-	private static final String KEY_NODE = "key";
-	private static final String FIFTHS_NODE = "fifths";
-	
-	private static final String TIME_NODE = "time";
-	private static final String BEAT_TYPE_NODE = "beat-type";
-	
-	private static final String SOUND_NODE = "sound";
-	private static final String TEMPO_NODE = "tempo";
-	
-	private static final String PITCH_NODE = "pitch";
-	private static final String REST_NODE = "rest";
-	//private static final String DURATION_NODE = "duration";
-	private static final String TYPE_NODE = "type";
-	private static final String DOTTED_NODE = "dot";
-	private static final String TIED_NODE = "tie";
-	private static final String START_NODE = "start";
-	private static final String STOP_NODE = "stop";
-	
-	private static final String STEP_NODE = "step";
-	private static final String OCTAVE_NODE = "octave";
-	private static final String ALTER_NODE = "alter";
 	
 	private static final int INITIAL_LAST_NOTE_VALUE = -1;
 	
@@ -89,8 +59,18 @@ public class Parser {
 	
 	private boolean tied;
 	private double tieDuration;
+	
+	//private IElementVisitor parser;
 
-	public Parser(File xmlFile, DifficultyLevel difficulty) {
+ 	public ParserStarter(File xmlFile, DifficultyLevel difficulty) {
+		initializeValues(difficulty);
+		NodeList topNodes = setupXmlFile(xmlFile);
+		if (topNodes != null) {
+			start(topNodes);
+		}
+	}
+	
+	public void initializeValues(DifficultyLevel difficulty) {
 		measures = null;
 		measureCount = 0;
 		realMeasures = 0;
@@ -129,32 +109,26 @@ public class Parser {
 		tied = false;
 		tieDuration = 0;
 		
-		start(xmlFile);
+		//parser = new ParserElementVisitor();
 	}
 	
-	public void setXmlFile(File xmlFile) {
+	public NodeList setupXmlFile(File xmlFile) {
 		xmlToParse = xmlFile;
-	}
-
-	public void start(File xmlFile) {
-		setXmlFile(xmlFile);
-		start();
-	}
-	
-	public void start() {		
 		DocumentBuilder builder;
 		Document toRead;
-		NodeList list;
 		try {
 			builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			toRead = builder.parse(xmlToParse);
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			System.out.println("ERROR: Couldn't open the xml file to read. Possibly an incorrect name.");
 			e.printStackTrace();
-			return;
+			return null;
 		}		
 		
-		list = toRead.getChildNodes();		
+		return toRead.getChildNodes();
+	}
+	
+	private void start(NodeList list) {	
 		Node elem = null;
 		int scoreCount = 0;
 		
@@ -164,7 +138,7 @@ public class Parser {
 			}
 			elem = list.item(i);
 			String name = elem.getNodeName().trim();
-			if (name.equalsIgnoreCase(SCORE_NODE)) {
+			if (name.equalsIgnoreCase(Constants.SCORE_NODE)) {
 				scoreCount++;
 			}
 		}
@@ -173,21 +147,29 @@ public class Parser {
 			System.out.println("ERROR: Couldn't find the score in the xml.");
 			return;
 		}
+		
+		/*
+		Score score = new Score(elem);
+		score.accept(parser);
+		*/
+		
 		list = elem.getChildNodes();
 		elem = null;
 		
 		for (int i = 0; i < list.getLength(); i++) {
 			elem = list.item(i);
 			String name = elem.getNodeName().trim();
-			if (name.equalsIgnoreCase(PART_NODE)) {
+			if (name.equalsIgnoreCase(Constants.PART_NODE)) {
 				break;
 			}
 		}
 		
-		if (elem == null || !elem.getNodeName().trim().equalsIgnoreCase(PART_NODE)) {
+		if (elem == null || !elem.getNodeName().trim().equalsIgnoreCase(Constants.PART_NODE)) {
 			System.out.println("ERROR: Couldn't find the first part in the xml.");
 			return;
 		}
+		
+		
 		measures = elem.getChildNodes();
 		measureCount = measures.getLength();
 		realMeasures = measures.getLength();
@@ -211,7 +193,7 @@ public class Parser {
 			return;
 		}
 		
-		if (!elem.getNodeName().trim().equalsIgnoreCase(MEASURE_NODE)) {
+		if (!elem.getNodeName().trim().equalsIgnoreCase(Constants.MEASURE_NODE)) {
 			//System.out.println("ERROR: A random non-measure node turned up. Skipping it.");
 			realMeasures--;
 			currentMeasure++;
@@ -223,14 +205,14 @@ public class Parser {
 		for (int i = 0; i < list.getLength(); i++) {
 			elem = list.item(i);
 			String name = elem.getNodeName().trim();
-			if (name.equalsIgnoreCase(NOTE_NODE)) {
+			if (name.equalsIgnoreCase(Constants.NOTE_NODE)) {
 				noteCount++;
 				parseNote(elem);
 			}
-			else if (name.equalsIgnoreCase(ATTRIBUTES_NODE)) {
+			else if (name.equalsIgnoreCase(Constants.ATTRIBUTES_NODE)) {
 				parseAttributes(elem);
 			}
-			else if (name.equalsIgnoreCase(DIRECTION_NODE)) {
+			else if (name.equalsIgnoreCase(Constants.DIRECTION_NODE)) {
 				parseDirection(elem);
 			}
 		}
@@ -245,12 +227,12 @@ public class Parser {
 		for (int j = 0; j < attributes.getLength(); j++) {
 			Node attribute = attributes.item(j);
 			String nodeNameForComparison = attribute.getNodeName().trim();
-			if (nodeNameForComparison.equalsIgnoreCase(KEY_NODE)) {
+			if (nodeNameForComparison.equalsIgnoreCase(Constants.KEY_NODE)) {
 				NodeList keyStuff = attribute.getChildNodes();
 				for (int k = 0; k < keyStuff.getLength(); k++) {
 					Node keyElem = keyStuff.item(k);
 					String keyElemName = keyElem.getNodeName().trim();
-					if (keyElemName.equalsIgnoreCase(FIFTHS_NODE)) {
+					if (keyElemName.equalsIgnoreCase(Constants.FIFTHS_NODE)) {
 						try {
 							int key = Integer.parseInt(keyElem.getTextContent().trim());
 							//Not sure what else to do with the key yet...
@@ -267,12 +249,12 @@ public class Parser {
 					}
 				}				
 			}
-			else if (nodeNameForComparison.equalsIgnoreCase(TIME_NODE)) {
+			else if (nodeNameForComparison.equalsIgnoreCase(Constants.TIME_NODE)) {
 				NodeList timeStuff = attribute.getChildNodes();
 				for (int k = 0; k < timeStuff.getLength(); k++) {
 					Node timeElem = timeStuff.item(k);
 					String timeElemName = timeElem.getNodeName().trim();
-					if (timeElemName.equalsIgnoreCase(BEAT_TYPE_NODE)) {
+					if (timeElemName.equalsIgnoreCase(Constants.BEAT_TYPE_NODE)) {
 						try {
 							int time = Integer.parseInt(timeElem.getTextContent().trim());
 							//Not sure what else to do with the time yet...
@@ -297,10 +279,10 @@ public class Parser {
 		for (int j = 0; j < directions.getLength(); j++) {
 			Node direction = directions.item(j);
 			String nodeNameForComparison = direction.getNodeName().trim();
-			if (nodeNameForComparison.equalsIgnoreCase(SOUND_NODE)) {
+			if (nodeNameForComparison.equalsIgnoreCase(Constants.SOUND_NODE)) {
 				if (direction.hasAttributes()) {
 					Node sound = direction.getAttributes().item(0);
-					if (sound.getNodeName().trim().equalsIgnoreCase(TEMPO_NODE)) {
+					if (sound.getNodeName().trim().equalsIgnoreCase(Constants.TEMPO_NODE)) {
 						try {
 							int newTempo = Integer.parseInt(sound.getNodeValue());
 							if (tempo != newTempo) {
@@ -330,12 +312,12 @@ public class Parser {
 					}*/
 				}			
 			}
-			else if (nodeNameForComparison.equalsIgnoreCase(DIRECTION_TYPE_NODE)) {
+			else if (nodeNameForComparison.equalsIgnoreCase(Constants.DIRECTION_TYPE_NODE)) {
 				NodeList directionStuff = direction.getChildNodes();
 				for (int k = 0; k < directionStuff.getLength(); k++) {
 					Node dynamElem = directionStuff.item(k);
 					String dynamElemName = dynamElem.getNodeName().trim();
-					if (dynamElemName.equalsIgnoreCase(DYNAMICS_NODE)) {
+					if (dynamElemName.equalsIgnoreCase(Constants.DYNAMICS_NODE)) {
 						NodeList dynamElems = dynamElem.getChildNodes();
 						for (int f = 0; f < dynamElems.getLength(); f++) {
 							Dynamic dynam = Utils.stringToDynamic(dynamElems.item(f).getNodeName());
@@ -369,42 +351,42 @@ public class Parser {
 		for (int j = 0; j < noteVals.getLength(); j++) {
 			Node noteVal = noteVals.item(j);
 			String nodeNameForComparison = noteVal.getNodeName().trim();
-			if (nodeNameForComparison.equalsIgnoreCase(PITCH_NODE)) {
+			if (nodeNameForComparison.equalsIgnoreCase(Constants.PITCH_NODE)) {
 				foundNote = true;
 				NodeList pitch = noteVal.getChildNodes();
 				for (int k = 0; k < pitch.getLength(); k++) {
 					Node pitchPart = pitch.item(k);
-					if (pitchPart.getNodeName().trim().equalsIgnoreCase(STEP_NODE)) {
+					if (pitchPart.getNodeName().trim().equalsIgnoreCase(Constants.STEP_NODE)) {
 						noteName = pitchPart.getTextContent().trim();
 					}
-					else if (pitchPart.getNodeName().trim().equalsIgnoreCase(OCTAVE_NODE)) {
+					else if (pitchPart.getNodeName().trim().equalsIgnoreCase(Constants.OCTAVE_NODE)) {
 						octave = pitchPart.getTextContent().trim();									
 					}
-					else if (pitchPart.getNodeName().trim().equalsIgnoreCase(ALTER_NODE)) {
+					else if (pitchPart.getNodeName().trim().equalsIgnoreCase(Constants.ALTER_NODE)) {
 						alter = pitchPart.getTextContent().trim();	
 					}
 				}
 			}
-			else if (nodeNameForComparison.equalsIgnoreCase(REST_NODE)) {
+			else if (nodeNameForComparison.equalsIgnoreCase(Constants.REST_NODE)) {
 				return;
 			}
 			//else if (nodeNameForComparison.equalsIgnoreCase(DURATION_NODE)) {
-			else if (nodeNameForComparison.equalsIgnoreCase(TYPE_NODE)) {
+			else if (nodeNameForComparison.equalsIgnoreCase(Constants.TYPE_NODE)) {
 				String noteType = noteVal.getTextContent().trim();
 				dur = Utils.typeAndTempoToDuration(noteType, tempo, beatsPerMeasure);
 			}
-			else if (nodeNameForComparison.equalsIgnoreCase(DOTTED_NODE)) {
+			else if (nodeNameForComparison.equalsIgnoreCase(Constants.DOTTED_NODE)) {
 				dotted = true;
 			}
-			else if (nodeNameForComparison.equalsIgnoreCase(TIED_NODE)) {
+			else if (nodeNameForComparison.equalsIgnoreCase(Constants.TIED_NODE)) {
 				if (noteVal.hasAttributes()) {
 					Node startStop = noteVal.getAttributes().item(0);
-					if (startStop.getNodeName().trim().equalsIgnoreCase(TYPE_NODE)) {
+					if (startStop.getNodeName().trim().equalsIgnoreCase(Constants.TYPE_NODE)) {
 						switch (startStop.getNodeValue()) {
-						case (START_NODE) :
+						case (Constants.START_NODE) :
 							tied = true;
 							break;
-						case (STOP_NODE) :
+						case (Constants.STOP_NODE) :
 							tied = false;
 							justUntied = true;
 							break;

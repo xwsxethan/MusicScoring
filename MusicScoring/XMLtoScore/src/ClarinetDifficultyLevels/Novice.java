@@ -1,4 +1,4 @@
-package DifficultyLevels;
+package ClarinetDifficultyLevels;
 
 public class Novice extends DifficultyLevel {
 	public static final String NOVICE_FILE = "Novice.xml";

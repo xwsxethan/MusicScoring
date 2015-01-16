@@ -1,4 +1,4 @@
-package DifficultyLevels;
+package ClarinetDifficultyLevels;
 
 import java.io.File;
 

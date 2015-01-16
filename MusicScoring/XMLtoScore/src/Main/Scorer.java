@@ -1,16 +1,17 @@
+package Main;
 import java.io.File;
 
-import DifficultyLevels.*;
+import ClarinetDifficultyLevels.*;
 
 
 public class Scorer {
 	private File xml;
-	private Parser parse;
+	private ParserStarter parse;
 	//private DifficultyLevel level;
 	
 	public Scorer (DifficultyLevel aLevel, File xmlFile) {
 		xml = xmlFile;
-		parse = new Parser(xml, aLevel);
+		parse = new ParserStarter(xml, aLevel);
 		//level = aLevel;
 		
 		/*System.out.println("Difficulty values: interval " + values.getIntervalDifficulty() +
