@@ -220,6 +220,7 @@ Articulations:
 	  <articulations>
         <staccato default-x="3" default-y="20" placement="above"/>
 		<accent default-x="-1" default-y="-65" placement="below"/>
+        <strong-accent default-x="3" default-y="8" placement="above" type="up"/>
 		<tenuto />
 	  </articulations>
 	  <slur number="1" placement="above" type="start"/>
@@ -231,3 +232,4 @@ Nothing: 1
 Accent: 1.1
 Staccato: 1.2
 Tenuto: 1.2
+Strong-Accent: 1.4

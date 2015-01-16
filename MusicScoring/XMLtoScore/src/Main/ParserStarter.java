@@ -495,6 +495,10 @@ public class ParserStarter {
 						articulations = Articulation.Tenuto;
 						return;
 					}
+					else if (articName.equalsIgnoreCase(Constants.STRONG_ACCENT_NODE)) {
+						articulations = Articulation.StrongAccent;
+						return;
+					}
 				}
 			}
 		}

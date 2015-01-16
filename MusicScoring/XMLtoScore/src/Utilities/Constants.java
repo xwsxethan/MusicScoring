@@ -40,6 +40,7 @@ public class Constants {
 	public static final String ACCENT_NODE = "accent";
 	public static final String STACCATO_NODE = "staccato";
 	public static final String TENUTO_NODE = "tenuto";
+	public static final String STRONG_ACCENT_NODE = "strong-accent";
 	
 
 	public static final int NOTES_IN_OCTAVE = 12;

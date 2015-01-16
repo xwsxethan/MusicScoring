@@ -422,5 +422,6 @@ public class DifficultyReader {
 		articulationDifficulties.put(Articulation.Accent, 1.1);
 		articulationDifficulties.put(Articulation.Staccato, 1.2);
 		articulationDifficulties.put(Articulation.Tenuto, 1.2);
+		articulationDifficulties.put(Articulation.StrongAccent, 1.4);
 	}
 }
