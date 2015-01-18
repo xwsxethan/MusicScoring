@@ -1,5 +1,5 @@
 package Main;
-import java.io.File;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,12 +14,13 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import DifficultyLevels.DifficultyLevel;
 import MusicalElements.*;
 import Utilities.*;
 
 
 public class DifficultyReader {
-	private File xmlToParse;
+	private DifficultyLevel level;
 	
 	private static final String LEVELS_NAME = "levels";
 	private static final String INTERVAL_NAME = "interval";
@@ -43,7 +44,7 @@ public class DifficultyReader {
 	
 	private static final boolean TRUE_FOR_SAX_FALSE_FOR_CLARINET = false;
 	
-	public DifficultyReader(File xmlFile) {
+	public DifficultyReader(DifficultyLevel lev) {
 		/*interval = -1;
 		range = -1;*/
 		noteDifficulties = new HashMap<Integer, Integer>();
@@ -54,12 +55,8 @@ public class DifficultyReader {
 		setDefaultDynamics();
 		setDefaultKeySignatures();
 		setDefaultArticulations();
-		setXmlFile(xmlFile);
+		level = lev;
 		start();
-	}
-	
-	private void setXmlFile(File xmlFile) {
-		xmlToParse = xmlFile;
 	}
 	
 	private void start() {
@@ -68,9 +65,10 @@ public class DifficultyReader {
 		NodeList list;
 		try {
 			builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-			toRead = builder.parse(xmlToParse);
-		} catch (ParserConfigurationException | SAXException | IOException e) {
+			toRead = builder.parse(level.getXMLFile());
+		} catch (IllegalArgumentException | ParserConfigurationException | SAXException | IOException e) {
 			System.out.println("ERROR: Couldn't open the xml file to read. Possibly an incorrect name.");
+			System.out.println("Current name: " + level.getXMLFileLocation());
 			e.printStackTrace();
 			return;
 		}

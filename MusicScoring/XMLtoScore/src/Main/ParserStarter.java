@@ -13,7 +13,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import ClarinetDifficultyLevels.DifficultyLevel;
+import DifficultyLevels.DifficultyLevel;
 import MusicalElements.*;
 import Utilities.*;
 
@@ -113,7 +113,7 @@ public class ParserStarter {
 		
 		currentScore = 0;
 
-		diffs = new DifficultyReader(difficulty.getXMLFile());
+		diffs = new DifficultyReader(difficulty);
 		
 		tied = false;
 		tieDuration = 0;

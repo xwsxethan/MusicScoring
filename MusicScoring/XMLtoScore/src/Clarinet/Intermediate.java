@@ -1,4 +1,6 @@
-package ClarinetDifficultyLevels;
+package Clarinet;
+
+import DifficultyLevels.DifficultyLevel;
 
 public class Intermediate extends DifficultyLevel {
 	public static final String INTERMEDIATE_FILE = "Intermediate.xml";

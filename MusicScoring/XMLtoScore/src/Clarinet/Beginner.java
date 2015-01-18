@@ -1,4 +1,6 @@
-package ClarinetDifficultyLevels;
+package Clarinet;
+
+import DifficultyLevels.DifficultyLevel;
 
 public class Beginner extends DifficultyLevel {
 	private static final String BEGINNER_FILE = "Beginner.xml";

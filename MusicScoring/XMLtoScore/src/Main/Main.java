@@ -1,17 +1,18 @@
 package Main;
 import java.io.File;
 
-import ClarinetDifficultyLevels.*;
+import Clarinet.*;
+import DifficultyLevels.DifficultyLevel;
 
 
 public class Main {
 	public static final boolean LOGGING = false;
 	
-	private static final String FOLDER_NAME = System.getProperty("user.dir") + File.separator;
+	/*private static final String FOLDER_NAME = System.getProperty("user.dir") + File.separator;
 	private static final String DEFAULT_FILE_NAME =
 			//"The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet.xml";
 			//"level1.xml";
-			"level2.xml";
+			"level2.xml";*/
 	private static final DifficultyLevel DEFAULT_LEVEL = new Beginner();
 	private static final String xmlEnding = ".xml";
 
@@ -19,13 +20,13 @@ public class Main {
 		DifficultyLevel lev;
 		String fullFileName;
 		if (args.length == 0 || args[0] == null || args[0].isEmpty()) {
-			fullFileName = FOLDER_NAME + DEFAULT_FILE_NAME;
-			lev = DEFAULT_LEVEL;
+			outputError();
+			return;
 		}
 		else {
 			int diffNum = 1;
 			if (args[0].toLowerCase().endsWith(xmlEnding)) {
-				fullFileName = FOLDER_NAME + args[0];
+				fullFileName = args[0];
 				if (args.length > 1 && args[1] != null && args[1].isEmpty()) {
 					try {
 						diffNum = Integer.parseInt(args[1]);
@@ -42,10 +43,11 @@ public class Main {
 				}
 
 				if (args.length > 1 && args[1] != null && args[1].isEmpty()) {
-					fullFileName = FOLDER_NAME + args[1];					
+					fullFileName = args[1];					
 				}
 				else {
-					fullFileName = FOLDER_NAME + DEFAULT_FILE_NAME;
+					outputError();
+					return;
 				}
 			}
 			switch (diffNum) {
@@ -77,6 +79,10 @@ public class Main {
 		Scorer letsGetSomeOutput = new Scorer(lev, xmlFile);
 		//Parser letsGetSomeOutput = new Parser(xmlFile);
 		
+	}
+	
+	private static void outputError() {
+		System.out.println("ERROR: No input file specified. Now quitting.");
 	}
 
 }

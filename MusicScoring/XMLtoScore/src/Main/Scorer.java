@@ -1,7 +1,7 @@
 package Main;
 import java.io.File;
 
-import ClarinetDifficultyLevels.*;
+import DifficultyLevels.DifficultyLevel;
 
 
 public class Scorer {
