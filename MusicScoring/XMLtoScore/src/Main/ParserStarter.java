@@ -213,16 +213,18 @@ public class ParserStarter {
 		
 		for (int i = 0; i < list.getLength(); i++) {
 			elem = list.item(i);
+			checkForTempo(elem);
+			checkForDynamics(elem);
 			String name = elem.getNodeName().trim();
-			if (name.equalsIgnoreCase(Constants.NOTE_NODE)) {
-				noteCount++;
-				parseNote(elem);
-			}
-			else if (name.equalsIgnoreCase(Constants.ATTRIBUTES_NODE)) {
+			if (name.equalsIgnoreCase(Constants.ATTRIBUTES_NODE)) {
 				parseAttributes(elem);
 			}
 			else if (name.equalsIgnoreCase(Constants.DIRECTION_NODE)) {
 				parseDirection(elem);
+			}
+			else if (name.equalsIgnoreCase(Constants.NOTE_NODE)) {
+				noteCount++;
+				parseNote(elem);
 			}
 		}
 		
@@ -287,64 +289,74 @@ public class ParserStarter {
 		NodeList directions = elem.getChildNodes();
 		for (int j = 0; j < directions.getLength(); j++) {
 			Node direction = directions.item(j);
-			String nodeNameForComparison = direction.getNodeName().trim();
-			if (nodeNameForComparison.equalsIgnoreCase(Constants.SOUND_NODE)) {
-				if (direction.hasAttributes()) {
-					Node sound = direction.getAttributes().item(0);
-					if (sound.getNodeName().trim().equalsIgnoreCase(Constants.TEMPO_NODE)) {
-						try {
-							int newTempo = Integer.parseInt(sound.getNodeValue());
-							if (tempo != newTempo) {
-								tempoChanges++;
-								if (Main.LOGGING) {
-									System.out.println("Old Tempo: " + tempo + "\tNew Tempo: " + newTempo);
-								}
-								tempo = newTempo;
+			checkForTempo(direction);
+			checkForDynamics(direction);
+		}
+	}
+
+	private void checkForTempo(Node direction) {
+		String nodeNameForComparison = direction.getNodeName().trim();
+		if (nodeNameForComparison.equalsIgnoreCase(Constants.SOUND_NODE)) {
+			if (direction.hasAttributes()) {
+				Node sound = direction.getAttributes().item(0);
+				if (sound.getNodeName().trim().equalsIgnoreCase(Constants.TEMPO_NODE)) {
+					try {
+						int newTempo = Integer.parseInt(sound.getNodeValue());
+						if (tempo != newTempo) {
+							tempoChanges++;
+							if (Main.LOGGING) {
+								System.out.println("Old Tempo: " + tempo + "\tNew Tempo: " + newTempo);
 							}
-						} catch (NumberFormatException e) {
+							tempo = newTempo;
+						}
+					} catch (NumberFormatException e) {
+						return;
+					}
+				}
+				/*else if (sound.getNodeName().trim().equalsIgnoreCase(DYNAMICS_NODE)) {
+					try {
+						int newDynamic = Integer.parseInt(sound.getNodeValue());
+						if (dynamic != newDynamic) {
+							dynamicChanges++;
+							if (Main.LOGGING) {
+								System.out.println("Old Dynamic: " + dynamic + "\tNew Dynamic: " + newDynamic);
+							}
+							dynamic = newDynamic;
+						}
+					} catch (NumberFormatException e) {
+						continue;
+					}
+				}*/
+			}			
+		}
+	}
+	
+	private void checkForDynamics(Node direction) {
+		String nodeNameForComparison = direction.getNodeName().trim();
+		
+		if (nodeNameForComparison.equalsIgnoreCase(Constants.DIRECTION_TYPE_NODE)) {
+			NodeList directionStuff = direction.getChildNodes();
+			for (int k = 0; k < directionStuff.getLength(); k++) {
+				Node dynamElem = directionStuff.item(k);
+				String dynamElemName = dynamElem.getNodeName().trim();
+				if (dynamElemName.equalsIgnoreCase(Constants.DYNAMICS_NODE)) {
+					NodeList dynamElems = dynamElem.getChildNodes();
+					for (int f = 0; f < dynamElems.getLength(); f++) {
+						Dynamic dynam = Utils.stringToDynamic(dynamElems.item(f).getNodeName());
+						if (dynam == Dynamic.ERROR) {
 							continue;
 						}
-					}
-					/*else if (sound.getNodeName().trim().equalsIgnoreCase(DYNAMICS_NODE)) {
-						try {
-							int newDynamic = Integer.parseInt(sound.getNodeValue());
-							if (dynamic != newDynamic) {
-								dynamicChanges++;
-								if (Main.LOGGING) {
-									System.out.println("Old Dynamic: " + dynamic + "\tNew Dynamic: " + newDynamic);
-								}
-								dynamic = newDynamic;
+						if (dynamics != dynam) {
+							dynamicChanges++;
+							if (Main.LOGGING) {
+								System.out.println("Old Dynamics: " + dynamics + "\tNew Dynamics: " + dynam);
 							}
-						} catch (NumberFormatException e) {
-							continue;
+							dynamics = dynam;
 						}
-					}*/
-				}			
-			}
-			else if (nodeNameForComparison.equalsIgnoreCase(Constants.DIRECTION_TYPE_NODE)) {
-				NodeList directionStuff = direction.getChildNodes();
-				for (int k = 0; k < directionStuff.getLength(); k++) {
-					Node dynamElem = directionStuff.item(k);
-					String dynamElemName = dynamElem.getNodeName().trim();
-					if (dynamElemName.equalsIgnoreCase(Constants.DYNAMICS_NODE)) {
-						NodeList dynamElems = dynamElem.getChildNodes();
-						for (int f = 0; f < dynamElems.getLength(); f++) {
-							Dynamic dynam = Utils.stringToDynamic(dynamElems.item(f).getNodeName());
-							if (dynam == Dynamic.ERROR) {
-								continue;
-							}
-							if (dynamics != dynam) {
-								dynamicChanges++;
-								if (Main.LOGGING) {
-									System.out.println("Old Dynamics: " + dynamics + "\tNew Dynamics: " + dynam);
-								}
-								dynamics = dynam;
-							}
-							break;
-						}
+						break;
 					}
-				}			
-			}
+				}
+			}			
 		}
 	}
 	
@@ -441,6 +453,7 @@ public class ParserStarter {
 				else {
 					tieDuration += dur;
 				}
+				
 			}
 			
 			if (!tied) {
