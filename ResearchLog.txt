@@ -233,3 +233,13 @@ Accent: 1.1
 Staccato: 1.2
 Tenuto: 1.2
 Strong-Accent: 1.4
+
+
+
+I've just discovered that actually, MusicXML is in both xml and mxl formats.
+What I previously thought was just a misnomer was actually my own confusion.
+The xml that I have been using is in fact the standard MusicXML (what I believe
+is version 3.0, the most current). However, the mxl format exists as a
+compressed version, presumably for portability. They are both technically 
+MusicXML however. Thus, finale (and likely others) provide the functionality to
+import or open either and subsequently output what we need.
