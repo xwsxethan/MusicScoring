@@ -6,6 +6,7 @@ import Visitors.IElementVisitor;
 
 public class Measure implements IVisitableXMLNode {
 
+	@SuppressWarnings("unused")
 	private Node base;
 
 	public Measure(Node elem) {
