@@ -25,7 +25,7 @@ public class Scorer {
 		
 		//parse.statusReport();
 		
-		System.out.println("Current score: " + parse.getScore());
+		System.out.println("Current score for the first part: " + parse.getScore());
 		
 		
 		//Apply level to parsed measures.
