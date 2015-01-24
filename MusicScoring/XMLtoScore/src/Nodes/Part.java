@@ -24,7 +24,8 @@ public class Part implements IVisitableXMLNode {
 		for (Node elem : elems) {
 			Measure measure = new Measure(elem);
 			measures.add(measure);
-			visitor.visit(measure);
+			measure.accept(visitor);
+			//visitor.visit(measure);
 		}
 		
 		visitor.visit(this);

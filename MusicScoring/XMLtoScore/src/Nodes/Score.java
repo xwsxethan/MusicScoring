@@ -21,7 +21,8 @@ public class Score implements IVisitableXMLNode {
 		
 		for (Node elem : elems) {
 			Part part = new Part(elem);
-			visitor.visit(part);
+			part.accept(visitor);
+			//visitor.visit(part);
 		}
 		
 		visitor.visit(this);

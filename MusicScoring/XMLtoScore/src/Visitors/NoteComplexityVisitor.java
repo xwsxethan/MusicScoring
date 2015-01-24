@@ -25,7 +25,7 @@ import Nodes.Tied;
 import Nodes.Time;
 import Nodes.Type;
 
-public class ParserElementVisitor implements IElementVisitor {
+public class NoteComplexityVisitor implements IElementVisitor {
 
 	@Override
 	public void visit(Score score) {
