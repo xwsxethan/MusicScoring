@@ -10,6 +10,7 @@ public class Scorer {
 	//private ParserStarter parse;
 	//private DifficultyLevel level;
 	private NoteComplexityVisitor visitor;
+	private double score;
 	
 	public Scorer (DifficultyLevel aLevel, File xmlFile) {
 		xml = xmlFile;
@@ -28,11 +29,16 @@ public class Scorer {
 		//parse.statusReport();
 		
 		visitor = new NoteComplexityVisitor(xml, aLevel);
+		score = visitor.getScore();
 		
-		System.out.println("Current score for the first part: " + visitor.getScore());
+		//System.out.println("Current score for the first part: " + score);
 		
 		
 		//Apply level to parsed measures.
 		
+	}
+	
+	public double getSetScore() {
+		return score;
 	}
 }
