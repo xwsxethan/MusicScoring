@@ -9,7 +9,6 @@
                 <attribute name="Class-Path" value="."/>
             </manifest>
             <fileset dir="C:/Users/user/Dropbox/Public/College/2015-01 Spring/Thesis/MusicScoring/XMLtoScore/bin"/>
-            <zipfileset excludes="META-INF/*.SF" src="C:/Users/user/Dropbox/Public/College/2015-01 Spring/Thesis/MusicScoring/xml-apis.jar"/>
         </jar>
     </target>
 </project>
