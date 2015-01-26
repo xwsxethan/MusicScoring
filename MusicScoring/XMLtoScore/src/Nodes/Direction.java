@@ -1,12 +1,16 @@
 package Nodes;
 
+import org.w3c.dom.Node;
+
 import Visitors.IElementVisitor;
 
-public class Direction implements IVisitableXMLNode {
+public class Direction extends IVisitableXMLNode {
 
-	@Override
-	public void accept(IElementVisitor visitor) {
+	public Direction(Node elem) {
+		base = elem;
+	}
+	
+	public void accept (IElementVisitor visitor) {
 		visitor.visit(this);
 	}
-
 }

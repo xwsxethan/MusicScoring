@@ -35,20 +35,6 @@ public interface IElementVisitor {
 	
 	public void visit(Rest rest);
 	
-	public void visit(Type type);
-	
-	public void visit(Dotted dot);
-	
-	public void visit(Tied tie);
-	
-	public void visit(Start start);
-	
-	public void visit(Stop stop);
-	
-	public void visit(Step step);
-	
-	public void visit(Octave octave);
-	
-	public void visit(Alter alter);
+	public void visit(Notations notations);
 	
 }
