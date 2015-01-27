@@ -7,7 +7,7 @@ import Visitors.*;
 public abstract class IVisitableXMLNode {
 	protected Node base;
 	
-	public abstract void accept (IElementVisitor visitor);
+	public abstract void accept (IMusicElementVisitor visitor);
 	
 	public Node getBase() {
 		return base;

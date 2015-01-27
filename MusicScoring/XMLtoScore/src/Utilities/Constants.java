@@ -35,6 +35,7 @@ public class Constants {
 	public static final String ALTER_NODE = "alter";
 
 	public static final String NOTATIONS_NODE = "notations";
+	public static final String NORMAL_TONGUING_NODE = "normal";
 	public static final String SLUR_NODE = "slur";
 	public static final String ARTICULATIONS_NODE = "articulations";
 	public static final String ACCENT_NODE = "accent";
@@ -56,5 +57,29 @@ public class Constants {
 	public static final String EIGHTH = "eighth";
 	public static final String SIXTEENTH = "16th";
 	public static final String THIRTYSECOND = "32nd";
+	
+
+	public static final String DIFFICULTY_LEVELS_NAME = "levels";
+	public static final String DIFFICULTY_NOTES_NAME = "notes";
+	public static final String DIFFICULTY_INDIVIDUAL_NOTE_NAME = "note-value";
+	public static final String DIFFICULTY_RANGE_NAME = "range";
+	
+	public static final String DIFFICULTY_INTERVALS_NAME = "intervals";
+	public static final String DIFFICULTY_INDIVIDUAL_INTERVAL_NAME = "interval";
+	public static final String DIFFICULTY_DIFFERENCE_NAME = "difference";
+	public static final String DIFFICULTY_LOCATION1_NAME = "location1";
+	public static final String DIFFICULTY_LOCATION2_NAME = "location2";
+	
+	public static final String DIFFICULTY_NAME = "difficulty";
+	
+	public static final String DIFFICULTY_DYNAMICS_NAME = "dynamics";
+	public static final String DIFFICULTY_TEMPO_NAME = "tempo";
+	public static final String DIFFICULTY_KEY_SIGNATURE_NAME = "key-signatures";
+	public static final String DIFFICULTY_INDIVIDUAL_KEY_SIGNATURE_NAME = "key-value";	
+	public static final String DIFFICULTY_KEY_NAME = "key";
+	
+	public static final String DIFFICULTY_ARTICULATIONS_NAME = "articulations";
+	
+	public static final String DIFFICULTY_DASH = "-";
 
 }

@@ -2,7 +2,7 @@ package Nodes;
 
 import org.w3c.dom.Node;
 
-import Visitors.IElementVisitor;
+import Visitors.IMusicElementVisitor;
 
 public class Rest extends IVisitableXMLNode {
 	
@@ -11,7 +11,7 @@ public class Rest extends IVisitableXMLNode {
 	}
 
 	@Override
-	public void accept(IElementVisitor visitor) {
+	public void accept(IMusicElementVisitor visitor) {
 		visitor.visit(this);
 	}
 

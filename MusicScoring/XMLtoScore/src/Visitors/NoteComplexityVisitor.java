@@ -21,7 +21,7 @@ import MusicalElements.Dynamic;
 import Nodes.*;
 import Utilities.*;
 
-public class NoteComplexityVisitor implements IElementVisitor {
+public class NoteComplexityVisitor implements IMusicElementVisitor {
 	
 	private static final int SCORE_REQUIRED = 2;
 	
@@ -401,14 +401,14 @@ public class NoteComplexityVisitor implements IElementVisitor {
 			Node dynamElem = directionStuff.item(k);
 			String dynamElemName = dynamElem.getNodeName().trim();
 			if (dynamElemName.equalsIgnoreCase(Constants.DYNAMICS_NODE)) {
-				Dynamics dynamics = new Dynamics(dynamElem);
+				DynamicsNode dynamics = new DynamicsNode(dynamElem);
 				dynamics.accept(this);
 			}
 		}	
 	}
 
 	@Override
-	public void visit(Dynamics dynamics) {
+	public void visit(DynamicsNode dynamics) {
 		NodeList dynamElems = dynamics.getBase().getChildNodes();
 		for (int f = 0; f < dynamElems.getLength(); f++) {
 			Dynamic dynam = Utils.stringToDynamic(dynamElems.item(f).getNodeName());

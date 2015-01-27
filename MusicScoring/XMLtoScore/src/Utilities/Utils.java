@@ -219,6 +219,105 @@ public class Utils {
 		return dynam.name();
 	}
 
+	public static Articulation stringToArticulation(String articulationName) {
+		if (articulationName == null || articulationName.isEmpty()) {
+			return Articulation.Normal;
+		}
+		
+		Articulation[] articulations = Articulation.values();
+		for (int j = 0; j < articulations.length; j++) {
+			if (articulations[j].name().equalsIgnoreCase(articulationName.trim())) {
+				return articulations[j];
+			}
+		}
+		
+		return Articulation.Normal;
+	}
+
+	public static String articulationToString(Articulation artic) {
+		return artic.name();
+	}
+
+	public static int namedKeyToNum(String keyName) {
+		if (keyName == null || keyName.isEmpty()) {
+			return 0;
+		}
+		
+		String toCompare = keyName.trim().toLowerCase();
+		
+		switch (toCompare) {
+		case ("c") :
+			return 0;
+		case ("g") :
+			return 1;
+		case ("d") :
+			return 2;
+		case ("a") :
+			return 3;
+		case ("e") :
+			return 4;
+		case ("b") :
+			return 5;
+		case ("f#") :
+			return 6;
+		case ("c#") :
+			return 7;
+		case ("f") :
+			return -1;
+		case ("bb") :
+			return -2;
+		case ("eb") :
+			return -3;
+		case ("ab") :
+			return -4;
+		case ("db") :
+			return -5;
+		case ("gb") :
+			return -6;
+		case ("cb") :
+			return -7;
+		default :
+			return 0;
+		}
+	}
+
+	public static String keyNumToNamedKey(int key) {
+		switch(key) {
+		case 0 :
+			return "C";
+		case 1 :
+			return "G";
+		case 2 :
+			return "D";
+		case 3 :
+			return "A";
+		case 4 :
+			return "E";
+		case 5 :
+			return "B";
+		case 6 :
+			return "F#";
+		case 7 :
+			return "C#";
+		case -1 :
+			return "F";
+		case -2 :
+			return "Bb";
+		case -3 :
+			return "Eb";
+		case -4 :
+			return "Ab";
+		case -5 :
+			return "Db";
+		case -6 :
+			return "Gb";
+		case -7 :
+			return "Cb";
+		default :
+			return "C";
+		}
+	}
+	
 	/**
 	 * Determines the chromatic start position of the scale for this key based on the integer
 	 * notation being used.

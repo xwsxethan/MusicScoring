@@ -2,7 +2,7 @@ package Visitors;
 
 import Nodes.*;
 
-public interface IElementVisitor {
+public interface IMusicElementVisitor {
 	public void visit(Score score);
 	
 	public void visit(Part part);
@@ -17,7 +17,7 @@ public interface IElementVisitor {
 	
 	public void visit(DirectionType directionType);
 	
-	public void visit(Dynamics dynamics);
+	public void visit(DynamicsNode dynamics);
 	
 	public void visit(Key key);
 	

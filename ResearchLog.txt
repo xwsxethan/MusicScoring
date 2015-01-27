@@ -118,57 +118,6 @@ start.
 
 
 
-How to specify intervals in the xml:
-<intervals>
-	<interval>
-		<difference>
-		1
-		</difference>
-		<location1>
-		-1
-		</location1>
-		<location2>
-		-1
-		</location2>
-		<difficulty>
-		1
-		</difficulty>
-	</interval>
-	<interval>
-	...
-	</interval>
-	<interval>
-	...
-	</interval>
-</intervals>
-
-intervals is the overall grouping that will hold multiple
-individual interval specifications.
-interval is one specific interval that has properties
-associated with it.
-difference, location1, location2, and difficulty are each
-properties of an interval.
-difference specifies the actual space between notes, based
-on musical notation. 1 is unison or a first (even though
-this would more accurately be a difference of 0). Similarly,
-2 is seconds, 3 third, 4 is fourth, etc. These can be
-represented as ranges with a dash, such as 3-5 for third to
-fifth, similarly to how notes are specified. Additionally,
-these can be specified with greater than or less than
-notation, such as >8 or 8< to show a difference greater
-than an octave. This includes >0 and 0< to show any 
-interval (which can also be shown with -1).
-location1 and location2 specify the range this interval
-applies to. They can be specified in any order (with 1
-being higher or 2 being higher). These can be represented
-as ranges themselves with dashes (similar to how note
-difficulties can be specified). -1 is the default value
-for anywhere. 
-difficulty specifies the actual difficulty number
-associated with this interval, such as an integer between
-1 and 10.
-
-
 
 Preliminary difficulty settings for intervals:
 
@@ -243,3 +192,182 @@ is version 3.0, the most current). However, the mxl format exists as a
 compressed version, presumably for portability. They are both technically 
 MusicXML however. Thus, finale (and likely others) provide the functionality to
 import or open either and subsequently output what we need.
+
+
+
+
+How to specify notes in the xml:
+<notes>
+	<note-value>
+		<range>
+			g3-f4
+		</range>
+		<difficulty>
+			1
+		</difficulty>
+	</note-value>
+	<note-value>
+	...
+	</note-value>
+	<note-value>
+	...
+	</note-value>
+</notes>
+
+notes is the overall grouping that will hold multiple
+individual note specifications.
+note-value is one specific note or range that has properties
+associated with it.
+range and difficulty are each properties of a set of note(s).
+range specifies the individual note(s) by simply a letter
+(with or without a sharp (#) or flat (b)) and a number. To
+show multiple notes, separate them by a dash. Only two notes
+at most can be specified at a time. 
+difficulty specifies the actual difficulty number
+associated with this note or notes, such as an integer between
+1 and 10.
+
+How to specify intervals in the xml:
+<intervals>
+	<interval>
+		<difference>
+		1
+		</difference>
+		<location1>
+		-1
+		</location1>
+		<location2>
+		-1
+		</location2>
+		<difficulty>
+		1
+		</difficulty>
+	</interval>
+	<interval>
+	...
+	</interval>
+	<interval>
+	...
+	</interval>
+</intervals>
+
+intervals is the overall grouping that will hold multiple
+individual interval specifications.
+interval is one specific interval that has properties
+associated with it.
+difference, location1, location2, and difficulty are each
+properties of an interval.
+difference specifies the actual space between notes, based
+on musical notation. 1 is unison or a first (even though
+this would more accurately be a difference of 0). Similarly,
+2 is seconds, 3 third, 4 is fourth, etc. These can be
+represented as ranges with a dash, such as 3-5 for third to
+fifth, similarly to how notes are specified. Additionally,
+these can be specified as greater than the specified
+interval by using negative notation. For example, to say
+any interval greater than an octave, one would specify
+-8. Since 0 is not used for an interval, it can be used
+to specify any interval.
+location1 and location2 specify the range this interval
+applies to. They can be specified in any order (with 1
+being higher or 2 being higher). These can be represented
+as ranges themselves with dashes (similar to how note
+difficulties can be specified). -1 is the default value
+for anywhere. 
+difficulty specifies the actual difficulty number
+associated with this interval, such as an integer between
+1 and 10.
+
+
+How to specify dynamics in xml:
+
+<dynamics>
+	<mf>
+		1
+	</mf>
+	<mp>
+		2
+	</mp>
+	<f>
+	...
+	</f>
+</dynamics>
+
+dynamics is the overall grouping that will hold multiple
+individual dynamics specifications.
+The next element is named for the dynamic level being
+specified. To specify fff, make the element <fff></fff>.
+The value of that element is the difficulty level that
+will be applied to that dynamic.
+
+
+How to specify tempo difficulty in xml:
+
+Tempo difficulty is already pretty much baked into the
+code on purpose based on how it is applied. Therefore,
+this modifier is only a multiplier to apply to the
+existing difficulty. This is recommended to be left at
+one.
+
+<tempo>
+	1.5
+</tempo>
+
+tempo is the overall grouping that holds the multiplier.
+The value of tempo is the multiplier that will be
+applied to the existing calculation.
+
+
+How to specify key signature difficulty in xml:
+
+<key-signatures>
+	<key-value>
+		<key>
+			C
+		</key>
+		<difficulty>
+			1
+		</difficulty>
+	</key-value>
+</key-signatures>
+
+key-signatures is the overall grouping that will hold multiple
+individual key-value specifications.
+key-value is one specific key-signature that has properties
+associated with it.
+key and difficulty are each properties of a key signature.
+key specifies the actual named key, such as C, G#, Bb, etc.
+difficulty specifies the actual difficulty number
+associated with this key, such as a decimal value.
+
+
+How to specify articulation difficulty in xml:
+
+<articulations>
+	<normal>
+		1
+	</normal>
+	<staccato>
+		2
+	</staccato>
+	<tenuto>
+	...
+	</tenuto>
+	<slur>
+	...
+	</slur>
+	<accent>
+	...
+	</accent>
+	<strong-accent>
+	...
+	</strong-accent>
+</articulations>
+
+articulations is the overall grouping that will hold multiple
+individual articulation specifications.
+The next element is named for the articulation being
+specified. To specify slur, make the element <slur></slur>.
+There must be a value here for "normal" or legato.
+The value of that element is the difficulty level that
+will be applied to that articulation.

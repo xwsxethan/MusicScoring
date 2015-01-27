@@ -4,9 +4,9 @@ import org.w3c.dom.Node;
 
 import Visitors.IMusicElementVisitor;
 
-public class DirectionType extends IVisitableXMLNode {
+public class DynamicsNode extends IVisitableXMLNode {
 	
-	public DirectionType(Node elem) {
+	public DynamicsNode(Node elem) {
 		base = elem;
 	}
 
