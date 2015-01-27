@@ -27,7 +27,7 @@
 		<script src="js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<script type="text/javascript">
+		<script>
 			/*$(document).ready(function(){
 				$.ajax({
 					context: this,
@@ -38,17 +38,20 @@
 					}
 				});
 			});*/
-			$('#HobbitRunner').on('click', function () {
+			$(document).on('click', '#HobbitRunner', function () {
+				//alert("I've been clicked.");
 				//Need some code here to execute the jar file with the specified parameters.
 				$.ajax({
 					type: "POST",
-					dataType : "json",
 					url : "backend.php",
 					success : function(results) {
-						alert(results);
+						$('#result').text(results);
+					},
+					error : function(something) {
+						alert("There was a problem. Please try again or contact the Music Scoring team.");
 					}
 				});
-			})
+			});
 		</script>
 		
 		<div class="jumbotron">
