@@ -1,4 +1,4 @@
-package Main;
+package OldUnusedCodeForReference;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,6 +16,7 @@ import org.xml.sax.SAXException;
 import DifficultyLevels.DifficultyLevel;
 import MusicalElements.*;
 import Utilities.*;
+import Main.*;
 
 
 public class ParserStarter {

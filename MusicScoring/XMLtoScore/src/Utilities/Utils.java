@@ -224,9 +224,20 @@ public class Utils {
 			return Articulation.Normal;
 		}
 		
+		String toCompare = articulationName;
+		int dashIndex = articulationName.indexOf(Constants.DIFFICULTY_DASH);
+		if (dashIndex != -1) {
+			try {
+				toCompare = articulationName.substring(0, dashIndex) + articulationName.substring(dashIndex + 1);
+			}
+			catch(IndexOutOfBoundsException e) {
+				toCompare = articulationName.substring(0, dashIndex);
+			}
+		}
+		
 		Articulation[] articulations = Articulation.values();
 		for (int j = 0; j < articulations.length; j++) {
-			if (articulations[j].name().equalsIgnoreCase(articulationName.trim())) {
+			if (articulations[j].name().equalsIgnoreCase(toCompare.trim())) {
 				return articulations[j];
 			}
 		}

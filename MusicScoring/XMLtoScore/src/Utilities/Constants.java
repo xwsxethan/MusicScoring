@@ -81,5 +81,7 @@ public class Constants {
 	public static final String DIFFICULTY_ARTICULATIONS_NAME = "articulations";
 	
 	public static final String DIFFICULTY_DASH = "-";
+	
+	public static final String HASH_TEXT_IN_XML = "#text";
 
 }

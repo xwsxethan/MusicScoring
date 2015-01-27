@@ -13,6 +13,9 @@ MusicScoring/.metadata/*
 MusicScoring/.recommenders
 MusicScoring/.recommenders/
 MusicScoring/.recommenders/*
+MusicScoring/XMLtoScore/bin
+MusicScoring/XMLtoScore/bin/
+MusicScoring/XMLtoScore/bin/*
 
 # ignore temp files when PowerPoint is open and workout files
 "Onward/Related Work/~$ScoreAnalysis.pptx"

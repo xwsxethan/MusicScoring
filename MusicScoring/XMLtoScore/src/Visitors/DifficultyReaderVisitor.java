@@ -63,7 +63,7 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 		noteDifficulties = new HashMap<Integer, Integer>();
 		intervalDifficulties = new ArrayList<Interval>();
 		dynamicDifficulties = new HashMap<Dynamic, Double>();
-		tempoDifficulty = (double) 1;
+		tempoDifficulty = 1.0;
 		keyDifficulties = new HashMap<Integer, Double>();
 		articulationDifficulties = new HashMap<Articulation, Double>();
 
@@ -281,6 +281,7 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 				fixedDifficulty = DEFAULT_NOTE_DIFFICULTY;
 			}
 			for (int j = location1Low; j <= location1High; j++) {
+				//System.out.println("Note: " + j + "\t" + fixedDifficulty);
 				noteDifficulties.put(j, fixedDifficulty);
 			}
 		}
@@ -380,6 +381,12 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 				fixedDifficulty = DEFAULT_INTERVAL_DIFFICULTY;
 			}
 			Interval toAdd = new Interval(location1Low, location1High, location2Low, location2High, difference, fixedDifficulty);
+			/*System.out.print("Interval loc1Low: " + location1Low + "\t");
+			System.out.print("Interval loc1High: " + location1High + "\t");
+			System.out.print("Interval loc2Low: " + location2Low + "\t");
+			System.out.print("Interval loc2High: " + location2High + "\t");
+			System.out.print("Interval difference: " + difference + "\t");
+			System.out.println("Interval difficulty: " + fixedDifficulty);*/
 			intervalDifficulties.add(toAdd);
 		}
 		else {
@@ -502,7 +509,11 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 				continue;
 			}
 			
-			String name = elem.getNodeName().trim().toLowerCase();			
+			String name = elem.getNodeName().trim().toLowerCase();
+			if (name.equals(Constants.HASH_TEXT_IN_XML)) {
+				continue;
+			}
+			
 			Dynamic output = Utils.stringToDynamic(name);
 			
 			if (output == Dynamic.ERROR) {
@@ -514,6 +525,7 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 			
 			try {
 				double difficultyMultiplier = Double.parseDouble(value);
+				//System.out.println("Dynamic difficulty: " + output + "\t" + difficultyMultiplier);
 				dynamicDifficulties.put(output, difficultyMultiplier);
 			}
 			catch (NumberFormatException e) {
@@ -591,6 +603,7 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 		}
 		
 		if (foundKey && foundDifficulty) {
+			//System.out.println("Key sig difficulty: " + tempKey + "\t" + tempDifficulty);
 			keyDifficulties.put(tempKey, tempDifficulty);
 		}
 		else {
@@ -621,13 +634,18 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 				continue;
 			}
 			
-			String name = elem.getNodeName().trim().toLowerCase();			
+			String name = elem.getNodeName().trim().toLowerCase();	
+			if (name.equals(Constants.HASH_TEXT_IN_XML)) {
+				continue;
+			}
+			
 			Articulation output = Utils.stringToArticulation(name);
 			
 			String value = elem.getTextContent().trim().toLowerCase();
 			
 			try {
 				double difficultyMultiplier = Double.parseDouble(value);
+				//System.out.println("Articulation difficulty: " + output + "\t" + difficultyMultiplier);
 				articulationDifficulties.put(output, difficultyMultiplier);
 			}
 			catch (NumberFormatException e) {

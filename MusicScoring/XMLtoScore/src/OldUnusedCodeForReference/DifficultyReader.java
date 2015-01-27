@@ -1,4 +1,4 @@
-package Main;
+package OldUnusedCodeForReference;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -31,6 +31,7 @@ public class DifficultyReader {
 	private static final int DEFAULT_NOTE_DIFFICULTY = 1;
 	private static final int DEFAULT_INTERVAL_DIFFICULTY = 10;
 	private static final double DEFAULT_DYNAMIC_DIFFICULTY = 1.5;
+	private static final double DEFAULT_TEMPO_DIFFICULTY = 1;
 	private static final double DEFAULT_KEY_DIFFICULTY = 1;
 	private static final double DEFAULT_ARTICULATION_DIFFICULTY = 1;
 	
@@ -39,6 +40,7 @@ public class DifficultyReader {
 	private HashMap<Integer, Integer> noteDifficulties;
 	private List<Interval> intervalDifficulties;
 	private HashMap<Dynamic, Double> dynamicDifficulties;
+	private Double tempoDifficulty;
 	private HashMap<Integer, Double> keyDifficulties;
 	private HashMap<Articulation, Double> articulationDifficulties;
 	
@@ -53,6 +55,7 @@ public class DifficultyReader {
 		setDefaultNotes();
 		setDefaultIntervals();
 		setDefaultDynamics();
+		tempoDifficulty = 1.0;
 		setDefaultKeySignatures();
 		setDefaultArticulations();
 		level = lev;
@@ -196,7 +199,7 @@ public class DifficultyReader {
 			initial = 1 / initial;
 		}
 		
-		return initial;
+		return initial * (tempoDifficulty == null ? DEFAULT_TEMPO_DIFFICULTY : tempoDifficulty);
 	}
 
 	public double getKeySignatureDifficulty(int key) {
@@ -277,7 +280,7 @@ public class DifficultyReader {
 			}
 			
 			int csharp5 = Utils.noteToNum("C", "5", "1");
-			int high = 10000;
+			int high = Utils.noteToNum("C", "10", "0");
 			for (int k = csharp5; k <= high; k++) {
 				noteDifficulties.put(k, 10);
 			}
@@ -349,7 +352,8 @@ public class DifficultyReader {
 			int c5 = Utils.noteToNum("C", "5", "0");
 			Interval jumps = new Interval(g3, g4, b4, c5, Interval.ANY_INTERVAL, 8);
 			int csharp5 = Utils.noteToNum("C", "5", "1");
-			Interval highs = new Interval(b4, c5, csharp5, Interval.ANY_NOTE, Interval.ANY_INTERVAL, 10);
+			int c10 = Utils.noteToNum("C", "10", "0");
+			Interval highs = new Interval(b4, c5, csharp5, c10, Interval.ANY_INTERVAL, 10);
 			Interval sixths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 6, 9);
 			Interval sevenths = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 7, 9);
 			Interval octaves = new Interval(Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, Interval.ANY_NOTE, 8, 9);
@@ -371,8 +375,8 @@ public class DifficultyReader {
 
 	private void setDefaultDynamics() {
 		dynamicDifficulties = new HashMap<Dynamic, Double>();
-		dynamicDifficulties.put(Dynamic.MF, (double) 1);
-		dynamicDifficulties.put(Dynamic.MP, (double) 1);
+		dynamicDifficulties.put(Dynamic.MF, 1.0);
+		dynamicDifficulties.put(Dynamic.MP, 1.0);
 		dynamicDifficulties.put(Dynamic.F, 1.1);
 		dynamicDifficulties.put(Dynamic.FF, 1.2);
 		dynamicDifficulties.put(Dynamic.P, 1.3);
@@ -382,7 +386,7 @@ public class DifficultyReader {
 	private void setDefaultKeySignatures() {
 		keyDifficulties = new HashMap<Integer, Double>();
 		int c = 0;
-		keyDifficulties.put(c, (double)1);
+		keyDifficulties.put(c, 1.0);
 		int g = 1;
 		keyDifficulties.put(g, 1.1);
 		int d = 2;
@@ -412,10 +416,11 @@ public class DifficultyReader {
 		int cb = -7;
 		keyDifficulties.put(cb, 1.6);
 	}
+	
 
 	private void setDefaultArticulations() {
 		articulationDifficulties = new HashMap<Articulation, Double>();
-		articulationDifficulties.put(Articulation.Normal, (double) 1);
+		articulationDifficulties.put(Articulation.Normal, 1.0);
 		articulationDifficulties.put(Articulation.Slur, 0.5);
 		articulationDifficulties.put(Articulation.Accent, 1.1);
 		articulationDifficulties.put(Articulation.Staccato, 1.2);

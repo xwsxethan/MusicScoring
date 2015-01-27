@@ -14,7 +14,6 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import DifficultyLevels.DifficultyLevel;
-import Main.DifficultyReader;
 import Main.Main;
 import MusicalElements.Articulation;
 import MusicalElements.Dynamic;
@@ -64,12 +63,10 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	private int articulationChanges;
 	
 	private double currentScore;
-	private DifficultyReader diffs;
+	private DifficultyReaderVisitor diffs;
 	
 	private boolean tied;
 	private double tieDuration;
-	
-	//private IElementVisitor parser;
 
  	public NoteComplexityVisitor(File xmlFile, DifficultyLevel difficulty) {
 		initializeValues(difficulty);
@@ -117,7 +114,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		
 		currentScore = 0;
 
-		diffs = new DifficultyReader(difficulty);
+		diffs = new DifficultyReaderVisitor(difficulty);
 		
 		tied = false;
 		tieDuration = 0;
@@ -611,9 +608,14 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		double dynamicMult = diffs.getDynamicDifficulty(dynamics);
 		double keyMult = diffs.getKeySignatureDifficulty(currentKey);
 		double articulationsMult = diffs.getArticulationDifficulty(articulations);
+		//System.out.print("Difficulty Values. Dynamic: " + dynamicMult + "\t");
+		//System.out.print("Key: " + keyMult + "\t");
+		//System.out.print("Articulation: " + articulationsMult + "\t");
+		//System.out.println("Note: " + diffs.getNoteDifficulty(noteNum) + "\t");
 		
 		double noteTotal = diffs.getNoteDifficulty(noteNum) * dynamicMult * keyMult * articulationsMult;
 		currentScore += noteTotal;
+		//System.out.println("Current Score: " + currentScore + "\tNote total: " + noteTotal);
 		
 		if (Main.LOGGING) {
 			System.out.println("Current Score: " + currentScore + "\tNote total: " + noteTotal);
@@ -641,7 +643,9 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 			totalInterval += interval;
 
 			double intervalTotal = diffs.getIntervalDifficulty(lastNote, noteNum, currentKey) * dynamicMult * keyMult * articulationsMult;
+			//System.out.println("Interval: " + diffs.getIntervalDifficulty(lastNote, noteNum, currentKey));
 			currentScore += intervalTotal;
+			//System.out.println("Current Score: " + currentScore + "\tInterval total: " + intervalTotal);
 			
 			if (Main.LOGGING) {
 				System.out.println("Current Score: " + currentScore + "\tInterval total: " + intervalTotal);
