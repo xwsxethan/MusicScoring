@@ -144,13 +144,22 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 
 	public double getTempoDifficulty(double duration, int notes) {
 		double initial = (double)notes / duration;
+		//System.out.println("Notes: " + notes);
+		//System.out.println("Duration: " + duration);
+		//System.out.println("Initial 1: " + initial);
 		if (initial < 1) {
 			//If 1 note for 2 seconds, initial should be the inverse.
 			//Instead of 0.5, you should get 2, because that is also difficult.
 			initial = 1 / initial;
 		}
 		
-		return initial * (tempoDifficulty == null ? DEFAULT_TEMPO_DIFFICULTY : tempoDifficulty);
+		//System.out.println("Initial 2: " + initial);
+		
+		double mult = (tempoDifficulty == null ? DEFAULT_TEMPO_DIFFICULTY : tempoDifficulty);
+		
+		//System.out.println("Multiplier: " + mult);
+		
+		return initial * mult;
 	}
 
 	public double getKeySignatureDifficulty(int key) {

@@ -197,6 +197,7 @@ public class Utils {
 		}
 		
 		double duration = beats / ((double)beatsPerMinute / Constants.SECONDS_IN_MINUTE);
+		//System.out.println("Beats: " + beats + "\tBeats per Minute: " + beatsPerMinute + "\tDuration: " + duration);
 		return duration;
 	}
 

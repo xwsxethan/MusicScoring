@@ -2,6 +2,9 @@ package Visitors;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -54,6 +57,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	
 	private int tempo;
 	private int tempoChanges;
+	private HashMap<Integer, Integer> tempoByMeasure;
 	
 	private Dynamic dynamics;
 	private int dynamicChanges;
@@ -63,20 +67,29 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	private int articulationChanges;
 	
 	private double currentScore;
+	private List<Double> allScores;
 	private DifficultyReaderVisitor diffs;
 	
 	private boolean tied;
 	private double tieDuration;
 
  	public NoteComplexityVisitor(File xmlFile, DifficultyLevel difficulty) {
-		initializeValues(difficulty);
+		allScores = new ArrayList<Double>();
+		diffs = new DifficultyReaderVisitor(difficulty);
+ 		
+		initializeValues();
+		
+		tempo = 0;
+		tempoChanges = 0;
+		tempoByMeasure = new HashMap<Integer, Integer>();
+		
 		NodeList topNodes = setupXmlFile(xmlFile);
 		if (topNodes != null) {
 			start(topNodes);
 		}
 	}
 	
-	public void initializeValues(DifficultyLevel difficulty) {
+	public void initializeValues() {
 		measures = null;
 		measureCount = 0;
 		realMeasures = 0;
@@ -102,9 +115,6 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		beatsPerMeasure = Integer.MAX_VALUE;
 		timeChanges = 0;
 		
-		tempo = 0;
-		tempoChanges = 0;
-		
 		dynamics = null;
 		dynamicChanges = 0;
 		
@@ -113,8 +123,6 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		articulationChanges = 0;
 		
 		currentScore = 0;
-
-		diffs = new DifficultyReaderVisitor(difficulty);
 		
 		tied = false;
 		tieDuration = 0;
@@ -165,28 +173,32 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 			
 	@Override
 	public void visit(Score score) {
+		boolean foundAPart = false;
 		NodeList list = score.getBase().getChildNodes();
 		Node elem = null;
 		
 		for (int i = 0; i < list.getLength(); i++) {
 			elem = list.item(i);
+			if (elem == null) { continue; }
 			String name = elem.getNodeName().trim();
+			//System.out.println("Element below score's name: " + name);
 			if (name.equalsIgnoreCase(Constants.PART_NODE)) {
-				break;
+				foundAPart = true;
+				Part part = new Part(elem);
+				part.accept(this);
 			}
 		}
 		
-		if (elem == null || !elem.getNodeName().trim().equalsIgnoreCase(Constants.PART_NODE)) {
+		if (!foundAPart) {
 			System.out.println("ERROR: Couldn't find the first part in the xml.");
 			return;
 		}
 		
-		Part part = new Part(elem);
-		part.accept(this);
 	}
 
 	@Override
 	public void visit(Part part) {
+		initializeValues();
 		measures = part.getBase().getChildNodes();
 		measureCount = measures.getLength();
 		realMeasures = measures.getLength();
@@ -199,7 +211,16 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		while (measures != null && currentMeasure < measureCount) {
 			Measure measure = new Measure(measures.item(currentMeasure));
 			measure.accept(this);
+			tempoByMeasure.put(currentMeasure, tempo);
 		}
+		
+		double tempoPortion = diffs.getTempoDifficulty(totalDuration, noteCount);
+		double totalCurrentScore = currentScore * tempoPortion;
+
+		//System.out.println("Current Score without tempo: " + currentScore);
+		//System.out.println("Tempo Multiplier: " + tempoPortion);
+		//System.out.println("Current Score with tempo: " + totalCurrentScore);
+		allScores.add((currentScore == 0 ? currentScore : totalCurrentScore));
 		
 		return;
 	}
@@ -287,7 +308,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 			//else if (nodeNameForComparison.equalsIgnoreCase(DURATION_NODE)) {
 			else if (nodeNameForComparison.equalsIgnoreCase(Constants.TYPE_NODE)) {
 				String noteType = noteVal.getTextContent().trim();
-				dur = Utils.typeAndTempoToDuration(noteType, tempo, beatsPerMeasure);
+				dur = Utils.typeAndTempoToDuration(noteType, getCurrentTempo(currentMeasure), beatsPerMeasure);
 			}
 			else if (nodeNameForComparison.equalsIgnoreCase(Constants.DOTTED_NODE)) {
 				dotted = true;
@@ -322,7 +343,9 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 				
 				if (!tied) {
 					if (justUntied) {
+						//System.out.print("Old tie duration: " + tieDuration + "\tDuration to add: " + dur);
 						tieDuration += dur;
+						//System.out.println("New tie duration: " + tieDuration);
 						dur = tieDuration;
 					}
 					
@@ -340,7 +363,9 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 						}
 						highDuration = dur;
 					}
+					//System.out.print("Old duration: " + totalDuration + "\tDuration to add: " + dur);
 					totalDuration += dur;
+					//System.out.println("\tNew duration: " + totalDuration);
 				}
 				else {
 					tieDuration += dur;
@@ -655,8 +680,39 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		}		
 	}
 
-	public double getScore() {
-		return currentScore * diffs.getTempoDifficulty(totalDuration, noteCount);		
+	public double getFirstScore() {
+		double aScore;
+		try {
+			aScore = allScores.get(0).doubleValue();
+		}
+		catch (IndexOutOfBoundsException e) {
+			aScore = currentScore * diffs.getTempoDifficulty(totalDuration, noteCount);
+		}
+		return aScore;		
+	}
+	
+	public double getScore(int partNum) {
+		Double aScore;
+		try {
+			aScore = allScores.get(partNum);
+		}
+		catch (IndexOutOfBoundsException e) {
+			aScore = 0.0;
+		}
+		
+		return aScore.doubleValue();
+	}
+	
+	public int getAmountOfScores() {
+		return allScores.size();
+	}
+	
+	private int getCurrentTempo(int measureNumber) {
+		Integer toReturn = tempoByMeasure.get(measureNumber);
+		if (toReturn == null) {
+			toReturn = tempo;
+		}
+		return tempo;
 	}
 	
 	public void statusReport() {

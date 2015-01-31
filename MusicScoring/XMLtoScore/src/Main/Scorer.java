@@ -14,27 +14,17 @@ public class Scorer {
 	
 	public Scorer (DifficultyLevel aLevel, File xmlFile) {
 		xml = xmlFile;
-		//parse = new ParserStarter(xml, aLevel);
-		//level = aLevel;
-		
-		/*System.out.println("Difficulty values: interval " + values.getIntervalDifficulty() +
-				" range " + values.getRangeDifficulty());*/
-		
-		
-		/*while (parse.hasMeasure()) {
-			//System.out.println("Still more measures to read.");
-			parse.parseMeasure();
-		}*/
 		
 		//parse.statusReport();
 		
 		visitor = new NoteComplexityVisitor(xml, aLevel);
-		score = visitor.getScore();
+		score = visitor.getFirstScore();
 		
-		//System.out.println("Current score for the first part: " + score);
-		
-		
-		//Apply level to parsed measures.
+		/*
+		//Portion for printing out all the scores gathered.
+		for (int i = 0; i < visitor.getAmountOfScores(); i++) {
+			System.out.println("Score Number " + i + " is: " + visitor.getScore(i));
+		}*/
 		
 	}
 	
