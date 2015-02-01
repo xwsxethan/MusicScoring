@@ -27,6 +27,9 @@ public class ComplexityScore {
 	private int worstMeasureNumber;
 	private double worstMeasureValue;
 	
+	private double totalNoteComplexity;
+	private double totalIntervalComplexity;
+	
 	private boolean otherFieldsSet;
 	
 	public ComplexityScore(double totalScoreValue, String name) {
@@ -39,7 +42,8 @@ public class ComplexityScore {
 			double durationAmount, int intervalAmount, int noteChanges, int keyChanges,
 			int bpmChanges, int tempoChanges, int dynamicChanges, int articulationChanges,
 			int highNote, int lowNote, double highDuration, double lowDuration, int highInterval,
-			int lowInterval, int worstMeasureNumber, double worstMeasureValue) {
+			int lowInterval, int worstMeasureNumber, double worstMeasureValue, double noteScore,
+			double intervalScore) {
 		
 		overallScore = totalScoreValue;
 		this.name = name;
@@ -65,6 +69,9 @@ public class ComplexityScore {
 		this.worstMeasureNumber = worstMeasureNumber;
 		this.worstMeasureValue = worstMeasureValue;
 		
+		totalNoteComplexity = noteScore;
+		totalIntervalComplexity = intervalScore;
+		
 		otherFieldsSet = true;
 	}
 	
@@ -82,6 +89,14 @@ public class ComplexityScore {
 	
 	public double getMostDifficultyMeasureValue() {
 		return worstMeasureValue;
+	}
+	
+	public double getTotalNoteScore() {
+		return totalNoteComplexity;
+	}
+	
+	public double getTotalIntervalScore() {
+		return totalIntervalComplexity;
 	}
 	
 	public void statusReport() {

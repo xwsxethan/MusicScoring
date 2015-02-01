@@ -77,6 +77,9 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	private int worstMeasureNumber;
 	private double worstMeasureValue;
 	private double currentMeasureValue; 
+	
+	private double noteTotal;
+	private double intervalTotal;
 
  	public NoteComplexityVisitor(File xmlFile, DifficultyLevel difficulty) {
 		allScores = new ArrayList<ComplexityScore>();
@@ -135,6 +138,9 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		worstMeasureNumber = 0;
 		worstMeasureValue = 0.0;
 		currentMeasureValue = 0.0;
+		
+		noteTotal = 0.0;
+		intervalTotal = 0.0;
 		
 		//parser = new ParserElementVisitor();
 	}
@@ -228,6 +234,8 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		double tempoPortion = diffs.getTempoDifficulty(totalDuration, noteCount);
 		double totalCurrentScore = currentScore * tempoPortion;
 		double totalWorstMeasureScore = (worstMeasureValue == 0 ? worstMeasureValue : worstMeasureValue * tempoPortion);
+		double tempNote = (noteTotal == 0.0 ? noteTotal : noteTotal * tempoPortion);
+		double tempInterval = (intervalTotal == 0.0 ? intervalTotal : intervalTotal * tempoPortion);
 
 		//System.out.println("Current Score without tempo: " + currentScore);
 		//System.out.println("Tempo Multiplier: " + tempoPortion);
@@ -240,7 +248,8 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 				((keyChanges - 1) == -1 ? 0 : (keyChanges - 1)), ((timeChanges - 1) == -1 ? 0 : (timeChanges - 1)),
 				((tempoChanges - 1) == -1 ? 0 : (tempoChanges - 1)), ((dynamicChanges - 1) == -1 ? 0 : (dynamicChanges - 1)),
 				((articulationChanges - 1) == -1 ? 0 : (articulationChanges - 1)), highNote, lowNote, highDuration,
-				lowDuration, highInterval, lowInterval, worstMeasureNumber, totalWorstMeasureScore);
+				lowDuration, highInterval, lowInterval, worstMeasureNumber, totalWorstMeasureScore, tempNote,
+				tempInterval);
 		
 		allScores.add(partWithScore);
 		
@@ -669,6 +678,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		//System.out.println("Note: " + diffs.getNoteDifficulty(noteNum) + "\t");
 		
 		double noteTotal = diffs.getNoteDifficulty(noteNum) * dynamicMult * keyMult * articulationsMult;
+		this.noteTotal += noteTotal;
 		currentScore += noteTotal;
 		//System.out.println("Current Score: " + currentScore + "\tNote total: " + noteTotal);
 		
@@ -699,6 +709,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 
 			double intervalTotal = diffs.getIntervalDifficulty(lastNote, noteNum, currentKey) * dynamicMult * keyMult * articulationsMult;
 			//System.out.println("Interval: " + diffs.getIntervalDifficulty(lastNote, noteNum, currentKey));
+			this.intervalTotal += intervalTotal;
 			currentScore += intervalTotal;
 			//System.out.println("Current Score: " + currentScore + "\tInterval total: " + intervalTotal);
 			
@@ -750,8 +761,9 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		int amountOfScores = 0;
 		for (ComplexityScore score : allScores) {
 			System.out.print("Part Name: " + score.getName());
-			System.out.print("\tOverall Score: " + score.getOverallScore());
-			System.out.println("\tWorst Measure is number " + score.getMostDifficultMeasureNumber() + " with value " +
+			System.out.println("\tOverall Score: " + score.getOverallScore());
+			System.out.println("Note Score: " + score.getTotalNoteScore() + "\tInterval Score : " + score.getTotalIntervalScore());
+			System.out.println("Worst Measure is number " + score.getMostDifficultMeasureNumber() + " with value " +
 					score.getMostDifficultyMeasureValue());
 			totalScore += score.getOverallScore();
 			amountOfScores++;
