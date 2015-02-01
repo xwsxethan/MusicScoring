@@ -44,41 +44,43 @@ public class Interval {
 				return true;
 			}
 			
-			boolean onKey = Utils.onKey(key, low);
-			if (onKey == Utils.onKey(key, high)) {
+			boolean onKeyLow = Utils.onKey(key, low);
+			boolean onKeyHigh = Utils.onKey(key, high);
+			if (onKeyLow != onKeyHigh) {
 				//Both can be on or off key, but must match. Otherwise, it will be a minor interval.
-				int extra = 0;
-				if (!onKey) {
-					extra = 1;
-				}
-				
-				int newLow = low + extra;
-				int newHigh = high + extra;
-				
-				if (!Utils.onKey(key, newLow) || !Utils.onKey(key, newHigh)) {
-					System.out.println("ERROR: Something weird happen. Need to investigate.");
-					return false;
-				}
-				
-				int actualDistance = traditionalIntervalNotation - 1;
-				boolean greater = false;
-				if (traditionalIntervalNotation < 0) {
-					greater = true;
-					actualDistance = Math.abs(traditionalIntervalNotation) - 1;
-				}
-				
-				
-				for (int i = 0; i < actualDistance; i++) {
-					newLow = Utils.nextScaledNote(key, newLow);
-				}
-				
-				newLow = newLow - extra;
-				newHigh = newHigh - extra;
-				
-				return (greater ? newHigh > newLow : newLow == newHigh);
+				//If it is minor, then decrement the lower to make it match a wider interval as necessary.
+				low--;
 			}
 			
-			return false;
+			int extra = 0;
+			if (!onKeyHigh) {
+				extra = 1;
+			}
+			
+			int newLow = low + extra;
+			int newHigh = high + extra;
+			
+			if (!Utils.onKey(key, newLow) || !Utils.onKey(key, newHigh)) {
+				System.out.println("ERROR: Something weird happen. Need to investigate.");
+				return false;
+			}
+			
+			int actualDistance = traditionalIntervalNotation - 1;
+			boolean greater = false;
+			if (traditionalIntervalNotation < 0) {
+				greater = true;
+				actualDistance = Math.abs(traditionalIntervalNotation) - 1;
+			}
+			
+			
+			for (int i = 0; i < actualDistance; i++) {
+				newLow = Utils.nextScaledNote(key, newLow);
+			}
+			
+			newLow = newLow - extra;
+			newHigh = newHigh - extra;
+			
+			return (greater ? newHigh > newLow : newLow == newHigh);
 		}
 		else {
 			return false;

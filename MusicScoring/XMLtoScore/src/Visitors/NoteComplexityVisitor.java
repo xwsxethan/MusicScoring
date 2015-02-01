@@ -211,7 +211,9 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		while (measures != null && currentMeasure < measureCount) {
 			Measure measure = new Measure(measures.item(currentMeasure));
 			measure.accept(this);
-			tempoByMeasure.put(currentMeasure, tempo);
+			if (tempoByMeasure.get(currentMeasure) == null) {
+				tempoByMeasure.put(currentMeasure, tempo);
+			}
 		}
 		
 		double tempoPortion = diffs.getTempoDifficulty(totalDuration, noteCount);
