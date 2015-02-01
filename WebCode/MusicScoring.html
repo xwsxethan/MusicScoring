@@ -25,9 +25,13 @@
 		<style type="text/css"></style>
 		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+
+		<link href="css/jquery.dataTables.min.css" rel="stylesheet">
+		<script src="js/jquery.dataTables.min.js"></script>
 	</head>
 	<body>
 		<script>
+			var complexityOutput;
 			$(document).on('ready', function(){
 				$.ajax({
 					context: this,
@@ -39,7 +43,7 @@
 				});
 				updateActiveListener();
 			});
-			$(document).on('click', '#HobbitRunner', function () {
+			$(document).on('click', '#ComplexityRunner', function () {
 				var fileName = getRealMusicPieceName();
 				//Need some code here to execute the jar file with the specified parameters.
 				$.ajax({
@@ -47,7 +51,35 @@
 					url : "backend.php",
 					data : {xmlName:fileName},
 					success : function(results) {
-						$('#resultholder').text(results);
+						complexityOutput = $.parseJSON(results);
+						$('#resultholder').html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="retrievedData"></table>' );
+						
+						var table = $('#retrievedData').DataTable({
+					        "columns": [
+					            { "title": "Instrument Name" },
+					            { "title": "Score" },
+					            { "title": "Toughest Measure Number" },
+					            { "title": "Toughest Measure Score" },
+					            { "title": "Note Score" },
+					            { "title": "Interval Score" }
+					        ]
+					    } );
+
+						var i = 0;
+					    for (; i < complexityOutput.length; i++) {
+					    	var item = complexityOutput[i];
+					    	table.row.add( [
+					            item.partName,
+					            item.overallScore,
+					            item.worstMeasureNumber,
+					            item.worstMeasureValue,
+					            item.noteTotal,
+					            item.intervalTotal
+					        ] ).draw();
+					    }
+
+
+						//$('#resultholder').text(results);
 					},
 					error : function(something) {
 						alert("There was a problem. Please try again or contact the Music Scoring team.");
@@ -82,6 +114,9 @@
 					case 'C Major Scale' :
 						toReturn = "CMajorKey.xml";
 						break;
+					case 'Actor Prelude' :
+						toReturn = "ActorPreludeSample.xml";
+						break;
 					default :
 						toReturn = "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet.xml";
 						break;
@@ -102,13 +137,14 @@
 				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 					<li role="presentation" id="hobbit" class="musicpiece active"><a role="menuitem" tabindex="-1" href="#">The Hobbit for Clarinet</a></li>
 					<li role="presentation" id="cmajor" class="musicpiece"><a role="menuitem" tabindex="-1" href="#">C Major Scale</a></li>
+					<li role="presentation" id="actorprelude" class="musicpiece"><a role="menuitem" tabindex="-1" href="#">Actor Prelude</a></li>
 				</ul>
 			</div></p>
 			<p>Selected Piece: <div id="selectedholder">
 				...		
 			</div></p>
 			<p>Output: <div id="resultholder">...</div></p>
-			<button type="button" id="HobbitRunner" class="btn btn-primary">Run Backend Code</button>
+			<button type="button" id="ComplexityRunner" class="btn btn-primary">Run Backend Code</button>
 		</div>
 		
 		<script src="js/docs.min.js"/>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project XMLtoScore">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/Users/ethanholder/Dropbox/Public/College/2015-01 Spring/OS X Thesis/MusicScoring/MusicScoring/Executables/MusicScoring.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="Main.Main"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="/Users/ethanholder/Dropbox/Public/College/2015-01 Spring/OS X Thesis/MusicScoring/MusicScoring/XMLtoScore/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/ethanholder/Dropbox/Public/College/2015-01 Spring/OS X Thesis/MusicScoring/MusicScoring/XMLtoScore/jars/json-simple-1.1.1.jar"/>
+        </jar>
+    </target>
+</project>

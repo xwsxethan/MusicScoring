@@ -83,11 +83,15 @@ public class ComplexityScore {
 		return name;
 	}
 	
+	public boolean getOtherFieldsSet() {
+		return otherFieldsSet;
+	}
+	
 	public int getMostDifficultMeasureNumber() {
 		return worstMeasureNumber;
 	}
 	
-	public double getMostDifficultyMeasureValue() {
+	public double getMostDifficultMeasureValue() {
 		return worstMeasureValue;
 	}
 	

@@ -1,6 +1,8 @@
 package Main;
 import java.io.File;
 
+import org.json.simple.JSONObject;
+
 import Clarinet.*;
 import DifficultyLevels.DifficultyLevel;
 
@@ -45,20 +47,27 @@ public class Main {
 			return;
 		}
 		
+		//Can no longer enable logging via command line since we're passing around json.
+		LOGGING = false;
+		
 		if (LOGGING) {
 			System.out.println("Logging enabled via command line. Now beginning parsing process.");
 		}
 		
 		Scorer letsGetSomeOutput = new Scorer(lev, xmlFile);
 
-		System.out.println("File: " + fullFileName);
-		System.out.println("Score: " + letsGetSomeOutput.getSetScore());
+		//System.out.println("File: " + fullFileName);
+		//System.out.println("Score: " + letsGetSomeOutput.getSetScore());
+		System.out.println(letsGetSomeOutput.getJsonString());
 		return;
 		
 	}
 	
+	@SuppressWarnings("unchecked")
 	private static void outputError() {
-		System.out.println("ERROR: No input file specified. Now quitting.");
+		JSONObject obj = new JSONObject();
+	    obj.put("errorMessage", "ERROR: No input file specified. Now quitting.");
+		System.out.println(obj.toString());
 	}
 
 	private static void attemptSetXml(String arg) {

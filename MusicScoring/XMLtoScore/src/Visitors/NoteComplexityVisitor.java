@@ -721,31 +721,8 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		}		
 	}
 
-	public double getFirstScore() {
-		double aScore;
-		try {
-			aScore = allScores.get(0).getOverallScore();
-		}
-		catch (IndexOutOfBoundsException e) {
-			aScore = currentScore * diffs.getTempoDifficulty(totalDuration, noteCount);
-		}
-		return aScore;		
-	}
-	
-	public double getScore(int partNum) {
-		double aScore;
-		try {
-			aScore = allScores.get(partNum).getOverallScore();
-		}
-		catch (IndexOutOfBoundsException e) {
-			aScore = 0.0;
-		}
-		
-		return aScore;
-	}
-	
-	public int getAmountOfScores() {
-		return allScores.size();
+	public List<ComplexityScore> getAllScores() {
+		return allScores;
 	}
 	
 	private int getCurrentTempo(int measureNumber) {
@@ -764,7 +741,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 			System.out.println("\tOverall Score: " + score.getOverallScore());
 			System.out.println("Note Score: " + score.getTotalNoteScore() + "\tInterval Score : " + score.getTotalIntervalScore());
 			System.out.println("Worst Measure is number " + score.getMostDifficultMeasureNumber() + " with value " +
-					score.getMostDifficultyMeasureValue());
+					score.getMostDifficultMeasureValue());
 			totalScore += score.getOverallScore();
 			amountOfScores++;
 		}
