@@ -26,6 +26,10 @@ public class Scorer {
 			System.out.println("Score Number " + i + " is: " + visitor.getScore(i));
 		}*/
 		
+		if (Main.LOGGING) {
+			visitor.statusReport();
+		}
+		
 	}
 	
 	public double getSetScore() {

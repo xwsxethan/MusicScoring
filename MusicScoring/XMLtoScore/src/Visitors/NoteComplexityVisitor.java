@@ -17,6 +17,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import DifficultyLevels.DifficultyLevel;
+import Main.ComplexityScore;
 import Main.Main;
 import MusicalElements.Articulation;
 import MusicalElements.Dynamic;
@@ -67,14 +68,18 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	private int articulationChanges;
 	
 	private double currentScore;
-	private List<Double> allScores;
+	private List<ComplexityScore> allScores;
 	private DifficultyReaderVisitor diffs;
 	
 	private boolean tied;
 	private double tieDuration;
+	
+	private int worstMeasureNumber;
+	private double worstMeasureValue;
+	private double currentMeasureValue; 
 
  	public NoteComplexityVisitor(File xmlFile, DifficultyLevel difficulty) {
-		allScores = new ArrayList<Double>();
+		allScores = new ArrayList<ComplexityScore>();
 		diffs = new DifficultyReaderVisitor(difficulty);
  		
 		initializeValues();
@@ -126,6 +131,10 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		
 		tied = false;
 		tieDuration = 0;
+		
+		worstMeasureNumber = 0;
+		worstMeasureValue = 0.0;
+		currentMeasureValue = 0.0;
 		
 		//parser = new ParserElementVisitor();
 	}
@@ -218,11 +227,22 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		
 		double tempoPortion = diffs.getTempoDifficulty(totalDuration, noteCount);
 		double totalCurrentScore = currentScore * tempoPortion;
+		double totalWorstMeasureScore = (worstMeasureValue == 0 ? worstMeasureValue : worstMeasureValue * tempoPortion);
 
 		//System.out.println("Current Score without tempo: " + currentScore);
 		//System.out.println("Tempo Multiplier: " + tempoPortion);
 		//System.out.println("Current Score with tempo: " + totalCurrentScore);
-		allScores.add((currentScore == 0 ? currentScore : totalCurrentScore));
+		
+		String tempName = "Haven't parsed names yet so this is the default value.";
+		
+		ComplexityScore partWithScore = new ComplexityScore((currentScore == 0 ? currentScore : totalCurrentScore),
+				tempName, realMeasures, noteCount, totalDuration, totalInterval, totalNoteChanges,
+				((keyChanges - 1) == -1 ? 0 : (keyChanges - 1)), ((timeChanges - 1) == -1 ? 0 : (timeChanges - 1)),
+				((tempoChanges - 1) == -1 ? 0 : (tempoChanges - 1)), ((dynamicChanges - 1) == -1 ? 0 : (dynamicChanges - 1)),
+				((articulationChanges - 1) == -1 ? 0 : (articulationChanges - 1)), highNote, lowNote, highDuration,
+				lowDuration, highInterval, lowInterval, worstMeasureNumber, totalWorstMeasureScore);
+		
+		allScores.add(partWithScore);
 		
 		return;
 	}
@@ -243,6 +263,8 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 			currentMeasure++;
 			return;
 		}
+		
+		double oldScore = currentScore;
 		
 		NodeList list = elem.getChildNodes();
 		
@@ -267,6 +289,12 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 				noteCount++;
 				new Note(elem).accept(this);
 			}
+		}
+		
+		currentMeasureValue = currentScore - oldScore;
+		if (currentMeasureValue > worstMeasureValue) {
+			worstMeasureValue = currentMeasureValue;
+			worstMeasureNumber = currentMeasure + 1;
 		}
 		
 		currentMeasure++;
@@ -685,7 +713,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	public double getFirstScore() {
 		double aScore;
 		try {
-			aScore = allScores.get(0).doubleValue();
+			aScore = allScores.get(0).getOverallScore();
 		}
 		catch (IndexOutOfBoundsException e) {
 			aScore = currentScore * diffs.getTempoDifficulty(totalDuration, noteCount);
@@ -694,15 +722,15 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	}
 	
 	public double getScore(int partNum) {
-		Double aScore;
+		double aScore;
 		try {
-			aScore = allScores.get(partNum);
+			aScore = allScores.get(partNum).getOverallScore();
 		}
 		catch (IndexOutOfBoundsException e) {
 			aScore = 0.0;
 		}
 		
-		return aScore.doubleValue();
+		return aScore;
 	}
 	
 	public int getAmountOfScores() {
@@ -718,33 +746,17 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	}
 	
 	public void statusReport() {
-		System.out.println("Current score: " + currentScore);
-		System.out.println("Total measures: " + realMeasures);
-		System.out.println("Total notes: " + noteCount);
-		System.out.println("Range: " + (highNote - lowNote) + " chromatic steps");
-		System.out.println("Average Note Duration: " + (totalDuration / noteCount) + " seconds (I think)");
-		System.out.println("Average Interval: " + (totalInterval / (noteCount - 1)) + " chromatic steps");
-		System.out.println("Total altered notes (key or accidental): " + totalNoteChanges);
-		System.out.println("Total key changes: " + ((keyChanges - 1) == -1 ? 0 : (keyChanges - 1)));
-		System.out.println("Total beats per measure changes: " + ((timeChanges - 1) == -1 ? 0 : (timeChanges - 1)));
-		System.out.println("Total tempo changes: " + ((tempoChanges - 1) == -1 ? 0 : (tempoChanges - 1)));
-		System.out.println("Total dynamic changes: " + ((dynamicChanges - 1) == -1 ? 0 : (dynamicChanges - 1)));
-		System.out.println("Total articulation changes: " + ((articulationChanges - 1) == -1 ? 0 : (articulationChanges - 1)));
-		if (Main.LOGGING) {
-			System.out.println("Total objects: " + measureCount);
-			System.out.println("High Note: " + highNote + " or " + Utils.numToNote(highNote));
-			System.out.println("Low Note: " + lowNote + " or " + Utils.numToNote(lowNote));
-			System.out.println("Total Note Duration: " + totalDuration + " seconds (I think)");
-			System.out.println("High Duration: " + highDuration + " seconds (I think)");
-			System.out.println("Low Duration: " + lowDuration + " seconds (I think)");
-			System.out.println("Total Interval: " + totalInterval + " chromatic steps");
-			System.out.println("High Interval: " + highInterval + " chromatic steps");
-			System.out.println("Low Interval: " + lowInterval + " chromatic steps");
-			System.out.println("Current Key: " + currentKey);
-			System.out.println("Current beats per measure: " + beatsPerMeasure);
-			System.out.println("Current tempo: " + tempo);
-			System.out.println("Current dynamics: " + dynamics.name());
-			System.out.println("Current articulations: " + articulations.name());
+		double totalScore = 0.0;
+		int amountOfScores = 0;
+		for (ComplexityScore score : allScores) {
+			System.out.print("Part Name: " + score.getName());
+			System.out.print("\tOverall Score: " + score.getOverallScore());
+			System.out.println("\tWorst Measure is number " + score.getMostDifficultMeasureNumber() + " with value " +
+					score.getMostDifficultyMeasureValue());
+			totalScore += score.getOverallScore();
+			amountOfScores++;
 		}
+		
+		System.out.println("Average Complexity for " + amountOfScores + " parts: " + (double)(totalScore / (double)amountOfScores));
 	}
 }
