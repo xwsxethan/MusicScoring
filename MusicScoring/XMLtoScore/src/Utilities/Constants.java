@@ -2,6 +2,10 @@ package Utilities;
 
 public class Constants {
 	public static final String SCORE_NODE = "score-partwise";
+	public static final String PART_LIST_NODE = "part-list";
+	public static final String SCORE_PART_NODE = "score-part";
+	public static final String PART_NAME_NODE = "part-name";
+	public static final String ID_ATTRIBUTE = "id";
 	public static final String PART_NODE = "part";
 	
 	public static final String MEASURE_NODE = "measure";

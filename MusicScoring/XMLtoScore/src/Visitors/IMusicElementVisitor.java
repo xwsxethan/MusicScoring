@@ -5,6 +5,12 @@ import Nodes.*;
 public interface IMusicElementVisitor {
 	public void visit(Score score);
 	
+	public void visit(PartList partList);
+	
+	public void visit(ScorePart scorePart);
+	
+	public void visit(PartName partName);
+	
 	public void visit(Part part);
 	
 	public void visit(Measure measure);

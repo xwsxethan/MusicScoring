@@ -80,10 +80,13 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	
 	private double noteTotal;
 	private double intervalTotal;
+	
+	private HashMap<String, String> partIdsToNames;
 
  	public NoteComplexityVisitor(File xmlFile, DifficultyLevel difficulty) {
 		allScores = new ArrayList<ComplexityScore>();
 		diffs = new DifficultyReaderVisitor(difficulty);
+		partIdsToNames = new HashMap<String, String>();
  		
 		initializeValues();
 		
@@ -202,6 +205,10 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 				Part part = new Part(elem);
 				part.accept(this);
 			}
+			else if (name.equalsIgnoreCase(Constants.PART_LIST_NODE)) {
+				PartList partList = new PartList(elem);
+				partList.accept(this);
+			}
 		}
 		
 		if (!foundAPart) {
@@ -209,6 +216,44 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 			return;
 		}
 		
+	}
+	
+	@Override
+	public void visit(PartList partList) {
+		NodeList separateParts = partList.getBase().getChildNodes();
+		for (int k = 0; k < separateParts.getLength(); k++) {
+			Node aPart = separateParts.item(k);
+			String partElemName = aPart.getNodeName().trim();
+			if (partElemName.equalsIgnoreCase(Constants.SCORE_PART_NODE)) {
+				ScorePart scorePart = new ScorePart(aPart);
+				scorePart.accept(this);
+			}
+		}
+	}
+	
+	@Override
+	public void visit(ScorePart scorePart) {
+		Node base = scorePart.getBase();
+		if (base.hasAttributes()) {
+			Node id = base.getAttributes().getNamedItem(Constants.ID_ATTRIBUTE);
+			if (id != null) {
+				String name = id.getTextContent();
+				NodeList children = base.getChildNodes();
+				for (int k = 0; k < children.getLength(); k++) {
+					Node partAttribute = children.item(k);
+					String partAttributeName = partAttribute.getNodeName().trim();
+					if (partAttributeName.equalsIgnoreCase(Constants.PART_NAME_NODE)) {
+						PartName partName = new PartName(partAttribute, name);
+						partName.accept(this);
+					}
+				}
+			}
+		}
+	}
+	
+	@Override
+	public void visit(PartName partName) {
+		partIdsToNames.put(partName.getName(), partName.getBase().getTextContent().trim().toLowerCase());
 	}
 
 	@Override
@@ -242,6 +287,13 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		//System.out.println("Current Score with tempo: " + totalCurrentScore);
 		
 		String tempName = "Haven't parsed names yet so this is the default value.";
+		
+		if (part.getBase().hasAttributes()) {
+			Node id = part.getBase().getAttributes().getNamedItem(Constants.ID_ATTRIBUTE);
+			if (id != null) {
+				tempName = partIdsToNames.get(id.getTextContent());
+			}
+		}
 		
 		ComplexityScore partWithScore = new ComplexityScore((currentScore == 0 ? currentScore : totalCurrentScore),
 				tempName, realMeasures, noteCount, totalDuration, totalInterval, totalNoteChanges,
