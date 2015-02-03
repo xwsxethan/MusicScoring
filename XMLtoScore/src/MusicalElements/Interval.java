@@ -1,4 +1,5 @@
 package MusicalElements;
+import Main.Main;
 import Utilities.Utils;
 
 
@@ -61,7 +62,9 @@ public class Interval {
 			int newHigh = high + extra;
 			
 			if (!Utils.onKey(key, newLow) || !Utils.onKey(key, newHigh)) {
-				System.out.println("ERROR: Something weird happen. Need to investigate.");
+				if (Main.LOGGING) {
+					System.out.println("ERROR: Something weird happen. Need to investigate.");
+				}
 				return false;
 			}
 			

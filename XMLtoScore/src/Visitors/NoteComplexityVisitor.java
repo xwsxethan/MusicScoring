@@ -156,8 +156,10 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 			builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			toRead = builder.parse(xmlToParse);
 		} catch (ParserConfigurationException | SAXException | IOException e) {
-			System.out.println("ERROR: Couldn't open the xml file to read. Possibly an incorrect name.");
-			e.printStackTrace();
+			if (Main.LOGGING) {
+				System.out.println("ERROR: Couldn't open the xml file to read. Possibly an incorrect name.");
+				e.printStackTrace();
+			}
 			return null;
 		}		
 		
@@ -180,7 +182,9 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		}
 		
 		if (elem == null || scoreCount != SCORE_REQUIRED) {
-			System.out.println("ERROR: Couldn't find the score in the xml.");
+			if (Main.LOGGING) {
+				System.out.println("ERROR: Couldn't find the score in the xml.");
+			}
 			return;
 		}
 		
@@ -212,7 +216,9 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		}
 		
 		if (!foundAPart) {
-			System.out.println("ERROR: Couldn't find the first part in the xml.");
+			if (Main.LOGGING) {
+				System.out.println("ERROR: Couldn't find the first part in the xml.");
+			}
 			return;
 		}
 		
@@ -264,7 +270,9 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		realMeasures = measures.getLength();
 		
 		if (!(measures != null && currentMeasure < measureCount)) {
-			System.out.println("ERROR: No measures to parse in the xml.");
+			if (Main.LOGGING) {
+				System.out.println("ERROR: No measures to parse in the xml.");
+			}
 			return;
 		}
 		
@@ -313,7 +321,9 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		Node elem = measure.getBase();
 		
 		if (elem == null) {
-			System.out.println("ERROR: A node turned up null for some reason. Stopping.");
+			if (Main.LOGGING) {
+				System.out.println("ERROR: A node turned up null for some reason. Stopping.");
+			}
 			measures = null;
 			return;
 		}
@@ -643,7 +653,9 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	@Override
 	public void visit(Notations notations) {
 		if (notations.getBase() == null) {
-			System.out.println("ERROR: Notations node was null.");
+			if (Main.LOGGING) {
+				System.out.println("ERROR: Notations node was null.");
+			}
 			return;
 		}
 		

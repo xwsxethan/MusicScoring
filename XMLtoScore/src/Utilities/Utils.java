@@ -5,6 +5,7 @@ import java.util.List;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import Main.Main;
 import MusicalElements.*;
 
 
@@ -49,7 +50,9 @@ public class Utils {
 			try {
 				base = Constants.NOTES_IN_OCTAVE*Integer.parseInt(octave);
 			} catch (NumberFormatException e) {
-				System.out.println("ERROR: Note octave not formatted correctly.");
+				if (Main.LOGGING) {
+					System.out.println("ERROR: Note octave not formatted correctly.");
+				}
 				base = 0;
 			}
 		}
@@ -63,7 +66,9 @@ public class Utils {
 				base = base + changeAmount;
 				alteration = changeAmount;
 			} catch (NumberFormatException e) {
-				System.out.println("ERROR: Note alter not formatted correctly.");
+				if (Main.LOGGING) {
+					System.out.println("ERROR: Note alter not formatted correctly.");
+				}
 			}
 		}
 		
@@ -363,7 +368,9 @@ public class Utils {
 
 	public static int nextScaledNote(int key, int note) {
 		if (!onKey(key, note)) {
-			System.out.println("ERROR: Note not on key. Unclear how to proceed. Returning original note.");
+			if (Main.LOGGING) {
+				System.out.println("ERROR: Note not on key. Unclear how to proceed. Returning original note.");
+			}
 			return note;
 		}
 		
@@ -382,7 +389,9 @@ public class Utils {
 		case 11 :
 			return note + 1;
 		default :
-			System.out.println("ERROR: Note not on key. Unclear how to proceed. Returning original note.");
+			if (Main.LOGGING) {
+				System.out.println("ERROR: Note not on key. Unclear how to proceed. Returning original note.");
+			}
 			return note;
 		}
 	}
@@ -391,7 +400,9 @@ public class Utils {
 		List<Node> elems = new ArrayList<Node>();
 		
 		if (base == null) {
-			System.out.println("ERROR: Base node to scan was null.");
+			if (Main.LOGGING) {
+				System.out.println("ERROR: Base node to scan was null.");
+			}
 			return elems;
 		}
 		
@@ -409,7 +420,9 @@ public class Utils {
 		}
 		
 		if (!foundElems) {
-			System.out.println("ERROR: Couldn't find any element named " + toMatch + " in the xml.");
+			if (Main.LOGGING) {
+				System.out.println("ERROR: Couldn't find any element named " + toMatch + " in the xml.");
+			}
 		}
 
 		return elems;

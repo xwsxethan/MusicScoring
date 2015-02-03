@@ -1,6 +1,5 @@
 package Visitors;
 
-import Main.*;
 import DifficultyNodes.*;
 
 import java.io.IOException;
@@ -18,26 +17,20 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import DifficultyLevels.DifficultyLevel;
+import Main.*;
 import MusicalElements.*;
 import Utilities.*;
 
-public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
+public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 	
 	private DifficultyLevel level;
 	
 	private static final int DEFAULT_NOTE_DIFFICULTY = 10;
 	private static final int DEFAULT_INTERVAL_DIFFICULTY = 10;
-	private static final double DEFAULT_DYNAMIC_DIFFICULTY = 1.5;
-	private static final double DEFAULT_TEMPO_DIFFICULTY = 1;
 	private static final double DEFAULT_KEY_DIFFICULTY = 1;
-	private static final double DEFAULT_ARTICULATION_DIFFICULTY = 1.5;
 	
 	private HashMap<Integer, Integer> noteDifficulties;
 	private List<Interval> intervalDifficulties;
-	private HashMap<Dynamic, Double> dynamicDifficulties;
-	private Double tempoDifficulty;
-	private HashMap<Integer, Double> keyDifficulties;
-	private HashMap<Articulation, Double> articulationDifficulties;
 	
 	private int difference;
 	private int location1Low;
@@ -45,28 +38,22 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 	private int location2Low;
 	private int location2High;
 	private double tempDifficulty;
-	private int tempKey;
 
 	private boolean foundDifference;
 	private boolean foundLocation1;
 	private boolean foundLocation2;
 	private boolean foundDifficulty;
-	private boolean foundKey;
 	
 	private DefaultOutputTypes aType;
 	
 	
- 	public DifficultyReaderVisitor(DifficultyLevel lev) {
+ 	public DifficultyValidatorVisitor(DifficultyLevel lev) {
 		resetIntervalBooleans();
 		level = lev;
 		aType = DefaultOutputTypes.note;
 
 		noteDifficulties = new HashMap<Integer, Integer>();
 		intervalDifficulties = new ArrayList<Interval>();
-		dynamicDifficulties = new HashMap<Dynamic, Double>();
-		tempoDifficulty = 1.0;
-		keyDifficulties = new HashMap<Integer, Double>();
-		articulationDifficulties = new HashMap<Articulation, Double>();
 
 		start();
 	}
@@ -76,7 +63,6 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 		foundLocation1 = false;
 		foundLocation2 = false;
 		foundDifficulty = false;
-		foundKey = false;
 	}
 	
 	private void start() {
@@ -115,6 +101,7 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 		levels.accept(this);
 	}
 		
+	/*
 	public int getNoteDifficulty(int noteNum) {
 		Integer output = noteDifficulties.get(noteNum);
 		if (output == null) {
@@ -184,6 +171,8 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 			return output.doubleValue();
 		}
 	}
+	
+	*/
 	
 	@Override
 	public void visit(Levels levels) {
@@ -523,171 +512,32 @@ public class DifficultyReaderVisitor implements IDifficultyElementVisitor {
 	
 	@Override
 	public void visit(DynamicsDifficulty dynamicsDifficulty) {
-		NodeList children = dynamicsDifficulty.getBase().getChildNodes();
-		
-		if (children == null || children.getLength() == 0) {
-			return;
-		}
-		
-		Node elem = null;
-		for (int i = 0; i < children.getLength(); i++) {
-			elem = children.item(i);
-			
-			if (elem == null) {
-				continue;
-			}
-			
-			String name = elem.getNodeName().trim().toLowerCase();
-			if (name.equals(Constants.HASH_TEXT_IN_XML)) {
-				continue;
-			}
-			
-			Dynamic output = Utils.stringToDynamic(name);
-			
-			if (output == Dynamic.ERROR) {
-				if (Main.LOGGING) {
-					System.out.println("ERROR: Could not parse the specified dynamic level. Skipping.");
-				}
-				continue;
-			}
-			
-			String value = elem.getTextContent().trim().toLowerCase();
-			
-			try {
-				double difficultyMultiplier = Double.parseDouble(value);
-				//System.out.println("Dynamic difficulty: " + output + "\t" + difficultyMultiplier);
-				dynamicDifficulties.put(output, difficultyMultiplier);
-			}
-			catch (NumberFormatException e) {
-				if (Main.LOGGING) {
-					System.out.println("ERROR: Could not parse the specified difficulty for the dynamic level. Skipping.");
-				}
-			}
-		}
+		return;
 	}
 
 	@Override
 	public void visit(TempoDifficulty tempoDifficultyNode) {
-		String diff = tempoDifficultyNode.getBase().getTextContent().trim().toLowerCase();
-		
-		try { 
-			tempoDifficulty = Double.parseDouble(diff);
-		}
-		catch (NumberFormatException e) {
-			tempoDifficulty = DEFAULT_TEMPO_DIFFICULTY;
-		}
+		return;
 	}
 
 	@Override
 	public void visit(KeySignatureDifficulty keySignatureDifficulty) {
-		NodeList keysigs = keySignatureDifficulty.getBase().getChildNodes();
-		
-		if (keysigs == null || keysigs.getLength() == 0) {
-			return;
-		}
-		
-		Node elem = null;
-		for (int i = 0; i < keysigs.getLength(); i++) {
-			elem = keysigs.item(i);
-			if (elem == null || !elem.getNodeName().equalsIgnoreCase(Constants.DIFFICULTY_INDIVIDUAL_KEY_SIGNATURE_NAME)) {
-				continue;
-			}
-			
-			IndividualKeySignatureDifficulty keysig = new IndividualKeySignatureDifficulty(elem);
-			keysig.accept(this);
-		}
+		return;
 	}
 
 	@Override
 	public void visit(IndividualKeySignatureDifficulty individualKeySignatureDifficulty) {
-		NodeList elems = individualKeySignatureDifficulty.getBase().getChildNodes();
-		
-		if (elems == null || elems.getLength() == 0) {
-			return;
-		}
-		
-		Node elem = null;
-		resetIntervalBooleans();
-		aType = DefaultOutputTypes.key;
-		
-		for (int i = 0; i < elems.getLength(); i++) {
-			elem = elems.item(i);
-			if (elem == null) {
-				continue;
-			}
-			
-			String name = elem.getNodeName().trim().toLowerCase();
-			
-			switch (name) {
-			case (Constants.DIFFICULTY_KEY_NAME) :
-				KeyNameDifficulty key = new KeyNameDifficulty(elem);
-				key.accept(this);
-				foundKey = true;
-				break;
-			case (Constants.DIFFICULTY_NAME) :
-				Difficulty difficulty = new Difficulty(elem);
-				difficulty.accept(this);
-				foundDifficulty = true;
-				break;
-			default :
-					break;
-			}
-		}
-		
-		if (foundKey && foundDifficulty) {
-			//System.out.println("Key sig difficulty: " + tempKey + "\t" + tempDifficulty);
-			keyDifficulties.put(tempKey, tempDifficulty);
-		}
-		else {
-			if (Main.LOGGING) {
-				System.out.println("ERROR: Not all key difficulty parameters specified. Ignoring.");
-			}
-		}
+		return;
 	}
 	
 	@Override
 	public void visit(KeyNameDifficulty keyNameDifficulty) {
-		String value = keyNameDifficulty.getBase().getTextContent().trim().toLowerCase();
-		
-		tempKey = Utils.namedKeyToNum(value);
+		return;
 	}
 
 	@Override
 	public void visit(ArticulationDifficulty articulationDifficulty) {
-		NodeList children = articulationDifficulty.getBase().getChildNodes();
-		
-		if (children == null || children.getLength() == 0) {
-			return;
-		}
-		
-		Node elem = null;
-		for (int i = 0; i < children.getLength(); i++) {
-			elem = children.item(i);
-			
-			if (elem == null) {
-				continue;
-			}
-			
-			String name = elem.getNodeName().trim().toLowerCase();	
-			if (name.equals(Constants.HASH_TEXT_IN_XML)) {
-				continue;
-			}
-			
-			Articulation output = Utils.stringToArticulation(name);
-			
-			String value = elem.getTextContent().trim().toLowerCase();
-			
-			try {
-				double difficultyMultiplier = Double.parseDouble(value);
-				//System.out.println("Articulation difficulty: " + output + "\t" + difficultyMultiplier);
-				articulationDifficulties.put(output, difficultyMultiplier);
-			}
-			catch (NumberFormatException e) {
-				if (Main.LOGGING) {
-					System.out.println("ERROR: Could not parse the specified difficulty for the articulation. Skipping.");
-				}
-			}
-		}
+		return;
 	}
 
 	
