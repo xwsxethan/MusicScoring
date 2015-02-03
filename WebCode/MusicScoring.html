@@ -106,19 +106,19 @@
 
 			function getRealMusicPieceName() {
 				var htmlName = getActiveMusicPiece();
-				var toReturn;
+				var toReturn = "MusicXMLs/";
 				switch(htmlName) {
 					case 'The Hobbit for Clarinet' :
-						toReturn = "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet.xml";
+						toReturn += "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet.xml";
 						break;
 					case 'C Major Scale' :
-						toReturn = "CMajorKey.xml";
+						toReturn += "CMajorKey.xml";
 						break;
 					case 'Actor Prelude' :
-						toReturn = "ActorPreludeSample.xml";
+						toReturn += "ActorPreludeSample.xml";
 						break;
 					default :
-						toReturn = "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet.xml";
+						toReturn += "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet.xml";
 						break;
 				}
 

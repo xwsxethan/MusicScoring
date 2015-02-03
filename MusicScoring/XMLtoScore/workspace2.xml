@@ -3,7 +3,7 @@
     <!--this file was created by Eclipse Runnable JAR Export Wizard-->
     <!--ANT 1.7 is required                                        -->
     <target name="create_run_jar">
-        <jar destfile="/Users/ethanholder/Dropbox/Public/College/2015-01 Spring/OS X Thesis/MusicScoring/MusicScoring/Executables/MusicScoring.jar" filesetmanifest="mergewithoutmain">
+        <jar destfile="/Users/ethanholder/Dropbox/Public/College/2015-01 Spring/OS X Thesis/MusicScoring/WebCode/MusicScoring.jar" filesetmanifest="mergewithoutmain">
             <manifest>
                 <attribute name="Main-Class" value="Main.Main"/>
                 <attribute name="Class-Path" value="."/>
