@@ -22,7 +22,37 @@
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<style type="text/css"></style>
+		<style type="text/css">
+			path {  stroke: #fff; }
+			path:hover {  opacity:0.9; }
+			rect:hover {  fill:blue; }
+			.axis {  font: 10px sans-serif; }
+			.legend tr{    border-bottom:1px solid grey; }
+			.legend tr:first-child{    border-top:1px solid grey; }
+
+			.axis path,
+			.axis line {
+			  fill: none;
+			  stroke: #000;
+			  shape-rendering: crispEdges;
+			}
+
+			.x.axis path {  display: none; }
+			.legend{
+			    margin-bottom:76px;
+			    display:inline-block;
+			    border-collapse: collapse;
+			    border-spacing: 0px;
+			}
+			.legend td{
+			    padding:4px 5px;
+			    vertical-align:bottom;
+			}
+			.legendFreq, .legendPerc{
+			    align:right;
+			    width:50px;
+			}
+		</style>
 		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 
@@ -30,106 +60,8 @@
 		<script src="js/jquery.dataTables.min.js"></script>
 	</head>
 	<body>
-		<script>
-			var complexityOutput;
-			$(document).on('ready', function(){
-				$.ajax({
-					context: this,
-					dataType : "html",
-					url : "navbar.htm",
-					success : function(results) {
-						$('#navholder').html(results);
-					}
-				});
-				updateActiveListener();
-			});
-			$(document).on('click', '#ComplexityRunner', function () {
-				var fileName = "MusicXMLs/" + getRealMusicPieceName() + ".xml";
-				//Need some code here to execute the jar file with the specified parameters.
-				$.ajax({
-					type : "POST",
-					url : "backend.php",
-					data : {xmlName:fileName},
-					success : function(results) {
-						complexityOutput = $.parseJSON(results);
-						//$('#noResultsTemp').html('');
-						$('#resultholder').html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="retrievedData"></table>' );
-						
-						var table = $('#retrievedData').DataTable({
-					        "columns": [
-					            { "title": "Instrument Name" },
-					            { "title": "Score" },
-					            { "title": "Toughest Measure Number" },
-					            { "title": "Toughest Measure Score" },
-					            { "title": "Note Score" },
-					            { "title": "Interval Score" }
-					        ]
-					    } );
-
-						var i = 0;
-					    for (; i < complexityOutput.length; i++) {
-					    	var item = complexityOutput[i];
-					    	table.row.add( [
-					            item.partName,
-					            item.overallScore,
-					            item.worstMeasureNumber,
-					            item.worstMeasureValue,
-					            item.noteTotal,
-					            item.intervalTotal
-					        ] ).draw();
-					    }
-
-
-						//$('#resultholder').text(results);
-					},
-					error : function(something) {
-						alert("There was a problem. Please try again or contact the Music Scoring team.");
-					}
-				});
-			});
-			$(document).on('click', '#PDFVersion', function () {
-				var fileName = "MusicPDFs/" + getRealMusicPieceName() + ".pdf";
-				window.location.href = fileName;
-			});
-			$(function() {
-				$(".musicpiece").click(function() {
-			    	// remove classes from all
-			    	$(".musicpiece").removeClass("active");
-			    	// add class to the one we clicked
-			    	$(this).addClass("active");
-			    	updateActiveListener();
-				});
-			});
-
-			function updateActiveListener() {
-				$("#selectedholder").text(getActiveMusicPiece());				
-			}
-
-			function getActiveMusicPiece() {
-				return $(".musicpiece.active").children()[0].text;
-			}
-
-			function getRealMusicPieceName() {
-				var htmlName = getActiveMusicPiece();
-				var toReturn = "";
-				switch(htmlName) {
-					case 'The Hobbit for Clarinet' :
-						toReturn += "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet";
-						break;
-					case 'C Major Scale' :
-						toReturn += "CMajorKey";
-						break;
-					case 'Actor Prelude' :
-						toReturn += "ActorPreludeSample";
-						break;
-					default :
-						toReturn += "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet";
-						break;
-				}
-
-				return toReturn;
-			}
-		</script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="js/MusicScoring.js"></script>
 		
 		<div id="navholder"></div>
 		<div class="jumbotron">
@@ -177,6 +109,19 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div id="resultholder">
+							<table cellpadding="0" cellspacing="0" border="0" class="display" id="retrievedData"></table>
+							
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8">
+						<div id="dashboardholder">
+							
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div id="pieholder">
 							
 						</div>
 					</div>
