@@ -44,7 +44,7 @@
 				updateActiveListener();
 			});
 			$(document).on('click', '#ComplexityRunner', function () {
-				var fileName = getRealMusicPieceName();
+				var fileName = "MusicXMLs/" + getRealMusicPieceName() + ".xml";
 				//Need some code here to execute the jar file with the specified parameters.
 				$.ajax({
 					type : "POST",
@@ -52,6 +52,7 @@
 					data : {xmlName:fileName},
 					success : function(results) {
 						complexityOutput = $.parseJSON(results);
+						//$('#noResultsTemp').html('');
 						$('#resultholder').html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="retrievedData"></table>' );
 						
 						var table = $('#retrievedData').DataTable({
@@ -86,6 +87,10 @@
 					}
 				});
 			});
+			$(document).on('click', '#PDFVersion', function () {
+				var fileName = "MusicPDFs/" + getRealMusicPieceName() + ".pdf";
+				window.location.href = fileName;
+			});
 			$(function() {
 				$(".musicpiece").click(function() {
 			    	// remove classes from all
@@ -106,19 +111,19 @@
 
 			function getRealMusicPieceName() {
 				var htmlName = getActiveMusicPiece();
-				var toReturn = "MusicXMLs/";
+				var toReturn = "";
 				switch(htmlName) {
 					case 'The Hobbit for Clarinet' :
-						toReturn += "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet.xml";
+						toReturn += "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet";
 						break;
 					case 'C Major Scale' :
-						toReturn += "CMajorKey.xml";
+						toReturn += "CMajorKey";
 						break;
 					case 'Actor Prelude' :
-						toReturn += "ActorPreludeSample.xml";
+						toReturn += "ActorPreludeSample";
 						break;
 					default :
-						toReturn += "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet.xml";
+						toReturn += "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet";
 						break;
 				}
 
@@ -128,23 +133,55 @@
 		
 		<div id="navholder"></div>
 		<div class="jumbotron">
-			<h1>Music Scoring</h1>
-		  	<p><div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-					Select a Piece to Score
-					<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-					<li role="presentation" id="hobbit" class="musicpiece active"><a role="menuitem" tabindex="-1" href="#">The Hobbit for Clarinet</a></li>
-					<li role="presentation" id="cmajor" class="musicpiece"><a role="menuitem" tabindex="-1" href="#">C Major Scale</a></li>
-					<li role="presentation" id="actorprelude" class="musicpiece"><a role="menuitem" tabindex="-1" href="#">Actor Prelude</a></li>
-				</ul>
-			</div></p>
-			<p>Selected Piece: <div id="selectedholder">
-				...		
-			</div></p>
-			<p>Output: <div id="resultholder">...</div></p>
-			<button type="button" id="ComplexityRunner" class="btn btn-primary">Run Backend Code</button>
+			<div class="container-fluid">
+				<div class="row"><h1>Music Scoring</h1></div>
+				<div class="row">
+				  	<p><div class="dropdown">
+						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+							Select a Piece to Score
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation" id="hobbit" class="musicpiece active"><a role="menuitem" tabindex="-1" href="#">The Hobbit for Clarinet</a></li>
+							<li role="presentation" id="cmajor" class="musicpiece"><a role="menuitem" tabindex="-1" href="#">C Major Scale</a></li>
+							<li role="presentation" id="actorprelude" class="musicpiece"><a role="menuitem" tabindex="-1" href="#">Actor Prelude</a></li>
+						</ul>
+					</div></p>
+				</div>
+				<div class="row">
+					<p>Selected Piece:</p>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div id="selectedholder">
+						...		
+						</div>
+					</div>
+					<div class="col-md-3">
+						<button type="button" id="PDFVersion" class="btn btn-success">PDF of Music Piece</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<button type="button" id="ComplexityRunner" class="btn btn-primary">Run Backend Code</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p></p>
+					</div>
+				</div>
+				<div class="row">
+					<p>Output:</p>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div id="resultholder">
+							
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		<script src="js/docs.min.js"/>
