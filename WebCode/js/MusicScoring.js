@@ -329,6 +329,7 @@ function dashboard(id, fData, histo, pie, legendBool){
     // function to handle legend.
     function legend(lD){
         var leg = {};
+        var stopForNan = false;
             
         // create table for legend.
         var legend = d3.select(id).append("table").attr('class','legend');
@@ -365,10 +366,25 @@ function dashboard(id, fData, histo, pie, legendBool){
         }
         
         function getLegend(d,aD){ // Utility function to compute percentage.
-            return d3.format("%")(d.total/d3.sum(aD.map(function(v){ return v.total; })));
+        	var percentage = d.total/d3.sum(aD.map(function(v){ return v.total; }));
+        	if (isNaN(percentage)) {
+        		percentage = 0;
+        		stopForNan = true;
+        	}
+            return d3.format("%")(percentage);
         }
         //alert(namesAndColors);
         legendExists = true;
+        if (stopForNan) {
+			if (pieExists) {
+				d3.select("#pieholder").select("svg").remove();
+				pieExists = false;
+			}
+			if (legendExists) {
+				d3.select("#pieholder").select("table").remove();
+				legendExists = false;
+			}
+        }
         return leg;
     }
     
