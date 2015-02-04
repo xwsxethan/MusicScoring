@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.json.simple.JSONValue;
 
-import Visitors.NoteComplexityVisitor;
+import Visitors.*;
 import DifficultyLevels.DifficultyLevel;
 
 
@@ -19,10 +19,19 @@ public class Scorer {
 	private double score;
 	private List<ComplexityScore> allScoredParts;
 	private String json;
+	private boolean validation;
+	private String validationOutput;
 	
 	@SuppressWarnings("unchecked")
-	public Scorer (DifficultyLevel aLevel, File xmlFile) {
+	public Scorer (DifficultyLevel aLevel, File xmlFile, boolean validate) {
 		xml = xmlFile;
+		validation = validate;
+		validationOutput = null;
+		
+		if (validation) {
+			DifficultyValidatorVisitor validator = new DifficultyValidatorVisitor(aLevel);
+			validationOutput = validator.getResults();
+		}
 		
 		//parse.statusReport();
 		
@@ -73,5 +82,9 @@ public class Scorer {
 	
 	public String getJsonString() {
 		return json;
+	}
+	
+	public String getValidationResults() {
+		return validationOutput;
 	}
 }

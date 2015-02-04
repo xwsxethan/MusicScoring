@@ -9,6 +9,7 @@ import DifficultyLevels.DifficultyLevel;
 
 public class Main {
 	public static boolean LOGGING = false;
+	private static boolean validation;
 	
 	/*private static final String FOLDER_NAME = System.getProperty("user.dir") + File.separator;
 	private static final String DEFAULT_FILE_NAME =
@@ -18,11 +19,13 @@ public class Main {
 	private static final DifficultyLevel DEFAULT_LEVEL = new Beginner();
 	private static final String xmlEnding = ".xml";
 	private static final String TURN_ON_LOGGING = "--logging=true";
+	private static final String TURN_ON_VALIDATION = "--validation=true";
 	
 	private static String fullFileName;
 	private static int diffNum;
 
 	public static void main(String[] args) {
+		validation = false;
 		diffNum = 1;
 		if (args.length == 0 || args[0] == null || args[0].isEmpty()) {
 			outputError();
@@ -33,6 +36,7 @@ public class Main {
 				attemptSetXml(args[i]);
 				attemptSetDifficulty(args[i]);
 				attemptSetLogging(args[i]);
+				attemptSetValidation(args[i]);
 			}
 		}
 		
@@ -54,11 +58,15 @@ public class Main {
 			System.out.println("Logging enabled via command line. Now beginning parsing process.");
 		}
 		
-		Scorer letsGetSomeOutput = new Scorer(lev, xmlFile);
+		Scorer letsGetSomeOutput = new Scorer(lev, xmlFile, validation);
 
 		//System.out.println("File: " + fullFileName);
 		//System.out.println("Score: " + letsGetSomeOutput.getSetScore());
 		System.out.println(letsGetSomeOutput.getJsonString());
+		
+		@SuppressWarnings("unused")
+		String validationResults = letsGetSomeOutput.getValidationResults();
+		
 		return;
 		
 	}
@@ -89,6 +97,12 @@ public class Main {
 	private static void attemptSetLogging(String arg) {
 		if (arg != null && !arg.isEmpty() && arg.equalsIgnoreCase(TURN_ON_LOGGING)) {
 			LOGGING = true;
+		}
+	}
+
+	private static void attemptSetValidation(String arg) {
+		if (arg != null && !arg.isEmpty() && arg.equalsIgnoreCase(TURN_ON_VALIDATION)) {
+			validation = true;
 		}
 	}
 

@@ -25,9 +25,8 @@ public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 	
 	private DifficultyLevel level;
 	
-	private static final int DEFAULT_NOTE_DIFFICULTY = 10;
-	private static final int DEFAULT_INTERVAL_DIFFICULTY = 10;
-	private static final double DEFAULT_KEY_DIFFICULTY = 1;
+	private static final int DEFAULT_NOTE_DIFFICULTY = Integer.MAX_VALUE;
+	private static final int DEFAULT_INTERVAL_DIFFICULTY = Integer.MAX_VALUE;
 	
 	private HashMap<Integer, Integer> noteDifficulties;
 	private List<Interval> intervalDifficulties;
@@ -46,11 +45,14 @@ public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 	
 	private DefaultOutputTypes aType;
 	
+	private String results;
+	
 	
  	public DifficultyValidatorVisitor(DifficultyLevel lev) {
 		resetIntervalBooleans();
 		level = lev;
 		aType = DefaultOutputTypes.note;
+		results = "No results yet.";
 
 		noteDifficulties = new HashMap<Integer, Integer>();
 		intervalDifficulties = new ArrayList<Interval>();
@@ -97,12 +99,24 @@ public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 			return;
 		}
 		
+		setDefaults();
+		
 		Levels levels = new Levels(elem);
 		levels.accept(this);
+		
+		checkResults();
 	}
 		
-	/*
-	public int getNoteDifficulty(int noteNum) {
+	private void setDefaults() {
+		int c0 = Utils.noteToNum("C", "0", "0");
+		int c10 = Utils.noteToNum("C", "10", "0");
+		
+		for (int i = c0; i <= c10; i++) {
+			noteDifficulties.put(i, DEFAULT_NOTE_DIFFICULTY);
+		}
+	}
+	
+	private int getNoteDifficulty(int noteNum) {
 		Integer output = noteDifficulties.get(noteNum);
 		if (output == null) {
 			return DEFAULT_NOTE_DIFFICULTY;
@@ -112,7 +126,7 @@ public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 		}
 	}
 
-	public int getIntervalDifficulty(int note1, int note2, int key) {
+	private int getIntervalDifficulty(int note1, int note2, int key) {
 		for(Interval inter : intervalDifficulties) {
 			if (inter.matches(note1, note2, key)) {
 				return inter.getDifficulty();
@@ -122,57 +136,45 @@ public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 		return DEFAULT_INTERVAL_DIFFICULTY;
 	}
 	
-	public double getDynamicDifficulty(Dynamic dynam) {
-		Double output = dynamicDifficulties.get(dynam);
-		if (output == null) {
-			return DEFAULT_DYNAMIC_DIFFICULTY;
+	private void checkResults() {
+		int c0 = Utils.noteToNum("C", "0", "0");
+		int c10 = Utils.noteToNum("C", "10", "0");
+		
+		String noteOutput = "Note results follow:\n";
+		
+		for (int note = c0; note <= c10; note++) {
+			if (getNoteDifficulty(note) == DEFAULT_NOTE_DIFFICULTY) {
+				noteOutput += "Note " + Utils.numToNote(note) + " not covered.\n";
+			}
 		}
-		else {
-			return output.doubleValue();
-		}
-	}
 
-	public double getTempoDifficulty(double duration, int notes) {
-		double initial = (double)notes / duration;
-		//System.out.println("Notes: " + notes);
-		//System.out.println("Duration: " + duration);
-		//System.out.println("Initial 1: " + initial);
-		if (initial < 1) {
-			//If 1 note for 2 seconds, initial should be the inverse.
-			//Instead of 0.5, you should get 2, because that is also difficult.
-			initial = 1 / initial;
+		int cflat = Utils.namedKeyToNum("Cb");
+		int csharp = Utils.namedKeyToNum("C#");
+		
+		noteOutput += "Interval results follow:\n";
+		
+		for (int key = cflat; key <= csharp; key++) {
+			for (int low = c0; low <= c10; low++) {
+				for (int high = low; high <= c10; high++) {
+					if (getIntervalDifficulty(low, high, key) == DEFAULT_INTERVAL_DIFFICULTY) {
+						noteOutput += "Interval of notes " + Utils.numToNote(low) + " and "
+							+ Utils.numToNote(high) + " in key " + Utils.keyNumToNamedKey(key) +
+							" not covered.\n";
+					}
+				}
+			}
 		}
 		
-		//System.out.println("Initial 2: " + initial);
 		
-		double mult = (tempoDifficulty == null ? DEFAULT_TEMPO_DIFFICULTY : tempoDifficulty);
+		results = noteOutput;
 		
-		//System.out.println("Multiplier: " + mult);
-		
-		return initial * mult;
 	}
-
-	public double getKeySignatureDifficulty(int key) {
-		Double output = keyDifficulties.get(key);
-		if (output == null) {
-			return DEFAULT_KEY_DIFFICULTY;
-		}
-		else {
-			return output.doubleValue();
-		}
+		
+	public String getResults() {
+		return results;
 	}
 	
-	public double getArticulationDifficulty(Articulation artic) {
-		Double output = articulationDifficulties.get(artic);
-		if (output == null) {
-			return DEFAULT_ARTICULATION_DIFFICULTY;
-		}
-		else {
-			return output.doubleValue();
-		}
-	}
 	
-	*/
 	
 	@Override
 	public void visit(Levels levels) {
@@ -498,13 +500,6 @@ public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 					}
 					tempDifficulty = DEFAULT_INTERVAL_DIFFICULTY;
 					break;
-				case key :
-					if (Main.LOGGING) {
-						System.out.println("ERROR: Key signature difficulty not correctly specified. Assuming default level: "
-							+ DEFAULT_KEY_DIFFICULTY);
-					}
-					tempDifficulty = DEFAULT_KEY_DIFFICULTY;
-					break;
 			}
 		}
 
@@ -542,6 +537,6 @@ public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 
 	
 	private enum DefaultOutputTypes {
-		note, interval, key
+		note, interval
 	}
 }
