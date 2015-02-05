@@ -14,6 +14,7 @@ $(document).on('ready', function(){
 		url : "navbar.htm",
 		success : function(results) {
 			$('#navholder').html(results);
+            $("body").css("padding-top", "70px");
 		}
 	});
 	updateActiveListener();
@@ -127,12 +128,14 @@ $(function() {
 
 function moveToTable() {
     //$("body").scrollTop($("#retrievedData").offset().top);
-    $('html, body').animate({ scrollTop: $("#retrievedData").offset().top }, 2000);
+    var distance = $("#retrievedData").offset().top - $("#navholder .container").height();
+    $('html, body').animate({ scrollTop: distance }, 1000);
 }
 
 function moveToPie() {
     //$("body").scrollTop($("#retrievedData").offset().top);
-    $('html, body').animate({ scrollTop: $("#pieholder").offset().top }, 2000);
+    var distance = $("#pieholder").offset().top - $("#navholder .container").height();
+    $('html, body').animate({ scrollTop: distance }, 1000);
 }
 
 function updateActiveListener() {
