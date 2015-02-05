@@ -365,7 +365,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		currentMeasureValue = currentScore - oldScore;
 		if (currentMeasureValue > worstMeasureValue) {
 			worstMeasureValue = currentMeasureValue;
-			worstMeasureNumber = currentMeasure + 1;
+			worstMeasureNumber = (currentMeasure - (measureCount - realMeasures) + 1);
 		}
 		
 		currentMeasure++;
