@@ -83,6 +83,8 @@ $(document).on('click', '#ComplexityRunner', function () {
 		    	dashboard("#dashboardholder", namesAndScores, true, false, false);
 			}
 
+            moveToTable();
+
 			//$('#resultholder').text(results);
 		},
 		error : function(something) {
@@ -110,6 +112,7 @@ $(document).on('click', '#retrievedData tbody tr', function () {
 		legendExists = false;
 	}
 	dashboard("#pieholder", pieparts, false, true, true);
+    moveToPie();
 } );
 
 $(function() {
@@ -121,6 +124,16 @@ $(function() {
     	updateActiveListener();
 	});
 });
+
+function moveToTable() {
+    //$("body").scrollTop($("#retrievedData").offset().top);
+    $('html, body').animate({ scrollTop: $("#retrievedData").offset().top }, 2000);
+}
+
+function moveToPie() {
+    //$("body").scrollTop($("#retrievedData").offset().top);
+    $('html, body').animate({ scrollTop: $("#pieholder").offset().top }, 2000);
+}
 
 function updateActiveListener() {
 	$("#selectedholder").text(getActiveMusicPiece());				
