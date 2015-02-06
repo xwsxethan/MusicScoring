@@ -31,14 +31,7 @@ $(document).on('click', '#ComplexityRunner', function () {
 			//$('#noResultsTemp').html('');
 			//$('#resultholder').html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="retrievedData"></table>' );
 
-			if (pieExists) {
-				d3.select("#pieholder").select("svg").remove();
-				pieExists = false;
-			}
-			if (legendExists) {
-				d3.select("#pieholder").select("table").remove();
-				legendExists = false;
-			}
+			removePieAndLegend();
 
 	    	if (histoExists) {
 	    		d3.select("#dashboardholder").select("svg").remove();
@@ -52,11 +45,11 @@ $(document).on('click', '#ComplexityRunner', function () {
 				superTable = $('#retrievedData').DataTable({
 			        "columns": [
 			            { "title": "Instrument Name" },
-			            { "title": "Score" },
+			            { "title": "Total Complexity Score" },
 			            { "title": "Toughest Measure Number" },
-			            { "title": "Toughest Measure Score" },
-			            { "title": "Note Score" },
-			            { "title": "Interval Score" }
+			            { "title": "Toughest Measure Complexity" },
+			            { "title": "Note Complexity" },
+			            { "title": "Interval Complexity" }
 			        ]
 			    } );
 			}
@@ -68,11 +61,11 @@ $(document).on('click', '#ComplexityRunner', function () {
 		    	var item = complexityOutput[i];
 		    	superTable.row.add( [
 		            item.partName,
-		            item.overallScore,
+		            Math.floor(item.overallScore),
 		            item.worstMeasureNumber,
-		            item.worstMeasureValue,
-		            item.noteTotal,
-		            item.intervalTotal
+		            Math.floor(item.worstMeasureValue),
+		            Math.floor(item.noteTotal),
+		            Math.floor(item.intervalTotal)
 		        ] ).draw();
 		        if (tempNames.indexOf(item.partName) == -1) {
 		        	namesAndScores.push({partName:item.partName,total:Math.floor(item.overallScore)});
@@ -86,7 +79,8 @@ $(document).on('click', '#ComplexityRunner', function () {
 
             moveToTable();
 
-			//$('#resultholder').text(results);
+            //This shouldn't be turned on yet, but it is available.
+            //displayWholeXml(fileName);
 		},
 		error : function(something) {
 			alert("There was a problem. Please try again or contact the Music Scoring team.");
@@ -103,18 +97,20 @@ $(document).on('click', '#retrievedData tbody tr', function () {
 	clickedRow = $(this);
 	var noteVal = Math.floor(Number(clickedRow[0].children[4].textContent));
 	var intervalVal = Math.floor(Number(clickedRow[0].children[5].textContent));
-	pieparts = [{type:"Notes",total:noteVal}, {type:"Intervals",total:intervalVal}];
-	if (pieExists) {
-		d3.select("#pieholder").select("svg").remove();
-		pieExists = false;
-	}
-	if (legendExists) {
-		d3.select("#pieholder").select("table").remove();
-		legendExists = false;
-	}
-	dashboard("#pieholder", pieparts, false, true, true);
-    moveToPie();
+	var pieparts = [{type:"Notes",total:noteVal}, {type:"Intervals",total:intervalVal}];
+
+    createPieChartAndLegend(pieparts);
 } );
+
+function createPieChartAndLegend(notesAndIntervals) {
+    removePieAndLegend();
+
+    setNotationCanvas();
+
+    dashboard("#pieholder", notesAndIntervals, false, true, true, "#legendholder");
+
+    moveToPie();
+}
 
 $(function() {
 	$(".musicpiece").click(function() {
@@ -172,7 +168,7 @@ function getAColor() {
 	return colors[colorCounter++ % colors.length];
 }
 
-function dashboard(id, fData, histo, pie, legendBool){
+function dashboard(id, fData, histo, pie, legendBool, legendId){
     var barColor = 'steelblue';
 
     var namesAndColors = {Notes:getAColor(), Intervals:getAColor()};
@@ -217,7 +213,8 @@ function dashboard(id, fData, histo, pie, legendBool){
             .attr("y", function(d) { return y(d[1]); })
             .attr("width", x.rangeBand())
             .attr("height", function(d) { return hGDim.h - y(d[1]); })
-            .attr('fill',getAColor());
+            .attr('fill',getAColor())
+            .on("click",clicked); // click is defined below.
             //.on("mouseover",mouseover)// mouseover is defined below.
             //.on("mouseout",mouseout);// mouseout is defined below.
             
@@ -237,6 +234,24 @@ function dashboard(id, fData, histo, pie, legendBool){
             .attr("x", function(d) { return x(d[0])+x.rangeBand()/2; })
             .attr("y", function(d) { return y(d[1])-5; })
             .attr("text-anchor", "middle");
+
+
+        function clicked(d){  // utility function to be called on click of a bar.
+            // filter for selected state.
+            //tempVariableHolder = d;
+
+            var selected = complexityOutput.filter(function(s){ return s.partName == d[0]; })[0];
+            if (selected === undefined) {
+                return;
+            }
+
+            var noteVal = Math.floor(selected.noteTotal);
+            var intervalVal = Math.floor(selected.intervalTotal);
+            var pieparts = [{type:"Notes",total:noteVal}, {type:"Intervals",total:intervalVal}];
+               
+            // call update functions of pie-chart and legend.    
+            createPieChartAndLegend(pieparts);
+        }
         
         /*
         function mouseover(d){  // utility function to be called on mouseover.
@@ -348,7 +363,7 @@ function dashboard(id, fData, histo, pie, legendBool){
         var stopForNan = false;
             
         // create table for legend.
-        var legend = d3.select(id).append("table").attr('class','legend');
+        var legend = d3.select(legendId).append("table").attr('class','legend');
         
         // create one row per segment.
         var tr = legend.append("tbody").selectAll("tr").data(lD).enter().append("tr");
@@ -392,14 +407,7 @@ function dashboard(id, fData, histo, pie, legendBool){
         //alert(namesAndColors);
         legendExists = true;
         if (stopForNan) {
-			if (pieExists) {
-				d3.select("#pieholder").select("svg").remove();
-				pieExists = false;
-			}
-			if (legendExists) {
-				d3.select("#pieholder").select("table").remove();
-				legendExists = false;
-			}
+            removePieAndLegend();
         }
         return leg;
     }
@@ -423,6 +431,59 @@ function dashboard(id, fData, histo, pie, legendBool){
     	var pC = pieChart(fData); // create the pie-chart.
     }
     if (legendBool) {
-    	var leg= legend(fData);  // create the legend.
+    	var leg = legend(fData);  // create the legend.
 	}
 }
+
+function setNotationCanvas() {
+    //$('#notationholder').html()
+    
+    var elem = $('#notationcanvas');
+    elem.removeClass('hidden');
+    var canvas = elem[0];
+    var renderer = new Vex.Flow.Renderer(canvas, Vex.Flow.Renderer.Backends.CANVAS);
+
+    var ctx = renderer.getContext();
+
+    var stave = new Vex.Flow.Stave(10, 0, 500);
+    stave.addClef("treble").setContext(ctx).draw();
+}
+
+/*
+    Code to display an entire music xml file in the page. Experimental.
+ */
+function displayWholeXml(xmlName) {
+    var fileName = xmlName;
+    if (xmlName === undefined) {
+        fileName = "MusicXMLs/" + getRealMusicPieceName() + ".xml";
+    }
+    //Need some code here to execute the jar file with the specified parameters.
+    $.ajax({
+        type : "GET",
+        url : fileName,
+        success : function(results) {
+            //tempVariableHolder = results;
+            var doc = new Vex.Flow.Document(results);
+            formatter = doc.getFormatter();
+            formatter.setWidth(800).draw($("#xmlholder")[0]);
+        },
+        error : function(something) {
+            alert("There was a problem. Please try again or contact the Music Scoring team.");
+        }
+    });
+}
+
+function removePieAndLegend() {
+    if (pieExists) {
+        d3.select("#pieholder").select("svg").remove();
+        pieExists = false;
+    }
+    if (legendExists) {
+        d3.select("#legendholder").select("table").remove();
+        legendExists = false;
+    }
+
+    $("#notationcanvas").addClass('hidden');
+}
+
+
