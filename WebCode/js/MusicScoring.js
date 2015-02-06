@@ -33,10 +33,7 @@ $(document).on('click', '#ComplexityRunner', function () {
 
 			removePieAndLegend();
 
-	    	if (histoExists) {
-	    		d3.select("#dashboardholder").select("svg").remove();
-	    		histoExists = false;
-	    	}
+	    	removeHisto();
 
 			if (superTable != undefined) {
 				superTable.clear();
@@ -98,14 +95,18 @@ $(document).on('click', '#retrievedData tbody tr', function () {
 	var noteVal = Math.floor(Number(clickedRow[0].children[4].textContent));
 	var intervalVal = Math.floor(Number(clickedRow[0].children[5].textContent));
 	var pieparts = [{type:"Notes",total:noteVal}, {type:"Intervals",total:intervalVal}];
+    var title = "Detailed Info About the " + clickedRow[0].children[0].textContent + " Part";
 
-    createPieChartAndLegend(pieparts);
+    createPieChartAndLegend(pieparts, title);
 } );
 
-function createPieChartAndLegend(notesAndIntervals) {
+function createPieChartAndLegend(notesAndIntervals, title) {
     removePieAndLegend();
 
     setNotationCanvas();
+
+    $("#detailedInfoTitle").text(title);
+    $("#detailedInfoTitle").removeClass('hidden');
 
     dashboard("#pieholder", notesAndIntervals, false, true, true, "#legendholder");
 
@@ -248,9 +249,10 @@ function dashboard(id, fData, histo, pie, legendBool, legendId){
             var noteVal = Math.floor(selected.noteTotal);
             var intervalVal = Math.floor(selected.intervalTotal);
             var pieparts = [{type:"Notes",total:noteVal}, {type:"Intervals",total:intervalVal}];
+            var title = "Detailed Info About the " + selected.partName + " Part";
                
             // call update functions of pie-chart and legend.    
-            createPieChartAndLegend(pieparts);
+            createPieChartAndLegend(pieparts, title);
         }
         
         /*
@@ -290,6 +292,7 @@ function dashboard(id, fData, histo, pie, legendBool, legendId){
                 .attr("y", function(d) {return y(d[1])-5; });            
         }    
         */    
+        $("#histoTitle").removeClass('hidden');
         histoExists = true;
         return hG;
     }
@@ -484,6 +487,15 @@ function removePieAndLegend() {
     }
 
     $("#notationcanvas").addClass('hidden');
+    $("#detailedInfoTitle").addClass('hidden');
+}
+
+function removeHisto() {
+    if (histoExists) {
+        d3.select("#dashboardholder").select("svg").remove();
+        $("#histoTitle").addClass('hidden');
+        histoExists = false;
+    }
 }
 
 

@@ -259,7 +259,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	
 	@Override
 	public void visit(PartName partName) {
-		partIdsToNames.put(partName.getName(), partName.getBase().getTextContent().trim().toLowerCase());
+		partIdsToNames.put(partName.getName(), partName.getBase().getTextContent().trim());
 	}
 
 	@Override
