@@ -13,6 +13,8 @@ public class Constants {
 	public static final String ATTRIBUTES_NODE = "attributes";
 	public static final String DIRECTION_NODE = "direction";
 	
+	public static final String CLEF_NODE = "clef";
+	
 	public static final String DIRECTION_TYPE_NODE = "direction-type";
 	public static final String DYNAMICS_NODE = "dynamics";
 	

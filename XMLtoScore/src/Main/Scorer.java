@@ -65,6 +65,7 @@ public class Scorer {
 			m1.put("otherFieldsSet", score.getOtherFieldsSet());
 			m1.put("worstMeasureNumber", score.getMostDifficultMeasureNumber());
 			m1.put("worstMeasureValue", score.getMostDifficultMeasureValue());
+			m1.put("worstMeasureText", score.getMostDifficultyMeasureText());
 			m1.put("noteTotal", score.getTotalNoteScore());
 			m1.put("intervalTotal", score.getTotalIntervalScore());
 			l1.add(m1);

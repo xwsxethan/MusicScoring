@@ -14,6 +14,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.w3c.dom.ls.DOMImplementationLS;
+import org.w3c.dom.ls.LSSerializer;
 import org.xml.sax.SAXException;
 
 import DifficultyLevels.DifficultyLevel;
@@ -76,10 +78,15 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	
 	private int worstMeasureNumber;
 	private double worstMeasureValue;
+	private String worstMeasureText;
+	private Node worstMeasureNode;
 	private double currentMeasureValue; 
 	
 	private double noteTotal;
 	private double intervalTotal;
+	
+	private Score topLevelScoreNode;
+	private Clef currentClef;
 	
 	private HashMap<String, String> partIdsToNames;
 
@@ -140,6 +147,8 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		
 		worstMeasureNumber = 0;
 		worstMeasureValue = 0.0;
+		worstMeasureText = "";
+		worstMeasureNode = null;
 		currentMeasureValue = 0.0;
 		
 		noteTotal = 0.0;
@@ -198,6 +207,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		boolean foundAPart = false;
 		NodeList list = score.getBase().getChildNodes();
 		Node elem = null;
+		topLevelScoreNode = score;
 		
 		for (int i = 0; i < list.getLength(); i++) {
 			elem = list.item(i);
@@ -303,13 +313,32 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 			}
 		}
 		
+		//Set the worst measure text variable
+		if (worstMeasureNode != null) {
+			Node tempMeasure = worstMeasureNode.cloneNode(true);
+			Node tempAttributes = currentClef.getBase().getParentNode().cloneNode(true);
+			tempMeasure.insertBefore(tempAttributes, tempMeasure.getFirstChild());
+			Node tempPart = part.getBase().cloneNode(false);
+			Node tempScore = topLevelScoreNode.getBase().cloneNode(false);
+			tempPart.appendChild(tempMeasure);
+			tempScore.appendChild(tempPart);
+			DOMImplementationLS lsImpl = (DOMImplementationLS)tempScore.getOwnerDocument()
+					.getImplementation().getFeature("LS", "3.0");
+			LSSerializer serializer = lsImpl.createLSSerializer();
+			serializer.getDomConfig().setParameter("xml-declaration", true);
+			worstMeasureText = serializer.writeToString(tempScore);
+		}
+		else {
+			worstMeasureText = "";
+		}
+		
 		ComplexityScore partWithScore = new ComplexityScore((currentScore == 0 ? currentScore : totalCurrentScore),
 				tempName, realMeasures, noteCount, totalDuration, totalInterval, totalNoteChanges,
 				((keyChanges - 1) == -1 ? 0 : (keyChanges - 1)), ((timeChanges - 1) == -1 ? 0 : (timeChanges - 1)),
 				((tempoChanges - 1) == -1 ? 0 : (tempoChanges - 1)), ((dynamicChanges - 1) == -1 ? 0 : (dynamicChanges - 1)),
 				((articulationChanges - 1) == -1 ? 0 : (articulationChanges - 1)), highNote, lowNote, highDuration,
-				lowDuration, highInterval, lowInterval, worstMeasureNumber, totalWorstMeasureScore, tempNote,
-				tempInterval);
+				lowDuration, highInterval, lowInterval, worstMeasureNumber, totalWorstMeasureScore,
+				worstMeasureText, tempNote, tempInterval);
 		
 		allScores.add(partWithScore);
 		
@@ -324,7 +353,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 			if (Main.LOGGING) {
 				System.out.println("ERROR: A node turned up null for some reason. Stopping.");
 			}
-			measures = null;
+			//measures = null;
 			return;
 		}
 		
@@ -351,7 +380,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 				directionType.accept(this);
 			}
 			else if (name.equalsIgnoreCase(Constants.ATTRIBUTES_NODE)) {
-				new Attribute(elem).accept(this);
+				new Attributes(elem).accept(this);
 			}
 			else if (name.equalsIgnoreCase(Constants.DIRECTION_NODE)) {
 				new Direction(elem).accept(this);
@@ -366,6 +395,8 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		if (currentMeasureValue > worstMeasureValue) {
 			worstMeasureValue = currentMeasureValue;
 			worstMeasureNumber = (currentMeasure - (measureCount - realMeasures) + 1);
+			worstMeasureNode = measure.getBase();
+			
 		}
 		
 		currentMeasure++;
@@ -483,7 +514,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 	}
 
 	@Override
-	public void visit(Attribute attribute) {
+	public void visit(Attributes attribute) {
 		NodeList attributes = attribute.getBase().getChildNodes();
 		for (int j = 0; j < attributes.getLength(); j++) {
 			Node elem = attributes.item(j);
@@ -496,10 +527,18 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 				Time time = new Time(elem);
 				time.accept(this);
 			}
+			else if (nodeNameForComparison.equalsIgnoreCase(Constants.CLEF_NODE)) {
+				Clef clef = new Clef(elem);
+				clef.accept(this);
+			}
 		}
 
 	}
 
+	public void visit(Clef clef) {
+		currentClef = clef;
+	}
+	
 	@Override
 	public void visit(Direction direction) {
 		NodeList directions = direction.getBase().getChildNodes();

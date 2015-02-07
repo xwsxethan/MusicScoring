@@ -92,25 +92,42 @@ $(document).on('click', '#PDFVersion', function () {
 
 $(document).on('click', '#retrievedData tbody tr', function () {
 	clickedRow = $(this);
-	var noteVal = Math.floor(Number(clickedRow[0].children[4].textContent));
-	var intervalVal = Math.floor(Number(clickedRow[0].children[5].textContent));
-	var pieparts = [{type:"Notes",total:noteVal}, {type:"Intervals",total:intervalVal}];
-    var title = "Detailed Info About the " + clickedRow[0].children[0].textContent + " Part";
+    var toPass = complexityOutput.filter(function(s) {
+        return s.partName == clickedRow[0].children[0].textContent;
+    })[0];
 
-    createPieChartAndLegend(pieparts, title);
+    var timeToMove = 1000;
+    if (!histoExists && pieExists) {
+        timeToMove = 0;
+    }
+    createPieChartAndLegend(toPass, timeToMove);
 } );
 
-function createPieChartAndLegend(notesAndIntervals, title) {
+function createPieChartAndLegend(complexityPart, movementTiming) {
+
+    var noteVal = Math.floor(complexityPart.noteTotal);
+    var intervalVal = Math.floor(complexityPart.intervalTotal);
+    var pieparts = [{type:"Notes",total:noteVal}, {type:"Intervals",total:intervalVal}];
+    var title = "Detailed Info About the " + complexityPart.partName + " Part";
+    var worstMeasureTitle = "Most Complex Measure: #" + complexityPart.worstMeasureNumber;
+
     removePieAndLegend();
 
-    setNotationCanvas();
+    try {
+        setNotationCanvas(complexityPart.worstMeasureText);
+    }
+    catch(e) {
+        $("#canvasErrorMessage").removeClass('hidden');
+    }
 
+    $("#worstMeasureTitle").text(worstMeasureTitle);
+    $("#worstMeasureTitle").removeClass('hidden');
     $("#detailedInfoTitle").text(title);
     $("#detailedInfoTitle").removeClass('hidden');
 
-    dashboard("#pieholder", notesAndIntervals, false, true, true, "#legendholder");
+    dashboard("#pieholder", pieparts, false, true, true, "#legendholder");
 
-    moveToPie();
+    moveToPie(movementTiming);
 }
 
 $(function() {
@@ -129,10 +146,13 @@ function moveToTable() {
     $('html, body').animate({ scrollTop: distance }, 1000);
 }
 
-function moveToPie() {
+function moveToPie(amountOfTimeToMove) {
+    if (amountOfTimeToMove === undefined) {
+        amountOfTimeToMove = 1000;
+    }
     //$("body").scrollTop($("#retrievedData").offset().top);
     var distance = $("#pieholder").offset().top - $("#navholder .container").height();
-    $('html, body').animate({ scrollTop: distance }, 1000);
+    $('html, body').animate({ scrollTop: distance }, amountOfTimeToMove);
 }
 
 function updateActiveListener() {
@@ -245,14 +265,13 @@ function dashboard(id, fData, histo, pie, legendBool, legendId){
             if (selected === undefined) {
                 return;
             }
-
-            var noteVal = Math.floor(selected.noteTotal);
-            var intervalVal = Math.floor(selected.intervalTotal);
-            var pieparts = [{type:"Notes",total:noteVal}, {type:"Intervals",total:intervalVal}];
-            var title = "Detailed Info About the " + selected.partName + " Part";
                
-            // call update functions of pie-chart and legend.    
-            createPieChartAndLegend(pieparts, title);
+            // call update functions of pie-chart and legend. 
+            var timeToMove = 0;
+            if (!pieExists) {
+                timeToMove = 1000;
+            }   
+            createPieChartAndLegend(selected, timeToMove);
         }
         
         /*
@@ -438,18 +457,31 @@ function dashboard(id, fData, histo, pie, legendBool, legendId){
 	}
 }
 
-function setNotationCanvas() {
+function setNotationCanvas(worstMeasure) {
     //$('#notationholder').html()
     
     var elem = $('#notationcanvas');
-    elem.removeClass('hidden');
     var canvas = elem[0];
-    var renderer = new Vex.Flow.Renderer(canvas, Vex.Flow.Renderer.Backends.CANVAS);
+    /*var renderer = new Vex.Flow.Renderer(canvas, Vex.Flow.Renderer.Backends.CANVAS);
 
     var ctx = renderer.getContext();
 
     var stave = new Vex.Flow.Stave(10, 0, 500);
-    stave.addClef("treble").setContext(ctx).draw();
+    stave.addClef("treble").setContext(ctx).draw();*/
+
+
+    var doc = new Vex.Flow.Document(worstMeasure);
+    formatter = doc.getFormatter();
+    formatter.setWidth(600).draw(canvas);
+
+    var newCanvas = $("#notationcanvas canvas");
+    if (newCanvas[0].width > 600) {
+        newCanvas.css("width", "600px");
+    }
+    else if (newCanvas[0].width < 200) {
+        newCanvas.css("width", "200px");
+    }
+    elem.removeClass('hidden');
 }
 
 /*
@@ -486,8 +518,10 @@ function removePieAndLegend() {
         legendExists = false;
     }
 
-    $("#notationcanvas").addClass('hidden');
     $("#detailedInfoTitle").addClass('hidden');
+    $("#worstMeasureTitle").addClass('hidden');
+    $("#canvasErrorMessage").addClass('hidden');
+    $("#notationcanvas").addClass('hidden');
 }
 
 function removeHisto() {

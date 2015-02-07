@@ -17,7 +17,9 @@ public interface IMusicElementVisitor {
 	
 	public void visit(Note note);
 	
-	public void visit(Attribute attribute);
+	public void visit(Attributes attribute);
+	
+	public void visit(Clef clef);
 	
 	public void visit(Direction direction);
 	

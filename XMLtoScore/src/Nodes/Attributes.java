@@ -4,9 +4,9 @@ import org.w3c.dom.Node;
 
 import Visitors.IMusicElementVisitor;
 
-public class Attribute extends IVisitableXMLNode {
+public class Attributes extends IVisitableXMLNode {
 
-	public Attribute(Node elem) {
+	public Attributes(Node elem) {
 		base = elem;
 	}
 	
