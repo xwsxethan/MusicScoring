@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="Ethan Holder">
+		<title>About</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+
+		<script src="js/ie-emulation-modes-warning.js"></script>
+
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<style type="text/css">
+			path {  stroke: #fff; }
+			path:hover {  opacity:0.9; }
+			rect:hover {  fill:blue; }
+			.axis {  font: 10px sans-serif; }
+			.legend tr{    border-bottom:1px solid grey; }
+			.legend tr:first-child{    border-top:1px solid grey; }
+
+			.axis path,
+			.axis line {
+			  fill: none;
+			  stroke: #000;
+			  shape-rendering: crispEdges;
+			}
+
+			.x.axis path {  display: none; }
+			.legend{
+			    margin-bottom:76px;
+			    display:inline-block;
+			    border-collapse: collapse;
+			    border-spacing: 0px;
+			}
+			.legend td{
+			    padding:4px 5px;
+			    vertical-align:bottom;
+			}
+			.legendFreq, .legendPerc{
+			    align:right;
+			    width:50px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<script src="js/MusicScoring.js"></script>
+		
+		<div id="navholder"></div>
+
+		<div class="container">
+			<div class="jumbotron">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-1">
+							<p></p>
+						</div>
+						<div class="col-md-10">
+							<h1>Musical Complexity Scoring</h1>
+						</div>
+						<div class="col-md-1">
+							<p></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<p></p>
+							<p>Musical Complexity Scoring is a project designed to give anyone related to music performance an objective measurement of the complexity -- or difficulty -- of any piece of music. To our knowledge, it is the first such objective measurement of its kind. It works by assigning difficulty values to specific musical elements: notes and intervals receive point values between 1 and 10; articulations, dynamics, tempos, and key signatures receive multiplier values greater than 0.</p>
+							<p>By scanning the MusicXML representation of a piece and referencing the preset difficulty values, the backend code can form an aggregate complexity score. This web page then displays that overall score along with some other relevant data, such the toughest measure of music in the piece (the one with the highest individual score) and the breakdown of notes and their multipliers versus intervals and their multipliers.</p>
+							<p>This algorithm works for single-part pieces as well as multi-part pieces, such as for conductors or large ensembles. However, the current implementation only specifies one set of difficulty values (for beginner clarinet) so all pieces are analyzed against that set, regardless of instrument. As we gather more feedback from experts, further difficulty values will be specified and existing values will be honed to precision.</p>
+							<p>For more information about this work, please check out the research abstract we submitted to Interdisciplinary Research Day 2015 at VT or go directly to the source code on github from the links on the navigation bar.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/docs.min.js"/>
+	</body>
+</html>
