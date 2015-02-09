@@ -87,7 +87,7 @@ $(document).on('click', '#ComplexityRunner', function () {
 
 $(document).on('click', '#PDFVersion', function () {
 	var fileName = "MusicPDFs/" + getRealMusicPieceName() + ".pdf";
-	window.location.href = fileName;
+	window.open(fileName, '_blank');
 });
 
 $(document).on('click', '#retrievedData tbody tr', function () {
