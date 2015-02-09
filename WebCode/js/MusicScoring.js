@@ -17,15 +17,17 @@ $(document).on('ready', function(){
             $("body").css("padding-top", "70px");
 		}
 	});
-	updateActiveListener();
+	updateMusicListener();
+    updateDifficultyListener();
 });
 $(document).on('click', '#ComplexityRunner', function () {
 	var fileName = "MusicXMLs/" + getRealMusicPieceName() + ".xml";
+    var difficultyVal = getRealDifficulty();
 	//Need some code here to execute the jar file with the specified parameters.
 	$.ajax({
 		type : "POST",
 		url : "backend.php",
-		data : {xmlName:fileName},
+		data : {xmlName:fileName,difficulty:difficultyVal},
 		success : function(results) {
 			complexityOutput = $.parseJSON(results);
 			//$('#noResultsTemp').html('');
@@ -131,13 +133,23 @@ function createPieChartAndLegend(complexityPart, movementTiming) {
 }
 
 $(function() {
-	$(".musicpiece").click(function() {
-    	// remove classes from all
-    	$(".musicpiece").removeClass("active");
-    	// add class to the one we clicked
-    	$(this).addClass("active");
-    	updateActiveListener();
-	});
+    $(".musicpiece").click(function() {
+        // remove classes from all
+        $(".musicpiece").removeClass("active");
+        // add class to the one we clicked
+        $(this).addClass("active");
+        updateMusicListener();
+    });
+});
+
+$(function() {
+    $(".musicdifficulty").click(function() {
+        // remove classes from all
+        $(".musicdifficulty").removeClass("active");
+        // add class to the one we clicked
+        $(this).addClass("active");
+        updateDifficultyListener();
+    });
 });
 
 function moveToTable() {
@@ -155,12 +167,20 @@ function moveToPie(amountOfTimeToMove) {
     $('html, body').animate({ scrollTop: distance }, amountOfTimeToMove);
 }
 
-function updateActiveListener() {
+function updateMusicListener() {
 	$("#selectedholder").text(getActiveMusicPiece());				
 }
 
 function getActiveMusicPiece() {
 	return $(".musicpiece.active").children()[0].text;
+}
+
+function updateDifficultyListener() {
+    $("#difficultyholder").text(getActiveDifficulty());               
+}
+
+function getActiveDifficulty() {
+    return $(".musicdifficulty.active").children()[0].text;
 }
 
 function getRealMusicPieceName() {
@@ -182,6 +202,33 @@ function getRealMusicPieceName() {
 	}
 
 	return toReturn;
+}
+
+function getRealDifficulty() {
+    var htmlName = getActiveDifficulty();
+    var toReturn = 1;
+    switch(htmlName) {
+        case 'Beginner' :
+            toReturn = 1;
+            break;
+        case 'Novice' :
+            toReturn = 2;
+            break;
+        case 'Intermediate' :
+            toReturn = 3;
+            break;
+        case 'Advanced' :
+            toReturn = 4;
+            break;
+        case 'Professional' :
+            toReturn = 5;
+            break;
+        default :
+            toReturn = 1;
+            break;
+    }
+
+    return toReturn;
 }
 
 function getAColor() {

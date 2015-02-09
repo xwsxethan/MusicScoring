@@ -87,7 +87,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<p></p>
-							<p>To get started, select a piece to analyze from the dropdown below.</p>
+							<p>To get started, select a piece to analyze and a difficulty setting to use from the dropdowns below.</p>
 							<p>Then click "Get Complexity Score" to obtain results and graphical data.</p>
 							<p>Click a row in the table or a bar in the graph to display more data about that specific part.</p>
 						</div>
@@ -104,7 +104,7 @@
 							<div class="row">
 								<div class="col-xs-1">
 								</div>
-								<div class="col-md-4">
+								<div class="col-md-6">
 									<div class="dropdown">
 										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
 											Select a Piece to Analyze
@@ -118,10 +118,19 @@
 									</div>
 								</div>
 								<div class="col-md-4">
-									<button type="button" id="ComplexityRunner" class="btn btn-primary">Get Complexity Score</button>
-								</div>
-								<div class="col-md-2">
-									<button type="button" id="PDFVersion" class="btn btn-success">View Selected Score</button>
+									<div class="dropdown">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">
+											Select a Difficulty Setting to Use
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+											<li role="presentation" id="beginner" class="musicdifficulty active"><a role="menuitem" tabindex="-1">Beginner</a></li>
+											<li role="presentation" id="novice" class="musicdifficulty"><a role="menuitem" tabindex="-1">Novice</a></li>
+											<li role="presentation" id="intermediate" class="musicdifficulty"><a role="menuitem" tabindex="-1">Intermediate</a></li>
+											<li role="presentation" id="advanced" class="musicdifficulty"><a role="menuitem" tabindex="-1">Advanced</a></li>
+											<li role="presentation" id="professional" class="musicdifficulty"><a role="menuitem" tabindex="-1">Professional</a></li>
+										</ul>
+									</div>
 								</div>
 								<div class="col-xs-1">
 								</div>
@@ -134,10 +143,36 @@
 							<div class="row">
 								<div class="col-xs-1">
 								</div>
-								<div class="col-md-8">
+								<div class="col-md-6">
 									<div id="selectedholder" class="well well-sm">
 									...		
 									</div>
+								</div>
+								<div class="col-md-4">
+									<div id="difficultyholder" class="well well-sm">
+									...		
+									</div>
+								</div>
+								<div class="col-xs-1">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-1">
+									<p></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-1">
+									<p></p>
+								</div>
+								<div class="col-md-6">
+									<button type="button" id="PDFVersion" class="btn btn-success">View Selected Score</button>
+								</div>
+								<div class="col-md-4">
+									<button type="button" id="ComplexityRunner" class="btn btn-primary">Get Complexity Score</button>
+								</div>
+								<div class="col-xs-1">
+									<p></p>
 								</div>
 							</div>
 						</div>
