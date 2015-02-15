@@ -64,9 +64,6 @@ public class Main {
 		//System.out.println("Score: " + letsGetSomeOutput.getSetScore());
 		System.out.println(letsGetSomeOutput.getJsonString());
 		
-		@SuppressWarnings("unused")
-		String validationResults = letsGetSomeOutput.getValidationResults();
-		
 		return;
 		
 	}

@@ -9,6 +9,7 @@ import org.json.simple.JSONValue;
 
 import Visitors.*;
 import DifficultyLevels.DifficultyLevel;
+import Utilities.*;
 
 
 public class Scorer {
@@ -20,7 +21,7 @@ public class Scorer {
 	private List<ComplexityScore> allScoredParts;
 	private String json;
 	private boolean validation;
-	private String validationOutput;
+	private ValidationResults validationOutput;
 	
 	@SuppressWarnings("unchecked")
 	public Scorer (DifficultyLevel aLevel, File xmlFile, boolean validate) {
@@ -56,6 +57,8 @@ public class Scorer {
 
 		@SuppressWarnings("rawtypes")
 		List  l1 = new LinkedList();
+		@SuppressWarnings("rawtypes")
+		Map topMap = new LinkedHashMap();
 		
 		for (ComplexityScore score : allScoredParts) {
 			@SuppressWarnings("rawtypes")
@@ -71,7 +74,26 @@ public class Scorer {
 			l1.add(m1);
 		}
 
-		json = JSONValue.toJSONString(l1);
+		@SuppressWarnings("rawtypes")
+		List validationList = new LinkedList();
+		@SuppressWarnings("rawtypes")
+		Map validationValues = new LinkedHashMap();
+		
+		if (validationOutput == null) {
+			validationValues.put("noteOutput", Constants.VALIDATION_INITIAL_RESULT);
+			validationValues.put("intervalOutput", Constants.VALIDATION_INITIAL_RESULT);
+		}
+		else {
+			validationValues.put("noteOutput", validationOutput.getNoteResults());
+			validationValues.put("intervalOutput", validationOutput.getIntervalResults());
+		}
+		
+		validationList.add(validationValues);
+		
+		topMap.put("validationResults", validationList);
+		topMap.put("scoreResults", l1);
+
+		json = JSONValue.toJSONString(topMap);
 		                
 		//System.out.println(jsonString);
 		
@@ -85,7 +107,7 @@ public class Scorer {
 		return json;
 	}
 	
-	public String getValidationResults() {
+	public ValidationResults getValidationResults() {
 		return validationOutput;
 	}
 }

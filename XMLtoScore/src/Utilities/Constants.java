@@ -89,5 +89,7 @@ public class Constants {
 	public static final String DIFFICULTY_DASH = "-";
 	
 	public static final String HASH_TEXT_IN_XML = "#text";
+	
+	public static final String VALIDATION_INITIAL_RESULT = "No results yet.";
 
 }

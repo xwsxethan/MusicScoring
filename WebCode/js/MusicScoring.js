@@ -1,3 +1,4 @@
+var validationResults
 var complexityOutput;
 var colorCounter = 1;
 var clickedRow;
@@ -33,13 +34,16 @@ $(document).on('ready', function(){
 $(document).on('click', '#ComplexityRunner', function () {
 	var fileName = "MusicXMLs/" + getRealMusicPieceName() + ".xml";
     var difficultyVal = getRealDifficulty();
+    var turnOnValidation = isValidationOn();
 	//Need some code here to execute the jar file with the specified parameters.
 	$.ajax({
 		type : "POST",
 		url : "backend.php",
-		data : {xmlName:fileName,difficulty:difficultyVal},
+		data : {xmlName:fileName,difficulty:difficultyVal,validation:turnOnValidation},
 		success : function(results) {
-			complexityOutput = $.parseJSON(results);
+			var validationAndComplexity = $.parseJSON(results);
+            complexityOutput = validationAndComplexity.scoreResults;
+            validationResults = validationAndComplexity.validationResults[0];
 			//$('#noResultsTemp').html('');
 			//$('#resultholder').html( '<table cellpadding="0" cellspacing="0" border="0" class="display" id="retrievedData"></table>' );
 
@@ -90,6 +94,11 @@ $(document).on('click', '#ComplexityRunner', function () {
 
             //This shouldn't be turned on yet, but it is available.
             //displayWholeXml(fileName);
+
+            if (turnOnValidation) {
+                alert(validationResults.noteOutput);
+                alert(validationResults.intervalOutput);
+            }
 		},
 		error : function(something) {
 			alert("There was a problem. Please try again or contact the Music Scoring team.");
@@ -241,6 +250,10 @@ function getRealDifficulty() {
     }
 
     return toReturn;
+}
+
+function isValidationOn() {
+    return $('#validationCheckbox')[0].checked;
 }
 
 function getAColor() {

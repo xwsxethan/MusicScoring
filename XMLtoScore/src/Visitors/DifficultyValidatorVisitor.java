@@ -45,14 +45,14 @@ public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 	
 	private DefaultOutputTypes aType;
 	
-	private String results;
+	private ValidationResults results;
 	
 	
  	public DifficultyValidatorVisitor(DifficultyLevel lev) {
 		resetIntervalBooleans();
 		level = lev;
 		aType = DefaultOutputTypes.note;
-		results = "No results yet.";
+		results = new ValidationResults(Constants.VALIDATION_INITIAL_RESULT,Constants.VALIDATION_INITIAL_RESULT);
 
 		noteDifficulties = new HashMap<Integer, Integer>();
 		intervalDifficulties = new ArrayList<Interval>();
@@ -151,13 +151,13 @@ public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 		int cflat = Utils.namedKeyToNum("Cb");
 		int csharp = Utils.namedKeyToNum("C#");
 		
-		noteOutput += "Interval results follow:\n";
+		String intervalOutput = "Interval results follow:\n";
 		
 		for (int key = cflat; key <= csharp; key++) {
 			for (int low = c0; low <= c10; low++) {
 				for (int high = low; high <= c10; high++) {
 					if (getIntervalDifficulty(low, high, key) == DEFAULT_INTERVAL_DIFFICULTY) {
-						noteOutput += "Interval of notes " + Utils.numToNote(low) + " and "
+						intervalOutput += "Interval of notes " + Utils.numToNote(low) + " and "
 							+ Utils.numToNote(high) + " in key " + Utils.keyNumToNamedKey(key) +
 							" not covered.\n";
 					}
@@ -165,12 +165,13 @@ public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 			}
 		}
 		
-		
-		results = noteOutput;
+
+		results.setNoteResults(noteOutput);
+		results.setIntervalResults(intervalOutput);
 		
 	}
 		
-	public String getResults() {
+	public ValidationResults getResults() {
 		return results;
 	}
 	
