@@ -7,6 +7,7 @@ var histoExists = false;
 var pieExists = false;
 var legendExists = false;
 var tempVariableHolder;
+var samplePieces;
 $(document).on('ready', function(){
 	$.ajax({
 		context: this,
@@ -17,7 +18,16 @@ $(document).on('ready', function(){
             $("body").css("padding-top", "70px");
 		}
 	});
-	updateMusicListener();
+    $.ajax({
+        context: this,
+        dataType : "json",
+        url : "SamplePieces.json",
+        success : function(results) {
+            samplePieces = results;
+            setupPieceDropdown();
+            updateMusicListener();
+        }
+    });
     updateDifficultyListener();
 });
 $(document).on('click', '#ComplexityRunner', function () {
@@ -105,6 +115,14 @@ $(document).on('click', '#retrievedData tbody tr', function () {
     createPieChartAndLegend(toPass, timeToMove);
 } );
 
+$(document).on('click', ".musicpiece", function() {
+    // remove classes from all
+    $(".musicpiece").removeClass("active");
+    // add class to the one we clicked
+    $(this).addClass("active");
+    updateMusicListener();
+});
+
 function createPieChartAndLegend(complexityPart, movementTiming) {
 
     var noteVal = Math.floor(complexityPart.noteTotal);
@@ -132,15 +150,21 @@ function createPieChartAndLegend(complexityPart, movementTiming) {
     moveToPie(movementTiming);
 }
 
-$(function() {
-    $(".musicpiece").click(function() {
-        // remove classes from all
-        $(".musicpiece").removeClass("active");
-        // add class to the one we clicked
-        $(this).addClass("active");
-        updateMusicListener();
-    });
-});
+function setupPieceDropdown() {
+    var elementsToAdd = "";
+    var i = 0;
+    for (; i < samplePieces.length; i++) {
+        elementsToAdd += '<li role="presentation" class="musicpiece';
+        if (i == 0) {
+            elementsToAdd += ' active';
+        }
+        elementsToAdd += '"><a role="menuitem" tabindex="-1">';
+        elementsToAdd += samplePieces[i].fancyName;
+        elementsToAdd += '</a></li>';
+    }
+
+    $('#pieceDropdownHolder').html(elementsToAdd);
+}
 
 $(function() {
     $(".musicdifficulty").click(function() {
@@ -185,21 +209,9 @@ function getActiveDifficulty() {
 
 function getRealMusicPieceName() {
 	var htmlName = getActiveMusicPiece();
-	var toReturn = "";
-	switch(htmlName) {
-		case 'The Hobbit for Clarinet' :
-			toReturn += "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet";
-			break;
-		case 'C Major Scale' :
-			toReturn += "CMajorKey";
-			break;
-		case 'Actor Prelude' :
-			toReturn += "ActorPreludeSample";
-			break;
-		default :
-			toReturn += "The_Hobbit_The_Desolation_of_Smaug_Medley_for_Solo_Clarinet";
-			break;
-	}
+	var toReturn = samplePieces.filter(function(s) {
+        return s.fancyName == htmlName;
+    })[0].fileNameNoExt;
 
 	return toReturn;
 }
