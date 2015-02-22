@@ -1,4 +1,4 @@
-\normalfont\documentclass[10pt]{sigplanconf}
+\documentclass[10pt]{sigplanconf}
 
 %\ConferenceName{ACM ONWARD Papers 2015}
 %\ConferenceShortName{ONWARD 2015}
@@ -103,6 +103,13 @@ Briefly lead into the following subsections.
 
 Provide an overview of music concepts, what they mean, how they impact play, and generally define our terms for the remainder of the paper. This could also probably stand alone after the abstract as its own section depending on its size. We'll need to be careful not to let this cover too much space even though we'll need to cover a lot of information.
 
+\begin{figure}[ht!]
+	\centering
+		\includegraphics[width=0.47\textwidth]{CognitiveMechanical.png}
+		\caption{The process of playing music introduces cognitive and mechanical complexities in interpreting written notes and creating a sound, respectively.}
+		\label{image:complexities}
+\end{figure}
+
 \subsection{Motivation} 
 \label{sec:motiv}
 
@@ -116,7 +123,7 @@ Concretely define exactly what our goal is for this paper. This should naturally
 \subsection{Paper Layout} 
 \label{sec:layout}
 
-Explain the layout for the remainder of paper and have document links for the other sections.
+The remainder of this paper is structured as follows. First, related work in this field is highlighted in \ref{sec:related}. Next, we explain the implementation of our scoring system in \ref{sec:imple}. This leads into the experimental setup section which shows how the current difficulty settings in \ref{sec:experiment}. The results in \ref{sec:results} then show exactly what we have uncovered through the implementation and user experiments so far. The analysis follows after the results and discusses how our system compares to others in the wild \ref{sec:analysis}. Next, brief directions for future work are given in \ref{sec:future}. Finally, we present our conclusions for this project in \ref{sec:conclu}.
 
 \section{Related Work} 
 \label{sec:related}
@@ -137,6 +144,8 @@ Talk about the high level approach for how this works in terms of the musical el
 \label{sec:details}
 
 Very briefly talk about the actual implementation details. This should not span more than a paragraph or two just talking about the lines of code written, the libraries used, and the languages utilized.
+
+The source code for this project is available for public consumption on github \footnote{\url{https://github.com/xwsxethan/MusicScoring}} \cite{GithubMusicScoring}.
 
 \section{Experimental Setup} 
 \label{sec:experiment}
@@ -183,13 +192,6 @@ Sum up the paper.
 
 Thank everyone and list any outside funding or support.
 
-%\begin{figure}[ht!]
-	%\centering
-		%\includegraphics[width=0.47\textwidth]{OverallProcessLatency.eps}
-		%\caption{Measurements of the latency of the overall UI update process.}
-		%\label{overalllatency}
-%\end{figure}
-
 
 
 
@@ -197,8 +199,8 @@ Thank everyone and list any outside funding or support.
 \medskip
 %\nocite{*}
 %\bibliographystyle{abbrvnat}
+\bibliography{HolderOnward2015}
 \bibliographystyle{abbrv}
-\bibliography{musicbib}{}
 
 
 \end{document}
