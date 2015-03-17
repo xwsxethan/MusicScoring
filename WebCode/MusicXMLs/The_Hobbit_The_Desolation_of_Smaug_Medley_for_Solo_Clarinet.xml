@@ -67,9 +67,9 @@
   </credit>
   <part-list>
     <score-part id="P1">
-      <part-name print-object="no">MusicXML Part</part-name>
+      <part-name print-object="no">Clarinet in B b</part-name>
       <score-instrument id="P1-I1">
-        <instrument-name>MusicXML Default 1</instrument-name>
+        <instrument-name>Clarinet in B b</instrument-name>
       </score-instrument>
       <midi-instrument id="P1-I1">
         <midi-channel>1</midi-channel>

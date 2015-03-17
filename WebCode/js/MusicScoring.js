@@ -9,6 +9,7 @@ var pieExists = false;
 var legendExists = false;
 var tempVariableHolder;
 var samplePieces;
+
 $(document).on('ready', function(){
 	$.ajax({
 		context: this,
@@ -30,11 +31,18 @@ $(document).on('ready', function(){
         }
     });
     updateDifficultyListener();
+
+    $('#validationToHide').hide();
 });
 $(document).on('click', '#ComplexityRunner', function () {
 	var fileName = "MusicXMLs/" + getRealMusicPieceName() + ".xml";
     var difficultyVal = getRealDifficulty();
     var turnOnValidation = isValidationOn();
+
+    var guess = $("#worstMeasureGuess")[0];
+    if (guess !== undefined) {
+        guess = parseInt(guess.value, 10);
+    }
 	//Need some code here to execute the jar file with the specified parameters.
 	$.ajax({
 		type : "POST",
@@ -42,6 +50,7 @@ $(document).on('click', '#ComplexityRunner', function () {
 		data : {xmlName:fileName,difficulty:difficultyVal,validation:turnOnValidation},
 		success : function(results) {
 			var validationAndComplexity = $.parseJSON(results);
+            tempVariableHolder = validationAndComplexity;
             complexityOutput = validationAndComplexity.scoreResults;
             validationResults = validationAndComplexity.validationResults[0];
 			//$('#noResultsTemp').html('');
@@ -67,6 +76,9 @@ $(document).on('click', '#ComplexityRunner', function () {
 			    } );
 			}
 
+            var guessCorrect = false;
+            var correctPartNames = "";
+            var incorrectPartNames = "";
 			var tempNames = [];
 			var namesAndScores = [];
 			var i = 0;
@@ -84,6 +96,15 @@ $(document).on('click', '#ComplexityRunner', function () {
 		        	namesAndScores.push({partName:item.partName,total:Math.floor(item.overallScore)});
 		        	tempNames.push(item.partName);
 		        }
+                if (guess !== undefined) {
+                    if (guess === item.worstMeasureNumber) {
+                        guessCorrect = true;
+                        correctPartNames = correctPartNames + item.partName + ",";
+                    }
+                    else {
+                        incorrectPartNames = incorrectPartNames + item.partName + ",";
+                    }
+                }
 		    }
 
 		    if (i > 1) {
@@ -98,6 +119,25 @@ $(document).on('click', '#ComplexityRunner', function () {
             if (turnOnValidation) {
                 alert(validationResults.noteOutput);
                 alert(validationResults.intervalOutput);
+            }
+
+            if (guess !== undefined) {
+                if (correctPartNames.length > 1) {
+                    correctPartNames = correctPartNames.substring(0, correctPartNames.length - 1);
+                }
+
+                if (incorrectPartNames.length > 1) {
+                    incorrectPartNames = incorrectPartNames.substring(0, incorrectPartNames.length - 1);
+                }
+
+                if (guessCorrect) {
+                    alert("You got it right! The following parts' most difficult measure is number "
+                        + guess + ":\n" + correctPartNames);
+                }
+                else {
+                    alert("Sorry, that is incorrect. The following parts had a different measure "
+                        + "as their most difficult one:\n" + incorrectPartNames);
+                }
             }
 		},
 		error : function(something) {

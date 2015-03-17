@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="Ethan Holder">
+		<title>Musical Complexity Scoring Game</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+
+		<script src="js/ie-emulation-modes-warning.js"></script>
+
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<link href="css/jquery.dataTables.min.css" rel="stylesheet">
+		<script src="js/jquery.dataTables.min.js"></script>
+
+		<style type="text/css">
+			path {  stroke: #fff; }
+			path:hover {  opacity:0.9; }
+			rect:hover {  fill:blue; }
+			.axis {  font: 10px sans-serif; }
+			.legend tr{    border-bottom:1px solid grey; }
+			.legend tr:first-child{    border-top:1px solid grey; }
+
+			.axis path,
+			.axis line {
+			  fill: none;
+			  stroke: #000;
+			  shape-rendering: crispEdges;
+			}
+
+			.x.axis path {  display: none; }
+			.legend{
+			    margin-bottom:76px;
+			    display:inline-block;
+			    border-collapse: collapse;
+			    border-spacing: 0px;
+			}
+			.legend td{
+			    padding:4px 5px;
+			    vertical-align:bottom;
+			}
+			.legendFreq, .legendPerc{
+			    align:right;
+			    width:50px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="js/vexflow-min.js"></script>
+		<script src="js/vexflow-min.musicxml.js"></script>
+		<script src="js/MusicScoring.js"></script>
+		
+		<div id="navholder"></div>
+
+		<div class="container">
+			<div class="jumbotron">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-1">
+							<p></p>
+						</div>
+						<div class="col-md-10">
+							<h1>Musical Complexity Scoring</h1>
+						</div>
+						<div class="col-md-1">
+							<p></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<p></p>
+							<p>To get started, select a piece to analyze and a difficulty setting to use from the dropdowns below.</p>
+							<p>If you'd like to view the specific music notation for that piece, click "View Selected Piece".</p>
+							<p>Input your guess for the most difficult measure number.</p>
+							<p>Then click "Get Complexity Score" to see if you were right!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Complexity Scorer</h3>
+						</div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-xs-1">
+								</div>
+								<div class="col-md-6">
+									<div class="dropdown">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+											Select a Piece to Analyze
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="pieceDropdownHolder">
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="dropdown">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">
+											Select a Difficulty Setting to Use
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+											<li role="presentation" id="beginner" class="musicdifficulty active"><a role="menuitem" tabindex="-1">Beginner</a></li>
+											<li role="presentation" id="novice" class="musicdifficulty"><a role="menuitem" tabindex="-1">Novice</a></li>
+											<li role="presentation" id="intermediate" class="musicdifficulty"><a role="menuitem" tabindex="-1">Intermediate</a></li>
+											<li role="presentation" id="advanced" class="musicdifficulty"><a role="menuitem" tabindex="-1">Advanced</a></li>
+											<li role="presentation" id="professional" class="musicdifficulty"><a role="menuitem" tabindex="-1">Professional</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-xs-1">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-1">
+									<p></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-1">
+								</div>
+								<div class="col-md-6">
+									<div id="selectedholder" class="well well-sm">
+									...		
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div id="difficultyholder" class="well well-sm">
+									...		
+									</div>
+								</div>
+								<div class="col-xs-1">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-1">
+									<p></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-1">
+									<p></p>
+								</div>
+								<div class="col-md-6">
+									<p></p>
+								</div>
+								<div class="col-md-4">
+									<div class="input-group" id="validationToHide">
+									    <span class="input-group-addon">
+									    	<input type="checkbox" id="validationCheckbox" aria-label="...">
+									    </span>
+										<input type="text" id="validationLabel" class="form-control disabled" placeholder="Difficulty validation on/off." disabled>
+								    </div><!-- /input-group -->
+								</div>
+								<div class="col-xs-1">
+									<p></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-1">
+									<p></p>
+								</div>
+								<div class="col-md-10">
+									<input type="number" id="worstMeasureGuess" class="form-control" placeholder="Input a whole number between 0 and infinity for the most difficult measure." min="0">
+								</div>
+								<div class="col-xs-1">
+									<p></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-1">
+									<p></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-1">
+									<p></p>
+								</div>
+								<div class="col-md-6">
+									<button type="button" id="PDFVersion" class="btn btn-success">View Selected Piece</button>
+								</div>
+								<div class="col-md-4">
+									<button type="button" id="ComplexityRunner" class="btn btn-primary">Get Complexity Score</button>
+								</div>
+								<div class="col-xs-1">
+									<p></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<p></p>
+				</div>
+			</div>
+			<!-- <div class="row">
+				<p>Output:</p>
+			</div> -->
+			<div class="row">
+				<div class="col-md-12">
+					<div id="resultholder">
+						<table cellpadding="0" cellspacing="0" border="0" class="display" id="retrievedData"></table>
+						
+					</div>
+				</div>
+			</div>
+			<!-- Empty row for spacing. -->
+			<div class="row">
+				<div class="col-md-1">
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<p></p>
+				</div>
+				<div class="col-md-8">
+					<div class="row text-center">
+						<h2 id="histoTitle" class="hidden">Parts and Complexity Scores</h2>
+					</div>
+					<div class="row">
+						<div id="dashboardholder">
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-1">
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h2 id="detailedInfoTitle" class="hidden"></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2">
+					<p></p>
+				</div>
+				<div class="col-md-3">
+					<div class="row">
+						<div id="pieholder">
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-1">
+							<p></p>
+						</div>
+						<div class="col-md-4">
+							<div id="legendholder">
+
+							</div>
+						</div>
+						<div class="col-xs-1">
+							<p></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="row">
+						<h4 id="worstMeasureTitle" class="hidden"></h4>
+					</div>
+					<div class="row">
+						<div width="500" height="200" id="notationcanvas" class="hidden">
+
+						</div>
+						<h4 id="canvasErrorMessage" class="hidden">There was an error displaying the measure.</h4>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					<div id="xmlholder">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/docs.min.js"/>
+	</body>
+</html>
