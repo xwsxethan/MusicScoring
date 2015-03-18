@@ -2,6 +2,7 @@ package Visitors;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,6 +10,8 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -16,7 +19,11 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.ls.DOMImplementationLS;
 import org.w3c.dom.ls.LSSerializer;
+import org.xml.sax.EntityResolver;
+import org.xml.sax.HandlerBase;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
 
 import DifficultyLevels.DifficultyLevel;
 import Main.ComplexityScore;
@@ -162,8 +169,27 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 		DocumentBuilder builder;
 		Document toRead;
 		try {
-			builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-			toRead = builder.parse(xmlToParse);
+			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+
+			//dbf.setNamespaceAware(false);
+			//dbf.setExpandEntityReferences(false);
+			//dbf.setFeature("http://xml.org/sax/features/namespaces", false);
+			//dbf.setFeature("http://xml.org/sax/features/validation", false);
+			//dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
+			dbf.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false);
+			//dbf.setFeature("http://xml.org/sax/features/validation", false);
+			dbf.setValidating(false);
+			
+			builder = dbf.newDocumentBuilder();
+			//sp.parse(xmlToParse, new DefaultHandler());
+			/*builder.setEntityResolver(new EntityResolver() {
+		        @Override
+		        public InputSource resolveEntity(String publicId, String systemId)
+		                throws SAXException, IOException {
+		            return new InputSource(new StringReader(""));
+		        }
+		    });*/
+			toRead = builder.parse(xmlToParse.getAbsolutePath());
 		} catch (ParserConfigurationException | SAXException | IOException e) {
 			if (Main.LOGGING) {
 				System.out.println("ERROR: Couldn't open the xml file to read. Possibly an incorrect name.");
@@ -171,7 +197,7 @@ public class NoteComplexityVisitor implements IMusicElementVisitor {
 			}
 			return null;
 		}		
-		
+
 		return toRead.getChildNodes();
 	}
 	

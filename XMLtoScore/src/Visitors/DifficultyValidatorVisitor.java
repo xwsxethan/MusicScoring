@@ -140,18 +140,18 @@ public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 		int c0 = Utils.noteToNum("C", "0", "0");
 		int c10 = Utils.noteToNum("C", "10", "0");
 		
-		String noteOutput = "Note results follow:\n\r";
+		String noteOutput = "Note results follow:\n";
 		
 		for (int note = c0; note <= c10; note++) {
 			if (getNoteDifficulty(note) == DEFAULT_NOTE_DIFFICULTY) {
-				noteOutput += "Note " + Utils.numToNote(note) + " not covered.\n\r";
+				noteOutput += "Note " + Utils.numToNote(note) + " not covered.\n";
 			}
 		}
 
 		int cflat = Utils.namedKeyToNum("Cb");
 		int csharp = Utils.namedKeyToNum("C#");
 		
-		String intervalOutput = "Interval results follow:\n\r";
+		String intervalOutput = "Interval results follow:\n";
 		
 		for (int key = cflat; key <= csharp; key++) {
 			for (int low = c0; low <= c10; low++) {
@@ -159,7 +159,7 @@ public class DifficultyValidatorVisitor implements IDifficultyElementVisitor {
 					if (getIntervalDifficulty(low, high, key) == DEFAULT_INTERVAL_DIFFICULTY) {
 						intervalOutput += "Interval of notes " + Utils.numToNote(low) + " and "
 							+ Utils.numToNote(high) + " in key " + Utils.keyNumToNamedKey(key) +
-							" not covered.\n\r";
+							" not covered.\n";
 					}
 				}
 			}
