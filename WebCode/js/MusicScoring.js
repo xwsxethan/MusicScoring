@@ -99,10 +99,10 @@ $(document).on('click', '#ComplexityRunner', function () {
                 if (guess !== undefined) {
                     if (guess === item.worstMeasureNumber) {
                         guessCorrect = true;
-                        correctPartNames = correctPartNames + item.partName + ",";
+                        correctPartNames = correctPartNames + "\n" + item.partName;
                     }
                     else {
-                        incorrectPartNames = incorrectPartNames + item.partName + ",";
+                        incorrectPartNames = incorrectPartNames + "\n" + item.partName;
                     }
                 }
 		    }
@@ -122,21 +122,13 @@ $(document).on('click', '#ComplexityRunner', function () {
             }
 
             if (guess !== undefined) {
-                if (correctPartNames.length > 1) {
-                    correctPartNames = correctPartNames.substring(0, correctPartNames.length - 1);
-                }
-
-                if (incorrectPartNames.length > 1) {
-                    incorrectPartNames = incorrectPartNames.substring(0, incorrectPartNames.length - 1);
-                }
-
                 if (guessCorrect) {
                     alert("You got it right! The following parts' most difficult measure is number "
-                        + guess + ":\n" + correctPartNames);
+                        + guess + ":" + correctPartNames);
                 }
                 else {
                     alert("Sorry, that is incorrect. The following parts had a different measure "
-                        + "as their most difficult one:\n" + incorrectPartNames);
+                        + "as their most difficult one:" + incorrectPartNames);
                 }
             }
 		},
