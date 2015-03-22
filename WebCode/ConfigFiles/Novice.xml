@@ -13,25 +13,19 @@
 			<range>
 				A4
 			</range>
-			<difficulty>
-				2
-			</difficulty>
+			<difficulty>1</difficulty>
 		</note-value>
 		<note-value>
 			<range>
 				B4-C5
 			</range>
-			<difficulty>
-				5
-			</difficulty>
+			<difficulty>4</difficulty>
 		</note-value>
 		<note-value>
 			<range>
 				C#5-C10
 			</range>
-			<difficulty>
-				10
-			</difficulty>
+			<difficulty>8</difficulty>
 		</note-value>
 	</notes>
 	<intervals>
@@ -59,9 +53,7 @@
 			<location2>
 			G3-G4
 			</location2>
-			<difficulty>
-			2
-			</difficulty>
+			<difficulty>1</difficulty>
 		</interval>
 		<interval>
 			<difference>
@@ -73,9 +65,7 @@
 			<location2>
 			G3-G4
 			</location2>
-			<difficulty>
-			3
-			</difficulty>
+			<difficulty>2</difficulty>
 		</interval>
 		<interval>
 			<difference>
@@ -87,9 +77,7 @@
 			<location2>
 			G3-G4
 			</location2>
-			<difficulty>
-			4
-			</difficulty>
+			<difficulty>2</difficulty>
 		</interval>
 		<interval>
 			<difference>
@@ -101,9 +89,7 @@
 			<location2>
 			G3-G4
 			</location2>
-			<difficulty>
-			5
-			</difficulty>
+			<difficulty>4</difficulty>
 		</interval>
 		<interval>
 			<difference>
@@ -115,9 +101,7 @@
 			<location2>
 			B4-C5
 			</location2>
-			<difficulty>
-			8
-			</difficulty>
+			<difficulty>7</difficulty>
 		</interval>
 		<interval>
 			<difference>
@@ -143,9 +127,7 @@
 			<location2>
 			-1
 			</location2>
-			<difficulty>
-			9
-			</difficulty>
+			<difficulty>7</difficulty>
 		</interval>
 		<interval>
 			<difference>
@@ -157,9 +139,7 @@
 			<location2>
 			-1
 			</location2>
-			<difficulty>
-			9
-			</difficulty>
+			<difficulty>8</difficulty>
 		</interval>
 		<interval>
 			<difference>
@@ -171,9 +151,7 @@
 			<location2>
 			-1
 			</location2>
-			<difficulty>
-			9
-			</difficulty>
+			<difficulty>8</difficulty>
 		</interval>
 		<interval>
 			<difference>
