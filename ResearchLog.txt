@@ -371,3 +371,9 @@ specified. To specify slur, make the element <slur></slur>.
 There must be a value here for "normal" or legato.
 The value of that element is the difficulty level that
 will be applied to that articulation.
+
+
+
+
+scp -r * eholder0@mickey.cs.vt.edu:~/WebCode/
+ssh eholder0@mickey.cs.vt.edu
