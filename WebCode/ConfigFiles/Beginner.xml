@@ -2,9 +2,7 @@
 <levels>
 	<notes>
 		<note-value>
-			<range>
-				G3-G4
-			</range>
+			<range>G3-G#4</range>
 			<difficulty>
 				1
 			</difficulty>
@@ -18,9 +16,7 @@
 			</difficulty>
 		</note-value>
 		<note-value>
-			<range>
-				B4-C5
-			</range>
+			<range>Bb4-C5</range>
 			<difficulty>
 				5
 			</difficulty>
@@ -53,12 +49,8 @@
 			<difference>
 			2
 			</difference>
-			<location1>
-			G3-G4
-			</location1>
-			<location2>
-			G3-G4
-			</location2>
+			<location1>G3-G#4</location1>
+			<location2>G3-G#4</location2>
 			<difficulty>
 			2
 			</difficulty>
@@ -67,12 +59,8 @@
 			<difference>
 			3
 			</difference>
-			<location1>
-			G3-G4
-			</location1>
-			<location2>
-			G3-G4
-			</location2>
+			<location1>G3-G#4</location1>
+			<location2>G3-G#4</location2>
 			<difficulty>
 			3
 			</difficulty>
@@ -81,12 +69,8 @@
 			<difference>
 			4
 			</difference>
-			<location1>
-			G3-G4
-			</location1>
-			<location2>
-			G3-G4
-			</location2>
+			<location1>G3-G#4</location1>
+			<location2>G3-G#4</location2>
 			<difficulty>
 			4
 			</difficulty>
@@ -95,12 +79,8 @@
 			<difference>
 			5
 			</difference>
-			<location1>
-			G3-G4
-			</location1>
-			<location2>
-			G3-G4
-			</location2>
+			<location1>G3-G#4</location1>
+			<location2>G3-G#4</location2>
 			<difficulty>
 			5
 			</difficulty>
@@ -109,12 +89,8 @@
 			<difference>
 			0
 			</difference>
-			<location1>
-			G3-G4
-			</location1>
-			<location2>
-			B4-C5
-			</location2>
+			<location1>G3-G#4</location1>
+			<location2>A4-C5</location2>
 			<difficulty>
 			8
 			</difficulty>
@@ -123,9 +99,7 @@
 			<difference>
 			0
 			</difference>
-			<location1>
-			B4-C5
-			</location1>
+			<location1>A4-C5</location1>
 			<location2>
 			C#5-C10
 			</location2>
