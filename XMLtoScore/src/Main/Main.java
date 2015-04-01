@@ -10,6 +10,7 @@ import DifficultyLevels.DifficultyLevel;
 public class Main {
 	public static boolean LOGGING = false;
 	private static boolean validation;
+	private static boolean lots = false;
 	
 	/*private static final String FOLDER_NAME = System.getProperty("user.dir") + File.separator;
 	private static final String DEFAULT_FILE_NAME =
@@ -43,6 +44,11 @@ public class Main {
 		DifficultyLevel lev = setDifficultyFromNum();
 		File xmlFile;
 		
+		if (lots) {
+			runLotsOfFilesAtOnce(lev);
+			return;
+		}
+		
 		try {
 			xmlFile = new File(fullFileName);
 		}
@@ -60,8 +66,6 @@ public class Main {
 		
 		Scorer letsGetSomeOutput = new Scorer(lev, xmlFile, validation);
 
-		//System.out.println("File: " + fullFileName);
-		//System.out.println("Score: " + letsGetSomeOutput.getSetScore());
 		System.out.println(letsGetSomeOutput.getJsonString());
 		
 		return;
@@ -129,5 +133,33 @@ public class Main {
 		}
 		
 		return lev;
+	}
+	
+	private static void runLotsOfFilesAtOnce(DifficultyLevel lev) {
+		//Put in the directory for all the files you need to run at once
+		String dirLocation = "/Users/ethanholder/Dropbox/Public/college/2015-01 Spring/OS X Thesis/MusicScoring/ClarinetSpecificSamplePieces/Graded Pieces/MusicXMLs to Run/";
+		File dir = new File(dirLocation);
+		
+		File[] lotsOfFiles = dir.listFiles();
+		
+		for (int i = 0; i < lotsOfFiles.length; i++) {	
+			File xmlFile = lotsOfFiles[i];
+			
+			if (xmlFile.getAbsolutePath().contains("Charles") || xmlFile.getAbsolutePath().contains("Scherzo")) {
+				System.out.print("");
+			}
+			
+			//Can no longer enable logging via command line since we're passing around json.
+			LOGGING = false;
+			
+			if (LOGGING) {
+				System.out.println("Logging enabled via command line. Now beginning parsing process.");
+			}
+			
+			Scorer letsGetSomeOutput = new Scorer(lev, xmlFile, validation);
+	
+			System.out.println("File: " + xmlFile);
+			System.out.println("Score: " + letsGetSomeOutput.getSetScore());
+		}
 	}
 }

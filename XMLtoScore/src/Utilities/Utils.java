@@ -158,6 +158,11 @@ public class Utils {
 			return 0;
 		}
 		
+		int beatsToUse = beatsPerMinute;
+		if (beatsPerMinute == 0) {
+			beatsToUse = Constants.DEFAULT_BEATS_PER_MINUTE;
+		}
+		
 		double beats;
 		switch(noteType.trim().toLowerCase()) {
 		case (Constants.WHOLE) : {
@@ -201,7 +206,7 @@ public class Utils {
 			beats = beats * 2;
 		}
 		
-		double duration = beats / ((double)beatsPerMinute / Constants.SECONDS_IN_MINUTE);
+		double duration = beats / ((double)beatsToUse / Constants.SECONDS_IN_MINUTE);
 		//System.out.println("Beats: " + beats + "\tBeats per Minute: " + beatsPerMinute + "\tDuration: " + duration);
 		return duration;
 	}

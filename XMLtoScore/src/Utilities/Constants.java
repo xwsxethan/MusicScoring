@@ -91,5 +91,7 @@ public class Constants {
 	public static final String HASH_TEXT_IN_XML = "#text";
 	
 	public static final String VALIDATION_INITIAL_RESULT = "No results yet.";
+	
+	public static final int DEFAULT_BEATS_PER_MINUTE = 120;
 
 }
