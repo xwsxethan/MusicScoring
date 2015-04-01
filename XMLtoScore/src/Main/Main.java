@@ -145,10 +145,6 @@ public class Main {
 		for (int i = 0; i < lotsOfFiles.length; i++) {	
 			File xmlFile = lotsOfFiles[i];
 			
-			if (xmlFile.getAbsolutePath().contains("Charles") || xmlFile.getAbsolutePath().contains("Scherzo")) {
-				System.out.print("");
-			}
-			
 			//Can no longer enable logging via command line since we're passing around json.
 			LOGGING = false;
 			
@@ -156,10 +152,9 @@ public class Main {
 				System.out.println("Logging enabled via command line. Now beginning parsing process.");
 			}
 			
-			Scorer letsGetSomeOutput = new Scorer(lev, xmlFile, validation);
+			Scorer letsGetSomeOutput = new Scorer(lev, xmlFile, false);
 	
-			System.out.println("File: " + xmlFile);
-			System.out.println("Score: " + letsGetSomeOutput.getSetScore());
+			System.out.println(xmlFile.getName() + "\t" + letsGetSomeOutput.getSetScore());
 		}
 	}
 }
