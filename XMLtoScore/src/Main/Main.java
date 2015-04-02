@@ -10,7 +10,7 @@ import DifficultyLevels.DifficultyLevel;
 public class Main {
 	public static boolean LOGGING = false;
 	private static boolean validation;
-	private static boolean lots = false;
+	private static boolean lots = true;
 	
 	/*private static final String FOLDER_NAME = System.getProperty("user.dir") + File.separator;
 	private static final String DEFAULT_FILE_NAME =
