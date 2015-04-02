@@ -137,7 +137,7 @@ public class Main {
 	
 	private static void runLotsOfFilesAtOnce(DifficultyLevel lev) {
 		//Put in the directory for all the files you need to run at once
-		String dirLocation = "/Users/ethanholder/Dropbox/Public/college/2015-01 Spring/OS X Thesis/MusicScoring/ClarinetSpecificSamplePieces/Graded Pieces/MusicXMLs to Run/";
+		String dirLocation = "/Users/ethanholder/Dropbox/Public/college/2015-01 Spring/OS X Thesis/MusicScoring/ClarinetSpecificSamplePieces/OCR Pieces/OCR xml/";
 		File dir = new File(dirLocation);
 		
 		File[] lotsOfFiles = dir.listFiles();
