@@ -1,46 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2014)
+This is BibTeX, Version 0.99d (TeX Live 2014/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: HolderOnward2015.aux
 The style file: abbrv.bst
 Database file #1: HolderOnward2015.bib
-You've used 1 entry,
+You've used 35 entries,
             2118 wiz_defined-function locations,
-            502 strings with 3833 characters,
-and the built_in function-call counts, 230 in all, are:
-= -- 20
-> -- 7
-< -- 0
-+ -- 3
-- -- 2
-* -- 10
-:= -- 44
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 4
+            718 strings with 8539 characters,
+and the built_in function-call counts, 10048 in all, are:
+= -- 996
+> -- 384
+< -- 7
++ -- 157
+- -- 119
+* -- 540
+:= -- 1630
+add.period$ -- 110
+call.type$ -- 35
+change.case$ -- 159
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 7
-empty$ -- 23
-format.name$ -- 2
-if$ -- 47
+cite$ -- 35
+duplicate$ -- 394
+empty$ -- 918
+format.name$ -- 119
+if$ -- 2203
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 8
+int.to.str$ -- 35
+missing$ -- 20
+newline$ -- 178
+num.names$ -- 72
+pop$ -- 245
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 127
 quote$ -- 0
-skip$ -- 7
+skip$ -- 319
 stack$ -- 0
-substring$ -- 5
-swap$ -- 1
-text.length$ -- 0
+substring$ -- 494
+swap$ -- 92
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 134
 warning$ -- 0
-while$ -- 2
-width$ -- 2
-write$ -- 12
+while$ -- 101
+width$ -- 37
+write$ -- 380

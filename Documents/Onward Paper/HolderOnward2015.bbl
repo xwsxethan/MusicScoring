@@ -1,8 +1,193 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{Allali2009}
+J.~Allali, P.~Ferraro, P.~Hanna, C.~Iliopoulos, and M.~Robine.
+\newblock Toward a general framework for polyphonic comparison.
+\newblock {\em Fundam. Inf.}, 97(3):331--346, Aug. 2009.
+
+\bibitem{XMLAPI}
+{Apache Xerces}.
+\newblock The apache xerces™ project.
+\newblock \url{http://xerces.apache.org/index.html}, 1 2013.
+
+\bibitem{Solos}
+J.~Arnold.
+\newblock {\em Clarinet Solos}.
+\newblock Amsco Music Pub. Co, New York, 1939.
+
+\bibitem{Sibelius}
+{Avid Technology Inc.}
+\newblock Sibelius.
+\newblock \url{http://www.avid.com/US/products/sibelius}, 3 2015.
+
+\bibitem{Audiveris}
+H.~Bitteur.
+\newblock Audiveris.
+\newblock \url{https://audiveris.kenai.com/}, 1 2013.
+
+\bibitem{D3}
+M.~Bostock.
+\newblock D3 data-driven documents.
+\newblock \url{http://d3js.org/}, 2013.
+
+\bibitem{Byrd2001}
+D.~Byrd.
+\newblock Music-notation searching and digital libraries.
+\newblock In {\em Proceedings of the 1st ACM/IEEE-CS Joint Conference on
+  Digital Libraries}, JCDL '01, pages 239--246, New York, NY, USA, 2001. ACM.
+
+\bibitem{byrd2006prospects}
+D.~Byrd and M.~Schindele.
+\newblock Prospects for improving omr with multiple recognizers.
+\newblock In {\em ISMIR}, pages 41--46, 2006.
+
+\bibitem{Cataltepe2007}
+Z.~Cataltepe, Y.~Yaslan, and A.~Sonmez.
+\newblock Music genre classification using midi and audio features.
+\newblock {\em EURASIP J. Appl. Signal Process.}, 2007(1):150--150, Jan. 2007.
+
+\bibitem{VexFlow}
+M.~M. Cheppudira.
+\newblock vexflow.
+\newblock \url{https://github.com/0xfe/vexflow}, 2010.
+
+\bibitem{Chiu2012}
+S.-C. Chiu and M.-S. Chen.
+\newblock A study on difficulty level recognition of piano sheet music.
+\newblock In {\em Proceedings of the 2012 IEEE International Symposium on
+  Multimedia}, ISM '12, pages 17--23, Washington, DC, USA, 2012. IEEE Computer
+  Society.
+
+\bibitem{Choudhury2000}
+G.~S. Choudhury, M.~Droetboom, T.~DiLauro, I.~Fujinaga, and B.~Harrington.
+\newblock Optical music recognition system within a large-scale digitization
+  project.
+\newblock In {\em ISMIR}, 2000.
+
+\bibitem{Cuthbert2011}
+M.~S. Cuthbert, C.~Ariza, and L.~Friedland.
+\newblock Feature extraction and machine learning on symbolic music using the
+  music21 toolkit.
+\newblock In {\em ISMIR}, pages 387--392, 2011.
+
+\bibitem{Good2001}
+M.~Good et~al.
+\newblock {MusicXML}: An internet-friendly format for sheet music.
+\newblock In {\em XML Conference and Expo}, pages 03--04. Citeseer, 2001.
+
+\bibitem{Heijink2002}
+H.~Heijink and R.~Meulenbroek.
+\newblock On the complexity of classical guitar playing: Functional adaptations
+  to task constraints.
+\newblock {\em Journal of motor behavior}, 34(4):339--351, 2002.
 
 \bibitem{GithubMusicScoring}
 E.~Holder.
 \newblock Musicscoring.
 \newblock \url{https://github.com/xwsxethan/MusicScoring}, 2 2015.
+
+\bibitem{JSONAPI}
+{JSON Simple}.
+\newblock json-simple.
+\newblock \url{https://code.google.com/p/json-simple/}, 2 2012.
+
+\bibitem{Physio}
+R.~Knapp, J.~Kim, and E.~André.
+\newblock Physiological signals and their use in augmenting emotion recognition
+  for human–machine interaction.
+\newblock In R.~Cowie, C.~Pelachaud, and P.~Petta, editors, {\em
+  Emotion-Oriented Systems}, Cognitive Technologies, pages 133--159. Springer
+  Berlin Heidelberg, 2011.
+
+\bibitem{Controller}
+R.~B. Knapp and H.~S. Lusted.
+\newblock A bioelectric controller for computer music applications.
+\newblock {\em Computer Music Journal}, 14(1):pp. 42--47, 1990.
+
+\bibitem{Liou2010}
+C.-Y. Liou, T.-H. Wu, and C.-Y. Lee.
+\newblock Modeling complexity in musical rhythm.
+\newblock {\em Complex.}, 15(4):19--30, Mar. 2010.
+
+\bibitem{FinaleNotepad}
+{Makemusic Inc.}
+\newblock Finale notepad.
+\newblock \url{http://www.finalemusic.com/products/finale-notepad/}, 3 2015.
+
+\bibitem{MusicXML}
+{Makemusic Inc.}
+\newblock {MusicXML}.
+\newblock \url{http://www.musicxml.com/}, 3 2015.
+
+\bibitem{MuseScore}
+{MuseScore BVBA}.
+\newblock Musescore share your sheet music.
+\newblock \url{https://musescore.com/}, 2015.
+
+\bibitem{NotationSoft}
+{Notation Software Germany}.
+\newblock Notation composer.
+\newblock \url{http://www.notation.com/NotationComposer.php}, 2014.
+
+\bibitem{NYSSMA}
+{NYSSMA New York State School Music Association}.
+\newblock Nyssma new york state school music association.
+\newblock \url{http://www.nyssma.org/}, 2015.
+
+\bibitem{Bootstrap}
+Otto and Thornton.
+\newblock Bootstrap.
+\newblock \url{http://getbootstrap.com/}, 2015.
+
+\bibitem{Standard}
+B.~Pearson.
+\newblock {\em Standard of excellence : comprehensive band method, B♭
+  clarinet}.
+\newblock Neil A. Kjos Music Co, San Diego, Calif, 1993.
+
+\bibitem{IMSLP}
+{Project Petrucci LLC}.
+\newblock International music score library project.
+\newblock \url{http://imslp.org/}, 2015.
+
+\bibitem{RoyalSyllabus}
+{Royal Conservatory Music Development Program}.
+\newblock Clarinet syllabus.
+\newblock
+  \url{https://www.musicdevelopmentprogram.org/sites/default/files/files/S42_Clarinet%20Syl_MDP_2014_online_SECURED.pdf},
+  2014.
+
+\bibitem{DataTables}
+{SpryMedia Ltd.}
+\newblock Datatables table plug-in for {jQuery}.
+\newblock \url{https://www.datatables.net/}, 2015.
+
+\bibitem{Tanaka2002}
+A.~Tanaka and R.~B. Knapp.
+\newblock Multimodal interaction in music using the electromyogram and relative
+  position sensing.
+\newblock In {\em Proceedings of the 2002 Conference on New Interfaces for
+  Musical Expression}, NIME '02, pages 1--6, Singapore, Singapore, 2002.
+  National University of Singapore.
+
+\bibitem{jQuery}
+{The {jQuery} Foundation}.
+\newblock {jQuery}.
+\newblock \url{https://jquery.com/}, 2015.
+
+\bibitem{VBODA}
+{Virginia Band and Orchestra Directors Association}.
+\newblock Virginia band and orchestra directors association.
+\newblock \url{http://www.vboda.org/}, 2015.
+
+\bibitem{Concert}
+H.~Voxman.
+\newblock {\em Concert and Contest Collection for Bb Clarinet: Solo Part}.
+\newblock Rubank Publications, Chicago, Illinois, 1992.
+
+\bibitem{wing2006computational}
+J.~M. Wing.
+\newblock Computational thinking.
+\newblock {\em Communications of the ACM}, 49(3):33--35, 2006.
 
 \end{thebibliography}
