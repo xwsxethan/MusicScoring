@@ -1,0 +1,230 @@
+\begin{thebibliography}{35}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Allali et~al.(2009)Allali, Ferraro, Hanna, Iliopoulos, and
+  Robine]{Allali2009}
+J.~Allali, P.~Ferraro, P.~Hanna, C.~Iliopoulos, and M.~Robine.
+\newblock Toward a general framework for polyphonic comparison.
+\newblock \emph{Fundam. Inf.}, 97\penalty0 (3):\penalty0 331--346, Aug. 2009.
+\newblock ISSN 0169-2968.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=2365196.2365200}.
+
+\bibitem[{Apache Xerces}(2013)]{XMLAPI}
+{Apache Xerces}.
+\newblock The apache xerces™ project.
+\newblock \url{http://xerces.apache.org/index.html}, 1 2013.
+
+\bibitem[Arnold(1939)]{Solos}
+J.~Arnold.
+\newblock \emph{Clarinet Solos}.
+\newblock Amsco Music Pub. Co, New York, 1939.
+\newblock ISBN 978-0-8256-2028-7.
+
+\bibitem[{Avid Technology Inc.}(2015)]{Sibelius}
+{Avid Technology Inc.}
+\newblock Sibelius.
+\newblock \url{http://www.avid.com/US/products/sibelius}, 3 2015.
+
+\bibitem[Bitteur(2013)]{Audiveris}
+H.~Bitteur.
+\newblock Audiveris.
+\newblock \url{https://audiveris.kenai.com/}, 1 2013.
+
+\bibitem[Bostock(2013)]{D3}
+M.~Bostock.
+\newblock D3 data-driven documents.
+\newblock \url{http://d3js.org/}, 2013.
+
+\bibitem[Byrd(2001)]{Byrd2001}
+D.~Byrd.
+\newblock Music-notation searching and digital libraries.
+\newblock In \emph{Proceedings of the 1st ACM/IEEE-CS Joint Conference on
+  Digital Libraries}, JCDL '01, pages 239--246, New York, NY, USA, 2001. ACM.
+\newblock ISBN 1-58113-345-6.
+\newblock \doi{10.1145/379437.379662}.
+\newblock URL \url{http://doi.acm.org/10.1145/379437.379662}.
+
+\bibitem[Byrd and Schindele(2006)]{byrd2006prospects}
+D.~Byrd and M.~Schindele.
+\newblock Prospects for improving omr with multiple recognizers.
+\newblock In \emph{ISMIR}, pages 41--46, 2006.
+
+\bibitem[Cataltepe et~al.(2007)Cataltepe, Yaslan, and Sonmez]{Cataltepe2007}
+Z.~Cataltepe, Y.~Yaslan, and A.~Sonmez.
+\newblock Music genre classification using midi and audio features.
+\newblock \emph{EURASIP J. Appl. Signal Process.}, 2007\penalty0 (1):\penalty0
+  150--150, Jan. 2007.
+\newblock ISSN 1110-8657.
+\newblock \doi{10.1155/2007/36409}.
+\newblock URL \url{http://dx.doi.org/10.1155/2007/36409}.
+
+\bibitem[Cheppudira(2010)]{VexFlow}
+M.~M. Cheppudira.
+\newblock vexflow.
+\newblock \url{https://github.com/0xfe/vexflow}, 2010.
+
+\bibitem[Chiu and Chen(2012)]{Chiu2012}
+S.-C. Chiu and M.-S. Chen.
+\newblock A study on difficulty level recognition of piano sheet music.
+\newblock In \emph{Proceedings of the 2012 IEEE International Symposium on
+  Multimedia}, ISM '12, pages 17--23, Washington, DC, USA, 2012. IEEE Computer
+  Society.
+\newblock ISBN 978-0-7695-4875-3.
+\newblock \doi{10.1109/ISM.2012.11}.
+\newblock URL \url{http://dx.doi.org/10.1109/ISM.2012.11}.
+
+\bibitem[Choudhury et~al.(2000)Choudhury, Droetboom, DiLauro, Fujinaga, and
+  Harrington]{Choudhury2000}
+G.~S. Choudhury, M.~Droetboom, T.~DiLauro, I.~Fujinaga, and B.~Harrington.
+\newblock Optical music recognition system within a large-scale digitization
+  project.
+\newblock In \emph{ISMIR}, 2000.
+
+\bibitem[Cuthbert et~al.(2011)Cuthbert, Ariza, and Friedland]{Cuthbert2011}
+M.~S. Cuthbert, C.~Ariza, and L.~Friedland.
+\newblock Feature extraction and machine learning on symbolic music using the
+  music21 toolkit.
+\newblock In \emph{ISMIR}, pages 387--392, 2011.
+
+\bibitem[Good et~al.(2001)]{Good2001}
+M.~Good et~al.
+\newblock {MusicXML}: An internet-friendly format for sheet music.
+\newblock In \emph{XML Conference and Expo}, pages 03--04. Citeseer, 2001.
+
+\bibitem[Heijink and Meulenbroek(2002)]{Heijink2002}
+H.~Heijink and R.~Meulenbroek.
+\newblock On the complexity of classical guitar playing: Functional adaptations
+  to task constraints.
+\newblock \emph{Journal of motor behavior}, 34\penalty0 (4):\penalty0 339--351,
+  2002.
+\newblock URL \url{www.summon.com}.
+
+\bibitem[Holder(2015)]{GithubMusicScoring}
+E.~Holder.
+\newblock Musicscoring.
+\newblock \url{https://github.com/xwsxethan/MusicScoring}, 2 2015.
+
+\bibitem[{JSON Simple}(2012)]{JSONAPI}
+{JSON Simple}.
+\newblock json-simple.
+\newblock \url{https://code.google.com/p/json-simple/}, 2 2012.
+
+\bibitem[Knapp et~al.(2011)Knapp, Kim, and André]{Physio}
+R.~Knapp, J.~Kim, and E.~André.
+\newblock Physiological signals and their use in augmenting emotion recognition
+  for human–machine interaction.
+\newblock In R.~Cowie, C.~Pelachaud, and P.~Petta, editors,
+  \emph{Emotion-Oriented Systems}, Cognitive Technologies, pages 133--159.
+  Springer Berlin Heidelberg, 2011.
+\newblock ISBN 978-3-642-15183-5.
+\newblock \doi{10.1007/978-3-642-15184-2_9}.
+\newblock URL \url{http://dx.doi.org/10.1007/978-3-642-15184-2_9}.
+
+\bibitem[Knapp and Lusted(1990)]{Controller}
+R.~B. Knapp and H.~S. Lusted.
+\newblock A bioelectric controller for computer music applications.
+\newblock \emph{Computer Music Journal}, 14\penalty0 (1):\penalty0 pp. 42--47,
+  1990.
+\newblock ISSN 01489267.
+\newblock URL \url{http://www.jstor.org/stable/3680115}.
+
+\bibitem[Liou et~al.(2010)Liou, Wu, and Lee]{Liou2010}
+C.-Y. Liou, T.-H. Wu, and C.-Y. Lee.
+\newblock Modeling complexity in musical rhythm.
+\newblock \emph{Complex.}, 15\penalty0 (4):\penalty0 19--30, Mar. 2010.
+\newblock ISSN 1076-2787.
+\newblock \doi{10.1002/cplx.v15:4}.
+\newblock URL \url{http://dx.doi.org/10.1002/cplx.v15:4}.
+
+\bibitem[{Makemusic Inc.}(2015{\natexlab{a}})]{FinaleNotepad}
+{Makemusic Inc.}
+\newblock Finale notepad.
+\newblock \url{http://www.finalemusic.com/products/finale-notepad/}, 3
+  2015{\natexlab{a}}.
+
+\bibitem[{Makemusic Inc.}(2015{\natexlab{b}})]{MusicXML}
+{Makemusic Inc.}
+\newblock {MusicXML}.
+\newblock \url{http://www.musicxml.com/}, 3 2015{\natexlab{b}}.
+
+\bibitem[{MuseScore BVBA}(2015)]{MuseScore}
+{MuseScore BVBA}.
+\newblock Musescore share your sheet music.
+\newblock \url{https://musescore.com/}, 2015.
+
+\bibitem[{Notation Software Germany}(2014)]{NotationSoft}
+{Notation Software Germany}.
+\newblock Notation composer.
+\newblock \url{http://www.notation.com/NotationComposer.php}, 2014.
+
+\bibitem[{NYSSMA New York State School Music Association}(2015)]{NYSSMA}
+{NYSSMA New York State School Music Association}.
+\newblock Nyssma new york state school music association.
+\newblock \url{http://www.nyssma.org/}, 2015.
+
+\bibitem[Otto and Thornton(2015)]{Bootstrap}
+Otto and Thornton.
+\newblock Bootstrap.
+\newblock \url{http://getbootstrap.com/}, 2015.
+
+\bibitem[Pearson(1993)]{Standard}
+B.~Pearson.
+\newblock \emph{Standard of excellence : comprehensive band method, B♭
+  clarinet}.
+\newblock Neil A. Kjos Music Co, San Diego, Calif, 1993.
+\newblock ISBN 978-0849759291.
+
+\bibitem[{Project Petrucci LLC}(2015)]{IMSLP}
+{Project Petrucci LLC}.
+\newblock International music score library project.
+\newblock \url{http://imslp.org/}, 2015.
+
+\bibitem[{Royal Conservatory Music Development Program}(2014)]{RoyalSyllabus}
+{Royal Conservatory Music Development Program}.
+\newblock Clarinet syllabus.
+\newblock
+  \url{https://www.musicdevelopmentprogram.org/sites/default/files/files/S42_Clarinet%20Syl_MDP_2014_online_SECURED.pdf},
+  2014.
+
+\bibitem[{SpryMedia Ltd.}(2015)]{DataTables}
+{SpryMedia Ltd.}
+\newblock Datatables table plug-in for {jQuery}.
+\newblock \url{https://www.datatables.net/}, 2015.
+
+\bibitem[Tanaka and Knapp(2002)]{Tanaka2002}
+A.~Tanaka and R.~B. Knapp.
+\newblock Multimodal interaction in music using the electromyogram and relative
+  position sensing.
+\newblock In \emph{Proceedings of the 2002 Conference on New Interfaces for
+  Musical Expression}, NIME '02, pages 1--6, Singapore, Singapore, 2002.
+  National University of Singapore.
+\newblock ISBN 1-87465365-8.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=1085171.1085183}.
+
+\bibitem[{The {jQuery} Foundation}(2015)]{jQuery}
+{The {jQuery} Foundation}.
+\newblock {jQuery}.
+\newblock \url{https://jquery.com/}, 2015.
+
+\bibitem[{Virginia Band and Orchestra Directors Association}(2015)]{VBODA}
+{Virginia Band and Orchestra Directors Association}.
+\newblock Virginia band and orchestra directors association.
+\newblock \url{http://www.vboda.org/}, 2015.
+
+\bibitem[Voxman(1992)]{Concert}
+H.~Voxman.
+\newblock \emph{Concert and Contest Collection for Bb Clarinet: Solo Part}.
+\newblock Rubank Publications, Chicago, Illinois, 1992.
+\newblock ISBN 978-1423445449.
+
+\bibitem[Wing(2006)]{wing2006computational}
+J.~M. Wing.
+\newblock Computational thinking.
+\newblock \emph{Communications of the ACM}, 49\penalty0 (3):\penalty0 33--35,
+  2006.
+
+\end{thebibliography}
