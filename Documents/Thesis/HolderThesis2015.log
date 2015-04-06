@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2014.12.2)  4 APR 2015 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2014.12.2)  6 APR 2015 05:46
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -525,13 +525,13 @@ Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
 [1
 
-] <ComputationalThinkingAnalogy.png, id=243, 397.485pt x 252.945pt>
+] <ComputationalThinkingAnalogy.png, id=248, 397.485pt x 252.945pt>
 File: ComputationalThinkingAnalogy.png Graphic file (type png)
 
 <use ComputationalThinkingAnalogy.png>
 Package pdftex.def Info: ComputationalThinkingAnalogy.png used on input line 23
 1.
-(pdftex.def)             Requested size: 328.82706pt x 209.26114pt.
+(pdftex.def)             Requested size: 375.80542pt x 239.15779pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -541,9 +541,8 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.259 \item M
-             usiplectics, a new application of computing that encompasses au...
- <./ComputationalThinkingAnalogy.png>]
+l.238 
+       <./ComputationalThinkingAnalogy.png>]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
@@ -589,25 +588,25 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 [11]
 Chapter 5.
-<JoinedCropped.png, id=345, 523.4757pt x 379.4175pt>
+<JoinedCropped.png, id=350, 523.4757pt x 379.4175pt>
 File: JoinedCropped.png Graphic file (type png)
  <use JoinedCropped.png>
 Package pdftex.def Info: JoinedCropped.png used on input line 374.
-(pdftex.def)             Requested size: 220.78542pt x 160.02583pt.
+(pdftex.def)             Requested size: 375.80542pt x 272.38722pt.
 
 [12
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.379 
-       <./JoinedCropped.png>]
+]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[13]
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.391 
+       <./JoinedCropped.png>]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
@@ -653,23 +652,23 @@ l.530
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.530 
-      ] <GradesVsComplexityScores.png, id=446, 680.5425pt x 463.7325pt>
+      ] <GradesVsComplexityScores.png, id=451, 680.5425pt x 463.7325pt>
 File: GradesVsComplexityScores.png Graphic file (type png)
 
 <use GradesVsComplexityScores.png>
 Package pdftex.def Info: GradesVsComplexityScores.png used on input line 588.
-(pdftex.def)             Requested size: 220.78542pt x 150.44238pt.
+(pdftex.def)             Requested size: 375.80542pt x 256.07967pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[18] <GradesVsAverageComplexityScoresSTD.png, id=456, 680.5425pt x 463.7325pt>
+[18] <GradesVsAverageComplexityScoresSTD.png, id=461, 680.5425pt x 463.7325pt>
 File: GradesVsAverageComplexityScoresSTD.png Graphic file (type png)
 
 <use GradesVsAverageComplexityScoresSTD.png>
 Package pdftex.def Info: GradesVsAverageComplexityScoresSTD.png used on input l
 ine 595.
-(pdftex.def)             Requested size: 220.78542pt x 150.44238pt.
+(pdftex.def)             Requested size: 375.80542pt x 256.07967pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -703,17 +702,17 @@ File: lstlang1.sty 2014/03/04 1.5c listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-<DifferenceOCR.png, id=478, 678.3744pt x 462.528pt>
+<DifferenceOCR.png, id=483, 678.3744pt x 462.528pt>
 File: DifferenceOCR.png Graphic file (type png)
  <use DifferenceOCR.png>
 Package pdftex.def Info: DifferenceOCR.png used on input line 656.
-(pdftex.def)             Requested size: 220.78542pt x 150.53154pt.
+(pdftex.def)             Requested size: 375.80542pt x 256.24026pt.
 
-<PercentageOCR.png, id=479, 678.3744pt x 462.528pt>
+<PercentageOCR.png, id=484, 678.3744pt x 462.528pt>
 File: PercentageOCR.png Graphic file (type png)
  <use PercentageOCR.png>
 Package pdftex.def Info: PercentageOCR.png used on input line 663.
-(pdftex.def)             Requested size: 220.78542pt x 150.53154pt.
+(pdftex.def)             Requested size: 375.80542pt x 256.24026pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -827,25 +826,28 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
 [32])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 819.
-
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
 [33]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 819.
+Appendix A.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 823.
+[34
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 823.
  (./HolderThesis2015.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 819.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 819.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 823.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 823.
 Package rerunfilecheck Info: File `HolderThesis2015.out' has not changed.
-(rerunfilecheck)             Checksum: C4EC281AD5575C543FD249B7D70C8619;1982.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 819.
+(rerunfilecheck)             Checksum: 03CE0B368C02F9595B0D4A5EF7EF30B6;2034.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 823.
  ) 
 Here is how much of TeX's memory you used:
- 9917 strings out of 493104
- 140799 string characters out of 6136932
- 288719 words of memory out of 5000000
- 13088 multiletter control sequences out of 15000+600000
+ 9921 strings out of 493104
+ 140843 string characters out of 6136932
+ 288760 words of memory out of 5000000
+ 13090 multiletter control sequences out of 15000+600000
  13435 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,8n,45p,1211b,1196s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -862,10 +864,10 @@ cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on HolderThesis2015.pdf (41 pages, 1248583 bytes).
+Output written on HolderThesis2015.pdf (42 pages, 1250777 bytes).
 PDF statistics:
- 704 PDF objects out of 1000 (max. 8388607)
- 628 compressed objects within 7 object streams
- 136 named destinations out of 1000 (max. 500000)
- 263 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 713 PDF objects out of 1000 (max. 8388607)
+ 636 compressed objects within 7 object streams
+ 138 named destinations out of 1000 (max. 500000)
+ 271 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -179,8 +179,8 @@ OUTPUT HolderThesis2015.lot
 INPUT ComputationalThinkingAnalogy.png
 INPUT ./ComputationalThinkingAnalogy.png
 INPUT ./ComputationalThinkingAnalogy.png
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsl12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 INPUT JoinedCropped.png
