@@ -35,6 +35,7 @@
 %\usepackage{caption}
 \usepackage{placeins}
 \usepackage{harmony}
+\usepackage{pdfpages}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \lstset{frame=none, xleftmargin=15pt, stepnumber=1, numbers=left, numbersep=5pt,
@@ -604,7 +605,7 @@ The ability to use music scores in PDF format would greatly enhance the usabilit
 In our experiments, we used freely available music OCR software from Audiveris \cite{Audiveris}. We evaluated the reliability of this process as follows: find pre-matched PDF files with the correct MusicXML, convert the PDF files into a new MusicXML, and finally compare the correct and converted MusicXML to each other.
 
 The pre-matched PDF and MusicXML files we used are all from MuseScore \cite{MuseScore} and are listed in Table \ref{table:matched}. They were selected randomly from the list of single part pieces for clarinet. The MusicXML files came in .mxl (compressed MusicXML) format from MuseScore, and they were uniformly imported into Finale Notepad 2012 \cite{FinaleNotepad} to then export the uncompressed format for comparison. For this test we use only Audiveris for conversion.
-
+ 
 \begin{table}[ht!]
 	\centering
 	\caption{The works with matched PDF and MusicXML files from MuseScore chosen for testing OCR reliability along with their composer or arranger.}
@@ -818,6 +819,13 @@ This paper presented musiplectics, a new computational paradigm, that systematic
 \appendix
 
 \chapter{External Survey}
+\markright{Ethan G. Holder  \hfill Appendix External Survey \hfill}
 \label{sec:appsurvey}
+
+\includepdf[pages=-,scale=.8,pagecommand={}]{MusicScoringSurvey.pdf}
+% \begin{figure}[htp] \centering{
+% \caption{External Survey}
+% \includegraphics[scale=0.82]{MusicScoringSurvey.pdf}}
+% \end{figure}
 
 \end{document}
