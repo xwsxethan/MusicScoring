@@ -19,12 +19,12 @@
 \contentsline {section}{\numberline {7.1}Manually Graded Pieces and Their Calculated Complexity Scores}{23}{section.7.1}
 \contentsline {section}{\numberline {7.2}Matched and OCR Generated MusicXML}{24}{section.7.2}
 \contentsline {section}{\numberline {7.3}Website Usability}{25}{section.7.3}
-\contentsline {chapter}{\numberline {8}Future Work}{26}{chapter.8}
-\contentsline {section}{\numberline {8.1}Expanding Instrument Complexity Parameters}{26}{section.8.1}
-\contentsline {section}{\numberline {8.2}Mapping Separate Parts and Instruments}{27}{section.8.2}
-\contentsline {section}{\numberline {8.3}Understanding Complexity Scores}{27}{section.8.3}
-\contentsline {section}{\numberline {8.4}Integrating Complexity Scores with Sources}{28}{section.8.4}
-\contentsline {section}{\numberline {8.5}Including More Input Formats}{28}{section.8.5}
-\contentsline {section}{\numberline {8.6}Measuring Complexity From Physiological Signals}{29}{section.8.6}
-\contentsline {chapter}{\numberline {9}Conclusions}{30}{chapter.9}
-\contentsline {chapter}{\numberline {A}External Survey}{34}{appendix.A}
+\contentsline {chapter}{\numberline {8}Future Work}{28}{chapter.8}
+\contentsline {section}{\numberline {8.1}Expanding Instrument Complexity Parameters}{28}{section.8.1}
+\contentsline {section}{\numberline {8.2}Mapping Separate Parts and Instruments}{29}{section.8.2}
+\contentsline {section}{\numberline {8.3}Understanding Complexity Scores}{29}{section.8.3}
+\contentsline {section}{\numberline {8.4}Integrating Complexity Scores with Sources}{30}{section.8.4}
+\contentsline {section}{\numberline {8.5}Including More Input Formats}{30}{section.8.5}
+\contentsline {section}{\numberline {8.6}Measuring Complexity From Physiological Signals}{31}{section.8.6}
+\contentsline {chapter}{\numberline {9}Conclusions}{32}{chapter.9}
+\contentsline {chapter}{\numberline {A}External Survey}{36}{appendix.A}

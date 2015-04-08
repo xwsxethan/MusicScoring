@@ -12,6 +12,10 @@
 \contentsline {figure}{\numberline {6.4}{\ignorespaces The difference between matched and OCR generated MusicXML files in words, lines, and characters via sdiff as well as the positive difference in complexity score.}}{22}{figure.6.4}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces The percentage difference between matched and OCR generated MusicXML files in words, lines, and characters via sdiff as well as the positive percentage difference in complexity score.}}{22}{figure.6.5}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces The main page for the website with user controls.}}{26}{figure.7.1}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces The table output of complexity data on the website.}}{26}{figure.7.2}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces The graph output of complexity data on the website.}}{27}{figure.7.3}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces The detailed output for one part on the website.}}{27}{figure.7.4}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
