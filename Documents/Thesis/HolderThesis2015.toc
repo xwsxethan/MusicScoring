@@ -24,7 +24,10 @@
 \contentsline {section}{\numberline {8.2}Mapping Separate Parts and Instruments}{29}{section.8.2}
 \contentsline {section}{\numberline {8.3}Understanding Complexity Scores}{29}{section.8.3}
 \contentsline {section}{\numberline {8.4}Integrating Complexity Scores with Sources}{30}{section.8.4}
-\contentsline {section}{\numberline {8.5}Including More Input Formats}{30}{section.8.5}
-\contentsline {section}{\numberline {8.6}Measuring Complexity From Physiological Signals}{31}{section.8.6}
-\contentsline {chapter}{\numberline {9}Conclusions}{32}{chapter.9}
-\contentsline {chapter}{\numberline {A}External Survey}{36}{appendix.A}
+\contentsline {section}{\numberline {8.5}Demonstrating Musiplectics for Art Expos\'e}{30}{section.8.5}
+\contentsline {section}{\numberline {8.6}Including More Input Formats}{30}{section.8.6}
+\contentsline {section}{\numberline {8.7}Measuring Complexity From Physiological Signals}{32}{section.8.7}
+\contentsline {section}{\numberline {8.8}Broadening Musiplectics to Other Plectics}{32}{section.8.8}
+\contentsline {chapter}{\numberline {9}Conclusions}{33}{chapter.9}
+\contentsline {chapter}{\numberline {A}Complexity Parameters Example}{37}{appendix.A}
+\contentsline {chapter}{\numberline {B}External Survey}{44}{appendix.B}

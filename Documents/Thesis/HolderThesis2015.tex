@@ -751,9 +751,8 @@ Finally, the website also features the ability to run on music pieces with multi
 \label{sec:future}
 \markright{Ethan G. Holder  \hfill Chapter 8. Future Work \hfill}
 
-The following Subsections address planned future work in a number of different directions, including expanding complexity parameters in \ref{sec:parameters}, mapping parts and instruments in \ref{sec:partinstruments}, understanding complexity scores in \ref{sec:understand}, integrating scores with sources in \ref{sec:integration},
-%demonstrating this work in \ref{sec:seemore},
-including more input formats in \ref{sec:input}, and measuring complexity from physiology in \ref{sec:physio}.
+The following Subsections address planned future work in a number of different directions, including expanding complexity parameters in \ref{sec:parameters}, mapping parts and instruments in \ref{sec:partinstruments}, understanding complexity scores in \ref{sec:understand}, integrating scores with sources in \ref{sec:integration}, demonstrating this work in \ref{sec:icat},
+including more input formats in \ref{sec:input}, measuring complexity from physiology in \ref{sec:physio}, and broadening our approach in \ref{sec:broad}.
 
 %Outline plans to survey more people and expand difficulties for parts.
 
@@ -793,8 +792,25 @@ This approach may be more useful for competition rankings so that the complexity
 
 To make musiplectics more accessible, one direction for future work lies in integrating the complexity score into various music applications. For instance, we envision notation applications, such as Finale Notepad \cite{FinaleNotepad} or Sibelius \cite{Sibelius}, displaying the complexity score of a piece as it is being written so composers can readily see exactly how complex their piece is numerically. Similarly, we would like to partner with music sharing websites, such as International Music Score Library Project \cite{IMSLP}, that allow users to search, view, and download pieces of music. We envision the complexity score of a piece being available before downloading, or more importantly purchasing, the piece so as to give users some reassurance of what they are getting. This could also lead to users being able to search pieces by their complexity score (if they were pre-computed and stored somewhere) should the user need to find a piece to match his or her playing level.
 
-%\subsection{Leveraging SeeMore for Art Expos\'e}
-%\label{sec:seemore}
+\section{Demonstrating Musiplectics for Art Expos\'e}
+\label{sec:icat}
+
+Talk about ICAT day and other things here.
+
+
+\begin{figure}[ht!]
+	\centering
+		\caption{The modified input for the game version of the website.}
+		\includegraphics[width=0.9\textwidth]{WebsiteGameInput.png}
+		\label{image:websitegameinput}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+		\caption{The potential output for the game version of the website.}
+		\includegraphics[width=0.9\textwidth]{WebsiteGameOutput.png}
+		\label{image:websitegameoutput}
+\end{figure}
 
 %some stuff goes here \cite{Seemore}
 
@@ -809,6 +825,11 @@ Beyond what OCR can handle, even more inputs can be translated into MusicXML. So
 \label{sec:physio}
 
 Some prior work has focused on measuring physiological characteristics, especially in the field of human-computer interaction. Often these measurements have been used as indicators of emotional state \cite{Physio}. In relation to music, these measurements have been used both to gauge an audience's reaction to a piece of music as well as a means for people to play their own music \cite{Controller} \cite{Tanaka2002}. We would like to leverage these types of works to incorporate physiological measurements and biofeedback as a means of forming or validating complexity scores. The knowledge of a performer's relative playing proficiency combined with their basic physiological traits while playing a piece could form a model for extrapolating the cognitive load or mental complexity being endured. This method can become a reliable means of parameterizing our system for individual players.
+
+\section{Broadening Musiplectics to Other Plectics}
+\label{sec:broad}
+
+Talk about using this for other tasks, both understood (sports) and specified, via natural (work tasks, mechanical turk) or formal (music, enterprise project planning) language.
 
 \chapter{Conclusions} 
 \label{sec:conclu}
@@ -857,6 +878,12 @@ This paper presented musiplectics, a new computational paradigm, that systematic
 % \chapter{Program Source}
 
 \appendix
+
+\chapter{Complexity Parameters Example}
+\markright{Ethan G. Holder  \hfill Appendix Complexity Parameters Example \hfill}
+\label{sec:appcomplexity}
+
+\lstinputlisting[language=xml,caption={The full xml file of complexity parameters for beginner B$\flat$ Clarinet.},label={xmlexample}]{Beginner.xml}
 
 \chapter{External Survey}
 \markright{Ethan G. Holder  \hfill Appendix External Survey \hfill}
