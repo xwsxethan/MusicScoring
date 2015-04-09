@@ -1,15 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2015.4.6)  8 APR 2015 22:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  9 APR 2015 15:13
 entering extended mode
- \write18 enabled.
- file:line:error style messages enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **HolderThesis2015.tex
 (./HolderThesis2015.tex
 LaTeX2e <2014/05/01>
-Babel <3.9k> and hyphenation patterns for 79 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -25,24 +24,24 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip43
 )
-(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip44
 \bibsep=\skip45
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count88
 )
-(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
@@ -53,17 +52,17 @@ Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \ALC@tlm=\skip46
 \algorithmicindent=\skip47
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
 \c@AlgoLine=\count93
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
 ********************************************************
@@ -106,24 +105,24 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \c@algocf=\count96
 \algocf@algoframe=\box32
 \algocf@algobox=\box33
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip64
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
 \ex@=\dimen109
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen110
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count97
@@ -164,31 +163,31 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count109
@@ -196,7 +195,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen118
 \Gin@req@width=\dimen119
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count110
 \lst@gtempboxa=\box36
 \lst@token=\toks20
@@ -210,18 +209,18 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \lst@lineno=\count115
 \lst@maxwidth=\dimen123
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 \c@lstnumber=\count116
 \lst@skipnumbers=\count117
 \lst@framebox=\box37
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2014/03/04 1.5c listings configuration
 ))
 Package: listings 2014/03/04 1.5c (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen124
 \WF@size=\dimen125
 \c@WF@wrappedlines=\count118
@@ -229,17 +228,17 @@ Package: listings 2014/03/04 1.5c (Carsten Heinz)
 \WF@everypar=\toks21
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen126
 )
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -280,25 +279,25 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen127
 \Hy@linkcounter=\count119
 \Hy@pagecounter=\count120
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count121
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `plainpages' set `false' on input line 4319.
@@ -331,19 +330,19 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count127
 \c@bookmark@seq@number=\count128
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip67
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen131
 \extrarowheight=\dimen132
@@ -351,11 +350,11 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip68
 \backup@length=\skip69
 )
-(/usr/share/texlive/texmf-dist/tex/latex/preprint/balance.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/preprint/balance.sty
 Package: balance 1999/02/23 4.3 (PWD)
 \oldvsize=\dimen133
 )
-(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip70
 \subfigcapskip=\skip71
@@ -371,21 +370,21 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip74
 \subfig@bottom=\skip75
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count133
 \float@exts=\toks23
@@ -393,10 +392,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks24
 \@floatcapt=\box40
 )
-(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-(/usr/share/texlive/texmf-dist/tex/latex/harmony/harmony.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/harmony/harmony.sty
 Package: harmony 2007/05/04
 \tmpdima=\dimen136
 \tmpdimb=\dimen137
@@ -413,10 +412,10 @@ Package: harmony 2007/05/04
 \nbxh=\box48
 \nbxi=\box49
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count134
 \calc@Bcount=\count135
@@ -429,13 +428,13 @@ LaTeX Info: Redefining \addtolength on input line 76.
 \calc@Ccount=\count136
 \calc@Cskip=\skip78
 )
-(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
 
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -449,7 +448,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box50
@@ -457,7 +456,7 @@ File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count137
 \AM@templatesizebox=\box51
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
 (./HolderThesis2015.aux)
@@ -478,7 +477,7 @@ LaTeX Font Info:    ... okay on input line 81.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count138
 \scratchdimen=\dimen143
@@ -491,10 +490,10 @@ LaTeX Font Info:    ... okay on input line 81.
 \MPnumerator=\count142
 \makeMPintoPDFobject=\count143
 \everyMPtoPDFconversion=\toks27
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
 Package grfext Info: Graphics extension search list:
@@ -502,7 +501,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -510,10 +509,10 @@ e
 \AtBeginShipoutBox=\box53
 Package hyperref Info: Link coloring OFF on input line 81.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count145
@@ -528,53 +527,50 @@ LaTeX Info: Redefining \nameref on input line 81.
 
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for U+msa on input line 149.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 149.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2] [3
 
-] [4
-
 ]
-(./HolderThesis2015.toc [5
+[4
+
+] [5] (./HolderThesis2015.toc [6
 
 ])
 \tf@toc=\write4
 \openout4 = `HolderThesis2015.toc'.
 
- [6] (./HolderThesis2015.lof)
+ [7] (./HolderThesis2015.lof)
 \tf@lof=\write5
 \openout5 = `HolderThesis2015.lof'.
 
- [7
+ [8
 
 ]
 (./HolderThesis2015.lot)
 \tf@lot=\write6
 \openout6 = `HolderThesis2015.lot'.
 
- [8
+ [9
 
 ]
 Chapter 1.
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
 [1
 
-] <ComputationalThinkingAnalogy.png, id=256, 397.485pt x 252.945pt>
+] <ComputationalThinkingAnalogy.png, id=260, 397.485pt x 252.945pt>
 File: ComputationalThinkingAnalogy.png Graphic file (type png)
 
 <use ComputationalThinkingAnalogy.png>
-Package pdftex.def Info: ComputationalThinkingAnalogy.png used on input line 23
-2.
+Package pdftex.def Info: ComputationalThinkingAnalogy.png used on input line 24
+4.
 (pdftex.def)             Requested size: 375.80542pt x 239.15779pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -585,7 +581,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.239 
+l.251 
        <./ComputationalThinkingAnalogy.png>]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -595,13 +591,13 @@ Chapter 2.
 [4
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 297.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 309.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 297.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 309.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -632,10 +628,10 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 [11]
 Chapter 5.
-<JoinedCropped.png, id=358, 523.4757pt x 379.4175pt>
+<JoinedCropped.png, id=362, 523.4757pt x 379.4175pt>
 File: JoinedCropped.png Graphic file (type png)
  <use JoinedCropped.png>
-Package pdftex.def Info: JoinedCropped.png used on input line 375.
+Package pdftex.def Info: JoinedCropped.png used on input line 387.
 (pdftex.def)             Requested size: 375.80542pt x 272.38722pt.
 
 [12
@@ -649,7 +645,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.392 
+l.404 
        <./JoinedCropped.png>]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -667,13 +663,13 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.531 
+l.543 
       pdfTeX warning (ext4): destination with the same identifier (name{table.6
 .2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.531 
+l.543 
       ]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -683,35 +679,35 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.531 
+l.543 
       pdfTeX warning (ext4): destination with the same identifier (name{table.6
 .4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.531 
+l.543 
       pdfTeX warning (ext4): destination with the same identifier (name{table.6
 .5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.531 
-      ] <GradesVsComplexityScores.png, id=459, 680.5425pt x 463.7325pt>
+l.543 
+      ] <GradesVsComplexityScores.png, id=463, 680.5425pt x 463.7325pt>
 File: GradesVsComplexityScores.png Graphic file (type png)
 
 <use GradesVsComplexityScores.png>
-Package pdftex.def Info: GradesVsComplexityScores.png used on input line 589.
+Package pdftex.def Info: GradesVsComplexityScores.png used on input line 601.
 (pdftex.def)             Requested size: 375.80542pt x 256.07967pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[18] <GradesVsAverageComplexityScoresSTD.png, id=469, 680.5425pt x 463.7325pt>
+[18] <GradesVsAverageComplexityScoresSTD.png, id=473, 680.5425pt x 463.7325pt>
 File: GradesVsAverageComplexityScoresSTD.png Graphic file (type png)
 
 <use GradesVsAverageComplexityScoresSTD.png>
 Package pdftex.def Info: GradesVsAverageComplexityScoresSTD.png used on input l
-ine 596.
+ine 608.
 (pdftex.def)             Requested size: 375.80542pt x 256.07967pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -722,7 +718,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.604 
+l.616 
       ]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -732,30 +728,30 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.604 
+l.616 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 6.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.604 
+l.616 
        <./GradesVsComplexityScores.png> <./GradesVsAverageComplexityScoresSTD.p
-ng>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+ng>] (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-<DifferenceOCR.png, id=491, 678.3744pt x 462.528pt>
+<DifferenceOCR.png, id=495, 678.3744pt x 462.528pt>
 File: DifferenceOCR.png Graphic file (type png)
  <use DifferenceOCR.png>
-Package pdftex.def Info: DifferenceOCR.png used on input line 657.
+Package pdftex.def Info: DifferenceOCR.png used on input line 669.
 (pdftex.def)             Requested size: 375.80542pt x 256.24026pt.
 
-<PercentageOCR.png, id=492, 678.3744pt x 462.528pt>
+<PercentageOCR.png, id=496, 678.3744pt x 462.528pt>
 File: PercentageOCR.png Graphic file (type png)
  <use PercentageOCR.png>
-Package pdftex.def Info: PercentageOCR.png used on input line 664.
+Package pdftex.def Info: PercentageOCR.png used on input line 676.
 (pdftex.def)             Requested size: 375.80542pt x 256.24026pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -766,13 +762,13 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.668 \chapter
+l.680 \chapter
               {Discussion}pdfTeX warning (ext4): destination with the same iden
 tifier (name{figure.6.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.668 \chapter
+l.680 \chapter
               {Discussion}]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -782,17 +778,17 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.668 \chapter
+l.680 \chapter
               {Discussion}pdfTeX warning (ext4): destination with the same iden
 tifier (name{figure.6.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.668 \chapter
+l.680 \chapter
               {Discussion} <./DifferenceOCR.png> <./PercentageOCR.png>]
 Chapter 7.
 
-Overfull \hbox (10.20277pt too wide) in paragraph at lines 674--674
+Overfull \hbox (10.20277pt too wide) in paragraph at lines 686--686
 []\OT1/cmr/bx/n/17.28 Manually Graded Pieces and Their Cal-cu-lated Com-
  []
 
@@ -802,29 +798,29 @@ Overfull \hbox (10.20277pt too wide) in paragraph at lines 674--674
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[24] <WebsiteLandingInput.png, id=533, 1187.43625pt x 719.68875pt>
+[24] <WebsiteLandingInput.png, id=537, 1187.43625pt x 719.68875pt>
 File: WebsiteLandingInput.png Graphic file (type png)
 
 <use WebsiteLandingInput.png>
-Package pdftex.def Info: WebsiteLandingInput.png used on input line 713.
+Package pdftex.def Info: WebsiteLandingInput.png used on input line 725.
 (pdftex.def)             Requested size: 422.77661pt x 256.24353pt.
 
-<WebsiteTable.png, id=534, 1183.42125pt x 507.8975pt>
+<WebsiteTable.png, id=538, 1183.42125pt x 507.8975pt>
 File: WebsiteTable.png Graphic file (type png)
  <use WebsiteTable.png>
-Package pdftex.def Info: WebsiteTable.png used on input line 720.
+Package pdftex.def Info: WebsiteTable.png used on input line 732.
 (pdftex.def)             Requested size: 422.77661pt x 181.44023pt.
 
-<WebsiteGraph.png, id=535, 803.0pt x 586.19pt>
+<WebsiteGraph.png, id=539, 803.0pt x 586.19pt>
 File: WebsiteGraph.png Graphic file (type png)
  <use WebsiteGraph.png>
-Package pdftex.def Info: WebsiteGraph.png used on input line 727.
+Package pdftex.def Info: WebsiteGraph.png used on input line 739.
 (pdftex.def)             Requested size: 422.77661pt x 308.63092pt.
 
-<WebsiteDetails.png, id=536, 803.0pt x 401.5pt>
+<WebsiteDetails.png, id=540, 803.0pt x 401.5pt>
 File: WebsiteDetails.png Graphic file (type png)
  <use WebsiteDetails.png>
-Package pdftex.def Info: WebsiteDetails.png used on input line 734.
+Package pdftex.def Info: WebsiteDetails.png used on input line 746.
 (pdftex.def)             Requested size: 422.77661pt x 211.39104pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -839,13 +835,13 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.738 \chapter
+l.750 \chapter
               {Future Work}pdfTeX warning (ext4): destination with the same ide
 ntifier (name{figure.7.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.738 \chapter
+l.750 \chapter
               {Future Work} <./WebsiteLandingInput.png> <./WebsiteTable.png>]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -855,13 +851,13 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.738 \chapter
+l.750 \chapter
               {Future Work}pdfTeX warning (ext4): destination with the same ide
 ntifier (name{figure.7.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.738 \chapter
+l.750 \chapter
               {Future Work} <./WebsiteGraph.png> <./WebsiteDetails.png>]
 Chapter 8.
 [28
@@ -931,37 +927,37 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 [35]
 Appendix A.
-<MusicScoringSurvey.pdf, id=656, 614.295pt x 794.97pt>
+<MusicScoringSurvey.pdf, id=660, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf>
-Package pdftex.def Info: MusicScoringSurvey.pdf used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf used on input line 865.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf>
-Package pdftex.def Info: MusicScoringSurvey.pdf used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf used on input line 865.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
  [36
 
 ]
-<MusicScoringSurvey.pdf, id=663, page=1, 614.295pt x 794.97pt>
+<MusicScoringSurvey.pdf, id=667, page=1, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 1>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 865.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 1>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 1>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 1>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -969,21 +965,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 1>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [37 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=684, page=2, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=688, page=2, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 2>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 2>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -991,21 +988,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 2>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [38 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=699, page=3, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=703, page=3, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 3>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 3>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1013,21 +1011,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 3>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [39 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=736, page=4, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=740, page=4, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 4>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 4>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1035,21 +1034,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 4>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [40 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=753, page=5, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=758, page=5, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 5>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 5>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1057,21 +1057,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 5>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [41 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=771, page=6, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=775, page=6, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 6>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 6>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1079,21 +1080,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 6>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [42 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=786, page=7, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=790, page=7, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 7>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 7>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1101,21 +1103,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 7>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [43 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=796, page=8, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=800, page=8, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 8>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 8>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1123,21 +1126,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 8>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [44 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=817, page=9, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=821, page=9, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 9>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 9>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1145,22 +1149,23 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 9>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 865.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [45 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=832, page=10, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=836, page=10, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 10>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 10>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1169,23 +1174,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 10>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [46 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=845, page=11, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=850, page=11, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 11>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 11>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1194,23 +1200,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 11>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [47 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=860, page=12, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=864, page=12, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 12>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 12>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1219,23 +1226,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 12>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [48 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=874, page=13, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=878, page=13, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 13>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 13>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1244,23 +1252,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 13>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [49 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=888, page=14, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=892, page=14, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 14>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 14>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1269,23 +1278,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 14>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [50 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=904, page=15, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=908, page=15, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 15>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 15>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1294,23 +1304,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 15>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [51 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=920, page=16, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=924, page=16, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 16>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 16>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1319,23 +1330,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 16>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [52 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=935, page=17, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=940, page=17, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 17>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 17>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1344,23 +1356,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 17>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [53 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=950, page=18, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=955, page=18, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 18>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 18>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1369,23 +1382,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 18>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [54 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=961, page=19, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=965, page=19, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 19>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 19>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1394,23 +1408,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 19>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [55 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=982, page=20, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=986, page=20, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 20>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 20>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1419,23 +1434,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 20>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [56 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=997, page=21, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=1001, page=21, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 21>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 21>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1444,23 +1460,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 21>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [57 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=1011, page=22, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=1015, page=22, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 22>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 22>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1469,23 +1486,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 22>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [58 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=1026, page=23, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=1031, page=23, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 23>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 23>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1494,23 +1512,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 23>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [59 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=1035, page=24, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=1039, page=24, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 24>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 24>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1519,23 +1538,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 24>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [60 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=1049, page=25, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=1053, page=25, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 25>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 25>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1544,23 +1564,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 25>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [61 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=1062, page=26, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=1066, page=26, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 26>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 26>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1569,23 +1590,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 26>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [62 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=1077, page=27, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=1081, page=27, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 27>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 27>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1594,23 +1616,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 27>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [63 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=1092, page=28, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=1096, page=28, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 28>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 28>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1619,23 +1642,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 28>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [64 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=1106, page=29, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=1111, page=29, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 29>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 29>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1644,23 +1668,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 29>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [65 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=1122, page=30, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=1126, page=30, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 30>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 30>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1669,23 +1694,24 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 30>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [66 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
->] <MusicScoringSurvey.pdf, id=1136, page=31, 614.295pt x 794.97pt>
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
+>] <MusicScoringSurvey.pdf, id=1140, page=31, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 31>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 31>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1694,48 +1720,54 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 31>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 853.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 865.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [67 <./MusicScoringSurvey.pdf
 
-pdfTeX warning: pdflatex (file ./MusicScoringSurvey.pdf): PDF inclusion: invali
-d other resource which is no dict (key 'ProcSets', type <array>); ignored.
+pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
+sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
+gnored.
 >]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 859.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 859.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 871.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 871.
  (./HolderThesis2015.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 859.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 859.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 871.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 871.
 Package rerunfilecheck Info: File `HolderThesis2015.out' has not changed.
 (rerunfilecheck)             Checksum: 03CE0B368C02F9595B0D4A5EF7EF30B6;2034.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 859.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 871.
  ) 
 Here is how much of TeX's memory you used:
- 11152 strings out of 493104
- 159861 string characters out of 6136933
- 312632 words of memory out of 5000000
+ 11154 strings out of 493117
+ 160661 string characters out of 6135433
+ 312588 words of memory out of 5000000
  14257 multiletter control sequences out of 15000+600000
  13435 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,19n,49p,1211b,1204s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on HolderThesis2015.pdf (75 pages, 1763234 bytes).
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on HolderThesis2015.pdf (76 pages, 1765502 bytes).
 PDF statistics:
- 1234 PDF objects out of 1440 (max. 8388607)
- 769 compressed objects within 8 object streams
- 175 named destinations out of 1000 (max. 500000)
+ 1238 PDF objects out of 1440 (max. 8388607)
+ 772 compressed objects within 8 object streams
+ 176 named destinations out of 1000 (max. 500000)
  461 words of extra memory for PDF output out of 10000 (max. 10000000)
 
