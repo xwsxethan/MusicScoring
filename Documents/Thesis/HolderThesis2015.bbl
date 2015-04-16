@@ -1,9 +1,14 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{37}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[gen(2001)]{genomePub}
+Initial sequencing and analysis of the human genome.
+\newblock \emph{Nature}, 409\penalty0 (6822):\penalty0 860--921, 02 2001.
+\newblock URL \url{http://dx.doi.org/10.1038/35057062}.
 
 \bibitem[Allali et~al.(2009)Allali, Ferraro, Hanna, Iliopoulos, and
   Robine]{Allali2009}
@@ -209,6 +214,85 @@ A.~Tanaka and R.~B. Knapp.
 {The {jQuery} Foundation}.
 \newblock {jQuery}.
 \newblock \url{https://jquery.com/}, 2015.
+
+\bibitem[Venter et~al.(2001)Venter, Adams, Myers, Li, Mural, Sutton, Smith,
+  Yandell, Evans, Holt, Gocayne, Amanatides, Ballew, Huson, Wortman, Zhang,
+  Kodira, Zheng, Chen, Skupski, Subramanian, Thomas, Zhang, Gabor~Miklos,
+  Nelson, Broder, Clark, Nadeau, McKusick, Zinder, Levine, Roberts, Simon,
+  Slayman, Hunkapiller, Bolanos, Delcher, Dew, Fasulo, Flanigan, Florea,
+  Halpern, Hannenhalli, Kravitz, Levy, Mobarry, Reinert, Remington,
+  Abu-Threideh, Beasley, Biddick, Bonazzi, Brandon, Cargill,
+  Chandramouliswaran, Charlab, Chaturvedi, Deng, Francesco, Dunn, Eilbeck,
+  Evangelista, Gabrielian, Gan, Ge, Gong, Gu, Guan, Heiman, Higgins, Ji, Ke,
+  Ketchum, Lai, Lei, Li, Li, Liang, Lin, Lu, Merkulov, Milshina, Moore, Naik,
+  Narayan, Neelam, Nusskern, Rusch, Salzberg, Shao, Shue, Sun, Wang, Wang,
+  Wang, Wang, Wei, Wides, Xiao, Yan, Yao, Ye, Zhan, Zhang, Zhang, Zhao, Zheng,
+  Zhong, Zhong, Zhu, Zhao, Gilbert, Baumhueter, Spier, Carter, Cravchik,
+  Woodage, Ali, An, Awe, Baldwin, Baden, Barnstead, Barrow, Beeson, Busam,
+  Carver, Center, Cheng, Curry, Danaher, Davenport, Desilets, Dietz, Dodson,
+  Doup, Ferriera, Garg, Gluecksmann, Hart, Haynes, Haynes, Heiner, Hladun,
+  Hostin, Houck, Howland, Ibegwam, Johnson, Kalush, Kline, Koduru, Love, Mann,
+  May, McCawley, McIntosh, McMullen, Moy, Moy, Murphy, Nelson, Pfannkoch,
+  Pratts, Puri, Qureshi, Reardon, Rodriguez, Rogers, Romblad, Ruhfel, Scott,
+  Sitter, Smallwood, Stewart, Strong, Suh, Thomas, Tint, Tse, Vech, Wang,
+  Wetter, Williams, Williams, Windsor, Winn-Deen, Wolfe, Zaveri, Zaveri, Abril,
+  Guigó, Campbell, Sjolander, Karlak, Kejariwal, Mi, Lazareva, Hatton,
+  Narechania, Diemer, Muruganujan, Guo, Sato, Bafna, Istrail, Lippert,
+  Schwartz, Walenz, Yooseph, Allen, Basu, Baxendale, Blick, Caminha,
+  Carnes-Stine, Caulk, Chiang, Coyne, Dahlke, Mays, Dombroski, Donnelly, Ely,
+  Esparham, Fosler, Gire, Glanowski, Glasser, Glodek, Gorokhov, Graham,
+  Gropman, Harris, Heil, Henderson, Hoover, Jennings, Jordan, Jordan, Kasha,
+  Kagan, Kraft, Levitsky, Lewis, Liu, Lopez, Ma, Majoros, McDaniel, Murphy,
+  Newman, Nguyen, Nguyen, Nodell, Pan, Peck, Peterson, Rowe, Sanders, Scott,
+  Simpson, Smith, Sprague, Stockwell, Turner, Venter, Wang, Wen, Wu, Wu, Xia,
+  Zandieh, and Zhu]{genomePri}
+J.~C. Venter, M.~D. Adams, E.~W. Myers, P.~W. Li, R.~J. Mural, G.~G. Sutton,
+  H.~O. Smith, M.~Yandell, C.~A. Evans, R.~A. Holt, J.~D. Gocayne,
+  P.~Amanatides, R.~M. Ballew, D.~H. Huson, J.~R. Wortman, Q.~Zhang, C.~D.
+  Kodira, X.~H. Zheng, L.~Chen, M.~Skupski, G.~Subramanian, P.~D. Thomas,
+  J.~Zhang, G.~L. Gabor~Miklos, C.~Nelson, S.~Broder, A.~G. Clark, J.~Nadeau,
+  V.~A. McKusick, N.~Zinder, A.~J. Levine, R.~J. Roberts, M.~Simon, C.~Slayman,
+  M.~Hunkapiller, R.~Bolanos, A.~Delcher, I.~Dew, D.~Fasulo, M.~Flanigan,
+  L.~Florea, A.~Halpern, S.~Hannenhalli, S.~Kravitz, S.~Levy, C.~Mobarry,
+  K.~Reinert, K.~Remington, J.~Abu-Threideh, E.~Beasley, K.~Biddick,
+  V.~Bonazzi, R.~Brandon, M.~Cargill, I.~Chandramouliswaran, R.~Charlab,
+  K.~Chaturvedi, Z.~Deng, V.~D. Francesco, P.~Dunn, K.~Eilbeck, C.~Evangelista,
+  A.~E. Gabrielian, W.~Gan, W.~Ge, F.~Gong, Z.~Gu, P.~Guan, T.~J. Heiman, M.~E.
+  Higgins, R.-R. Ji, Z.~Ke, K.~A. Ketchum, Z.~Lai, Y.~Lei, Z.~Li, J.~Li,
+  Y.~Liang, X.~Lin, F.~Lu, G.~V. Merkulov, N.~Milshina, H.~M. Moore, A.~K.
+  Naik, V.~A. Narayan, B.~Neelam, D.~Nusskern, D.~B. Rusch, S.~Salzberg,
+  W.~Shao, B.~Shue, J.~Sun, Z.~Y. Wang, A.~Wang, X.~Wang, J.~Wang, M.-H. Wei,
+  R.~Wides, C.~Xiao, C.~Yan, A.~Yao, J.~Ye, M.~Zhan, W.~Zhang, H.~Zhang,
+  Q.~Zhao, L.~Zheng, F.~Zhong, W.~Zhong, S.~C. Zhu, S.~Zhao, D.~Gilbert,
+  S.~Baumhueter, G.~Spier, C.~Carter, A.~Cravchik, T.~Woodage, F.~Ali, H.~An,
+  A.~Awe, D.~Baldwin, H.~Baden, M.~Barnstead, I.~Barrow, K.~Beeson, D.~Busam,
+  A.~Carver, A.~Center, M.~L. Cheng, L.~Curry, S.~Danaher, L.~Davenport,
+  R.~Desilets, S.~Dietz, K.~Dodson, L.~Doup, S.~Ferriera, N.~Garg,
+  A.~Gluecksmann, B.~Hart, J.~Haynes, C.~Haynes, C.~Heiner, S.~Hladun,
+  D.~Hostin, J.~Houck, T.~Howland, C.~Ibegwam, J.~Johnson, F.~Kalush, L.~Kline,
+  S.~Koduru, A.~Love, F.~Mann, D.~May, S.~McCawley, T.~McIntosh, I.~McMullen,
+  M.~Moy, L.~Moy, B.~Murphy, K.~Nelson, C.~Pfannkoch, E.~Pratts, V.~Puri,
+  H.~Qureshi, M.~Reardon, R.~Rodriguez, Y.-H. Rogers, D.~Romblad, B.~Ruhfel,
+  R.~Scott, C.~Sitter, M.~Smallwood, E.~Stewart, R.~Strong, E.~Suh, R.~Thomas,
+  N.~N. Tint, S.~Tse, C.~Vech, G.~Wang, J.~Wetter, S.~Williams, M.~Williams,
+  S.~Windsor, E.~Winn-Deen, K.~Wolfe, J.~Zaveri, K.~Zaveri, J.~F. Abril,
+  R.~Guigó, M.~J. Campbell, K.~V. Sjolander, B.~Karlak, A.~Kejariwal, H.~Mi,
+  B.~Lazareva, T.~Hatton, A.~Narechania, K.~Diemer, A.~Muruganujan, N.~Guo,
+  S.~Sato, V.~Bafna, S.~Istrail, R.~Lippert, R.~Schwartz, B.~Walenz,
+  S.~Yooseph, D.~Allen, A.~Basu, J.~Baxendale, L.~Blick, M.~Caminha,
+  J.~Carnes-Stine, P.~Caulk, Y.-H. Chiang, M.~Coyne, C.~Dahlke, A.~D. Mays,
+  M.~Dombroski, M.~Donnelly, D.~Ely, S.~Esparham, C.~Fosler, H.~Gire,
+  S.~Glanowski, K.~Glasser, A.~Glodek, M.~Gorokhov, K.~Graham, B.~Gropman,
+  M.~Harris, J.~Heil, S.~Henderson, J.~Hoover, D.~Jennings, C.~Jordan,
+  J.~Jordan, J.~Kasha, L.~Kagan, C.~Kraft, A.~Levitsky, M.~Lewis, X.~Liu,
+  J.~Lopez, D.~Ma, W.~Majoros, J.~McDaniel, S.~Murphy, M.~Newman, T.~Nguyen,
+  N.~Nguyen, M.~Nodell, S.~Pan, J.~Peck, M.~Peterson, W.~Rowe, R.~Sanders,
+  J.~Scott, M.~Simpson, T.~Smith, A.~Sprague, T.~Stockwell, R.~Turner,
+  E.~Venter, M.~Wang, M.~Wen, D.~Wu, M.~Wu, A.~Xia, A.~Zandieh, and X.~Zhu.
+\newblock The sequence of the human genome.
+\newblock \emph{Science}, 291\penalty0 (5507):\penalty0 1304--1351, 2001.
+\newblock \doi{10.1126/science.1058040}.
+\newblock URL \url{http://www.sciencemag.org/content/291/5507/1304.abstract}.
 
 \bibitem[{Virginia Band and Orchestra Directors Association}(2015)]{VBODA}
 {Virginia Band and Orchestra Directors Association}.
