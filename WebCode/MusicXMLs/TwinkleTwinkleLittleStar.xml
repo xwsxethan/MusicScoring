@@ -76,10 +76,10 @@
   </credit>
   <part-list>
     <score-part id="P1">
-      <part-name>B Clarinet</part-name>
-      <part-abbreviation>B Cl.</part-abbreviation>
+      <part-name>Bb Clarinet</part-name>
+      <part-abbreviation>Bb Cl.</part-abbreviation>
       <score-instrument id="P1-I1">
-        <instrument-name>B Clarinet</instrument-name>
+        <instrument-name>Bb Clarinet</instrument-name>
       </score-instrument>
       <midi-instrument id="P1-I1">
         <midi-channel>1</midi-channel>
