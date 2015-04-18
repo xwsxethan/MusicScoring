@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -99,6 +99,11 @@ M.~S. Cuthbert, C.~Ariza, and L.~Friedland.
 M.~Good et~al.
 \newblock {MusicXML}: An internet-friendly format for sheet music.
 \newblock In \emph{XML Conference and Expo}, pages 03--04. Citeseer, 2001.
+
+\bibitem[Gosling(2000)]{java}
+J.~Gosling.
+\newblock \emph{The Java language specification}.
+\newblock Addison-Wesley Professional, 2000.
 
 \bibitem[Heijink and Meulenbroek(2002)]{Heijink2002}
 H.~Heijink and R.~Meulenbroek.
