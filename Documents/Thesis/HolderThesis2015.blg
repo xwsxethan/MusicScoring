@@ -5,45 +5,45 @@ The style file: abbrvnat.bst
 Database file #1: HolderThesis2015.bib
 Warning--to sort, need author or key in genomePub
 Warning--empty author in genomePub
-You've used 38 entries,
+You've used 40 entries,
             2773 wiz_defined-function locations,
-            864 strings with 15590 characters,
-and the built_in function-call counts, 28773 in all, are:
-= -- 2239
-> -- 3072
-< -- 37
-+ -- 1041
-- -- 1002
-* -- 2653
-:= -- 4731
-add.period$ -- 146
-call.type$ -- 38
-change.case$ -- 442
-chr.to.int$ -- 37
-cite$ -- 79
-duplicate$ -- 755
-empty$ -- 1426
-format.name$ -- 1052
-if$ -- 5751
+            889 strings with 16108 characters,
+and the built_in function-call counts, 29788 in all, are:
+= -- 2342
+> -- 3121
+< -- 38
++ -- 1058
+- -- 1017
+* -- 2748
+:= -- 4892
+add.period$ -- 158
+call.type$ -- 40
+change.case$ -- 453
+chr.to.int$ -- 39
+cite$ -- 83
+duplicate$ -- 796
+empty$ -- 1505
+format.name$ -- 1069
+if$ -- 5960
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 24
-newline$ -- 225
-num.names$ -- 150
-pop$ -- 953
+missing$ -- 26
+newline$ -- 241
+num.names$ -- 158
+pop$ -- 966
 preamble$ -- 1
-purify$ -- 408
+purify$ -- 417
 quote$ -- 0
-skip$ -- 856
+skip$ -- 883
 stack$ -- 0
-substring$ -- 445
-swap$ -- 108
+substring$ -- 493
+swap$ -- 112
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 398
+type$ -- 420
 warning$ -- 2
-while$ -- 145
+while$ -- 155
 width$ -- 0
-write$ -- 547
+write$ -- 585
 (There were 2 warnings)
