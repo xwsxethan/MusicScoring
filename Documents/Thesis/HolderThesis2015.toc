@@ -14,7 +14,7 @@
 \contentsline {section}{\numberline {6.1}Clarinet Complexity Parameterization}{15}{section.6.1}
 \contentsline {section}{\numberline {6.2}External Survey}{18}{section.6.2}
 \contentsline {section}{\numberline {6.3}Graded Music Pieces for Comparison}{18}{section.6.3}
-\contentsline {section}{\numberline {6.4}Optical Character Recognition (OCR)}{21}{section.6.4}
+\contentsline {section}{\numberline {6.4}Optical Character Recognition (OCR)}{20}{section.6.4}
 \contentsline {chapter}{\numberline {7}Discussion}{23}{chapter.7}
 \contentsline {section}{\numberline {7.1}Manually Graded Pieces and Their Calculated Complexity Scores}{23}{section.7.1}
 \contentsline {section}{\numberline {7.2}Matched and OCR Generated MusicXML}{24}{section.7.2}
@@ -29,5 +29,5 @@
 \contentsline {section}{\numberline {8.7}Measuring Complexity From Physiological Signals}{32}{section.8.7}
 \contentsline {section}{\numberline {8.8}Broadening Musiplectics to Other Plectics}{32}{section.8.8}
 \contentsline {chapter}{\numberline {9}Conclusions}{33}{chapter.9}
-\contentsline {chapter}{\numberline {A}Complexity Parameters Example}{38}{appendix.A}
-\contentsline {chapter}{\numberline {B}External Survey}{45}{appendix.B}
+\contentsline {chapter}{\numberline {A}Complexity Parameters Example}{39}{appendix.A}
+\contentsline {chapter}{\numberline {B}External Survey}{46}{appendix.B}

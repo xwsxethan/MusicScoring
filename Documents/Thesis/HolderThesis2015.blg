@@ -1,49 +1,51 @@
 This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: HolderThesis2015.aux
-The style file: abbrvnat.bst
+The style file: abbrv.bst
 Database file #1: HolderThesis2015.bib
 Warning--to sort, need author or key in genomePub
 Warning--empty author in genomePub
-You've used 40 entries,
-            2773 wiz_defined-function locations,
-            889 strings with 16108 characters,
-and the built_in function-call counts, 29788 in all, are:
-= -- 2342
-> -- 3121
-< -- 38
-+ -- 1058
-- -- 1017
-* -- 2748
-:= -- 4892
-add.period$ -- 158
-call.type$ -- 40
-change.case$ -- 453
-chr.to.int$ -- 39
-cite$ -- 83
-duplicate$ -- 796
-empty$ -- 1505
-format.name$ -- 1069
-if$ -- 5960
-int.to.chr$ -- 2
-int.to.str$ -- 1
-missing$ -- 26
+Warning--empty journal in css
+Warning--empty year in css
+You've used 48 entries,
+            2118 wiz_defined-function locations,
+            793 strings with 15575 characters,
+and the built_in function-call counts, 21910 in all, are:
+= -- 1870
+> -- 1884
+< -- 7
++ -- 760
+- -- 707
+* -- 1850
+:= -- 3846
+add.period$ -- 148
+call.type$ -- 48
+change.case$ -- 490
+chr.to.int$ -- 0
+cite$ -- 52
+duplicate$ -- 532
+empty$ -- 1218
+format.name$ -- 707
+if$ -- 4273
+int.to.chr$ -- 0
+int.to.str$ -- 48
+missing$ -- 31
 newline$ -- 241
-num.names$ -- 158
-pop$ -- 966
+num.names$ -- 96
+pop$ -- 592
 preamble$ -- 1
-purify$ -- 417
+purify$ -- 447
 quote$ -- 0
-skip$ -- 883
+skip$ -- 406
 stack$ -- 0
-substring$ -- 493
-swap$ -- 112
+substring$ -- 660
+swap$ -- 106
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 420
-warning$ -- 2
-while$ -- 155
-width$ -- 0
-write$ -- 585
-(There were 2 warnings)
+type$ -- 184
+warning$ -- 4
+while$ -- 133
+width$ -- 50
+write$ -- 512
+(There were 4 warnings)

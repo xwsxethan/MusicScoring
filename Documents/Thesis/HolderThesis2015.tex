@@ -247,7 +247,7 @@ Musiplectics draws its inspiration from computational thinking \cite{wing2006com
 
 Although one can draw various analogies between music and computing, the intricacy of determining the complexity of music scores is most similar to estimating program performance on different computing devices. While the same compiled program can be executed on any computing device of a given architecture, the device's processing power ultimately determines the efficiency of the resulting execution, which can vary widely. The same applies to the complexity experienced by musicians with dissimilar levels of proficiency when performing the same piece on a given instrument. Although all musicians read a piece of sheet music and understand it similarly, the complexity of playing that piece is determined by a performer's proficiency. Musiplectics aspires to blaze a trail toward objectively assessing these complexities by creating a practical computational framework that can capture the subtle nuances of musical complexity.
 
-The solutions presented herein are instrument agnostic. Nevertheless, to realize the concept of musiplectics, our reference implementation of the computational framework targets the B$\flat$ Clarinet. This exclusive focus on clarinet is reflective of our own music performance expertise, rather than of any limitations of the presented concepts.
+The solutions presented herein are instrument agnostic. Nevertheless, to realize the concept of musiplectics, the reference implementation of the computational framework targets the B$\flat$ Clarinet. This exclusive focus on clarinet is reflective of my own music performance expertise, rather than of any limitations of the presented concepts.
 
 \section{Research Contributions} 
 \label{sec:rqg}
@@ -266,26 +266,26 @@ The solutions presented herein are instrument agnostic. Nevertheless, to realize
 % \item Are the current grades for music competition pieces relatively correct?
 % \end{enumerate}
 
-By presenting our work, this paper makes the following contributions:
+By presenting my work, this thesis makes the following contributions:
 
 \begin{enumerate}
 \item Musiplectics, a new application of computing that encompasses automated assessment of the complexity of music scores.
 \item A computational model for music complexity; it assigns base levels of difficulty to an instrument's notes and intervals, with dynamics, articulations, key signatures, and note duration serving as multipliers that increase or reduce the base difficulty.
 \item Musical Complexity Scoring or MCS, a concrete realization of the musiplectics-based model above, made publicly available online for teaching and experimentation.
-\item A preliminary evaluation of our model's realization, which compares MCS to commonly accepted educational level guidelines for repertoire pieces.
+\item A preliminary evaluation of the model's realization, which compares MCS to commonly accepted educational level guidelines for repertoire pieces.
 \item An evaluation of music Optical Character Recognition (OCR) software as a means of converting sheet music into a computer-readable MusicXML format.
 \end{enumerate}
 
 \section{Paper Roadmap} 
 \label{sec:layout}
 
-The remainder of this paper is structured as follows. First, Chapter \ref{sec:background} presents background information on music to provide a base line for readers. Then, Chapter \ref{sec:related} highlights related work in this field. Next, Chapter \ref{sec:scoring} explains our basic model for determining music complexity. Afterwards, Chapter \ref{sec:proof} details the proof of concept's design and details. This leads into the evaluation chapter \ref{sec:eval} which shows how we have tested this system and what preliminary results we have uncovered. Chapter \ref{sec:discus} interprets the results and discusses how our system compares to the state of the practice. Afterwards, Chapter \ref{sec:future} gives directions for future work. Finally, Chapter \ref{sec:conclu} presents our conclusions for this project.
+The remainder of this thesis is structured as follows. First, Chapter \ref{sec:background} presents background information on music to provide a base line for readers. Then, Chapter \ref{sec:related} highlights related work in this field. Next, Chapter \ref{sec:scoring} explains the basic model for determining music complexity. Afterwards, Chapter \ref{sec:proof} details the proof of concept's design and details. This leads into the evaluation chapter \ref{sec:eval} which shows how I have tested this system and what preliminary results I have uncovered. Chapter \ref{sec:discus} interprets the results and discusses how the system compares to the state of the practice. Afterwards, Chapter \ref{sec:future} gives directions for future work. Finally, Chapter \ref{sec:conclu} presents my conclusions for this project.
 
 \chapter{Background} 
 \label{sec:background}
 \markright{Ethan G. Holder  \hfill Chapter 2. Background \hfill}
 
-This research is concerned with evaluating musical complexity. Music is a very specialized domain with its own unique set of concepts, terms, and conventions. Hence, for the benefit of the reader not familiar with Western music, we next present a brief refresher of the standard elements of music. The reader well-versed in this art can safely skip this Section. Although, we have striven to adhere to the standard definitions of the common musical elements, this Section distills music theory down to the core concepts for the sake of brevity.
+This research is concerned with evaluating musical complexity. Music is a very specialized domain with its own unique set of concepts, terms, and conventions. Hence, for the benefit of the reader not familiar with Western music, I next present a brief refresher of the standard elements of music. The reader well-versed in this art can safely skip this chapter. Although I have striven to adhere to the standard definitions of the common musical elements, this chapter distills music theory down to the core concepts for the sake of brevity. For more advanced background information beyond what is provided here, there are many free resources available, such as MusicTheory.net \cite{MusicTheoryNet} or the Society for Music Theory \cite{SMT}.
 
 The fundamental building block of music is the note. Notes in music are similar to words in spoken language or tokens in code. The characteristics expressed by a sound require multiple types of visual symbols to express a note. In written music, the most important characteristics of notes are pitch, duration, dynamics, and articulation. In sheet music, notes are depicted as ovals, both with and without a line (stem) and flag attached to them.
 
@@ -295,7 +295,7 @@ Pitch is the most salient characteristic of any note. It is the frequency of the
 
 An interval is the difference in pitch between two notes. Each interval's name encodes the distance between pitches with different levels of gradation. For example, a minor third, a perfect fourth, a major sixth, etc.
 
-The pitch of a note can be determined from the note's vertical placement on the staff (the five horizontal lines and four spaces in between), the clef (the range of notes possible to represent on the staff), and the key signature (the pitches to be altered up or down a half step). Accidentals can also similarly alter the pitch of a note up or down by half steps; but accidentals are not applied to the entire piece, only one specific measure at a time. Both accidentals and key signatures are represented by symbols called sharps or $\sharp$, which raise the pitch a half step, flats or $\flat$, which lower the pitch a half step, and naturals or $\natural$, which undo the effect of the previously applied pitch modification. Web designers can draw an analogy from key signatures and accidentals in music to global and inline cascading style sheets (CSS) in web page rendering.
+The pitch of a note can be determined from the note's vertical placement on the staff (the five horizontal lines and four spaces in between), the clef (the range of notes possible to represent on the staff), and the key signature (the pitches to be altered up or down a half step). Accidentals can also similarly alter the pitch of a note up or down by half steps; but accidentals are not applied to the entire piece, only one specific measure at a time. Both accidentals and key signatures are represented by symbols called sharps or $\sharp$, which raise the pitch a half step, flats or $\flat$, which lower the pitch a half step, and naturals or $\natural$, which undo the effect of the previously applied pitch modification. Web designers can draw an analogy from key signatures and accidentals in music to global and inline cascading style sheets (CSS) \cite{css} in web page rendering.
 
 Another central characteristic of a note is its duration. Duration is simply the length of time a note is sustained. Although written music does not explicitly specify duration, it is inferred from the note's value (a fraction expressed by the note's stem and flags), the time signature (how many beats are in a measure and what fraction of a whole note gets a beat), and the tempo (how many beats are played in a given time frame).
 
@@ -326,7 +326,7 @@ Multiple prior research efforts study various facets of music. Although relative
 \section{Complexity Analysis}
 \label{sec:relcom}
 
-The most relevant works to musiplectics are those that also seek to analyze the complexity of music in some way. A representative example is presented in reference \cite{Chiu2012}. This work seeks to automatically generate or predict the difficulty of a piano music piece. The authors apply regression theory over a set of features that cause difficulties for that specific instrument. Musiplectics leverages similar musical concepts to build up an aggregate measure of difficulty or complexity. However, our approach has a wider range of applicability, both in terms of musical instruments and playing proficiency, as well as portability, by embracing uniform types of complexity parameters. In other words complexity parameters in musiplectics encompass the cognitive and mechanical complexities for a given instrument. So all instruments have the same types of complexity parameters, which may take upon vastly different values.
+The most relevant works to musiplectics are those that also seek to analyze the complexity of music in some way. A representative example is presented in reference \cite{Chiu2012}. This work seeks to automatically generate or predict the difficulty of a piano music piece. The authors apply regression theory over a set of features that cause difficulties for that specific instrument. Musiplectics leverages similar musical concepts to build up an aggregate measure of difficulty or complexity. However, my approach has a wider range of applicability, both in terms of musical instruments and playing proficiency, as well as portability, by embracing uniform types of complexity parameters. In other words complexity parameters in musiplectics encompass the cognitive and mechanical complexities for a given instrument. So all instruments have the same types of complexity parameters, which may take upon vastly different values.
 
 Similar to \cite{Chiu2012}, \cite{Heijink2002} studies the complexity of playing guitar. Their work extracts features that determine difficulty when playing guitar. However, their focus lies more on the mechanical difficulties specifically associated with that instrument rather than broad ranging complexities of playing music on any instrument. Musiplectics also takes into account the playing proficiency of the player at hand.
 
@@ -335,6 +335,8 @@ Another related approach to ours is \cite{Liou2010}. The authors analyze the com
 State organizations, such as \cite{VBODA} in Virginia and \cite{NYSSMA} in New York as well as others, similarly analyze music scores by hand, an activity which we hope to automate. These organizations govern K-12 schools in their respective states. They also list music pieces and their respective difficulty grades for district, regional, or state competitions for each K-12 grade level. Other organizations, such as the Royal Conservatory Music Development Program \cite{RoyalSyllabus}, offer similar pieces and respective grades as part of their level requirements and assessment regulations. Unlike state organizations, Royal Conservatory publishes their pieces and scores to the public, a provision that enables us to leverage them in evaluating our work.
 
 The difficulty grading schemes in both types of organizations are analogous to the complexity of the piece, except that in these organizations pieces are graded subjectively by a group of people rather than a uniform algorithm. Additionally, the grades are typically listed as integer values between 1 and 10, thus lacking a sufficient level of granularity to express nuanced differences between musical pieces.
+
+Some past works have specifically studied the complexity of music as experienced by listeners or observers. These works show great insights into defining complexity and in fact utilize very similar music elements as representative features to determine overall complexity. For instance, \cite{madsen2006music} relies on note pitches, intervals, and durations of notes as features on pieces of MIDI formatted music to determine the complexity experienced by listeners. Similarly, \cite{streich2006automatic} presents an entire Ph. D. thesis on characterizing the complexity of music from the viewpoint of the listener. Several related works from \cite{streich2006automatic} also formally define what complexity is in terms of listeners and what information can be gathered from it as a property of music \cite{edmonds1995complexity} \cite{pressing1999cognitive} \cite{scheirer2000perceived}. While this thesis focuses on the complexity experienced by performers, such related works all provide a basis to build upon.
 
 \section{Music Scan \& Search}
 \label{sec:relscan}
@@ -866,7 +868,8 @@ This paper presented musiplectics, a new computational paradigm, that systematic
 % If you are using BibTeX, uncomment the following:
 
 %\nocite{*}
-\bibliographystyle{abbrvnat}
+%\bibliographystyle{abbrvnat}
+\bibliographystyle{abbrv}
 \markright{Ethan G. Holder  \hfill Chapter Bibliography \hfill}
 %\thebibliography{HolderThesis2015}
 \bibliography{HolderThesis2015}

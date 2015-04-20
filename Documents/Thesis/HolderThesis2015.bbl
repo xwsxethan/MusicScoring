@@ -1,274 +1,244 @@
-\begin{thebibliography}{40}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\begin{thebibliography}{10}
 
-\bibitem[gen(2001)]{genomePub}
+\bibitem{genomePub}
 Initial sequencing and analysis of the human genome.
-\newblock \emph{Nature}, 409\penalty0 (6822):\penalty0 860--921, 02 2001.
-\newblock URL \url{http://dx.doi.org/10.1038/35057062}.
+\newblock {\em Nature}, 409(6822):860--921, 02 2001.
 
-\bibitem[Allali et~al.(2009)Allali, Ferraro, Hanna, Iliopoulos, and
-  Robine]{Allali2009}
+\bibitem{Allali2009}
 J.~Allali, P.~Ferraro, P.~Hanna, C.~Iliopoulos, and M.~Robine.
 \newblock Toward a general framework for polyphonic comparison.
-\newblock \emph{Fundam. Inf.}, 97\penalty0 (3):\penalty0 331--346, Aug. 2009.
-\newblock ISSN 0169-2968.
-\newblock URL \url{http://dl.acm.org/citation.cfm?id=2365196.2365200}.
+\newblock {\em Fundam. Inf.}, 97(3):331--346, Aug. 2009.
 
-\bibitem[{Apache Xerces}(2013)]{XMLAPI}
+\bibitem{XMLAPI}
 {Apache Xerces}.
 \newblock The apache xerces™ project.
 \newblock \url{http://xerces.apache.org/index.html}, 1 2013.
 
-\bibitem[Arnold(1939)]{Solos}
+\bibitem{Solos}
 J.~Arnold.
-\newblock \emph{Clarinet Solos}.
+\newblock {\em Clarinet Solos}.
 \newblock Amsco Music Pub. Co, New York, 1939.
-\newblock ISBN 978-0-8256-2028-7.
 
-\bibitem[{Avid Technology Inc.}(2015)]{Sibelius}
+\bibitem{Sibelius}
 {Avid Technology Inc.}
 \newblock Sibelius.
 \newblock \url{http://www.avid.com/US/products/sibelius}, 3 2015.
 
-\bibitem[Bitteur(2013)]{Audiveris}
+\bibitem{Audiveris}
 H.~Bitteur.
 \newblock Audiveris.
 \newblock \url{https://audiveris.kenai.com/}, 1 2013.
 
-\bibitem[Bostock(2013)]{D3}
+\bibitem{css}
+B.~Bos, H.~W. Lie, C.~Lilley, and I.~Jacobs.
+\newblock Cascading style sheets, level 2 css2 specification.
+
+\bibitem{D3}
 M.~Bostock.
 \newblock D3 data-driven documents.
 \newblock \url{http://d3js.org/}, 2013.
 
-\bibitem[Byrd(2001)]{Byrd2001}
+\bibitem{Byrd2001}
 D.~Byrd.
 \newblock Music-notation searching and digital libraries.
-\newblock In \emph{Proceedings of the 1st ACM/IEEE-CS Joint Conference on
+\newblock In {\em Proceedings of the 1st ACM/IEEE-CS Joint Conference on
   Digital Libraries}, JCDL '01, pages 239--246, New York, NY, USA, 2001. ACM.
-\newblock ISBN 1-58113-345-6.
-\newblock \doi{10.1145/379437.379662}.
-\newblock URL \url{http://doi.acm.org/10.1145/379437.379662}.
 
-\bibitem[Byrd and Schindele(2006)]{byrd2006prospects}
+\bibitem{byrd2006prospects}
 D.~Byrd and M.~Schindele.
 \newblock Prospects for improving omr with multiple recognizers.
-\newblock In \emph{ISMIR}, pages 41--46, 2006.
+\newblock In {\em ISMIR}, pages 41--46, 2006.
 
-\bibitem[Cataltepe et~al.(2007)Cataltepe, Yaslan, and Sonmez]{Cataltepe2007}
+\bibitem{Cataltepe2007}
 Z.~Cataltepe, Y.~Yaslan, and A.~Sonmez.
 \newblock Music genre classification using midi and audio features.
-\newblock \emph{EURASIP J. Appl. Signal Process.}, 2007\penalty0 (1):\penalty0
-  150--150, Jan. 2007.
-\newblock ISSN 1110-8657.
-\newblock \doi{10.1155/2007/36409}.
-\newblock URL \url{http://dx.doi.org/10.1155/2007/36409}.
+\newblock {\em EURASIP J. Appl. Signal Process.}, 2007(1):150--150, Jan. 2007.
 
-\bibitem[Cheppudira(2010)]{VexFlow}
+\bibitem{VexFlow}
 M.~M. Cheppudira.
 \newblock vexflow.
 \newblock \url{https://github.com/0xfe/vexflow}, 2010.
 
-\bibitem[Chiu and Chen(2012)]{Chiu2012}
+\bibitem{Chiu2012}
 S.-C. Chiu and M.-S. Chen.
 \newblock A study on difficulty level recognition of piano sheet music.
-\newblock In \emph{Proceedings of the 2012 IEEE International Symposium on
+\newblock In {\em Proceedings of the 2012 IEEE International Symposium on
   Multimedia}, ISM '12, pages 17--23, Washington, DC, USA, 2012. IEEE Computer
   Society.
-\newblock ISBN 978-0-7695-4875-3.
-\newblock \doi{10.1109/ISM.2012.11}.
-\newblock URL \url{http://dx.doi.org/10.1109/ISM.2012.11}.
 
-\bibitem[Choudhury et~al.(2000)Choudhury, Droetboom, DiLauro, Fujinaga, and
-  Harrington]{Choudhury2000}
+\bibitem{Choudhury2000}
 G.~S. Choudhury, M.~Droetboom, T.~DiLauro, I.~Fujinaga, and B.~Harrington.
 \newblock Optical music recognition system within a large-scale digitization
   project.
-\newblock In \emph{ISMIR}, 2000.
+\newblock In {\em ISMIR}, 2000.
 
-\bibitem[Cuthbert et~al.(2011)Cuthbert, Ariza, and Friedland]{Cuthbert2011}
+\bibitem{Cuthbert2011}
 M.~S. Cuthbert, C.~Ariza, and L.~Friedland.
 \newblock Feature extraction and machine learning on symbolic music using the
   music21 toolkit.
-\newblock In \emph{ISMIR}, pages 387--392, 2011.
+\newblock In {\em ISMIR}, pages 387--392, 2011.
 
-\bibitem[Good et~al.(2001)]{Good2001}
+\bibitem{edmonds1995complexity}
+B.~Edmonds.
+\newblock What is complexity?-the philosophy of complexity per se with
+  application to some examples in evolution.
+\newblock {\em The evolution of complexity}, 1995.
+
+\bibitem{Good2001}
 M.~Good et~al.
 \newblock {MusicXML}: An internet-friendly format for sheet music.
-\newblock In \emph{XML Conference and Expo}, pages 03--04. Citeseer, 2001.
+\newblock In {\em XML Conference and Expo}, pages 03--04. Citeseer, 2001.
 
-\bibitem[Gosling(2000)]{java}
+\bibitem{java}
 J.~Gosling.
-\newblock \emph{The Java language specification}.
+\newblock {\em The Java language specification}.
 \newblock Addison-Wesley Professional, 2000.
 
-\bibitem[Heijink and Meulenbroek(2002)]{Heijink2002}
+\bibitem{Heijink2002}
 H.~Heijink and R.~Meulenbroek.
 \newblock On the complexity of classical guitar playing: Functional adaptations
   to task constraints.
-\newblock \emph{Journal of motor behavior}, 34\penalty0 (4):\penalty0 339--351,
-  2002.
-\newblock URL \url{www.summon.com}.
+\newblock {\em Journal of motor behavior}, 34(4):339--351, 2002.
 
-\bibitem[Holder(2015)]{GithubMusicScoring}
+\bibitem{GithubMusicScoring}
 E.~Holder.
 \newblock Musicscoring.
 \newblock \url{https://github.com/xwsxethan/MusicScoring}, 2 2015.
 
-\bibitem[{JSON Simple}(2012)]{JSONAPI}
+\bibitem{JSONAPI}
 {JSON Simple}.
 \newblock json-simple.
 \newblock \url{https://code.google.com/p/json-simple/}, 2 2012.
 
-\bibitem[Knapp et~al.(2011)Knapp, Kim, and André]{Physio}
+\bibitem{Physio}
 R.~Knapp, J.~Kim, and E.~André.
 \newblock Physiological signals and their use in augmenting emotion recognition
   for human–machine interaction.
-\newblock In R.~Cowie, C.~Pelachaud, and P.~Petta, editors,
-  \emph{Emotion-Oriented Systems}, Cognitive Technologies, pages 133--159.
-  Springer Berlin Heidelberg, 2011.
-\newblock ISBN 978-3-642-15183-5.
-\newblock \doi{10.1007/978-3-642-15184-2_9}.
-\newblock URL \url{http://dx.doi.org/10.1007/978-3-642-15184-2_9}.
+\newblock In R.~Cowie, C.~Pelachaud, and P.~Petta, editors, {\em
+  Emotion-Oriented Systems}, Cognitive Technologies, pages 133--159. Springer
+  Berlin Heidelberg, 2011.
 
-\bibitem[Knapp and Lusted(1990)]{Controller}
+\bibitem{Controller}
 R.~B. Knapp and H.~S. Lusted.
 \newblock A bioelectric controller for computer music applications.
-\newblock \emph{Computer Music Journal}, 14\penalty0 (1):\penalty0 pp. 42--47,
-  1990.
-\newblock ISSN 01489267.
-\newblock URL \url{http://www.jstor.org/stable/3680115}.
+\newblock {\em Computer Music Journal}, 14(1):pp. 42--47, 1990.
 
-\bibitem[Liou et~al.(2010)Liou, Wu, and Lee]{Liou2010}
+\bibitem{Liou2010}
 C.-Y. Liou, T.-H. Wu, and C.-Y. Lee.
 \newblock Modeling complexity in musical rhythm.
-\newblock \emph{Complex.}, 15\penalty0 (4):\penalty0 19--30, Mar. 2010.
-\newblock ISSN 1076-2787.
-\newblock \doi{10.1002/cplx.v15:4}.
-\newblock URL \url{http://dx.doi.org/10.1002/cplx.v15:4}.
+\newblock {\em Complex.}, 15(4):19--30, Mar. 2010.
 
-\bibitem[{Makemusic Inc.}(2015{\natexlab{a}})]{FinaleNotepad}
+\bibitem{madsen2006music}
+S.~T. Madsen and G.~Widmer.
+\newblock Music complexity measures predicting the listening experience.
+\newblock {\em Entropy}, 1(4):1, 2006.
+
+\bibitem{FinaleNotepad}
 {Makemusic Inc.}
 \newblock Finale notepad.
-\newblock \url{http://www.finalemusic.com/products/finale-notepad/}, 3
-  2015{\natexlab{a}}.
+\newblock \url{http://www.finalemusic.com/products/finale-notepad/}, 3 2015.
 
-\bibitem[{Makemusic Inc.}(2015{\natexlab{b}})]{MusicXML}
+\bibitem{MusicXML}
 {Makemusic Inc.}
 \newblock {MusicXML}.
-\newblock \url{http://www.musicxml.com/}, 3 2015{\natexlab{b}}.
+\newblock \url{http://www.musicxml.com/}, 3 2015.
 
-\bibitem[{MuseScore BVBA}(2015)]{MuseScore}
+\bibitem{MuseScore}
 {MuseScore BVBA}.
 \newblock Musescore share your sheet music.
 \newblock \url{https://musescore.com/}, 2015.
 
-\bibitem[{Notation Software Germany}(2014)]{NotationSoft}
+\bibitem{MusicTheoryNet}
+{MusicTheory.net LLC}.
+\newblock Musictheory.net.
+\newblock \url{http://www.musictheory.net/}, 2015.
+
+\bibitem{NotationSoft}
 {Notation Software Germany}.
 \newblock Notation composer.
 \newblock \url{http://www.notation.com/NotationComposer.php}, 2014.
 
-\bibitem[{NYSSMA New York State School Music Association}(2015)]{NYSSMA}
+\bibitem{NYSSMA}
 {NYSSMA New York State School Music Association}.
 \newblock Nyssma new york state school music association.
 \newblock \url{http://www.nyssma.org/}, 2015.
 
-\bibitem[Otto and Thornton(2015)]{Bootstrap}
+\bibitem{Bootstrap}
 Otto and Thornton.
 \newblock Bootstrap.
 \newblock \url{http://getbootstrap.com/}, 2015.
 
-\bibitem[Park(1993)]{Park1993}
+\bibitem{Park1993}
 C.~Y. Park.
 \newblock Predicting program execution times by analyzing static and dynamic
   program paths.
-\newblock \emph{Real-Time Syst.}, 5\penalty0 (1):\penalty0 31--62, Mar. 1993.
-\newblock ISSN 0922-6443.
-\newblock \doi{10.1007/BF01088696}.
-\newblock URL \url{http://dx.doi.org/10.1007/BF01088696}.
+\newblock {\em Real-Time Syst.}, 5(1):31--62, Mar. 1993.
 
-\bibitem[Pearson(1993)]{Standard}
+\bibitem{Standard}
 B.~Pearson.
-\newblock \emph{Standard of excellence : comprehensive band method, B♭
+\newblock {\em Standard of excellence : comprehensive band method, B♭
   clarinet}.
 \newblock Neil A. Kjos Music Co, San Diego, Calif, 1993.
-\newblock ISBN 978-0849759291.
 
-\bibitem[{Project Petrucci LLC}(2015)]{IMSLP}
+\bibitem{pressing1999cognitive}
+J.~Pressing.
+\newblock Cognitive complexity and the structure of musical patterns.
+\newblock In {\em Proceedings of the 4th Conference of the Australasian
+  Cognitive Science Society}, 1999.
+
+\bibitem{IMSLP}
 {Project Petrucci LLC}.
 \newblock International music score library project.
 \newblock \url{http://imslp.org/}, 2015.
 
-\bibitem[{Royal Conservatory Music Development Program}(2014)]{RoyalSyllabus}
+\bibitem{RoyalSyllabus}
 {Royal Conservatory Music Development Program}.
 \newblock Clarinet syllabus.
 \newblock
   \url{https://www.musicdevelopmentprogram.org/sites/default/files/files/S42_Clarinet%20Syl_MDP_2014_online_SECURED.pdf},
   2014.
 
-\bibitem[{SpryMedia Ltd.}(2015)]{DataTables}
+\bibitem{scheirer2000perceived}
+E.~D. Scheirer, R.~B. Watson, and B.~L. Vercoe.
+\newblock On the perceived complexity of short musical segments.
+\newblock In {\em Proceedings of the 2000 International Conference on Music
+  Perception and Cognition}. Citeseer, 2000.
+
+\bibitem{SMT}
+{Society for Music Theory}.
+\newblock Mto a journal for the society for music theory.
+\newblock \url{http://www.mtosmt.org/index.php}, 2015.
+
+\bibitem{DataTables}
 {SpryMedia Ltd.}
 \newblock Datatables table plug-in for {jQuery}.
 \newblock \url{https://www.datatables.net/}, 2015.
 
-\bibitem[Tanaka and Knapp(2002)]{Tanaka2002}
+\bibitem{streich2006automatic}
+S.~Streich.
+\newblock {\em Automatic Characterization of Music Complexity: a multifaceted
+  approach}.
+\newblock PhD thesis, Citeseer, 2006.
+
+\bibitem{Tanaka2002}
 A.~Tanaka and R.~B. Knapp.
 \newblock Multimodal interaction in music using the electromyogram and relative
   position sensing.
-\newblock In \emph{Proceedings of the 2002 Conference on New Interfaces for
+\newblock In {\em Proceedings of the 2002 Conference on New Interfaces for
   Musical Expression}, NIME '02, pages 1--6, Singapore, Singapore, 2002.
   National University of Singapore.
-\newblock ISBN 1-87465365-8.
-\newblock URL \url{http://dl.acm.org/citation.cfm?id=1085171.1085183}.
 
-\bibitem[{The {jQuery} Foundation}(2015)]{jQuery}
+\bibitem{jQuery}
 {The {jQuery} Foundation}.
 \newblock {jQuery}.
 \newblock \url{https://jquery.com/}, 2015.
 
-\bibitem[Tiwari et~al.(1996)Tiwari, Malik, Wolfe, and Lee]{Tiwari1996}
+\bibitem{Tiwari1996}
 V.~Tiwari, S.~Malik, A.~Wolfe, and M.~T.-C. Lee.
 \newblock Instruction level power analysis and optimization of software.
-\newblock \emph{J. VLSI Signal Process. Syst.}, 13\penalty0 (2-3):\penalty0
-  223--238, Aug. 1996.
-\newblock ISSN 0922-5773.
-\newblock \doi{10.1007/BF01130407}.
-\newblock URL \url{http://dx.doi.org/10.1007/BF01130407}.
+\newblock {\em J. VLSI Signal Process. Syst.}, 13(2-3):223--238, Aug. 1996.
 
-\bibitem[Venter et~al.(2001)Venter, Adams, Myers, Li, Mural, Sutton, Smith,
-  Yandell, Evans, Holt, Gocayne, Amanatides, Ballew, Huson, Wortman, Zhang,
-  Kodira, Zheng, Chen, Skupski, Subramanian, Thomas, Zhang, Gabor~Miklos,
-  Nelson, Broder, Clark, Nadeau, McKusick, Zinder, Levine, Roberts, Simon,
-  Slayman, Hunkapiller, Bolanos, Delcher, Dew, Fasulo, Flanigan, Florea,
-  Halpern, Hannenhalli, Kravitz, Levy, Mobarry, Reinert, Remington,
-  Abu-Threideh, Beasley, Biddick, Bonazzi, Brandon, Cargill,
-  Chandramouliswaran, Charlab, Chaturvedi, Deng, Francesco, Dunn, Eilbeck,
-  Evangelista, Gabrielian, Gan, Ge, Gong, Gu, Guan, Heiman, Higgins, Ji, Ke,
-  Ketchum, Lai, Lei, Li, Li, Liang, Lin, Lu, Merkulov, Milshina, Moore, Naik,
-  Narayan, Neelam, Nusskern, Rusch, Salzberg, Shao, Shue, Sun, Wang, Wang,
-  Wang, Wang, Wei, Wides, Xiao, Yan, Yao, Ye, Zhan, Zhang, Zhang, Zhao, Zheng,
-  Zhong, Zhong, Zhu, Zhao, Gilbert, Baumhueter, Spier, Carter, Cravchik,
-  Woodage, Ali, An, Awe, Baldwin, Baden, Barnstead, Barrow, Beeson, Busam,
-  Carver, Center, Cheng, Curry, Danaher, Davenport, Desilets, Dietz, Dodson,
-  Doup, Ferriera, Garg, Gluecksmann, Hart, Haynes, Haynes, Heiner, Hladun,
-  Hostin, Houck, Howland, Ibegwam, Johnson, Kalush, Kline, Koduru, Love, Mann,
-  May, McCawley, McIntosh, McMullen, Moy, Moy, Murphy, Nelson, Pfannkoch,
-  Pratts, Puri, Qureshi, Reardon, Rodriguez, Rogers, Romblad, Ruhfel, Scott,
-  Sitter, Smallwood, Stewart, Strong, Suh, Thomas, Tint, Tse, Vech, Wang,
-  Wetter, Williams, Williams, Windsor, Winn-Deen, Wolfe, Zaveri, Zaveri, Abril,
-  Guigó, Campbell, Sjolander, Karlak, Kejariwal, Mi, Lazareva, Hatton,
-  Narechania, Diemer, Muruganujan, Guo, Sato, Bafna, Istrail, Lippert,
-  Schwartz, Walenz, Yooseph, Allen, Basu, Baxendale, Blick, Caminha,
-  Carnes-Stine, Caulk, Chiang, Coyne, Dahlke, Mays, Dombroski, Donnelly, Ely,
-  Esparham, Fosler, Gire, Glanowski, Glasser, Glodek, Gorokhov, Graham,
-  Gropman, Harris, Heil, Henderson, Hoover, Jennings, Jordan, Jordan, Kasha,
-  Kagan, Kraft, Levitsky, Lewis, Liu, Lopez, Ma, Majoros, McDaniel, Murphy,
-  Newman, Nguyen, Nguyen, Nodell, Pan, Peck, Peterson, Rowe, Sanders, Scott,
-  Simpson, Smith, Sprague, Stockwell, Turner, Venter, Wang, Wen, Wu, Wu, Xia,
-  Zandieh, and Zhu]{genomePri}
+\bibitem{genomePri}
 J.~C. Venter, M.~D. Adams, E.~W. Myers, P.~W. Li, R.~J. Mural, G.~G. Sutton,
   H.~O. Smith, M.~Yandell, C.~A. Evans, R.~A. Holt, J.~D. Gocayne,
   P.~Amanatides, R.~M. Ballew, D.~H. Huson, J.~R. Wortman, Q.~Zhang, C.~D.
@@ -313,25 +283,21 @@ J.~C. Venter, M.~D. Adams, E.~W. Myers, P.~W. Li, R.~J. Mural, G.~G. Sutton,
   J.~Scott, M.~Simpson, T.~Smith, A.~Sprague, T.~Stockwell, R.~Turner,
   E.~Venter, M.~Wang, M.~Wen, D.~Wu, M.~Wu, A.~Xia, A.~Zandieh, and X.~Zhu.
 \newblock The sequence of the human genome.
-\newblock \emph{Science}, 291\penalty0 (5507):\penalty0 1304--1351, 2001.
-\newblock \doi{10.1126/science.1058040}.
-\newblock URL \url{http://www.sciencemag.org/content/291/5507/1304.abstract}.
+\newblock {\em Science}, 291(5507):1304--1351, 2001.
 
-\bibitem[{Virginia Band and Orchestra Directors Association}(2015)]{VBODA}
+\bibitem{VBODA}
 {Virginia Band and Orchestra Directors Association}.
 \newblock Virginia band and orchestra directors association.
 \newblock \url{http://www.vboda.org/}, 2015.
 
-\bibitem[Voxman(1992)]{Concert}
+\bibitem{Concert}
 H.~Voxman.
-\newblock \emph{Concert and Contest Collection for Bb Clarinet: Solo Part}.
+\newblock {\em Concert and Contest Collection for Bb Clarinet: Solo Part}.
 \newblock Rubank Publications, Chicago, Illinois, 1992.
-\newblock ISBN 978-1423445449.
 
-\bibitem[Wing(2006)]{wing2006computational}
+\bibitem{wing2006computational}
 J.~M. Wing.
 \newblock Computational thinking.
-\newblock \emph{Communications of the ACM}, 49\penalty0 (3):\penalty0 33--35,
-  2006.
+\newblock {\em Communications of the ACM}, 49(3):33--35, 2006.
 
 \end{thebibliography}

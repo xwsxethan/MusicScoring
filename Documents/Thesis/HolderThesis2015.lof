@@ -6,8 +6,8 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces The overall control flow from a user's perspective.}}{13}{figure.5.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces The complexity score of pieces by grade from Royal Conservatory. Everything to the right of a grade including that number represents a piece with that grade.}}{20}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces The average complexity score of pieces by grade from Royal Conservatory along with standard deviations.}}{20}{figure.6.2}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces The complexity score of pieces by grade from Royal Conservatory. Everything to the right of a grade including that number represents a piece with that grade.}}{19}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The average complexity score of pieces by grade from Royal Conservatory along with standard deviations.}}{19}{figure.6.2}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces The comparison command for MusicXML files.}}{21}{figure.6.3}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces The difference between matched and OCR generated MusicXML files in words, lines, and characters via sdiff as well as the positive difference in complexity score.}}{22}{figure.6.4}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces The percentage difference between matched and OCR generated MusicXML files in words, lines, and characters via sdiff as well as the positive percentage difference in complexity score.}}{22}{figure.6.5}
