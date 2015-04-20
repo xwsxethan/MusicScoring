@@ -7,45 +7,45 @@ Warning--to sort, need author or key in genomePub
 Warning--empty author in genomePub
 Warning--empty journal in css
 Warning--empty year in css
-You've used 48 entries,
+You've used 54 entries,
             2118 wiz_defined-function locations,
-            793 strings with 15575 characters,
-and the built_in function-call counts, 21910 in all, are:
-= -- 1870
-> -- 1884
-< -- 7
-+ -- 760
-- -- 707
-* -- 1850
-:= -- 3846
-add.period$ -- 148
-call.type$ -- 48
-change.case$ -- 490
+            828 strings with 16746 characters,
+and the built_in function-call counts, 24164 in all, are:
+= -- 2099
+> -- 1984
+< -- 10
++ -- 801
+- -- 741
+* -- 2004
+:= -- 4206
+add.period$ -- 168
+call.type$ -- 54
+change.case$ -- 524
 chr.to.int$ -- 0
-cite$ -- 52
-duplicate$ -- 532
-empty$ -- 1218
-format.name$ -- 707
-if$ -- 4273
+cite$ -- 58
+duplicate$ -- 623
+empty$ -- 1396
+format.name$ -- 741
+if$ -- 4756
 int.to.chr$ -- 0
-int.to.str$ -- 48
-missing$ -- 31
-newline$ -- 241
-num.names$ -- 96
-pop$ -- 592
+int.to.str$ -- 54
+missing$ -- 36
+newline$ -- 271
+num.names$ -- 108
+pop$ -- 631
 preamble$ -- 1
-purify$ -- 447
+purify$ -- 476
 quote$ -- 0
-skip$ -- 406
+skip$ -- 470
 stack$ -- 0
-substring$ -- 660
-swap$ -- 106
-text.length$ -- 7
+substring$ -- 805
+swap$ -- 134
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 184
+type$ -- 208
 warning$ -- 4
-while$ -- 133
-width$ -- 50
-write$ -- 512
+while$ -- 155
+width$ -- 56
+write$ -- 580
 (There were 4 warnings)

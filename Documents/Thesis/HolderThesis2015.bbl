@@ -49,6 +49,12 @@ D.~Byrd and M.~Schindele.
 \newblock Prospects for improving omr with multiple recognizers.
 \newblock In {\em ISMIR}, pages 41--46, 2006.
 
+\bibitem{casey2008content}
+M.~A. Casey, R.~Veltkamp, M.~Goto, M.~Leman, C.~Rhodes, and M.~Slaney.
+\newblock Content-based music information retrieval: Current directions and
+  future challenges.
+\newblock {\em Proceedings of the IEEE}, 96(4):668--696, 2008.
+
 \bibitem{Cataltepe2007}
 Z.~Cataltepe, Y.~Yaslan, and A.~Sonmez.
 \newblock Music genre classification using midi and audio features.
@@ -78,6 +84,12 @@ M.~S. Cuthbert, C.~Ariza, and L.~Friedland.
   music21 toolkit.
 \newblock In {\em ISMIR}, pages 387--392, 2011.
 
+\bibitem{downie2003music}
+J.~S. Downie.
+\newblock Music information retrieval.
+\newblock {\em Annual review of information science and technology},
+  37(1):295--340, 2003.
+
 \bibitem{edmonds1995complexity}
 B.~Edmonds.
 \newblock What is complexity?-the philosophy of complexity per se with
@@ -100,10 +112,31 @@ H.~Heijink and R.~Meulenbroek.
   to task constraints.
 \newblock {\em Journal of motor behavior}, 34(4):339--351, 2002.
 
+\bibitem{holder2013cloudSPLASH}
+E.~Holder.
+\newblock Cloud twin: interactive cross-platform replay for mobile
+  applications.
+\newblock In {\em Proceedings of the 2013 companion publication for conference
+  on Systems, programming, \& applications: software for humanity}, pages
+  119--120. ACM, 2013.
+
 \bibitem{GithubMusicScoring}
 E.~Holder.
 \newblock Musicscoring.
 \newblock \url{https://github.com/xwsxethan/MusicScoring}, 2 2015.
+
+\bibitem{holder2013cloudASE}
+E.~Holder, E.~Shah, M.~Davoodi, and E.~Tilevich.
+\newblock Cloud twin: Native execution of android applications on the windows
+  phone.
+\newblock In {\em Automated Software Engineering (ASE), 2013 IEEE/ACM 28th
+  International Conference on}, pages 598--603. IEEE, 2013.
+
+\bibitem{holder2014native}
+E.~G. Holder.
+\newblock {\em Native Execution of Mobile Applications Across Platforms}.
+\newblock PhD thesis, Virginia Polytechnic Institute and State University,
+  2014.
 
 \bibitem{JSONAPI}
 {JSON Simple}.
@@ -152,6 +185,11 @@ S.~T. Madsen and G.~Widmer.
 {MusicTheory.net LLC}.
 \newblock Musictheory.net.
 \newblock \url{http://www.musictheory.net/}, 2015.
+
+\bibitem{nguyen2007sloc}
+V.~Nguyen, S.~Deeds-Rubin, T.~Tan, and B.~Boehm.
+\newblock A sloc counting standard.
+\newblock In {\em COCOMO II Forum}, volume 2007, 2007.
 
 \bibitem{NotationSoft}
 {Notation Software Germany}.
