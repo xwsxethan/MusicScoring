@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 APR 2015 23:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 APR 2015 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -628,7 +628,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 [11]
 Chapter 5.
-<JoinedCropped.png, id=406, 523.4757pt x 379.4175pt>
+<JoinedCropped.png, id=424, 523.4757pt x 379.4175pt>
 File: JoinedCropped.png Graphic file (type png)
  <use JoinedCropped.png>
 Package pdftex.def Info: JoinedCropped.png used on input line 393.
@@ -693,14 +693,14 @@ l.558
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.558 
-      ] <GradesVsComplexityScores.png, id=505, 680.5425pt x 463.7325pt>
+      ] <GradesVsComplexityScores.png, id=523, 680.5425pt x 463.7325pt>
 File: GradesVsComplexityScores.png Graphic file (type png)
 
 <use GradesVsComplexityScores.png>
 Package pdftex.def Info: GradesVsComplexityScores.png used on input line 616.
 (pdftex.def)             Requested size: 375.80542pt x 256.07967pt.
 
-<GradesVsAverageComplexityScoresSTD.png, id=506, 680.5425pt x 463.7325pt>
+<GradesVsAverageComplexityScoresSTD.png, id=524, 680.5425pt x 463.7325pt>
 File: GradesVsAverageComplexityScoresSTD.png Graphic file (type png)
 
 <use GradesVsAverageComplexityScoresSTD.png>
@@ -744,13 +744,13 @@ File: lstlang1.sty 2014/03/04 1.5c listings language file
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-<DifferenceOCR.png, id=533, 678.3744pt x 462.528pt>
+<DifferenceOCR.png, id=551, 678.3744pt x 462.528pt>
 File: DifferenceOCR.png Graphic file (type png)
  <use DifferenceOCR.png>
 Package pdftex.def Info: DifferenceOCR.png used on input line 684.
 (pdftex.def)             Requested size: 375.80542pt x 256.24026pt.
 
-<PercentageOCR.png, id=534, 678.3744pt x 462.528pt>
+<PercentageOCR.png, id=552, 678.3744pt x 462.528pt>
 File: PercentageOCR.png Graphic file (type png)
  <use PercentageOCR.png>
 Package pdftex.def Info: PercentageOCR.png used on input line 691.
@@ -800,26 +800,26 @@ Overfull \hbox (10.20277pt too wide) in paragraph at lines 701--701
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[24] <WebsiteLandingInput.png, id=569, 1187.43625pt x 719.68875pt>
+[24] <WebsiteLandingInput.png, id=588, 1187.43625pt x 719.68875pt>
 File: WebsiteLandingInput.png Graphic file (type png)
 
 <use WebsiteLandingInput.png>
 Package pdftex.def Info: WebsiteLandingInput.png used on input line 740.
 (pdftex.def)             Requested size: 422.77661pt x 256.24353pt.
 
-<WebsiteTable.png, id=570, 1183.42125pt x 507.8975pt>
+<WebsiteTable.png, id=589, 1183.42125pt x 507.8975pt>
 File: WebsiteTable.png Graphic file (type png)
  <use WebsiteTable.png>
 Package pdftex.def Info: WebsiteTable.png used on input line 747.
 (pdftex.def)             Requested size: 422.77661pt x 181.44023pt.
 
-<WebsiteGraph.png, id=571, 803.0pt x 586.19pt>
+<WebsiteGraph.png, id=590, 803.0pt x 586.19pt>
 File: WebsiteGraph.png Graphic file (type png)
  <use WebsiteGraph.png>
 Package pdftex.def Info: WebsiteGraph.png used on input line 754.
 (pdftex.def)             Requested size: 422.77661pt x 308.63092pt.
 
-<WebsiteDetails.png, id=572, 803.0pt x 401.5pt>
+<WebsiteDetails.png, id=591, 803.0pt x 401.5pt>
 File: WebsiteDetails.png Graphic file (type png)
  <use WebsiteDetails.png>
 Package pdftex.def Info: WebsiteDetails.png used on input line 761.
@@ -868,14 +868,14 @@ Chapter 8.
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[29] <WebsiteGameInput.png, id=612, 784.9325pt x 296.10625pt>
+[29] <WebsiteGameInput.png, id=630, 784.9325pt x 296.10625pt>
 File: WebsiteGameInput.png Graphic file (type png)
 
 <use WebsiteGameInput.png>
 Package pdftex.def Info: WebsiteGameInput.png used on input line 819.
 (pdftex.def)             Requested size: 422.77661pt x 159.48834pt.
 
-<WebsiteGameOutput.png, id=613, 420.57124pt x 197.73875pt>
+<WebsiteGameOutput.png, id=631, 420.57124pt x 197.73875pt>
 File: WebsiteGameOutput.png Graphic file (type png)
 
 <use WebsiteGameOutput.png>
@@ -916,38 +916,54 @@ Missing character: There is no ¢ in font cmr12!
  [34
 
 ]
+! Misplaced alignment tab character &.
+l.147 \newblock {\em Perception &
+                                  Psychophysics}, 17(1):84--90, 1975.
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \vbox (8.33331pt too high) has occurred while \output is active []
+
+
+[35]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no © in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
 
-Overfull \vbox (8.33331pt too high) has occurred while \output is active []
-
-
-[35]
-Underfull \hbox (badness 3861) in paragraph at lines 192--195
+Underfull \hbox (badness 3861) in paragraph at lines 209--212
 []\OT1/cmr/m/n/12 Makemusic Inc.  Fi-nale notepad.  []$\OT1/cmtt/m/n/12 http : 
 / / www . finalemusic . com / products /
  []
 
 
-Underfull \hbox (badness 1163) in paragraph at lines 217--220
+Underfull \hbox (badness 1163) in paragraph at lines 246--249
 []\OT1/cmr/m/n/12 Notation Soft-ware Ger-many.  No-ta-tion com-poser.  []$\OT1/
 cmtt/m/n/12 http : / / www . notation . com /
  []
 
+
+Overfull \vbox (8.33331pt too high) has occurred while \output is active []
+
+
+[36]
 Missing character: There is no â in font cmti12!
 Missing character: There is no ™ in font cmti12!
 Missing character: There is no ­ in font cmti12!
 
-Underfull \hbox (badness 1297) in paragraph at lines 260--265
+Underfull \hbox (badness 1297) in paragraph at lines 300--305
 []\OT1/cmr/m/n/12 Royal Con-ser-va-tory Mu-sic De-vel-op-ment Pro-gram.  Clar-i
 net syl-labus.  []$\OT1/cmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--265
+Underfull \hbox (badness 10000) in paragraph at lines 300--305
 \OT1/cmtt/m/n/12 / / www . musicdevelopmentprogram . org / sites / default / fi
 les / files / S42 _
  []
@@ -956,18 +972,18 @@ les / files / S42 _
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[36]
+[37]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ³ in font cmr12!
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[37])
+[38])
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[38]
+[39]
 Appendix A.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
@@ -978,13 +994,9 @@ File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 (./Beginner.xml
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1.
- [39
+ [40
 
 ]
-Overfull \vbox (8.33331pt too high) has occurred while \output is active []
-
-
-[40]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
@@ -1000,13 +1012,17 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[44])
+[44]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[45]
+[45])
+Overfull \vbox (8.33331pt too high) has occurred while \output is active []
+
+
+[46]
 Appendix B.
-<MusicScoringSurvey.pdf, id=1063, 614.295pt x 794.97pt>
+<MusicScoringSurvey.pdf, id=1086, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf>
@@ -1016,10 +1032,10 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf>
 Package pdftex.def Info: MusicScoringSurvey.pdf used on input line 910.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
- [46
+ [47
 
 ]
-<MusicScoringSurvey.pdf, id=1071, page=1, 614.295pt x 794.97pt>
+<MusicScoringSurvey.pdf, id=1093, page=1, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 1>
@@ -1046,12 +1062,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 <use MusicScoringSurvey.pdf, page 1>
 Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [47 <./MusicScoringSurvey.pdf
+ [48 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1098, page=2, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1120, page=2, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 2>
@@ -1069,12 +1085,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 <use MusicScoringSurvey.pdf, page 2>
 Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [48 <./MusicScoringSurvey.pdf
+ [49 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1110, page=3, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1132, page=3, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 3>
@@ -1092,12 +1108,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 <use MusicScoringSurvey.pdf, page 3>
 Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [49 <./MusicScoringSurvey.pdf
+ [50 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1148, page=4, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1170, page=4, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 4>
@@ -1115,12 +1131,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 <use MusicScoringSurvey.pdf, page 4>
 Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [50 <./MusicScoringSurvey.pdf
+ [51 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1170, page=5, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1192, page=5, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 5>
@@ -1138,12 +1154,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 <use MusicScoringSurvey.pdf, page 5>
 Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [51 <./MusicScoringSurvey.pdf
+ [52 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1196, page=6, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1219, page=6, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 6>
@@ -1161,12 +1177,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 <use MusicScoringSurvey.pdf, page 6>
 Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [52 <./MusicScoringSurvey.pdf
+ [53 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1215, page=7, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1237, page=7, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 7>
@@ -1184,12 +1200,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 <use MusicScoringSurvey.pdf, page 7>
 Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [53 <./MusicScoringSurvey.pdf
+ [54 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1233, page=8, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1255, page=8, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 8>
@@ -1207,12 +1223,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 <use MusicScoringSurvey.pdf, page 8>
 Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [54 <./MusicScoringSurvey.pdf
+ [55 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1251, page=9, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1273, page=9, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 9>
@@ -1230,12 +1246,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 <use MusicScoringSurvey.pdf, page 9>
 Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [55 <./MusicScoringSurvey.pdf
+ [56 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1270, page=10, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1292, page=10, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 10>
@@ -1256,12 +1272,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [56 <./MusicScoringSurvey.pdf
+ [57 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1288, page=11, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1310, page=11, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 11>
@@ -1282,12 +1298,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [57 <./MusicScoringSurvey.pdf
+ [58 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1306, page=12, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1329, page=12, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 12>
@@ -1308,12 +1324,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [58 <./MusicScoringSurvey.pdf
+ [59 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1323, page=13, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1346, page=13, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 13>
@@ -1334,12 +1350,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [59 <./MusicScoringSurvey.pdf
+ [60 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1341, page=14, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1364, page=14, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 14>
@@ -1360,12 +1376,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [60 <./MusicScoringSurvey.pdf
+ [61 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1354, page=15, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1377, page=15, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 15>
@@ -1386,12 +1402,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [61 <./MusicScoringSurvey.pdf
+ [62 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1378, page=16, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1401, page=16, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 16>
@@ -1412,12 +1428,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [62 <./MusicScoringSurvey.pdf
+ [63 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1396, page=17, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1419, page=17, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 17>
@@ -1438,12 +1454,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [63 <./MusicScoringSurvey.pdf
+ [64 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1415, page=18, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1438, page=18, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 18>
@@ -1464,12 +1480,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [64 <./MusicScoringSurvey.pdf
+ [65 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1434, page=19, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1456, page=19, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 19>
@@ -1490,12 +1506,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [65 <./MusicScoringSurvey.pdf
+ [66 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1453, page=20, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1475, page=20, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 20>
@@ -1516,12 +1532,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [66 <./MusicScoringSurvey.pdf
+ [67 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1472, page=21, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1494, page=21, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 21>
@@ -1542,12 +1558,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [67 <./MusicScoringSurvey.pdf
+ [68 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1490, page=22, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1512, page=22, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 22>
@@ -1568,12 +1584,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [68 <./MusicScoringSurvey.pdf
+ [69 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1508, page=23, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1530, page=23, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 23>
@@ -1594,12 +1610,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [69 <./MusicScoringSurvey.pdf
+ [70 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1522, page=24, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1545, page=24, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 24>
@@ -1620,12 +1636,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [70 <./MusicScoringSurvey.pdf
+ [71 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1536, page=25, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1558, page=25, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 25>
@@ -1646,12 +1662,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [71 <./MusicScoringSurvey.pdf
+ [72 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1554, page=26, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1576, page=26, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 26>
@@ -1672,12 +1688,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [72 <./MusicScoringSurvey.pdf
+ [73 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1572, page=27, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1594, page=27, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 27>
@@ -1698,12 +1714,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [73 <./MusicScoringSurvey.pdf
+ [74 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1590, page=28, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1612, page=28, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 28>
@@ -1724,12 +1740,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [74 <./MusicScoringSurvey.pdf
+ [75 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1608, page=29, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1630, page=29, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 29>
@@ -1750,12 +1766,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [75 <./MusicScoringSurvey.pdf
+ [76 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1626, page=30, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1649, page=30, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 30>
@@ -1776,12 +1792,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [76 <./MusicScoringSurvey.pdf
+ [77 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1645, page=31, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1667, page=31, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 31>
@@ -1802,12 +1818,12 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [77 <./MusicScoringSurvey.pdf
+ [78 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1662, page=32, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1684, page=32, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 32>
@@ -1828,7 +1844,7 @@ File: MusicScoringSurvey.pdf Graphic file (type pdf)
 Package pdftex.def Info: MusicScoringSurvey.pdf, page32 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
- [78 <./MusicScoringSurvey.pdf
+ [79 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
@@ -1844,10 +1860,10 @@ Package rerunfilecheck Info: File `HolderThesis2015.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 916.
  ) 
 Here is how much of TeX's memory you used:
- 11714 strings out of 493117
- 170102 string characters out of 6135433
- 318921 words of memory out of 5000000
- 14433 multiletter control sequences out of 15000+600000
+ 11751 strings out of 493117
+ 170994 string characters out of 6135433
+ 319065 words of memory out of 5000000
+ 14460 multiletter control sequences out of 15000+600000
  13435 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,19n,52p,1211b,1793s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1865,10 +1881,10 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on HolderThesis2015.pdf (87 pages, 1866590 bytes).
+Output written on HolderThesis2015.pdf (88 pages, 1869378 bytes).
 PDF statistics:
- 1836 PDF objects out of 2073 (max. 8388607)
- 1271 compressed objects within 13 object streams
- 550 named destinations out of 1000 (max. 500000)
+ 1860 PDF objects out of 2073 (max. 8388607)
+ 1294 compressed objects within 13 object streams
+ 560 named destinations out of 1000 (max. 500000)
  508 words of extra memory for PDF output out of 10000 (max. 10000000)
 

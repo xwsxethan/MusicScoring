@@ -49,6 +49,12 @@ M.~Bostock.
 \newblock D3 data-driven documents.
 \newblock \url{http://d3js.org/}, 2013.
 
+\bibitem{burke1990musical}
+M.~J. Burke and M.~C. Gridley.
+\newblock Musical preferences as a function of stimulus complexity and
+  listeners'sophistication.
+\newblock {\em Perceptual and Motor Skills}, 71(2):687--690, 1990.
+
 \bibitem{Byrd2001}
 D.~Byrd.
 \newblock Music-notation searching and digital libraries.
@@ -134,6 +140,12 @@ H.~Heijink and R.~Meulenbroek.
   to task constraints.
 \newblock {\em Journal of motor behavior}, 34(4):339--351, 2002.
 
+\bibitem{Heyduk1975}
+R.~Heyduk.
+\newblock Rated preference for musical compositions as it relates to complexity
+  and exposure frequency.
+\newblock {\em Perception & Psychophysics}, 17(1):84--90, 1975.
+
 \bibitem{holder2013cloudSPLASH}
 E.~Holder.
 \newblock Cloud twin: interactive cross-platform replay for mobile
@@ -178,6 +190,11 @@ R.~B. Knapp and H.~S. Lusted.
 \newblock A bioelectric controller for computer music applications.
 \newblock {\em Computer Music Journal}, 14(1):pp. 42--47, 1990.
 
+\bibitem{Knuth:1984:CS:358027.358042}
+D.~E. Knuth.
+\newblock The complexity of songs.
+\newblock {\em Commun. ACM}, 27(4):344--346, Apr. 1984.
+
 \bibitem{Liou2010}
 C.-Y. Liou, T.-H. Wu, and C.-Y. Lee.
 \newblock Modeling complexity in musical rhythm.
@@ -198,6 +215,12 @@ S.~T. Madsen and G.~Widmer.
 \newblock {MusicXML}.
 \newblock \url{http://www.musicxml.com/}, 3 2015.
 
+\bibitem{mauch2011structural}
+M.~Mauch and M.~Levy.
+\newblock Structural change on multiple time scales as a correlate of musical
+  complexity.
+\newblock In {\em ISMIR}, pages 489--494, 2011.
+
 \bibitem{MuseScore}
 {MuseScore BVBA}.
 \newblock Musescore share your sheet music.
@@ -212,6 +235,12 @@ S.~T. Madsen and G.~Widmer.
 V.~Nguyen, S.~Deeds-Rubin, T.~Tan, and B.~Boehm.
 \newblock A sloc counting standard.
 \newblock In {\em COCOMO II Forum}, volume 2007, 2007.
+
+\bibitem{north1999can}
+A.~C. North and D.~J. Hargreaves.
+\newblock Can music move people? the effects of musical complexity and silence
+  on waiting time.
+\newblock {\em Environment and Behavior}, 31(1):136--149, 1999.
 
 \bibitem{NotationSoft}
 {Notation Software Germany}.
@@ -228,6 +257,12 @@ V.~Nguyen, S.~Deeds-Rubin, T.~Tan, and B.~Boehm.
 \newblock Mysql the world's most popular open source database.
 \newblock \url{https://www.mysql.com/}, 2015.
 
+\bibitem{orr2001relationship}
+M.~G. Orr and S.~Ohlsson.
+\newblock The relationship between musical complexity and liking in jazz and
+  bluegrass.
+\newblock {\em Psychology of Music}, 29(2):108--127, 2001.
+
 \bibitem{Bootstrap}
 Otto and Thornton.
 \newblock Bootstrap.
@@ -238,6 +273,11 @@ C.~Y. Park.
 \newblock Predicting program execution times by analyzing static and dynamic
   program paths.
 \newblock {\em Real-Time Syst.}, 5(1):31--62, Mar. 1993.
+
+\bibitem{parry2004musical}
+R.~M. Parry.
+\newblock Musical complexity and top 40 chart performance.
+\newblock 2004.
 
 \bibitem{Standard}
 B.~Pearson.
@@ -278,6 +318,12 @@ E.~D. Scheirer, R.~B. Watson, and B.~L. Vercoe.
 {SpryMedia Ltd.}
 \newblock Datatables table plug-in for {jQuery}.
 \newblock \url{https://www.datatables.net/}, 2015.
+
+\bibitem{steck1975preference}
+L.~Steck and P.~Machotka.
+\newblock Preference for musical complexity: Effects of context.
+\newblock {\em Journal of Experimental Psychology: Human Perception and
+  Performance}, 1(2):170, 1975.
 
 \bibitem{streich2006automatic}
 S.~Streich.
@@ -359,6 +405,12 @@ J.~C. Venter, M.~D. Adams, E.~W. Myers, P.~W. Li, R.~J. Mural, G.~G. Sutton,
 H.~Voxman.
 \newblock {\em Concert and Contest Collection for Bb Clarinet: Solo Part}.
 \newblock Rubank Publications, Chicago, Illinois, 1992.
+
+\bibitem{williams2005effect}
+L.~R. Williams.
+\newblock Effect of music training and musical complexity on focus of attention
+  to melody or harmony.
+\newblock {\em Journal of Research in Music Education}, 53(3):210--221, 2005.
 
 \bibitem{wing2006computational}
 J.~M. Wing.

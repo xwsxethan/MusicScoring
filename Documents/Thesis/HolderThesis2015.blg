@@ -8,45 +8,46 @@ Warning--empty author in genomePub
 Warning--empty journal in bloch2008effective
 Warning--empty journal in css
 Warning--empty year in css
-You've used 59 entries,
+Warning--empty journal in parry2004musical
+You've used 68 entries,
             2118 wiz_defined-function locations,
-            854 strings with 17379 characters,
-and the built_in function-call counts, 25638 in all, are:
-= -- 2240
-> -- 2052
-< -- 11
-+ -- 828
-- -- 763
-* -- 2083
-:= -- 4451
-add.period$ -- 184
-call.type$ -- 59
-change.case$ -- 549
+            913 strings with 18861 characters,
+and the built_in function-call counts, 28444 in all, are:
+= -- 2529
+> -- 2145
+< -- 12
++ -- 867
+- -- 791
+* -- 2279
+:= -- 4909
+add.period$ -- 211
+call.type$ -- 68
+change.case$ -- 590
 chr.to.int$ -- 0
-cite$ -- 64
-duplicate$ -- 688
-empty$ -- 1520
-format.name$ -- 763
-if$ -- 5077
+cite$ -- 74
+duplicate$ -- 798
+empty$ -- 1761
+format.name$ -- 791
+if$ -- 5664
 int.to.chr$ -- 0
-int.to.str$ -- 59
-missing$ -- 42
-newline$ -- 296
-num.names$ -- 118
-pop$ -- 672
+int.to.str$ -- 68
+missing$ -- 51
+newline$ -- 341
+num.names$ -- 136
+pop$ -- 704
 preamble$ -- 1
-purify$ -- 497
+purify$ -- 529
 quote$ -- 0
-skip$ -- 515
+skip$ -- 596
 stack$ -- 0
-substring$ -- 858
-swap$ -- 147
-text.length$ -- 11
+substring$ -- 1086
+swap$ -- 165
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 224
-warning$ -- 5
-while$ -- 167
-width$ -- 61
-write$ -- 633
-(There were 5 warnings)
+type$ -- 260
+warning$ -- 6
+while$ -- 200
+width$ -- 70
+write$ -- 730
+(There were 6 warnings)

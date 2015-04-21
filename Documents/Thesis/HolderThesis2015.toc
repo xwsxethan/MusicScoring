@@ -30,5 +30,5 @@
 \contentsline {section}{\numberline {8.7}Measuring Complexity From Physiological Signals}{32}{section.8.7}
 \contentsline {section}{\numberline {8.8}Broadening Musiplectics to Other Plectics}{32}{section.8.8}
 \contentsline {chapter}{\numberline {9}Conclusions}{33}{chapter.9}
-\contentsline {chapter}{\numberline {A}Complexity Parameters Example}{39}{appendix.A}
-\contentsline {chapter}{\numberline {B}External Survey}{46}{appendix.B}
+\contentsline {chapter}{\numberline {A}Complexity Parameters Example}{40}{appendix.A}
+\contentsline {chapter}{\numberline {B}External Survey}{47}{appendix.B}
