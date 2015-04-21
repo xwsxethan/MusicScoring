@@ -5,47 +5,48 @@ The style file: abbrv.bst
 Database file #1: HolderThesis2015.bib
 Warning--to sort, need author or key in genomePub
 Warning--empty author in genomePub
+Warning--empty journal in bloch2008effective
 Warning--empty journal in css
 Warning--empty year in css
-You've used 54 entries,
+You've used 59 entries,
             2118 wiz_defined-function locations,
-            828 strings with 16746 characters,
-and the built_in function-call counts, 24164 in all, are:
-= -- 2099
-> -- 1984
-< -- 10
-+ -- 801
-- -- 741
-* -- 2004
-:= -- 4206
-add.period$ -- 168
-call.type$ -- 54
-change.case$ -- 524
+            854 strings with 17379 characters,
+and the built_in function-call counts, 25638 in all, are:
+= -- 2240
+> -- 2052
+< -- 11
++ -- 828
+- -- 763
+* -- 2083
+:= -- 4451
+add.period$ -- 184
+call.type$ -- 59
+change.case$ -- 549
 chr.to.int$ -- 0
-cite$ -- 58
-duplicate$ -- 623
-empty$ -- 1396
-format.name$ -- 741
-if$ -- 4756
+cite$ -- 64
+duplicate$ -- 688
+empty$ -- 1520
+format.name$ -- 763
+if$ -- 5077
 int.to.chr$ -- 0
-int.to.str$ -- 54
-missing$ -- 36
-newline$ -- 271
-num.names$ -- 108
-pop$ -- 631
+int.to.str$ -- 59
+missing$ -- 42
+newline$ -- 296
+num.names$ -- 118
+pop$ -- 672
 preamble$ -- 1
-purify$ -- 476
+purify$ -- 497
 quote$ -- 0
-skip$ -- 470
+skip$ -- 515
 stack$ -- 0
-substring$ -- 805
-swap$ -- 134
-text.length$ -- 10
+substring$ -- 858
+swap$ -- 147
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 208
-warning$ -- 4
-while$ -- 155
-width$ -- 56
-write$ -- 580
-(There were 4 warnings)
+type$ -- 224
+warning$ -- 5
+while$ -- 167
+width$ -- 61
+write$ -- 633
+(There were 5 warnings)

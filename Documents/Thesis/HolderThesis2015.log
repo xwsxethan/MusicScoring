@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 APR 2015 18:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 APR 2015 23:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -565,7 +565,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Chapter 1.
 [1
 
-] <ComputationalThinkingAnalogy.png, id=280, 397.485pt x 252.945pt>
+] <ComputationalThinkingAnalogy.png, id=285, 397.485pt x 252.945pt>
 File: ComputationalThinkingAnalogy.png Graphic file (type png)
 
 <use ComputationalThinkingAnalogy.png>
@@ -628,7 +628,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 [11]
 Chapter 5.
-<JoinedCropped.png, id=400, 523.4757pt x 379.4175pt>
+<JoinedCropped.png, id=406, 523.4757pt x 379.4175pt>
 File: JoinedCropped.png Graphic file (type png)
  <use JoinedCropped.png>
 Package pdftex.def Info: JoinedCropped.png used on input line 393.
@@ -645,8 +645,9 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.410 
-       <./JoinedCropped.png>]
+l.412 T
+       he system itself can be extended to operate only on specific selectio...
+ <./JoinedCropped.png>]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
@@ -663,13 +664,13 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.549 
+l.558 
       pdfTeX warning (ext4): destination with the same identifier (name{table.6
 .2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.549 
+l.558 
       ]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -679,32 +680,32 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.549 
+l.558 
       pdfTeX warning (ext4): destination with the same identifier (name{table.6
 .4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.549 
+l.558 
       pdfTeX warning (ext4): destination with the same identifier (name{table.6
 .5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.549 
-      ] <GradesVsComplexityScores.png, id=487, 680.5425pt x 463.7325pt>
+l.558 
+      ] <GradesVsComplexityScores.png, id=505, 680.5425pt x 463.7325pt>
 File: GradesVsComplexityScores.png Graphic file (type png)
 
 <use GradesVsComplexityScores.png>
-Package pdftex.def Info: GradesVsComplexityScores.png used on input line 607.
+Package pdftex.def Info: GradesVsComplexityScores.png used on input line 616.
 (pdftex.def)             Requested size: 375.80542pt x 256.07967pt.
 
-<GradesVsAverageComplexityScoresSTD.png, id=488, 680.5425pt x 463.7325pt>
+<GradesVsAverageComplexityScoresSTD.png, id=506, 680.5425pt x 463.7325pt>
 File: GradesVsAverageComplexityScoresSTD.png Graphic file (type png)
 
 <use GradesVsAverageComplexityScoresSTD.png>
 Package pdftex.def Info: GradesVsAverageComplexityScoresSTD.png used on input l
-ine 614.
+ine 623.
 (pdftex.def)             Requested size: 375.80542pt x 256.07967pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -719,13 +720,13 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.622 
+l.631 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 6.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.622 
+l.631 
        <./GradesVsComplexityScores.png> <./GradesVsAverageComplexityScoresSTD.p
 ng>]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -736,23 +737,23 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.622 
+l.631 
       ] (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
-<DifferenceOCR.png, id=515, 678.3744pt x 462.528pt>
+<DifferenceOCR.png, id=533, 678.3744pt x 462.528pt>
 File: DifferenceOCR.png Graphic file (type png)
  <use DifferenceOCR.png>
-Package pdftex.def Info: DifferenceOCR.png used on input line 675.
+Package pdftex.def Info: DifferenceOCR.png used on input line 684.
 (pdftex.def)             Requested size: 375.80542pt x 256.24026pt.
 
-<PercentageOCR.png, id=516, 678.3744pt x 462.528pt>
+<PercentageOCR.png, id=534, 678.3744pt x 462.528pt>
 File: PercentageOCR.png Graphic file (type png)
  <use PercentageOCR.png>
-Package pdftex.def Info: PercentageOCR.png used on input line 682.
+Package pdftex.def Info: PercentageOCR.png used on input line 691.
 (pdftex.def)             Requested size: 375.80542pt x 256.24026pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -763,13 +764,13 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.686 \chapter
+l.695 \chapter
               {Discussion}pdfTeX warning (ext4): destination with the same iden
 tifier (name{figure.6.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.686 \chapter
+l.695 \chapter
               {Discussion}]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -779,17 +780,17 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.686 \chapter
+l.695 \chapter
               {Discussion}pdfTeX warning (ext4): destination with the same iden
 tifier (name{figure.6.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.686 \chapter
+l.695 \chapter
               {Discussion} <./DifferenceOCR.png> <./PercentageOCR.png>]
 Chapter 7.
 
-Overfull \hbox (10.20277pt too wide) in paragraph at lines 692--692
+Overfull \hbox (10.20277pt too wide) in paragraph at lines 701--701
 []\OT1/cmr/bx/n/17.28 Manually Graded Pieces and Their Cal-cu-lated Com-
  []
 
@@ -799,29 +800,29 @@ Overfull \hbox (10.20277pt too wide) in paragraph at lines 692--692
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[24] <WebsiteLandingInput.png, id=551, 1187.43625pt x 719.68875pt>
+[24] <WebsiteLandingInput.png, id=569, 1187.43625pt x 719.68875pt>
 File: WebsiteLandingInput.png Graphic file (type png)
 
 <use WebsiteLandingInput.png>
-Package pdftex.def Info: WebsiteLandingInput.png used on input line 731.
+Package pdftex.def Info: WebsiteLandingInput.png used on input line 740.
 (pdftex.def)             Requested size: 422.77661pt x 256.24353pt.
 
-<WebsiteTable.png, id=552, 1183.42125pt x 507.8975pt>
+<WebsiteTable.png, id=570, 1183.42125pt x 507.8975pt>
 File: WebsiteTable.png Graphic file (type png)
  <use WebsiteTable.png>
-Package pdftex.def Info: WebsiteTable.png used on input line 738.
+Package pdftex.def Info: WebsiteTable.png used on input line 747.
 (pdftex.def)             Requested size: 422.77661pt x 181.44023pt.
 
-<WebsiteGraph.png, id=553, 803.0pt x 586.19pt>
+<WebsiteGraph.png, id=571, 803.0pt x 586.19pt>
 File: WebsiteGraph.png Graphic file (type png)
  <use WebsiteGraph.png>
-Package pdftex.def Info: WebsiteGraph.png used on input line 745.
+Package pdftex.def Info: WebsiteGraph.png used on input line 754.
 (pdftex.def)             Requested size: 422.77661pt x 308.63092pt.
 
-<WebsiteDetails.png, id=554, 803.0pt x 401.5pt>
+<WebsiteDetails.png, id=572, 803.0pt x 401.5pt>
 File: WebsiteDetails.png Graphic file (type png)
  <use WebsiteDetails.png>
-Package pdftex.def Info: WebsiteDetails.png used on input line 752.
+Package pdftex.def Info: WebsiteDetails.png used on input line 761.
 (pdftex.def)             Requested size: 422.77661pt x 211.39104pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -836,13 +837,13 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.756 \chapter
+l.765 \chapter
               {Future Work}pdfTeX warning (ext4): destination with the same ide
 ntifier (name{figure.7.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.756 \chapter
+l.765 \chapter
               {Future Work} <./WebsiteLandingInput.png> <./WebsiteTable.png>]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -852,13 +853,13 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.756 \chapter
+l.765 \chapter
               {Future Work}pdfTeX warning (ext4): destination with the same ide
 ntifier (name{figure.7.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.756 \chapter
+l.765 \chapter
               {Future Work} <./WebsiteGraph.png> <./WebsiteDetails.png>]
 Chapter 8.
 [28
@@ -867,18 +868,18 @@ Chapter 8.
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
-[29] <WebsiteGameInput.png, id=594, 784.9325pt x 296.10625pt>
+[29] <WebsiteGameInput.png, id=612, 784.9325pt x 296.10625pt>
 File: WebsiteGameInput.png Graphic file (type png)
 
 <use WebsiteGameInput.png>
-Package pdftex.def Info: WebsiteGameInput.png used on input line 810.
+Package pdftex.def Info: WebsiteGameInput.png used on input line 819.
 (pdftex.def)             Requested size: 422.77661pt x 159.48834pt.
 
-<WebsiteGameOutput.png, id=595, 420.57124pt x 197.73875pt>
+<WebsiteGameOutput.png, id=613, 420.57124pt x 197.73875pt>
 File: WebsiteGameOutput.png Graphic file (type png)
 
 <use WebsiteGameOutput.png>
-Package pdftex.def Info: WebsiteGameOutput.png used on input line 817.
+Package pdftex.def Info: WebsiteGameOutput.png used on input line 826.
 (pdftex.def)             Requested size: 422.77661pt x 198.7792pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -893,13 +894,13 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.834 
+l.843 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 8.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.834 
+l.843 
        <./WebsiteGameInput.png> <./WebsiteGameOutput.png>]
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
@@ -925,13 +926,13 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 
 [35]
-Underfull \hbox (badness 3861) in paragraph at lines 170--173
+Underfull \hbox (badness 3861) in paragraph at lines 192--195
 []\OT1/cmr/m/n/12 Makemusic Inc.  Fi-nale notepad.  []$\OT1/cmtt/m/n/12 http : 
 / / www . finalemusic . com / products /
  []
 
 
-Underfull \hbox (badness 1163) in paragraph at lines 195--198
+Underfull \hbox (badness 1163) in paragraph at lines 217--220
 []\OT1/cmr/m/n/12 Notation Soft-ware Ger-many.  No-ta-tion com-poser.  []$\OT1/
 cmtt/m/n/12 http : / / www . notation . com /
  []
@@ -940,13 +941,13 @@ Missing character: There is no â in font cmti12!
 Missing character: There is no ™ in font cmti12!
 Missing character: There is no ­ in font cmti12!
 
-Underfull \hbox (badness 1297) in paragraph at lines 233--238
+Underfull \hbox (badness 1297) in paragraph at lines 260--265
 []\OT1/cmr/m/n/12 Royal Con-ser-va-tory Mu-sic De-vel-op-ment Pro-gram.  Clar-i
 net syl-labus.  []$\OT1/cmtt/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--238
+Underfull \hbox (badness 10000) in paragraph at lines 260--265
 \OT1/cmtt/m/n/12 / / www . musicdevelopmentprogram . org / sites / default / fi
 les / files / S42 _
  []
@@ -1005,37 +1006,37 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 
 [45]
 Appendix B.
-<MusicScoringSurvey.pdf, id=1042, 614.295pt x 794.97pt>
+<MusicScoringSurvey.pdf, id=1063, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf>
-Package pdftex.def Info: MusicScoringSurvey.pdf used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf used on input line 910.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf>
-Package pdftex.def Info: MusicScoringSurvey.pdf used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf used on input line 910.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
  [46
 
 ]
-<MusicScoringSurvey.pdf, id=1051, page=1, 614.295pt x 794.97pt>
+<MusicScoringSurvey.pdf, id=1071, page=1, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 1>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 910.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 1>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 1>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 1>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1043,22 +1044,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 1>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page1 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [47 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1078, page=2, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1098, page=2, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 2>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 2>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1066,22 +1067,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 2>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page2 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [48 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1090, page=3, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1110, page=3, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 3>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 3>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1089,22 +1090,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 3>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page3 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [49 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1128, page=4, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1148, page=4, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 4>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 4>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1112,22 +1113,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 4>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page4 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [50 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1150, page=5, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1170, page=5, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 5>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 5>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1135,22 +1136,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 5>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page5 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [51 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1176, page=6, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1196, page=6, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 6>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 6>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1158,22 +1159,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 6>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page6 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [52 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1195, page=7, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1215, page=7, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 7>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 7>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1181,22 +1182,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 7>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page7 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [53 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1213, page=8, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1233, page=8, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 8>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 8>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1204,22 +1205,22 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 8>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page8 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [54 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1231, page=9, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1251, page=9, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 9>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 9>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
 Overfull \vbox (8.33331pt too high) has occurred while \output is active []
@@ -1227,23 +1228,23 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 9>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page9 used on input line 910.
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [55 <./MusicScoringSurvey.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1250, page=10, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1270, page=10, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 10>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 10>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1252,7 +1253,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 10>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [56 <./MusicScoringSurvey.pdf
@@ -1260,16 +1261,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page10 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1268, page=11, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1288, page=11, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 11>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 11>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1278,7 +1279,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 11>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [57 <./MusicScoringSurvey.pdf
@@ -1286,16 +1287,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page11 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1286, page=12, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1306, page=12, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 12>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 12>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1304,7 +1305,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 12>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [58 <./MusicScoringSurvey.pdf
@@ -1312,16 +1313,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page12 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1303, page=13, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1323, page=13, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 13>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 13>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1330,7 +1331,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 13>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [59 <./MusicScoringSurvey.pdf
@@ -1338,16 +1339,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page13 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1321, page=14, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1341, page=14, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 14>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 14>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1356,7 +1357,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 14>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [60 <./MusicScoringSurvey.pdf
@@ -1364,16 +1365,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page14 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1334, page=15, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1354, page=15, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 15>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 15>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1382,7 +1383,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 15>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [61 <./MusicScoringSurvey.pdf
@@ -1390,16 +1391,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page15 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1358, page=16, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1378, page=16, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 16>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 16>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1408,7 +1409,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 16>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [62 <./MusicScoringSurvey.pdf
@@ -1416,16 +1417,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page16 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1376, page=17, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1396, page=17, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 17>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 17>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1434,7 +1435,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 17>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [63 <./MusicScoringSurvey.pdf
@@ -1442,16 +1443,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page17 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1394, page=18, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1415, page=18, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 18>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 18>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1460,7 +1461,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 18>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [64 <./MusicScoringSurvey.pdf
@@ -1468,16 +1469,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page18 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1413, page=19, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1434, page=19, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 19>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 19>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1486,7 +1487,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 19>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [65 <./MusicScoringSurvey.pdf
@@ -1494,16 +1495,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page19 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1432, page=20, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1453, page=20, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 20>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 20>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1512,7 +1513,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 20>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [66 <./MusicScoringSurvey.pdf
@@ -1520,16 +1521,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page20 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1451, page=21, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1472, page=21, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 21>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 21>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1538,7 +1539,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 21>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [67 <./MusicScoringSurvey.pdf
@@ -1546,16 +1547,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page21 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1469, page=22, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1490, page=22, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 22>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 22>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1564,7 +1565,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 22>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [68 <./MusicScoringSurvey.pdf
@@ -1572,16 +1573,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page22 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1488, page=23, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1508, page=23, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 23>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 23>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1590,7 +1591,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 23>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [69 <./MusicScoringSurvey.pdf
@@ -1598,16 +1599,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page23 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1502, page=24, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1522, page=24, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 24>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 24>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1616,7 +1617,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 24>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [70 <./MusicScoringSurvey.pdf
@@ -1624,16 +1625,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page24 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1516, page=25, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1536, page=25, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 25>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 25>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1642,7 +1643,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 25>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [71 <./MusicScoringSurvey.pdf
@@ -1650,16 +1651,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page25 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1534, page=26, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1554, page=26, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 26>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 26>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1668,7 +1669,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 26>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [72 <./MusicScoringSurvey.pdf
@@ -1676,16 +1677,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page26 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1552, page=27, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1572, page=27, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 27>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 27>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1694,7 +1695,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 27>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [73 <./MusicScoringSurvey.pdf
@@ -1702,16 +1703,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page27 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1570, page=28, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1590, page=28, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 28>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 28>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1720,7 +1721,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 28>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [74 <./MusicScoringSurvey.pdf
@@ -1728,16 +1729,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page28 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1588, page=29, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1608, page=29, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 29>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 29>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1746,7 +1747,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 29>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [75 <./MusicScoringSurvey.pdf
@@ -1754,16 +1755,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page29 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1606, page=30, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1626, page=30, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 30>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 30>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1772,7 +1773,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 30>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [76 <./MusicScoringSurvey.pdf
@@ -1780,16 +1781,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page30 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1625, page=31, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1645, page=31, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 31>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 31>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1798,7 +1799,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 31>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [77 <./MusicScoringSurvey.pdf
@@ -1806,16 +1807,16 @@ Package pdftex.def Info: MusicScoringSurvey.pdf, page31 used on input line 901.
 pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
->] <MusicScoringSurvey.pdf, id=1642, page=32, 614.295pt x 794.97pt>
+>] <MusicScoringSurvey.pdf, id=1662, page=32, 614.295pt x 794.97pt>
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 32>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page32 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page32 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
  <use MusicScoringSurvey.pdf, page 32>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page32 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page32 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
 
@@ -1824,7 +1825,7 @@ Overfull \vbox (8.33331pt too high) has occurred while \output is active []
 File: MusicScoringSurvey.pdf Graphic file (type pdf)
 
 <use MusicScoringSurvey.pdf, page 32>
-Package pdftex.def Info: MusicScoringSurvey.pdf, page32 used on input line 901.
+Package pdftex.def Info: MusicScoringSurvey.pdf, page32 used on input line 910.
 
 (pdftex.def)             Requested size: 491.43666pt x 635.97687pt.
  [78 <./MusicScoringSurvey.pdf
@@ -1833,20 +1834,20 @@ pdfTeX warning: /usr/texbin/pdflatex (file ./MusicScoringSurvey.pdf): PDF inclu
 sion: invalid other resource which is no dict (key 'ProcSets', type <array>); i
 gnored.
 >]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 907.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 907.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 916.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 916.
  (./HolderThesis2015.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 907.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 907.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 916.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 916.
 Package rerunfilecheck Info: File `HolderThesis2015.out' has not changed.
-(rerunfilecheck)             Checksum: 3FDD2FAC609408C7ADAD8CD8AE403327;2279.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 907.
+(rerunfilecheck)             Checksum: 93E8AFE07DEC81A2E4EA957B2A7E9AA8;2349.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 916.
  ) 
 Here is how much of TeX's memory you used:
- 11691 strings out of 493117
- 169657 string characters out of 6135433
- 318768 words of memory out of 5000000
- 14416 multiletter control sequences out of 15000+600000
+ 11714 strings out of 493117
+ 170102 string characters out of 6135433
+ 318921 words of memory out of 5000000
+ 14433 multiletter control sequences out of 15000+600000
  13435 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,19n,52p,1211b,1793s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1864,10 +1865,10 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/
 2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
 014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on HolderThesis2015.pdf (87 pages, 1862742 bytes).
+Output written on HolderThesis2015.pdf (87 pages, 1866590 bytes).
 PDF statistics:
- 1815 PDF objects out of 2073 (max. 8388607)
- 1250 compressed objects within 13 object streams
- 544 named destinations out of 1000 (max. 500000)
- 500 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1836 PDF objects out of 2073 (max. 8388607)
+ 1271 compressed objects within 13 object streams
+ 550 named destinations out of 1000 (max. 500000)
+ 508 words of extra memory for PDF output out of 10000 (max. 10000000)
 

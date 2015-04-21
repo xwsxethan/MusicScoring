@@ -9,7 +9,8 @@
 \contentsline {chapter}{\numberline {4}Computational Model for Music Complexity}{10}{chapter.4}
 \contentsline {chapter}{\numberline {5}Proof of Concept}{12}{chapter.5}
 \contentsline {section}{\numberline {5.1}Design Overview}{12}{section.5.1}
-\contentsline {section}{\numberline {5.2}Implementation Details}{14}{section.5.2}
+\contentsline {section}{\numberline {5.2}Architecture Highlights}{13}{section.5.2}
+\contentsline {section}{\numberline {5.3}Implementation Details}{14}{section.5.3}
 \contentsline {chapter}{\numberline {6}Evaluation}{15}{chapter.6}
 \contentsline {section}{\numberline {6.1}Clarinet Complexity Parameterization}{15}{section.6.1}
 \contentsline {section}{\numberline {6.2}External Survey}{18}{section.6.2}

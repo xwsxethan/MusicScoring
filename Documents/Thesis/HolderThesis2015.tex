@@ -362,7 +362,7 @@ Similarly, \cite{Cataltepe2007} proposes an approach to classifying music files 
 \label{sec:scoring}
 \markright{Ethan G. Holder  \hfill Chapter 4. Computational Model for Music Complexity \hfill}
 
-In Chapter \ref{sec:background} above, we discussed several fundamental music concepts. These concepts serve as the baseline elements that factor into the complexity score. 
+In Chapter \ref{sec:background} above, I discussed several fundamental music concepts. These concepts serve as the baseline elements that factor into the complexity score. 
 
 The most straightforward approach to calculating an overall score is to assign whole number weights to each element perceived to be especially important (i.e., notes, intervals, dynamics, articulations, key signatures, and note durations) and add all the weights up. This scheme, however viable, fails to adequately reflect the experience of playing music. At their core, notes and intervals present distinct difficulties on their own, whereas dynamics, articulations, key signatures, and note durations only modify those difficulties. For instance, a small interval may seem easy on its own, but with changing dynamics, with differing articulations, in a strange key, or at a high tempo, that interval could become much more difficult.
 
@@ -370,9 +370,9 @@ Hence, a more authentic approach to calculating an overall score is to only assi
 
 Note duration is factored into the score as an average over all notes. The total amount of notes and associated duration in seconds is calculated at the end and applied as its own multiplier. The more notes in a given span of time, the higher the multiplier becomes.
 
-This scheme captures the concept we envisioned that makes duration complex, except in the extreme case of playing excessively long notes. In cases of wind instruments, such as our main target of B$\flat$ Clarinet, holding notes out for long durations may possess its own difficulty in providing adequate breath support, rather than the difficulties of changing finger positions and embouchure quickly.
+This scheme captures the concept previously envisioned that makes duration complex, except in the extreme case of playing excessively long notes. In cases of wind instruments, such as the main target of B$\flat$ Clarinet, holding notes out for long durations may possess its own difficulty in providing adequate breath support, rather than the difficulties of changing finger positions and embouchure quickly.
 
-Thus, our model adapts the note duration multiplier to be a multiplicative or fractional difference from one. If the average of notes per second in the piece is 1.5, then the multiplier remains 1.5. However, in the case of many long notes, the average of notes per second might be something closer to 0.5. In this case (when the average is less than 1), the fraction becomes its reciprocal, 2 in the example.
+Thus, the model adapts the note duration multiplier to be a multiplicative or fractional difference from one. If the average of notes per second in the piece is 1.5, then the multiplier remains 1.5. However, in the case of many long notes, the average of notes per second might be something closer to 0.5. In this case (when the average is less than 1), the fraction becomes its reciprocal, 2 in the example.
 
 Users cannot directly change this parameter as it is built into the model. However, they can still influence the degree to which this parameter affects the overall score. To that end, the user can parameterize note durations with a multiplier value that increases or reduces the impact of the note duration parameter. For the cases when the user is content with the built-in setting, the model applies the default value of 1.
 
@@ -380,33 +380,42 @@ Users cannot directly change this parameter as it is built into the model. Howev
 \label{sec:proof}
 \markright{Ethan G. Holder  \hfill Chapter 5. Proof of Concept \hfill}
 
-In \ref{sec:design}, we outline the basic software design of our proof of concept and its extensible architecture. Then, we describe the implementation choices we have made while realizing our design in \ref{sec:details}.
+In \ref{sec:design}, I outline the basic software design of the proof of concept. Next, I provide some highlights of the extensible architecture in \ref{sec:highlights}. Then, I describe the choices I have made while realizing the full implementation in \ref{sec:details}.
 
 \section{Design Overview} 
 \label{sec:design}
 
-The complexity model presented above outlines the basic functionality of our approach. Nevertheless, the implementation's complete control flow involves several steps. The complete control flow can be seen in Figure \ref{image:flow}.
+The complexity model presented above outlines the basic functionality of the approach. Nevertheless, the implementation's complete control flow involves several steps. The extended control flow based on the model can be seen in Figure \ref{image:flow}.
 
 \begin{figure}[ht!]
 	\centering
-		\caption{The overall control flow from a user's perspective.}
+		\caption{The extended control flow showing the model forming the complexity score.}
 		\includegraphics[width=0.8\textwidth]{JoinedCropped.png}
 		\label{image:flow}
 \end{figure}
 
-From the top left, one can see the inputs to our a musiplectics system are Notation Apps and Pieces in PDF format. Many common notation applications, such as Finale Notepad \cite{FinaleNotepad} and Sibelius \cite{Sibelius}, support a universal format called MusicXML \cite{MusicXML} \cite{Good2001}. MusicXML files can be imported, edited, and output back to MusicXML or other proprietary formats. MusicXML is the underlying representation on which our reference implementation operates.
+From the top left, one can see the inputs to our a musiplectics system are Notation Apps and Pieces in PDF format. Many common notation applications, such as Finale Notepad \cite{FinaleNotepad} and Sibelius \cite{Sibelius}, support a universal format called MusicXML \cite{MusicXML} \cite{Good2001}. MusicXML files can be imported, edited, and output back to MusicXML or other proprietary formats. MusicXML is the underlying representation on which the reference implementation operates.
 
-Alternatively, the system can be extended to work directly with music pieces in PDF format. It can accept PDF files and transform them into their MusicXML representation, by means of music OCR (Optical Character Recognition) software. Our reference implementation relies on free software from Audiveris \cite{Audiveris} currently, but it could equivalently utilize other off-the-shelf OCR applications.
+Alternatively, the system can be extended to work directly with music pieces in PDF format. It can accept PDF files and transform them into their MusicXML representation, by means of music OCR (Optical Character Recognition) software. The reference implementation relies on free software from Audiveris \cite{Audiveris} currently, but it could equivalently utilize other off-the-shelf OCR applications.
 
 Once the MusicXML representation of the piece is obtained, the automated processor then takes it as an input. The processor computes the complexity score by going through a sequence of steps. First, it parses the piece to extract individual music elements to be analyzed. Then, it looks up the weights for each element as specified by the complexity parameterization.
 
-Recall that our system can be parameterized with different complexity weights to reflect dissimilar levels of per-instrument playing proficiency. Currently, these weights are specified in an xml file to facilitate tool integration. Because the weights are meant to be decided on by music experts, our design foresees the creation of visual editors to specify this information. These editors can easily save their inputs in some xml format. In our proof of concept, we experimented with 5 different sets of weights, which represent proficiency levels that range from that of a beginner up to a trained professional.
+Recall that this system can be parameterized with different complexity weights to reflect dissimilar levels of per-instrument playing proficiency. Currently, these weights are specified in an xml file to facilitate tool integration. Because the weights are meant to be decided on by music experts, the design foresees the creation of visual editors to specify this information. These editors can easily save their inputs in some xml format. In the proof of concept, I experimented with 5 different sets of weights, which represent proficiency levels that range from that of a beginner up to a trained professional.
 
 Using the specified weights, the system calculates the complexity by tallying up the difficulty values of each individual type of element, computed separately during a single pass over the structure. The final piece of functionality presents the calculated complexity in a user friendly fashion. To that end the system uses a web-based interface with specialized javascript libraries.
 
-One key design feature is ease of extendability at each level. Any application that generates valid MusicXML files can feasibly provide input to our system. Furthermore, the overall process can be extended if other applications can generate the piece of music in PDF form or some intermediate that can be represented in PDF or MusicXML.
+\section{Architecture Highlights} 
+\label{sec:highlights}
 
-The system itself can be extended to operate only on specific selections of pieces or on batches of multiple pieces if necessary (thus showing the complexity of an entire performance). Finally, the parameters that determine complexity can easily be changed on the fly. This provision enables individual performers or groups to set their own complexity levels to find a score even more relevant to their playing style.
+One key design feature is ease of extendability at each level. Any application that generates valid MusicXML files can feasibly provide input to this system. Furthermore, the overall process can be extended if other applications can generate the piece of music in PDF form or some intermediate that can be represented in PDF or MusicXML.
+
+The system itself can be extended to operate only on specific selections of pieces or on batches of multiple pieces if necessary (thus showing the complexity of an entire performance). Additionally, the parameters that determine complexity can easily be changed on the fly based on future refinements. This provision enables individual performers or groups to set their own complexity levels to find a score even more relevant to their playing style.
+
+Beyond the extension to the current process, the system can be easily scaled up to operate for many users on many music pieces. The current complexity parameters can be quickly substituted with an external database in MySQL \cite{mysql}. Additionally, libraries of MusicXML pieces along with user uploaded files can easily replace pre-selected pieces currently available.
+
+Even the backend software itself can be extended and modified in the future with relative ease. MusicXML files are parsed with heavy reliance on the Visitor Design Pattern \cite{gamma1994design} and judicious overloading \cite{bloch2008effective}. In doing so the intricacies and redundancies of MusicXML are effectively abstracted away, and future additions to the model are easily accommodated.
+
+Finally, the javascript libraries used on the frontend naturally facilitate creating a mobile-friendly web interface. While mobile experiences have not yet been fully optimized, they are still readily available even now. Furthermore, it would be straightforward to extend this interface into a mobile app itself by utilizing past translational research \cite{holder2013cloudSPLASH} \cite{holder2013cloudASE} or PhoneGap \cite{phonegapBook} \cite{phonegapArticle}.
 
 
 %Talk about the high level approach for how this works in terms of the musical elements defined in the background section earlier.
@@ -416,9 +425,9 @@ The system itself can be extended to operate only on specific selections of piec
 
 The reference implementation spans several different code bases, most notably the automated processor backend and the web UI frontend. Both are publicly available on GitHub \cite{GithubMusicScoring} along with instructions as to how to set them up and links to the current deployed version.\footnote{The current version is deployed at \url{http://mickey.cs.vt.edu/}}
 
-The backend code is written in Java \cite{java} with some limited PHP to facilitate server communication and spans 5137 source lines of code (SLOC) \cite{nguyen2007sloc}. We've utilized the Apache Xerces 2.11.0 library for parsing xml files \cite{XMLAPI} and the JSON Simple 1.1.1 library \cite{JSONAPI} for constructing JSON to pass along to the frontend. The backend utilizes the visitor pattern heavily so as to ease the handling of the intricacies and redundancies of processing MusicXML.
+The backend code is written in Java \cite{java} with some limited PHP to facilitate server communication and spans 5137 source lines of code (SLOC) \cite{nguyen2007sloc}. We've utilized the Apache Xerces 2.11.0 library for parsing xml files \cite{XMLAPI} and the JSON Simple 1.1.1 library \cite{JSONAPI} for constructing JSON to pass along to the frontend. Again, the backend utilizes the visitor pattern heavily so as to ease the handling of the intricacies and redundancies of processing MusicXML.
 
-The frontend code is written in Javascript, HTML, and CSS and spans 3061 SLOC \cite{nguyen2007sloc}. To minimize the amount of hand-written code, our implementation makes use of numerous libraries, including jQuery 2.1.0 \cite{jQuery}, Bootstrap 3.3.4 \cite{Bootstrap}, Datafs 1.10.5 \cite{DataTables}, D3 3.5.5 \cite{D3}, and VexFlow 1.2.27 \cite{VexFlow}. These libraries greatly facilitate various standard facets of system implementation, making it possible for us to focus on the novel, research-related issues of musiplectics.
+The frontend code is written in Javascript, HTML, and CSS and spans 3061 SLOC \cite{nguyen2007sloc}. To minimize the amount of hand-written code, our implementation makes use of numerous libraries, including jQuery 2.1.0 \cite{jQuery}, Bootstrap 3.3.4 \cite{Bootstrap}, Datatables 1.10.5 \cite{DataTables}, D3 3.5.5 \cite{D3}, and VexFlow 1.2.27 \cite{VexFlow}. These libraries greatly facilitate various standard facets of system implementation, making it possible for us to focus on the novel, research-related issues of musiplectics.
 
 \chapter{Evaluation} 
 \label{sec:eval}

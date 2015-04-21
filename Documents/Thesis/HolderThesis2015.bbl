@@ -9,6 +9,12 @@ J.~Allali, P.~Ferraro, P.~Hanna, C.~Iliopoulos, and M.~Robine.
 \newblock Toward a general framework for polyphonic comparison.
 \newblock {\em Fundam. Inf.}, 97(3):331--346, Aug. 2009.
 
+\bibitem{phonegapArticle}
+S.~Allen, V.~Graupera, and L.~Lundrigan.
+\newblock Phonegap.
+\newblock In {\em Pro Smartphone Cross-Platform Development}, pages 131--152.
+  Apress, 2010.
+
 \bibitem{XMLAPI}
 {Apache Xerces}.
 \newblock The apache xerces™ project.
@@ -28,6 +34,11 @@ J.~Arnold.
 H.~Bitteur.
 \newblock Audiveris.
 \newblock \url{https://audiveris.kenai.com/}, 1 2013.
+
+\bibitem{bloch2008effective}
+J.~Bloch.
+\newblock Effective java (the java series).
+\newblock 2008.
 
 \bibitem{css}
 B.~Bos, H.~W. Lie, C.~Lilley, and I.~Jacobs.
@@ -95,6 +106,17 @@ B.~Edmonds.
 \newblock What is complexity?-the philosophy of complexity per se with
   application to some examples in evolution.
 \newblock {\em The evolution of complexity}, 1995.
+
+\bibitem{gamma1994design}
+E.~Gamma, R.~Helm, R.~Johnson, and J.~Vlissides.
+\newblock {\em Design patterns: elements of reusable object-oriented software}.
+\newblock Pearson Education, 1994.
+
+\bibitem{phonegapBook}
+R.~Ghatol and Y.~Patel.
+\newblock {\em Beginning PhoneGap: Mobile Web Framework for JavaScript and
+  HTML5}.
+\newblock Apress, Berkely, CA, USA, 1st edition, 2012.
 
 \bibitem{Good2001}
 M.~Good et~al.
@@ -200,6 +222,11 @@ V.~Nguyen, S.~Deeds-Rubin, T.~Tan, and B.~Boehm.
 {NYSSMA New York State School Music Association}.
 \newblock Nyssma new york state school music association.
 \newblock \url{http://www.nyssma.org/}, 2015.
+
+\bibitem{mysql}
+{Oracle Corporation}.
+\newblock Mysql the world's most popular open source database.
+\newblock \url{https://www.mysql.com/}, 2015.
 
 \bibitem{Bootstrap}
 Otto and Thornton.
