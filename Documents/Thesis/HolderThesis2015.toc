@@ -4,31 +4,31 @@
 \contentsline {chapter}{\numberline {2}Background}{4}{chapter.2}
 \contentsline {chapter}{\numberline {3}Related Work}{7}{chapter.3}
 \contentsline {section}{\numberline {3.1}Complexity Analysis}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Music Scan \& Search}{8}{section.3.2}
+\contentsline {section}{\numberline {3.2}Music Scan \& Search}{9}{section.3.2}
 \contentsline {section}{\numberline {3.3}Music Classification}{9}{section.3.3}
-\contentsline {chapter}{\numberline {4}Computational Model for Music Complexity}{10}{chapter.4}
-\contentsline {chapter}{\numberline {5}Proof of Concept}{12}{chapter.5}
-\contentsline {section}{\numberline {5.1}Design Overview}{12}{section.5.1}
-\contentsline {section}{\numberline {5.2}Architecture Highlights}{13}{section.5.2}
-\contentsline {section}{\numberline {5.3}Implementation Details}{14}{section.5.3}
-\contentsline {chapter}{\numberline {6}Evaluation}{17}{chapter.6}
-\contentsline {section}{\numberline {6.1}Clarinet Complexity Parameterization}{17}{section.6.1}
-\contentsline {section}{\numberline {6.2}External Survey}{20}{section.6.2}
-\contentsline {section}{\numberline {6.3}Graded Music Pieces for Comparison}{20}{section.6.3}
-\contentsline {section}{\numberline {6.4}Optical Character Recognition (OCR)}{22}{section.6.4}
-\contentsline {chapter}{\numberline {7}Discussion}{25}{chapter.7}
-\contentsline {section}{\numberline {7.1}Manually Graded Pieces and Their Calculated Complexity Scores}{25}{section.7.1}
-\contentsline {section}{\numberline {7.2}Matched and OCR Generated MusicXML}{26}{section.7.2}
-\contentsline {section}{\numberline {7.3}Website Usability}{27}{section.7.3}
-\contentsline {chapter}{\numberline {8}Future Work}{30}{chapter.8}
-\contentsline {section}{\numberline {8.1}Expanding Instrument Complexity Parameters}{30}{section.8.1}
-\contentsline {section}{\numberline {8.2}Mapping Separate Parts and Instruments}{31}{section.8.2}
-\contentsline {section}{\numberline {8.3}Understanding Complexity Scores}{31}{section.8.3}
-\contentsline {section}{\numberline {8.4}Integrating Complexity Scores with Sources}{32}{section.8.4}
-\contentsline {section}{\numberline {8.5}Demonstrating Musiplectics for Art Expos\'e}{32}{section.8.5}
-\contentsline {section}{\numberline {8.6}Including More Input Formats}{32}{section.8.6}
-\contentsline {section}{\numberline {8.7}Measuring Complexity From Physiological Signals}{34}{section.8.7}
-\contentsline {section}{\numberline {8.8}Broadening Musiplectics to Other Plectics}{34}{section.8.8}
-\contentsline {chapter}{\numberline {9}Conclusions}{35}{chapter.9}
-\contentsline {chapter}{\numberline {A}Complexity Parameters Example}{42}{appendix.A}
-\contentsline {chapter}{\numberline {B}External Survey}{49}{appendix.B}
+\contentsline {chapter}{\numberline {4}Computational Model for Music Complexity}{11}{chapter.4}
+\contentsline {chapter}{\numberline {5}Proof of Concept}{13}{chapter.5}
+\contentsline {section}{\numberline {5.1}Design Overview}{13}{section.5.1}
+\contentsline {section}{\numberline {5.2}Architecture Highlights}{14}{section.5.2}
+\contentsline {section}{\numberline {5.3}Implementation Details}{15}{section.5.3}
+\contentsline {chapter}{\numberline {6}Evaluation}{18}{chapter.6}
+\contentsline {section}{\numberline {6.1}Clarinet Complexity Parameterization}{18}{section.6.1}
+\contentsline {section}{\numberline {6.2}External Survey}{21}{section.6.2}
+\contentsline {section}{\numberline {6.3}Graded Music Pieces for Comparison}{21}{section.6.3}
+\contentsline {section}{\numberline {6.4}Optical Character Recognition (OCR)}{24}{section.6.4}
+\contentsline {chapter}{\numberline {7}Discussion}{26}{chapter.7}
+\contentsline {section}{\numberline {7.1}Manually Graded Pieces and Their Calculated Complexity Scores}{26}{section.7.1}
+\contentsline {section}{\numberline {7.2}Matched and OCR Generated MusicXML}{27}{section.7.2}
+\contentsline {section}{\numberline {7.3}Website Usability}{28}{section.7.3}
+\contentsline {chapter}{\numberline {8}Future Work}{31}{chapter.8}
+\contentsline {section}{\numberline {8.1}Expanding Instrument Complexity Parameters}{31}{section.8.1}
+\contentsline {section}{\numberline {8.2}Mapping Separate Parts and Instruments}{32}{section.8.2}
+\contentsline {section}{\numberline {8.3}Understanding Complexity Scores}{32}{section.8.3}
+\contentsline {section}{\numberline {8.4}Integrating Complexity Scores with Sources}{33}{section.8.4}
+\contentsline {section}{\numberline {8.5}Demonstrating Musiplectics for Art Expos\'e}{33}{section.8.5}
+\contentsline {section}{\numberline {8.6}Including More Input Formats}{35}{section.8.6}
+\contentsline {section}{\numberline {8.7}Measuring Complexity From Physiological Signals}{35}{section.8.7}
+\contentsline {section}{\numberline {8.8}Broadening Musiplectics to Other Plectics}{36}{section.8.8}
+\contentsline {chapter}{\numberline {9}Conclusions}{37}{chapter.9}
+\contentsline {chapter}{\numberline {A}Complexity Parameters Example}{45}{appendix.A}
+\contentsline {chapter}{\numberline {B}External Survey}{52}{appendix.B}

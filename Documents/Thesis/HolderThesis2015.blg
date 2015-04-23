@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2014)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: HolderThesis2015.aux
-The style file: abbrv.bst
+The style file: abbrvnat.bst
 Database file #1: HolderThesis2015.bib
 Warning--to sort, need author or key in genomePub
 Warning--to sort, need author or key in GS
@@ -10,48 +10,51 @@ Warning--empty author in genomePub
 Warning--empty journal in bloch2008effective
 Warning--empty journal in css
 Warning--empty year in css
+Warning--empty year in css
 Warning--empty journal in crockford2006application
 Warning--empty journal in garrett2005ajax
+Warning--there's a number but no series in kamp1993discourse
+Warning--can't use both volume and number fields in kate2005learning
 Warning--empty journal in parry2004musical
-You've used 77 entries,
-            2118 wiz_defined-function locations,
-            953 strings with 19583 characters,
-and the built_in function-call counts, 30382 in all, are:
-= -- 2717
-> -- 2208
-< -- 12
-+ -- 895
-- -- 809
-* -- 2366
-:= -- 5222
-add.period$ -- 236
-call.type$ -- 77
-change.case$ -- 625
-chr.to.int$ -- 0
-cite$ -- 87
-duplicate$ -- 871
-empty$ -- 1956
-format.name$ -- 809
-if$ -- 6085
-int.to.chr$ -- 0
-int.to.str$ -- 77
-missing$ -- 54
-newline$ -- 384
-num.names$ -- 150
-pop$ -- 767
+You've used 84 entries,
+            2773 wiz_defined-function locations,
+            1131 strings with 22685 characters,
+and the built_in function-call counts, 47139 in all, are:
+= -- 3921
+> -- 3905
+< -- 80
++ -- 1336
+- -- 1251
+* -- 3953
+:= -- 7509
+add.period$ -- 303
+call.type$ -- 84
+change.case$ -- 655
+chr.to.int$ -- 83
+cite$ -- 184
+duplicate$ -- 1690
+empty$ -- 3107
+format.name$ -- 1369
+if$ -- 9685
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 63
+newline$ -- 468
+num.names$ -- 326
+pop$ -- 1452
 preamble$ -- 1
-purify$ -- 555
+purify$ -- 581
 quote$ -- 0
-skip$ -- 662
+skip$ -- 1555
 stack$ -- 0
-substring$ -- 1157
-swap$ -- 172
-text.length$ -- 12
+substring$ -- 989
+swap$ -- 211
+text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 296
-warning$ -- 10
-while$ -- 216
-width$ -- 79
-write$ -- 815
-(There were 10 warnings)
+type$ -- 879
+warning$ -- 13
+while$ -- 316
+width$ -- 0
+write$ -- 1152
+(There were 13 warnings)
