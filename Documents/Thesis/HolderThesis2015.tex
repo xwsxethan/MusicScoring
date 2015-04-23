@@ -370,7 +370,7 @@ Hence, a more authentic approach to calculating an overall score is to only assi
 
 Note duration is factored into the score as an average over all notes. The total amount of notes and associated duration in seconds is calculated at the end and applied as its own multiplier. The more notes in a given span of time, the higher the multiplier becomes.
 
-This scheme captures the concept previously envisioned that makes duration complex, except in the extreme case of playing excessively long notes. In cases of wind instruments, such as the main target of B$\flat$ Clarinet, holding notes out for long durations may possess its own difficulty in providing adequate breath support, rather than the difficulties of changing finger positions and embouchure quickly.
+This scheme captures the concept previously envisioned that makes duration add to overall complexity, except in the extreme case of playing excessively long notes. In cases of wind instruments, such as the main target of B$\flat$ Clarinet, holding notes out for long durations may possess its own difficulty in providing adequate breath support, rather than the difficulties of changing finger positions and embouchure quickly.
 
 Thus, the model adapts the note duration multiplier to be a multiplicative or fractional difference from one. If the average of notes per second in the piece is 1.5, then the multiplier remains 1.5. However, in the case of many long notes, the average of notes per second might be something closer to 0.5. In this case (when the average is less than 1), the fraction becomes its reciprocal, 2 in the example.
 
@@ -380,7 +380,7 @@ Users cannot directly change this parameter as it is built into the model. Howev
 \label{sec:proof}
 \markright{Ethan G. Holder  \hfill Chapter 5. Proof of Concept \hfill}
 
-In \ref{sec:design}, I outline the basic software design of the proof of concept. Next, I provide some highlights of the extensible architecture in \ref{sec:highlights}. Then, I describe the choices I have made while realizing the full implementation in \ref{sec:details}.
+In \ref{sec:design}, I outline the basic software design of the proof of concept. Next, I provide some highlights of the extensible architecture in \ref{sec:highlights}. Then, I describe the full details of the overall implementation in \ref{sec:details}.
 
 \section{Design Overview} 
 \label{sec:design}
@@ -400,7 +400,7 @@ Alternatively, the system can be extended to work directly with music pieces in 
 
 Once the MusicXML representation of the piece is obtained, the automated processor then takes it as an input. The processor computes the complexity score by going through a sequence of steps. First, it parses the piece to extract individual music elements to be analyzed. Then, it looks up the weights for each element as specified by the complexity parameterization.
 
-Recall that this system can be parameterized with different complexity weights to reflect dissimilar levels of per-instrument playing proficiency. Currently, these weights are specified in an xml file to facilitate tool integration. Because the weights are meant to be decided on by music experts, the design foresees the creation of visual editors to specify this information. These editors can easily save their inputs in some xml format. In the proof of concept, I experimented with 5 different sets of weights, which represent proficiency levels that range from that of a beginner up to a trained professional.
+Recall that this system can be parameterized with different complexity weights to reflect dissimilar levels of per-instrument playing proficiency. Currently, these weights are specified in an xml file to facilitate tool integration. Because the weights are meant to be decided on by music experts, the design foresees the creation of visual editors to specify this information. These editors can easily save their inputs in some xml format. Similarly, individual users could create their own file representing their own personal weights and apply the system in the same manner. In the proof of concept, I experimented with 5 different sets of weights, which represent proficiency levels that range from that of a beginner up to a trained professional.
 
 Using the specified weights, the system calculates the complexity by tallying up the difficulty values of each individual type of element, computed separately during a single pass over the structure. The final piece of functionality presents the calculated complexity in a user friendly fashion. To that end the system uses a web-based interface with specialized javascript libraries.
 
@@ -423,11 +423,28 @@ Finally, the javascript libraries used on the frontend naturally facilitate crea
 \section{Implementation Details} 
 \label{sec:details}
 
-The reference implementation spans several different code bases, most notably the automated processor backend and the web UI frontend. Both are publicly available on GitHub \cite{GithubMusicScoring} along with instructions as to how to set them up and links to the current deployed version.\footnote{The current version is deployed at \url{http://mickey.cs.vt.edu/}}
+The reference implementation spans several different code bases, most notably the automated processor backend and the web UI frontend. This style of two-tier architecture is common in both web and mobile applications. Figure \ref{image:architecture} shows a diagram detailing the specific architecture for the reference implementation and showing how the frontend and backend pieces interact.
 
-The backend code is written in Java \cite{java} with some limited PHP to facilitate server communication and spans 5137 source lines of code (SLOC) \cite{nguyen2007sloc}. We've utilized the Apache Xerces 2.11.0 library for parsing xml files \cite{XMLAPI} and the JSON Simple 1.1.1 library \cite{JSONAPI} for constructing JSON to pass along to the frontend. Again, the backend utilizes the visitor pattern heavily so as to ease the handling of the intricacies and redundancies of processing MusicXML.
+As shown, when a user first requests a complexity score from the frontend interface, that request is formatted as AJAX \cite{garrett2005ajax} and sent to the backend web server. The physical server receives the request and routes it to the appropriate running service (in this case, the backend). Once the backend receives the request, it fetches the complexity parameters and the piece in MusicXML format specified by the user. Then, the backend code generates the complexity score as discussed previously in the design overview. It formats the complexity score as well as some related data (the most complex measure number and form, note complexity including associated multipliers, and interval complexity including associated multipliers) for each part within the piece of music into JSON \cite{crockford2006application} data before sending the response back to the frontend. When the frontend receives the asynchronous response, it parses the JSON data and displays the complexity score and related data in graphical format.
 
-The frontend code is written in Javascript, HTML, and CSS and spans 3061 SLOC \cite{nguyen2007sloc}. To minimize the amount of hand-written code, our implementation makes use of numerous libraries, including jQuery 2.1.0 \cite{jQuery}, Bootstrap 3.3.4 \cite{Bootstrap}, Datatables 1.10.5 \cite{DataTables}, D3 3.5.5 \cite{D3}, and VexFlow 1.2.27 \cite{VexFlow}. These libraries greatly facilitate various standard facets of system implementation, making it possible for us to focus on the novel, research-related issues of musiplectics.
+\begin{figure}[ht!]
+	\centering
+		\caption{The architecture and flow of the backend and frontend code bases.}
+		\includegraphics[width=0.8\textwidth]{Architecture.png}
+		\label{image:architecture}
+\end{figure}
+
+The backend code is written in Java \cite{java} and spans 5137 source lines of code (SLOC) \cite{nguyen2007sloc}. I've utilized the Apache Xerces 2.11.0 library for parsing xml files \cite{XMLAPI} and the JSON Simple 1.1.1 library \cite{JSONAPI} for constructing JSON \cite{crockford2006application} to pass along to the frontend. This Java backend is compiled and bundled up as an executable. It is then run via command line interface, specifying the complexity parameters and MusicXML to run against.
+
+As mentioned previously, the backend utilizes the visitor pattern heavily when processing the MusicXML file. The visitor pattern eases the handling of the intricacies and redundancies of MusicXML by allowing different operations to be defined on the classes of elements present within MusicXML. It also abstracts away the requirement for a specific MusicXML structure.
+
+The simplest way to demonstrate this abstraction is through the placement of specific xml elements within the MusicXML file. For instance, the elements ``sound'' and ``direction-type'' typically hold new ``tempo'' or ``dynamics'' elements as children, respectively. Obviously, tempo and dynamics must be tracked as part of the complexity score so their elements must be tracked, thus their parent elements must be tracked as well. However, ``sound'' and ``direction-type'' elements do not always appear in the same location within the MusicXML file. Both can occur as a child of a ``direction'' element or as a child of a ``measure'' element. Therefore, the system needs to be robust enough to encounter these types of elements at varying depths within the MusicXML's tree structure. Visitor pattern succinctly accomplishes that goal.
+
+The compiled backend code is currently deployed on a Unix-based Mac Mini \cite{macmini} running OS X Mavericks (version 10.9.1) \cite{osx}. A lightweight Apache server \cite{apacheServ} hosts the files and runs some limited PHP to facilitate easy communication between the frontend and backend portions. AJAX requests \cite{garrett2005ajax} are sent to the backend and JSON response text is sent back in the current implementation.
+
+The frontend code is written in Javascript, HTML, and CSS and spans 3061 SLOC \cite{nguyen2007sloc}. To minimize the amount of hand-written code, the implementation makes use of numerous industry-standard libraries, including jQuery 2.1.0 \cite{jQuery}, Bootstrap 3.3.4 \cite{Bootstrap}, Datatables 1.10.5 \cite{DataTables}, D3 3.5.5 \cite{D3}, and VexFlow 1.2.27 \cite{VexFlow}. These libraries span various standard facets of system implementation, making it possible to focus on the novel, research-related issues of musiplectics when creating the proof of concept.
+
+Both the frontend and backend as currently implemented are publicly available on GitHub \cite{GithubMusicScoring} along with instructions as to how to set them up personally. The site also features links to the currently deployed version.\footnote{The current version is deployed at \url{http://mickey.cs.vt.edu/}}
 
 \chapter{Evaluation} 
 \label{sec:eval}

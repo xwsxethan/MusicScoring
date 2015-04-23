@@ -20,6 +20,16 @@ S.~Allen, V.~Graupera, and L.~Lundrigan.
 \newblock The apache xerces™ project.
 \newblock \url{http://xerces.apache.org/index.html}, 1 2013.
 
+\bibitem{osx}
+{Apple Inc.}
+\newblock {OS X Mavericks 10.9.1 Update}.
+\newblock \url{https://support.apple.com/kb/dl1715?locale=en_US}, 12 2013.
+
+\bibitem{macmini}
+{Apple Inc.}
+\newblock {Mac Mini}.
+\newblock \url{https://www.apple.com/mac-mini/}, 2015.
+
 \bibitem{Solos}
 J.~Arnold.
 \newblock {\em Clarinet Solos}.
@@ -118,6 +128,11 @@ E.~Gamma, R.~Helm, R.~Johnson, and J.~Vlissides.
 \newblock {\em Design patterns: elements of reusable object-oriented software}.
 \newblock Pearson Education, 1994.
 
+\bibitem{garrett2005ajax}
+J.~J. Garrett et~al.
+\newblock Ajax: A new approach to web applications.
+\newblock 2005.
+
 \bibitem{phonegapBook}
 R.~Ghatol and Y.~Patel.
 \newblock {\em Beginning PhoneGap: Mobile Web Framework for JavaScript and
@@ -144,7 +159,7 @@ H.~Heijink and R.~Meulenbroek.
 R.~Heyduk.
 \newblock Rated preference for musical compositions as it relates to complexity
   and exposure frequency.
-\newblock {\em Perception & Psychophysics}, 17(1):84--90, 1975.
+\newblock {\em Perception and Psychophysics}, 17(1):84--90, 1975.
 
 \bibitem{holder2013cloudSPLASH}
 E.~Holder.
@@ -338,6 +353,11 @@ A.~Tanaka and R.~B. Knapp.
 \newblock In {\em Proceedings of the 2002 Conference on New Interfaces for
   Musical Expression}, NIME '02, pages 1--6, Singapore, Singapore, 2002.
   National University of Singapore.
+
+\bibitem{apacheServ}
+{The Apache Software Foundation}.
+\newblock {Apache HTTP Server Project}.
+\newblock \url{http://httpd.apache.org/}, 2015.
 
 \bibitem{jQuery}
 {The {jQuery} Foundation}.
