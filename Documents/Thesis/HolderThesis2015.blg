@@ -4,51 +4,54 @@ The top-level auxiliary file: HolderThesis2015.aux
 The style file: abbrv.bst
 Database file #1: HolderThesis2015.bib
 Warning--to sort, need author or key in genomePub
+Warning--to sort, need author or key in GS
+Warning--to sort, need author or key in ACMDL
 Warning--empty author in genomePub
 Warning--empty journal in bloch2008effective
 Warning--empty journal in css
 Warning--empty year in css
+Warning--empty journal in crockford2006application
 Warning--empty journal in garrett2005ajax
 Warning--empty journal in parry2004musical
-You've used 72 entries,
+You've used 77 entries,
             2118 wiz_defined-function locations,
-            929 strings with 19214 characters,
-and the built_in function-call counts, 29306 in all, are:
-= -- 2611
-> -- 2179
+            953 strings with 19583 characters,
+and the built_in function-call counts, 30382 in all, are:
+= -- 2717
+> -- 2208
 < -- 12
-+ -- 881
-- -- 801
-* -- 2310
-:= -- 5058
-add.period$ -- 223
-call.type$ -- 72
-change.case$ -- 606
++ -- 895
+- -- 809
+* -- 2366
+:= -- 5222
+add.period$ -- 236
+call.type$ -- 77
+change.case$ -- 625
 chr.to.int$ -- 0
-cite$ -- 79
-duplicate$ -- 829
-empty$ -- 1844
-format.name$ -- 801
-if$ -- 5849
+cite$ -- 87
+duplicate$ -- 871
+empty$ -- 1956
+format.name$ -- 809
+if$ -- 6085
 int.to.chr$ -- 0
-int.to.str$ -- 72
-missing$ -- 52
-newline$ -- 361
-num.names$ -- 144
-pop$ -- 734
+int.to.str$ -- 77
+missing$ -- 54
+newline$ -- 384
+num.names$ -- 150
+pop$ -- 767
 preamble$ -- 1
-purify$ -- 541
+purify$ -- 555
 quote$ -- 0
-skip$ -- 626
+skip$ -- 662
 stack$ -- 0
-substring$ -- 1106
-swap$ -- 168
+substring$ -- 1157
+swap$ -- 172
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 276
-warning$ -- 7
-while$ -- 208
-width$ -- 74
-write$ -- 769
-(There were 7 warnings)
+type$ -- 296
+warning$ -- 10
+while$ -- 216
+width$ -- 79
+write$ -- 815
+(There were 10 warnings)

@@ -4,6 +4,14 @@
 Initial sequencing and analysis of the human genome.
 \newblock {\em Nature}, 409(6822):860--921, 02 2001.
 
+\bibitem{ACMDL}
+Acm digital library.
+\newblock \url{http://dl.acm.org/}, Dec. 2014.
+
+\bibitem{GS}
+Google scholar.
+\newblock \url{http://scholar.google.com/}, Dec. 2014.
+
 \bibitem{Allali2009}
 J.~Allali, P.~Ferraro, P.~Hanna, C.~Iliopoulos, and M.~Robine.
 \newblock Toward a general framework for polyphonic comparison.
@@ -44,6 +52,11 @@ J.~Arnold.
 H.~Bitteur.
 \newblock Audiveris.
 \newblock \url{https://audiveris.kenai.com/}, 1 2013.
+
+\bibitem{Seemore}
+S.~Blanchard and K.~Cameron.
+\newblock Seemore.
+\newblock {\em Leonardo}, 47(4):414--415, 2014.
 
 \bibitem{bloch2008effective}
 J.~Bloch.
@@ -104,6 +117,12 @@ G.~S. Choudhury, M.~Droetboom, T.~DiLauro, I.~Fujinaga, and B.~Harrington.
 \newblock Optical music recognition system within a large-scale digitization
   project.
 \newblock In {\em ISMIR}, 2000.
+
+\bibitem{crockford2006application}
+D.~Crockford.
+\newblock The application/json media type for javascript object notation
+  (json).
+\newblock 2006.
 
 \bibitem{Cuthbert2011}
 M.~S. Cuthbert, C.~Ariza, and L.~Friedland.
@@ -420,6 +439,11 @@ J.~C. Venter, M.~D. Adams, E.~W. Myers, P.~W. Li, R.~J. Mural, G.~G. Sutton,
 {Virginia Band and Orchestra Directors Association}.
 \newblock Virginia band and orchestra directors association.
 \newblock \url{http://www.vboda.org/}, 2015.
+
+\bibitem{SharpEye}
+{Visiv}.
+\newblock Sharpeye music scanning.
+\newblock \url{http://www.visiv.co.uk/}, 2015.
 
 \bibitem{Concert}
 H.~Voxman.
