@@ -1,34 +1,35 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Research Contributions}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Paper Roadmap}{chapter.1}% 3
-\BOOKMARK [0][-]{chapter.2}{Background}{}% 4
-\BOOKMARK [0][-]{chapter.3}{Related Work}{}% 5
-\BOOKMARK [1][-]{section.3.1}{Complexity Analysis}{chapter.3}% 6
-\BOOKMARK [1][-]{section.3.2}{Music Scan \046 Search}{chapter.3}% 7
-\BOOKMARK [1][-]{section.3.3}{Music Classification}{chapter.3}% 8
-\BOOKMARK [0][-]{chapter.4}{Computational Model for Music Complexity}{}% 9
-\BOOKMARK [0][-]{chapter.5}{Proof of Concept}{}% 10
-\BOOKMARK [1][-]{section.5.1}{Design Overview}{chapter.5}% 11
-\BOOKMARK [1][-]{section.5.2}{Architecture Highlights}{chapter.5}% 12
-\BOOKMARK [1][-]{section.5.3}{Implementation Details}{chapter.5}% 13
-\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 14
-\BOOKMARK [1][-]{section.6.1}{Clarinet Complexity Parameterization}{chapter.6}% 15
-\BOOKMARK [1][-]{section.6.2}{External Survey}{chapter.6}% 16
-\BOOKMARK [1][-]{section.6.3}{Graded Music Pieces for Comparison}{chapter.6}% 17
-\BOOKMARK [1][-]{section.6.4}{Optical Character Recognition \(OCR\)}{chapter.6}% 18
-\BOOKMARK [0][-]{chapter.7}{Discussion}{}% 19
-\BOOKMARK [1][-]{section.7.1}{Manually Graded Pieces and Their Calculated Complexity Scores}{chapter.7}% 20
-\BOOKMARK [1][-]{section.7.2}{Matched and OCR Generated MusicXML}{chapter.7}% 21
-\BOOKMARK [1][-]{section.7.3}{Website Usability}{chapter.7}% 22
-\BOOKMARK [0][-]{chapter.8}{Future Work}{}% 23
-\BOOKMARK [1][-]{section.8.1}{Expanding Instrument Complexity Parameters}{chapter.8}% 24
-\BOOKMARK [1][-]{section.8.2}{Mapping Separate Parts and Instruments}{chapter.8}% 25
-\BOOKMARK [1][-]{section.8.3}{Understanding Complexity Scores}{chapter.8}% 26
-\BOOKMARK [1][-]{section.8.4}{Integrating Complexity Scores with Sources}{chapter.8}% 27
-\BOOKMARK [1][-]{section.8.5}{Demonstrating Musiplectics for Art Expos\351}{chapter.8}% 28
-\BOOKMARK [1][-]{section.8.6}{Including More Input Formats}{chapter.8}% 29
-\BOOKMARK [1][-]{section.8.7}{Measuring Complexity From Physiological Signals}{chapter.8}% 30
-\BOOKMARK [1][-]{section.8.8}{Broadening Musiplectics to Other Plectics}{chapter.8}% 31
-\BOOKMARK [0][-]{chapter.9}{Conclusions}{}% 32
-\BOOKMARK [0][-]{appendix.A}{Complexity Parameters Example}{}% 33
-\BOOKMARK [0][-]{appendix.B}{External Survey}{}% 34
+\BOOKMARK [1][-]{section.1.2}{Definition of Terms}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Paper Roadmap}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Background}{}% 5
+\BOOKMARK [0][-]{chapter.3}{Related Work}{}% 6
+\BOOKMARK [1][-]{section.3.1}{Complexity Analysis}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.2}{Music Scan \046 Search}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.3}{Music Classification}{chapter.3}% 9
+\BOOKMARK [0][-]{chapter.4}{Computational Model for Music Complexity}{}% 10
+\BOOKMARK [0][-]{chapter.5}{Proof of Concept}{}% 11
+\BOOKMARK [1][-]{section.5.1}{Design Overview}{chapter.5}% 12
+\BOOKMARK [1][-]{section.5.2}{Architecture Highlights}{chapter.5}% 13
+\BOOKMARK [1][-]{section.5.3}{Implementation Details}{chapter.5}% 14
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 15
+\BOOKMARK [1][-]{section.6.1}{Clarinet Complexity Parameterization}{chapter.6}% 16
+\BOOKMARK [1][-]{section.6.2}{External Survey}{chapter.6}% 17
+\BOOKMARK [1][-]{section.6.3}{Graded Music Pieces for Comparison}{chapter.6}% 18
+\BOOKMARK [1][-]{section.6.4}{Optical Character Recognition \(OCR\)}{chapter.6}% 19
+\BOOKMARK [0][-]{chapter.7}{Discussion}{}% 20
+\BOOKMARK [1][-]{section.7.1}{Manually Graded Pieces and Their Calculated Complexity Scores}{chapter.7}% 21
+\BOOKMARK [1][-]{section.7.2}{Matched and OCR Generated MusicXML}{chapter.7}% 22
+\BOOKMARK [1][-]{section.7.3}{Website Usability}{chapter.7}% 23
+\BOOKMARK [0][-]{chapter.8}{Future Work}{}% 24
+\BOOKMARK [1][-]{section.8.1}{Expanding Instrument Complexity Parameters}{chapter.8}% 25
+\BOOKMARK [1][-]{section.8.2}{Mapping Separate Parts and Instruments}{chapter.8}% 26
+\BOOKMARK [1][-]{section.8.3}{Understanding Complexity Scores}{chapter.8}% 27
+\BOOKMARK [1][-]{section.8.4}{Integrating Complexity Scores with Sources}{chapter.8}% 28
+\BOOKMARK [1][-]{section.8.5}{Demonstrating Musiplectics for Art Expos\351}{chapter.8}% 29
+\BOOKMARK [1][-]{section.8.6}{Including More Input Formats}{chapter.8}% 30
+\BOOKMARK [1][-]{section.8.7}{Measuring Complexity From Physiological Signals}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.8}{Broadening Musiplectics to Other Plectics}{chapter.8}% 32
+\BOOKMARK [0][-]{chapter.9}{Conclusions}{}% 33
+\BOOKMARK [0][-]{appendix.A}{Complexity Parameters Example}{}% 34
+\BOOKMARK [0][-]{appendix.B}{External Survey}{}% 35
