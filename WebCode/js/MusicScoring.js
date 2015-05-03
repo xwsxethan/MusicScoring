@@ -7,8 +7,11 @@ var pieparts;
 var histoExists = false;
 var pieExists = false;
 var legendExists = false;
+var dagExists = false;
 var tempVariableHolder;
 var samplePieces;
+var guesses;
+var oldGuessIndex = -1;
 
 $(document).on('ready', function(){
 	$.ajax({
@@ -42,22 +45,13 @@ $(document).on('click', '#ComplexityRunner', function () {
     var difficultyVal = getRealDifficulty();
     var turnOnValidation = isValidationOn();
 
-    var guesses = $("#worstMeasureGuesses")[0];
-    if (guesses !== undefined) {
-        var inputs = $("#worstMeasureGuesses input");
-
-        guesses = [inputs.length];
-        var l = 0;
-        for (; l < inputs.length; l++) {
-            if (inputs[l].value === "") {
-                guesses[l] = -1;
-            }
-            else {
-                guesses[l] = parseInt(inputs[l].value, 10);
-            }
-        }
-
+    var guessCheck = $("#worstMeasureGuesses")[0];
+    
+    var hiddenInputElem = $("#hiddenInputElem")[0];
+    if (hiddenInputElem.value !== "" && oldGuessIndex != -1) {
+        guesses[oldGuessIndex] = parseInt(hiddenInputElem.value, 10);
     }
+
 	//Need some code here to execute the jar file with the specified parameters.
 	$.ajax({
 		type : "POST",
@@ -113,7 +107,7 @@ $(document).on('click', '#ComplexityRunner', function () {
 		        	tempNames.push(item.partName);
 		        }
                 /* Determining if guesses were correct. */
-                if (guesses !== undefined) {
+                if (guessCheck !== undefined) {
                     guessAnswers += item.partName + ": " + item.worstMeasureNumber + " (";
 
                     if (guesses[i] === item.worstMeasureNumber) {
@@ -151,7 +145,7 @@ $(document).on('click', '#ComplexityRunner', function () {
             }
 
             /* Output from guesses. */
-            if (guesses !== undefined) {
+            if (guessCheck !== undefined) {
                 alert(guessAnswers);
                 /*
                 if (guessCorrect) {
@@ -211,35 +205,205 @@ function setupGuesses() {
     var guessHolder = $("#worstMeasureGuesses");
 
     if (guessHolder.length > 0) {
-        var htmlName = getActiveMusicPiece();
-        var parts = samplePieces.filter(function(s) {
-            return s.fancyName == htmlName;
-        })[0].parts;
-
-
-        var elementsToAdd = "";
-        var i = 0;
-        for (; i < parts.length; i++) {
-            elementsToAdd += '<div class="row">';
-
-            elementsToAdd += '<div class="col-md-4">';
-            elementsToAdd += '<div class="well well-sm">';
-            elementsToAdd += parts[i];    
-            elementsToAdd += '</div>';
-            elementsToAdd += '</div>';
-
-            elementsToAdd += '<div class="col-md-8">';
-            elementsToAdd += '<input type="number" class="form-control" ';
-            elementsToAdd += 'placeholder="Input the number of the most complex measure for this part." ';
-            elementsToAdd += 'min="0">';
-            elementsToAdd += '</div>';
-
-            elementsToAdd += '</div>';
-        }
-
-        guessHolder.html(elementsToAdd);
+        //inputBoxGuessInterface();
+        removeDag();
+        d3GuessInterface();
     }
 }
+
+function inputBoxGuessInterface() {
+    var guessHolder = $("#worstMeasureGuesses");
+    var htmlName = getActiveMusicPiece();
+    var parts = samplePieces.filter(function(s) {
+        return s.fancyName == htmlName;
+    })[0].parts;
+
+
+    var elementsToAdd = "";
+    var i = 0;
+    for (; i < parts.length; i++) {
+        elementsToAdd += '<div class="row">';
+
+        elementsToAdd += '<div class="col-md-4">';
+        elementsToAdd += '<div class="well well-sm">';
+        elementsToAdd += parts[i];    
+        elementsToAdd += '</div>';
+        elementsToAdd += '</div>';
+
+        elementsToAdd += '<div class="col-md-8">';
+        elementsToAdd += '<input type="number" class="form-control" ';
+        elementsToAdd += 'placeholder="Input the number of the most complex measure for this part." ';
+        elementsToAdd += 'min="0">';
+        elementsToAdd += '</div>';
+
+        elementsToAdd += '</div>';
+    }
+
+    guessHolder.html(elementsToAdd);
+}
+
+function d3GuessInterface() {
+    var guessHolder = $("#worstMeasureGuesses");
+    var htmlName = getActiveMusicPiece();
+    var parts = samplePieces.filter(function(s) {
+        return s.fancyName == htmlName;
+    })[0].parts;
+
+    /*var inputElem = '<input type="number" id="hiddenInputElem" class="form-control" ';
+    inputElem += 'placeholder="Input the number of the most complex measure for this part." ';
+    inputElem += 'min="0">';
+    guessHolder.append(inputElem)
+    $("#hiddenInputElem").hide();*/
+
+    /* Set the diagrams Height & Width */
+        var h = 550, w = 600;
+    /* Set the color scale we want to use */
+        var color = d3.scale.category20();
+    /* Establish/instantiate an SVG container object */
+        var svg = d3.select("#worstMeasureGuesses")
+                        .append("svg")
+                        .attr("height",h)
+                        .attr("width",w);
+    /* Build the directional arrows for the links/edges */
+            svg.append("svg:defs")
+                        .selectAll("marker")
+                        .data(["end"]) 
+                        .enter().append("svg:marker")
+                        .attr("id", String)
+                        .attr("viewBox", "0 -5 10 10")
+                        .attr("refX", 15)
+                        .attr("refY", -1.5)
+                        .attr("markerWidth", 6)
+                        .attr("markerHeight", 6)
+                        .attr("orient", "auto")
+                        .append("svg:path")
+                        .attr("d", "M0,-5L10,0L0,5");
+    /* Pre-Load the json data using the queue library */
+    /*queue()
+        .defer(d3.json, "nodes.json")
+        .defer(d3.json, "links.json")
+        .await(createGuessDiag); */
+
+    var nodes = [parts.length + 1];
+    var links = [parts.length];
+    guesses = [parts.length];
+
+    var initialNode = {};
+    initialNode.name = htmlName;
+    var n = 0;
+    nodes[n] = initialNode;
+
+    for (; n < parts.length; n++) {
+        var node = {};
+        node.name = parts[n];
+        nodes[n + 1] = node;
+
+        var link = {};
+        link.source = 0;
+        link.target = n + 1;
+        links[n] = link;
+
+        guesses[n] = -1;
+    }
+
+    dagExists = true;
+    oldGuessIndex = -1;
+    createGuessDiag(null, nodes, links, null);
+
+    /* Define the main worker or execution function */
+    function createGuessDiag(error, nodes, links, table) {
+        /* Draw the node labels first */
+       var texts = svg.selectAll("text")
+                        .data(nodes)
+                        .enter()
+                        .append("text")
+                        .attr("fill", "black")
+                        .attr("font-family", "sans-serif")
+                        .attr("font-size", "16px")
+                        .text(function(d) { return d.name; }); 
+        /* Establish the dynamic force behavor of the nodes */
+        var force = d3.layout.force()
+                        .nodes(nodes)
+                        .links(links)
+                        .size([w,h])
+                        .linkDistance([250])
+                        .charge([-1500])
+                        .gravity(0.3)
+                        .start();
+        /* Draw the edges/links between the nodes */
+        var edges = svg.selectAll("line")
+                        .data(links)
+                        .enter()
+                        .append("line")
+                        .style("stroke", "#ccc")
+                        .style("stroke-width", 1)
+                        .attr("marker-end", "url(#end)");
+        /* Draw the nodes themselves */
+        var firstOneBig = 0;                
+        var nodes = svg.selectAll("circle")
+                        .data(nodes)
+                        .enter()
+                        .append("circle")
+                        .attr("r", 20)
+                        .attr("opacity", 0.5)
+                        .on("click",clicked)
+                        .style("fill", function(d,i) { return color(i); })
+                        .call(force.drag);
+        /* Run the Force effect */
+        force.on("tick", function() {
+                   edges.attr("x1", function(d) { return d.source.x; })
+                        .attr("y1", function(d) { return d.source.y; })
+                        .attr("x2", function(d) { return d.target.x; })
+                        .attr("y2", function(d) { return d.target.y; });
+                   nodes.attr("cx", function(d) { return d.x; })
+                        .attr("cy", function(d) { return d.y; })
+                   texts.attr("transform", function(d) {
+                            return "translate(" + d.x + "," + d.y + ")";
+                            });
+                   }); // End tick func
+
+        function clicked(d) {
+            var index = d.index - 1;
+            if (index != -1) {
+                //guesses[index] = 38;
+                tempVariableHolder = d;
+
+                //var guessHolder = $("#worstMeasureGuesses");
+                var hiddenInputElem = $("#hiddenInputElem")[0];
+
+                //Check and store existing value
+                if (oldGuessIndex != -1) {
+                    if (hiddenInputElem.value === "") {
+                        guesses[oldGuessIndex] = -1;
+                    }
+                    else {
+                        guesses[oldGuessIndex] = parseInt(hiddenInputElem.value, 10);
+                    } 
+                }
+
+                //Set new value
+                if (guesses[index] == -1) {
+                    hiddenInputElem.value = "";
+                }
+                else {
+                    hiddenInputElem.value = guesses[index];
+                }
+                //hiddenInputElem.show();
+
+                oldGuessIndex = index;
+            }
+        }
+    }; // End makeDiag worker func
+}
+
+function removeDag() {
+    if (dagExists) {
+        d3.select("#worstMeasureGuesses").select("svg").remove();
+        //$("#histoTitle").addClass('hidden');
+        dagExists = false;
+    }
+}
+
 
 function createPieChartAndLegend(complexityPart, movementTiming) {
 
