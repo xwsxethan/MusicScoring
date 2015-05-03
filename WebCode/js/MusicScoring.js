@@ -48,7 +48,7 @@ $(document).on('click', '#ComplexityRunner', function () {
     var guessCheck = $("#worstMeasureGuesses")[0];
     
     var hiddenInputElem = $("#hiddenInputElem")[0];
-    if (hiddenInputElem.value !== "" && oldGuessIndex != -1) {
+    if (hiddenInputElem !== undefined && hiddenInputElem.value !== "" && oldGuessIndex != -1) {
         guesses[oldGuessIndex] = parseInt(hiddenInputElem.value, 10);
     }
 

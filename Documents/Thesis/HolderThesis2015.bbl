@@ -54,6 +54,11 @@ M.~M. Association et~al.
 \newblock Sibelius.
 \newblock \url{http://www.avid.com/US/products/sibelius}, 3 2015.
 
+\bibitem{bartenieff1980body}
+I.~Bartenieff.
+\newblock {\em Body movement: Coping with the environment}.
+\newblock Psychology Press, 1980.
+
 \bibitem{Audiveris}
 H.~Bitteur.
 \newblock Audiveris.
@@ -95,6 +100,20 @@ D.~Byrd and M.~Schindele.
 \newblock Prospects for improving omr with multiple recognizers.
 \newblock In {\em ISMIR}, pages 41--46, 2006.
 
+\bibitem{camurri2000eyesweb}
+A.~Camurri, S.~Hashimoto, M.~Ricchetti, A.~Ricci, K.~Suzuki, R.~Trocca, and
+  G.~Volpe.
+\newblock Eyesweb: Toward gesture and affect recognition in interactive dance
+  and music systems.
+\newblock {\em Computer Music Journal}, 24(1):57--69, 2000.
+
+\bibitem{camurri2004multimodal}
+A.~Camurri, B.~Mazzarino, M.~Ricchetti, R.~Timmers, and G.~Volpe.
+\newblock Multimodal analysis of expressive gesture in music and dance
+  performances.
+\newblock In {\em Gesture-based communication in human-computer interaction},
+  pages 20--39. Springer, 2004.
+
 \bibitem{casey2008content}
 M.~A. Casey, R.~Veltkamp, M.~Goto, M.~Leman, C.~Rhodes, and M.~Slaney.
 \newblock Content-based music information retrieval: Current directions and
@@ -116,6 +135,13 @@ C.~Chapados and D.~J. Levitin.
 M.~M. Cheppudira.
 \newblock vexflow.
 \newblock \url{https://github.com/0xfe/vexflow}, 2010.
+
+\bibitem{Chi2000}
+D.~Chi, M.~Costa, L.~Zhao, and N.~Badler.
+\newblock The emote model for effort and shape.
+\newblock In {\em Proceedings of the 27th Annual Conference on Computer
+  Graphics and Interactive Techniques}, SIGGRAPH '00, pages 173--182, New York,
+  NY, USA, 2000. ACM Press/Addison-Wesley Publishing Co.
 
 \bibitem{Chiu2012}
 S.-C. Chiu and M.-S. Chen.
@@ -191,6 +217,11 @@ J.~Gosling.
 \newblock {\em The Java language specification}.
 \newblock Addison-Wesley Professional, 2000.
 
+\bibitem{guest2005labanotation}
+A.~H. Guest.
+\newblock {\em Labanotation: the system of analyzing and recording movement}.
+\newblock Psychology Press, 2005.
+
 \bibitem{harrison1978introduction}
 M.~A. Harrison.
 \newblock {\em Introduction to formal language theory}.
@@ -233,6 +264,11 @@ E.~G. Holder.
 \newblock {\em Native Execution of Mobile Applications Across Platforms}.
 \newblock PhD thesis, Virginia Polytechnic Institute and State University,
   2014.
+
+\bibitem{hutchinson1996labanotation}
+A.~Hutchinson.
+\newblock Labanotation.
+\newblock {\em Dance Books}, 1996.
 
 \bibitem{JSONAPI}
 {JSON Simple}.
@@ -290,6 +326,12 @@ S.~T. Madsen and G.~Widmer.
 {Makemusic Inc.}
 \newblock {MusicXML}.
 \newblock \url{http://www.musicxml.com/}, 3 2015.
+
+\bibitem{maletic1987body}
+V.~Maletic.
+\newblock {\em Body-space-expression: The development of Rudolf Laban's
+  movement and dance concepts}, volume~75.
+\newblock Walter de Gruyter, 1987.
 
 \bibitem{mauch2011structural}
 M.~Mauch and M.~Levy.
