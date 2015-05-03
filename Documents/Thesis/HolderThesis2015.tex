@@ -834,14 +834,16 @@ To make musiplectics more accessible, one direction for future work lies in inte
 \section{Demonstrating Musiplectics for Art Expos\'e}
 \label{sec:icat}
 
-Virginia Tech's Institute for Creativity, Arts, and Technology (ICAT) annually holds an expos\'e for new research and works of art that combine technology with the arts in a variety of ways. ICAT Day as it is called will serve as a formal demonstration for many potential stakeholders to see Musiplectics in action and get to interact with the reference implementation. In order to facilitate this interaction with the reference implementation, some minor changes were made to the frontend web interface, turning it into a sort of game for spectators to play.
+Virginia Tech's Institute for Creativity, Arts, and Technology (ICAT) annually holds an expos\'e for new research and works of art that combine technology with the arts in a variety of ways. ICAT Day as it is called will serve as a formal demonstration for many potential stakeholders to see Musiplectics in action and get to interact with the reference implementation. In order to facilitate this interaction with the reference implementation, changes were made to the frontend web interface, turning it into a sort of game for spectators to play.
 
-As shown in Figure \ref{image:websitegameinput}, the game format of the web page allows users to input their best guess for what the most difficult measure is within the piece. For pieces with only a single part, this is relatively straightforward. For pieces with multiple parts, the guess is applied uniformly to all parts (users cannot make multiple guesses for each part). The request sent to the backend is identical to before, but once the response is returned, the most difficult measure for each part is compared to the user's guess. If the guess is correct, output such as in Figure \ref{image:websitegameoutput} is shown over top of the results. If the guess is incorrect, similar output is shown with the correct measure for each part.
+As shown in Figure \ref{image:websitegameinput}, the game format of the web page allows users to assess the music piece in PDF format alongside inputting a guess for the most difficult measure in the piece. On the left, an iframe displays the currently selected music piece in PDF format. On the right, a directed acyclic graph (DAG) shows each part within the piece connected to a central node for the name of the selected piece. Users may select a node in the graph, then supply their guess for the most difficult measure for that specific part. A user can specify guesses for every part or just some subset of the parts, and then click "Get Complexity Score" as usual to send the request.
+
+The request sent to the backend is identical to before, but once the response is returned, the most difficult measure for each part is compared to the user's guess. Afterwards, output such as in Figure \ref{image:websitegameoutput} is shown via an alert over top of the results.
 
 \begin{figure}[ht!] 
 	\centering
 		\caption{The modified input for the game version of the website.}
-		\includegraphics[width=0.9\textwidth]{WebsiteGameInput.png}
+		\includegraphics[height=0.9\textheight]{WebsiteGameInput.png}
 		\label{image:websitegameinput}
 \end{figure}
 
@@ -918,8 +920,8 @@ This paper presented musiplectics, a new computational paradigm, that systematic
 % If you are using BibTeX, uncomment the following:
 
 \nocite{*}
-\bibliographystyle{abbrvnat}
-%\bibliographystyle{abbrv}
+%\bibliographystyle{abbrvnat}
+\bibliographystyle{abbrv}
 \markright{Ethan G. Holder  \hfill Chapter Bibliography \hfill}
 %\thebibliography{HolderThesis2015}
 \bibliography{HolderThesis2015}
