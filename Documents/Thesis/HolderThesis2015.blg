@@ -3,6 +3,8 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: HolderThesis2015.aux
 The style file: abbrv.bst
 Database file #1: HolderThesis2015.bib
+Warning--entry type for "holder2014native" isn't style-file defined
+--line 585 of file HolderThesis2015.bib
 Warning--to sort, need author or key in genomePub
 Warning--to sort, need author or key in GS
 Warning--to sort, need author or key in ACMDL
@@ -17,36 +19,36 @@ Warning--can't use both volume and number fields in kate2005learning
 Warning--empty journal in parry2004musical
 You've used 91 entries,
             2118 wiz_defined-function locations,
-            1027 strings with 21934 characters,
-and the built_in function-call counts, 34801 in all, are:
-= -- 3150
+            1026 strings with 21943 characters,
+and the built_in function-call counts, 34799 in all, are:
+= -- 3146
 > -- 2409
 < -- 18
-+ -- 977
++ -- 976
 - -- 875
-* -- 2638
-:= -- 5952
-add.period$ -- 282
+* -- 2635
+:= -- 5944
+add.period$ -- 281
 call.type$ -- 91
-change.case$ -- 693
+change.case$ -- 694
 chr.to.int$ -- 0
 cite$ -- 103
-duplicate$ -- 1061
-empty$ -- 2315
+duplicate$ -- 1059
+empty$ -- 2323
 format.name$ -- 875
-if$ -- 7031
+if$ -- 7036
 int.to.chr$ -- 0
 int.to.str$ -- 91
 missing$ -- 73
-newline$ -- 454
+newline$ -- 453
 num.names$ -- 178
-pop$ -- 865
+pop$ -- 871
 preamble$ -- 1
 purify$ -- 615
 quote$ -- 0
-skip$ -- 790
+skip$ -- 792
 stack$ -- 0
-substring$ -- 1359
+substring$ -- 1358
 swap$ -- 216
 text.length$ -- 18
 text.prefix$ -- 0
@@ -55,5 +57,5 @@ type$ -- 340
 warning$ -- 12
 while$ -- 257
 width$ -- 93
-write$ -- 969
-(There were 12 warnings)
+write$ -- 966
+(There were 13 warnings)

@@ -5,11 +5,11 @@ Initial sequencing and analysis of the human genome.
 \newblock {\em Nature}, 409(6822):860--921, 02 2001.
 
 \bibitem{ACMDL}
-Acm digital library.
+{ACM Digital Library}.
 \newblock \url{http://dl.acm.org/}, Dec. 2014.
 
 \bibitem{GS}
-Google scholar.
+{Google Scholar}.
 \newblock \url{http://scholar.google.com/}, Dec. 2014.
 
 \bibitem{Allali2009}
@@ -25,7 +25,7 @@ S.~Allen, V.~Graupera, and L.~Lundrigan.
 
 \bibitem{XMLAPI}
 {Apache Xerces}.
-\newblock The apache xerces™ project.
+\newblock {The Apache Xerces™ Project}.
 \newblock \url{http://xerces.apache.org/index.html}, 1 2013.
 
 \bibitem{osx}
@@ -45,8 +45,8 @@ J.~Arnold.
 
 \bibitem{midi1996complete}
 M.~M. Association et~al.
-\newblock {\em The complete MIDI 1.0 detailed specification: incorporating all
-  recommended practices}.
+\newblock {\em The complete {MIDI} 1.0 detailed specification: incorporating
+  all recommended practices}.
 \newblock MIDI Manufacturers Association, 1996.
 
 \bibitem{Sibelius}
@@ -66,17 +66,17 @@ H.~Bitteur.
 
 \bibitem{Seemore}
 S.~Blanchard and K.~Cameron.
-\newblock Seemore.
+\newblock {SeeMore}.
 \newblock {\em Leonardo}, 47(4):414--415, 2014.
 
 \bibitem{bloch2008effective}
 J.~Bloch.
-\newblock Effective java (the java series).
+\newblock {Effective Java (the Java Series)}.
 \newblock 2008.
 
 \bibitem{css}
 B.~Bos, H.~W. Lie, C.~Lilley, and I.~Jacobs.
-\newblock Cascading style sheets, level 2 css2 specification.
+\newblock Cascading style sheets, level 2 {CSS2} specification.
 
 \bibitem{D3}
 M.~Bostock.
@@ -86,7 +86,7 @@ M.~Bostock.
 \bibitem{burke1990musical}
 M.~J. Burke and M.~C. Gridley.
 \newblock Musical preferences as a function of stimulus complexity and
-  listeners'sophistication.
+  listeners' sophistication.
 \newblock {\em Perceptual and Motor Skills}, 71(2):687--690, 1990.
 
 \bibitem{Byrd2001}
@@ -97,7 +97,7 @@ D.~Byrd.
 
 \bibitem{byrd2006prospects}
 D.~Byrd and M.~Schindele.
-\newblock Prospects for improving omr with multiple recognizers.
+\newblock Prospects for improving {OMR} with multiple recognizers.
 \newblock In {\em ISMIR}, pages 41--46, 2006.
 
 \bibitem{camurri2000eyesweb}
@@ -122,7 +122,7 @@ M.~A. Casey, R.~Veltkamp, M.~Goto, M.~Leman, C.~Rhodes, and M.~Slaney.
 
 \bibitem{Cataltepe2007}
 Z.~Cataltepe, Y.~Yaslan, and A.~Sonmez.
-\newblock Music genre classification using midi and audio features.
+\newblock Music genre classification using {MIDI} and audio features.
 \newblock {\em EURASIP J. Appl. Signal Process.}, 2007(1):150--150, Jan. 2007.
 
 \bibitem{chapados2008cross}
@@ -138,7 +138,7 @@ M.~M. Cheppudira.
 
 \bibitem{Chi2000}
 D.~Chi, M.~Costa, L.~Zhao, and N.~Badler.
-\newblock The emote model for effort and shape.
+\newblock The {EMOTE} model for effort and shape.
 \newblock In {\em Proceedings of the 27th Annual Conference on Computer
   Graphics and Interactive Techniques}, SIGGRAPH '00, pages 173--182, New York,
   NY, USA, 2000. ACM Press/Addison-Wesley Publishing Co.
@@ -158,7 +158,7 @@ G.~S. Choudhury, M.~Droetboom, T.~DiLauro, I.~Fujinaga, and B.~Harrington.
 
 \bibitem{crockford2006application}
 D.~Crockford.
-\newblock The application/json media type for javascript object notation
+\newblock The application/json media type for {JavaScript} object notation
   (json).
 \newblock 2006.
 
@@ -192,8 +192,8 @@ J.~J. Garrett et~al.
 
 \bibitem{phonegapBook}
 R.~Ghatol and Y.~Patel.
-\newblock {\em Beginning PhoneGap: Mobile Web Framework for JavaScript and
-  HTML5}.
+\newblock {\em Beginning {PhoneGap}: mobile web framework for {JavaScript} and
+  {HTML5}}.
 \newblock Apress, Berkely, CA, USA, 1st edition, 2012.
 
 \bibitem{gomez2004affective}
@@ -214,7 +214,7 @@ M.~Good et~al.
 
 \bibitem{java}
 J.~Gosling.
-\newblock {\em The Java language specification}.
+\newblock {\em The {Java} language specification}.
 \newblock Addison-Wesley Professional, 2000.
 
 \bibitem{guest2005labanotation}
@@ -249,21 +249,19 @@ E.~Holder.
 
 \bibitem{GithubMusicScoring}
 E.~Holder.
-\newblock Musicscoring.
+\newblock {MusicScoring}.
 \newblock \url{https://github.com/xwsxethan/MusicScoring}, 2 2015.
 
 \bibitem{holder2013cloudASE}
 E.~Holder, E.~Shah, M.~Davoodi, and E.~Tilevich.
-\newblock Cloud twin: Native execution of android applications on the windows
-  phone.
+\newblock Cloud twin: Native execution of {Android} applications on the
+  {Windows Phone}.
 \newblock In {\em Automated Software Engineering (ASE), 2013 IEEE/ACM 28th
   International Conference on}, pages 598--603. IEEE, 2013.
 
 \bibitem{holder2014native}
 E.~G. Holder.
-\newblock {\em Native Execution of Mobile Applications Across Platforms}.
-\newblock PhD thesis, Virginia Polytechnic Institute and State University,
-  2014.
+\newblock Native execution of mobile applications across platforms, 2014.
 
 \bibitem{hutchinson1996labanotation}
 A.~Hutchinson.
@@ -319,7 +317,7 @@ S.~T. Madsen and G.~Widmer.
 
 \bibitem{FinaleNotepad}
 {Makemusic Inc.}
-\newblock Finale notepad.
+\newblock {Finale Notepad}.
 \newblock \url{http://www.finalemusic.com/products/finale-notepad/}, 3 2015.
 
 \bibitem{MusicXML}
@@ -341,17 +339,17 @@ M.~Mauch and M.~Levy.
 
 \bibitem{MuseScore}
 {MuseScore BVBA}.
-\newblock Musescore share your sheet music.
+\newblock {MuseScore} share your sheet music.
 \newblock \url{https://musescore.com/}, 2015.
 
 \bibitem{MusicTheoryNet}
 {MusicTheory.net LLC}.
-\newblock Musictheory.net.
+\newblock {MusicTheory.net}.
 \newblock \url{http://www.musictheory.net/}, 2015.
 
 \bibitem{nguyen2007sloc}
 V.~Nguyen, S.~Deeds-Rubin, T.~Tan, and B.~Boehm.
-\newblock A sloc counting standard.
+\newblock A {SLOC} counting standard.
 \newblock In {\em COCOMO II Forum}, volume 2007, 2007.
 
 \bibitem{north1999can}
@@ -362,17 +360,17 @@ A.~C. North and D.~J. Hargreaves.
 
 \bibitem{NotationSoft}
 {Notation Software Germany}.
-\newblock Notation composer.
+\newblock {Notation Composer}.
 \newblock \url{http://www.notation.com/NotationComposer.php}, 2014.
 
 \bibitem{NYSSMA}
 {NYSSMA New York State School Music Association}.
-\newblock Nyssma new york state school music association.
+\newblock {NYSSMA New York State School Music Association}.
 \newblock \url{http://www.nyssma.org/}, 2015.
 
 \bibitem{mysql}
 {Oracle Corporation}.
-\newblock Mysql the world's most popular open source database.
+\newblock {MySQL} the world's most popular open source database.
 \newblock \url{https://www.mysql.com/}, 2015.
 
 \bibitem{orr2001relationship}
@@ -429,7 +427,7 @@ E.~D. Scheirer, R.~B. Watson, and B.~L. Vercoe.
 
 \bibitem{SMT}
 {Society for Music Theory}.
-\newblock Mto a journal for the society for music theory.
+\newblock {MTO a Journal for the Society for Music Theory}.
 \newblock \url{http://www.mtosmt.org/index.php}, 2015.
 
 \bibitem{DataTables}
@@ -526,7 +524,7 @@ J.~C. Venter, M.~D. Adams, E.~W. Myers, P.~W. Li, R.~J. Mural, G.~G. Sutton,
 
 \bibitem{SharpEye}
 {Visiv}.
-\newblock Sharpeye music scanning.
+\newblock {SharpEye Music Scanning}.
 \newblock \url{http://www.visiv.co.uk/}, 2015.
 
 \bibitem{Concert}
