@@ -159,7 +159,7 @@ G.~S. Choudhury, M.~Droetboom, T.~DiLauro, I.~Fujinaga, and B.~Harrington.
 \bibitem{crockford2006application}
 D.~Crockford.
 \newblock The application/json media type for {JavaScript} object notation
-  (json).
+  ({JSON}).
 \newblock 2006.
 
 \bibitem{Cuthbert2011}
@@ -261,7 +261,9 @@ E.~Holder, E.~Shah, M.~Davoodi, and E.~Tilevich.
 
 \bibitem{holder2014native}
 E.~G. Holder.
-\newblock Native execution of mobile applications across platforms, 2014.
+\newblock Native execution of mobile applications across platforms.
+\newblock {Honors Bachelor's Thesis}, Virginia Polytechnic Institute and State
+  University, May 2014.
 
 \bibitem{hutchinson1996labanotation}
 A.~Hutchinson.
