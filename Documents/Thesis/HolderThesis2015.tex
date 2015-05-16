@@ -95,7 +95,7 @@ Ethan G. Holder
 
 \vfill
 
-Dissertation submitted to the Faculty of the \\
+Thesis submitted to the Faculty of the \\
 Virginia Polytechnic Institute and State University \\
 in partial fulfillment of the requirements for the degree of
 
@@ -103,7 +103,7 @@ in partial fulfillment of the requirements for the degree of
 
 Master of Science \\
 in \\
-Computer Science
+Computer Science and Applications
 
 \vfill
 
@@ -162,7 +162,7 @@ That this work received support from a Virginia Tech ICAT SEAD grant.
 
 \chapter*{Dedication}
 
-\thispagestyle{empty}
+%\thispagestyle{empty}
 
 \begin{center}
 
@@ -170,7 +170,9 @@ That this work received support from a Virginia Tech ICAT SEAD grant.
 
 %This thesis is dedicated to the memories of Robert Brooks Nance, Katherine Gayle Nance, and Durward Alexander Holder. You are deeply loved and sorely missed.  
 
-\textit{To the memory of Coppertone Holder, the standard by which all other pets shall be measured.}
+\textit{To the memory of Coppertone Holder,}
+
+\textit{the standard by which all other pets shall be measured.}
 
 \vfill
 
@@ -180,7 +182,7 @@ That this work received support from a Virginia Tech ICAT SEAD grant.
 
 \chapter*{Acknowledgments}
 
-\thispagestyle{empty}
+%\thispagestyle{empty}
 
 I have not experienced anything in this world quite like the publication of my master's thesis. It has taken only my last two years of graduate school to accomplish, but it has brought me (kicking and screaming at times) further along in those two years than I could have possibly imagined. This process took its toll many times not only on myself, but on all of those close to me. Thus, I'd like to take a moment to graciously acknowledge and thank all of those that had a hand in both shaping my research and keeping my sanity.
 
@@ -921,11 +923,15 @@ This paper presented musiplectics, a new computational paradigm, that systematic
 
 % If you are using BibTeX, uncomment the following:
 
+
+\pagebreak
+
 \nocite{*}
 %\bibliographystyle{abbrvnat}
 \bibliographystyle{abbrv}
-\markright{Ethan G. Holder  \hfill Chapter Bibliography \hfill}
+\markright{Ethan G. Holder  \hfill Bibliography \hfill}
 %\thebibliography{HolderThesis2015}
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliography{HolderThesis2015}
 
 % Otherwise, uncomment the following:
@@ -939,13 +945,13 @@ This paper presented musiplectics, a new computational paradigm, that systematic
 \appendix
 
 \chapter{Complexity Parameters Example}
-\markright{Ethan G. Holder  \hfill Appendix Complexity Parameters Example \hfill}
+\markright{Ethan G. Holder  \hfill Appendix A Complexity Parameters Example \hfill}
 \label{sec:appcomplexity}
 
 \lstinputlisting[language=xml,caption={The full xml file of complexity parameters for beginner B$\flat$ Clarinet.},label={xmlexample}]{Beginner.xml}
 
 \chapter{External Survey}
-\markright{Ethan G. Holder  \hfill Appendix External Survey \hfill}
+\markright{Ethan G. Holder  \hfill Appendix B External Survey \hfill}
 \label{sec:appsurvey}
 
 \includepdf[pages=-,scale=.8,pagecommand={}]{MusicScoringSurvey.pdf}
