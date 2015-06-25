@@ -7,23 +7,23 @@
 \BOOKMARK [2][-]{subsection.3.2}{Music Scan \046 Search}{section.3}% 7
 \BOOKMARK [2][-]{subsection.3.3}{Music Classification}{section.3}% 8
 \BOOKMARK [1][-]{section.4}{Computational Model for Music Complexity}{}% 9
-\BOOKMARK [1][-]{section.5}{Proof of Concept}{}% 10
-\BOOKMARK [2][-]{subsection.5.1}{Design Overview}{section.5}% 11
-\BOOKMARK [2][-]{subsection.5.2}{Implementation Details}{section.5}% 12
-\BOOKMARK [1][-]{section.6}{Evaluation}{}% 13
-\BOOKMARK [2][-]{subsection.6.1}{Clarinet Complexity Parameterization}{section.6}% 14
-\BOOKMARK [2][-]{subsection.6.2}{External Survey}{section.6}% 15
-\BOOKMARK [2][-]{subsection.6.3}{Graded Music Pieces for Comparison}{section.6}% 16
-\BOOKMARK [2][-]{subsection.6.4}{Optical Character Recognition \(OCR\)}{section.6}% 17
-\BOOKMARK [1][-]{section.7}{Discussion}{}% 18
-\BOOKMARK [2][-]{subsection.7.1}{Manually Graded Pieces and Their Calculated Complexity Scores}{section.7}% 19
-\BOOKMARK [2][-]{subsection.7.2}{Matched and OCR Generated MusicXML}{section.7}% 20
-\BOOKMARK [2][-]{subsection.7.3}{Website Usability}{section.7}% 21
-\BOOKMARK [1][-]{section.8}{Future Work}{}% 22
-\BOOKMARK [2][-]{subsection.8.1}{Expanding Instrument Complexity Parameters}{section.8}% 23
-\BOOKMARK [2][-]{subsection.8.2}{Mapping Separate Parts and Instruments}{section.8}% 24
-\BOOKMARK [2][-]{subsection.8.3}{Understanding Complexity Scores}{section.8}% 25
-\BOOKMARK [2][-]{subsection.8.4}{Integrating Complexity Scores with Sources}{section.8}% 26
-\BOOKMARK [2][-]{subsection.8.5}{Including More Input Formats}{section.8}% 27
-\BOOKMARK [2][-]{subsection.8.6}{Measuring Complexity From Physiological Signals}{section.8}% 28
-\BOOKMARK [1][-]{section.9}{Conclusions}{}% 29
+\BOOKMARK [1][-]{section.5}{Use Case}{}% 10
+\BOOKMARK [1][-]{section.6}{Proof of Concept}{}% 11
+\BOOKMARK [2][-]{subsection.6.1}{Design Overview}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.2}{Implementation Details}{section.6}% 13
+\BOOKMARK [1][-]{section.7}{Evaluation}{}% 14
+\BOOKMARK [2][-]{subsection.7.1}{Clarinet Complexity Parameterization}{section.7}% 15
+\BOOKMARK [2][-]{subsection.7.2}{External Survey}{section.7}% 16
+\BOOKMARK [2][-]{subsection.7.3}{Graded Music Pieces for Comparison}{section.7}% 17
+\BOOKMARK [1][-]{section.8}{Discussion}{}% 18
+\BOOKMARK [2][-]{subsection.8.1}{Manually Graded Pieces and Their Calculated Complexity Scores}{section.8}% 19
+\BOOKMARK [2][-]{subsection.8.2}{Website Usability}{section.8}% 20
+\BOOKMARK [1][-]{section.9}{Future Work}{}% 21
+\BOOKMARK [2][-]{subsection.9.1}{Expanding Instrument Complexity Parameters}{section.9}% 22
+\BOOKMARK [2][-]{subsection.9.2}{Mapping Separate Parts and Instruments}{section.9}% 23
+\BOOKMARK [2][-]{subsection.9.3}{Understanding Complexity Scores}{section.9}% 24
+\BOOKMARK [2][-]{subsection.9.4}{Integrating Complexity Scores with Sources}{section.9}% 25
+\BOOKMARK [2][-]{subsection.9.5}{Including More Input Formats}{section.9}% 26
+\BOOKMARK [2][-]{subsection.9.6}{Measuring Complexity From Physiological Signals}{section.9}% 27
+\BOOKMARK [1][-]{section.10}{Conclusions}{}% 28
+\BOOKMARK [1][-]{appendix.A}{Evaluating the Accuracy of Music Optical Character Recognition \(OCR\) Software}{}% 29

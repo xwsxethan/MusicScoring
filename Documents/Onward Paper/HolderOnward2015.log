@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2014.12.2)  3 APR 2015 06:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/Debian) (preloaded format=pdflatex 2015.4.10)  25 JUN 2015 17:55
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -427,44 +427,137 @@ Package: harmony 2007/05/04
 \nbxh=\box49
 \nbxi=\box50
 )
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 137.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/changes/changes.sty
+Package: changes 2013/08/13 v2.0.2 changes-Paket
+
+*** changes-Paket 2013/08/13 v2.0.2 ***
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/05/25 v2.7 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks27
+\XKV@tempa@toks=\toks28
+)
+\XKV@depth=\count137
+File: xkeyval.tex 2014/05/25 v2.7 key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/xifthen/xifthen.sty
+Package: xifthen 2009/04/17 v1.3 Extended ifthen features
+
+(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count139
+\calc@Bcount=\count140
+\calc@Adimen=\dimen142
+\calc@Bdimen=\dimen143
+\calc@Askip=\skip81
+\calc@Bskip=\skip82
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
+\calc@Ccount=\count141
+\calc@Cskip=\skip83
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+Package: ifmtarg 2009/09/02 v1.2a check for an empty argument
+))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdfcolmk.sty
+Package: pdfcolmk 2008/08/11 v1.2 Color support for pdfTeX via marks (HO)
+Package pdfcolmk Info: The color stack of pdfTeX >= 1.40 is used. Therefore
+(pdfcolmk)             this package is not necessary and not loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box51
+\UL@hyphenbox=\box52
+\UL@skip=\skip84
+\UL@hook=\toks29
+\UL@height=\dimen144
+\UL@pe=\count142
+\UL@pixel=\dimen145
+\ULC@box=\box53
+Package: ulem 2012/05/18
+\ULdepth=\dimen146
+)
+\c@Changes@AuthorCount=\count143
+\c@Changes@Author=\count144
+\c@Changes@AddCount=\count145
+\c@Changes@DeleteCount=\count146
+\c@Changes@ReplaceCount=\count147
+
+(/usr/share/texlive/texmf-dist/tex/latex/truncate/truncate.sty
+Package: truncate 2001/08/20  ver 3.6
+\@Trunc@RestHyph=\toks30
+)
+\Changes@Len@summ=\skip85
+)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
 )
 (./HolderOnward2015.aux)
 \openout1 = `HolderOnward2015.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 60.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count137
-\scratchdimen=\dimen142
-\scratchbox=\box51
-\nofMPsegments=\count138
-\nofMParguments=\count139
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count140
-\MPscratchDim=\dimen143
-\MPnumerator=\count141
-\makeMPintoPDFobject=\count142
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count148
+\scratchdimen=\dimen147
+\scratchbox=\box54
+\nofMPsegments=\count149
+\nofMParguments=\count150
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count151
+\MPscratchDim=\dimen148
+\MPnumerator=\count152
+\makeMPintoPDFobject=\count153
+\everyMPtoPDFconversion=\toks32
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -480,9 +573,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count143
-\AtBeginShipoutBox=\box52
-Package hyperref Info: Link coloring OFF on input line 55.
+\c@lstlisting=\count154
+\AtBeginShipoutBox=\box55
+Package hyperref Info: Link coloring OFF on input line 60.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -490,49 +583,84 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count144
+\c@section@level=\count155
 )
-LaTeX Info: Redefining \ref on input line 55.
-LaTeX Info: Redefining \pageref on input line 55.
-LaTeX Info: Redefining \nameref on input line 55.
+LaTeX Info: Redefining \ref on input line 60.
+LaTeX Info: Redefining \pageref on input line 60.
+LaTeX Info: Redefining \nameref on input line 60.
 
 (./HolderOnward2015.out) (./HolderOnward2015.out)
 \@outlinefile=\write3
 \openout3 = `HolderOnward2015.out'.
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 91.
-LaTeX Font Info:    Try loading font information for U+msa on input line 96.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
+ (./HolderOnward2015.loc
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 96.
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 101.
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+Overfull \hbox (1599.50453pt too wide) detected at line 9
+\OT1/ptm/m/n/10 The length of a piece can test the performer's endurance bounda
+ries, particularly for wind instruments, and as such, serves as an integral com
+ponent of the overall complexity. If however, the length is to be disregarded, 
+one can simply divide the complexity score by the music piece's length, thus re
+porting the average complexity. There can be value in reporting both the overal
+l and average complexity, a proposition to be verified by future research. 
+ []
 
+
+Overfull \hbox (1058.27713pt too wide) detected at line 12
+\OT1/ptm/m/n/10 We provide these parameters simply as an example used to realiz
+e our proof-of-concept, thus allowing us to begin initial testing with the over
+all system. Moving forward, we plan to parameterize our system with the paramet
+ers derived from surveying experts, as discussed in more detail in sections []7
+.2[] and []9.1[]. 
+ []
+
+
+Overfull \hbox (1509.8497pt too wide) detected at line 13
+\OT1/ptm/m/n/10 It would be trivial enough to test with all our levels, but for
+ the sake of brevity we only utilized the beginner level and only B$\OML/cmm/m/
+it/10 [$ \OT1/ptm/m/n/10 Clarinet in our tests. Section []9.1[] discusses areas
+ of future work with more settings and more instruments. Additionally, the onli
+ne reference implementation features music pieces with multiple instruments and
+ the ability to generate complexity scores for each level to further showcase t
+his possibility. 
+ []
+
+)
+\tf@loc=\write4
+\openout4 = `HolderOnward2015.loc'.
+
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<ComputationalThinkingAnalogy.png, id=135, 397.485pt x 252.945pt>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 113.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 126.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 126.
+ [2
+
+]
+<ComputationalThinkingAnalogy.png, id=176, 397.485pt x 252.945pt>
 File: ComputationalThinkingAnalogy.png Graphic file (type png)
 
 <use ComputationalThinkingAnalogy.png>
-Package pdftex.def Info: ComputationalThinkingAnalogy.png used on input line 13
-5.
+Package pdftex.def Info: ComputationalThinkingAnalogy.png used on input line 16
+0.
 (pdftex.def)             Requested size: 236.88062pt x 150.74536pt.
- [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -549,31 +677,57 @@ Package pdftex.def Info: ComputationalThinkingAnalogy.png used on input line 13
                                        \else \@outputpage \fi \global \@mpar...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-...
-l.191 N
-       otes are placed into measures. A measure is a uniform unit of time th...
- <./ComputationalThinkingAnalogy.png>]
+l.215 
+       <./ComputationalThinkingAnalogy.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 210.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 235.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 210.
- [3] [4]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 235.
+ [4] [5]
+<TwinkleTwinkleLittleStarCropped.png, id=258, 517.935pt x 259.97125pt>
+File: TwinkleTwinkleLittleStarCropped.png Graphic file (type png)
+
+<use TwinkleTwinkleLittleStarCropped.png>
+Package pdftex.def Info: TwinkleTwinkleLittleStarCropped.png used on input line
+ 315.
+(pdftex.def)             Requested size: 236.88062pt x 118.90196pt.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+<to be read again> \AtBegShi@Output 
+                                    \endgroup \set@typeset@protect 
+\@outputpage ...width {\@thefoot }\color@endbox }}
+                                                  \global \let \if@newlist \...
+
+\@outputdblcol ...\@combinedblfloats \@outputpage 
+                                                  \begingroup \@dblfloatplac...
+
+\@opcol ->\if@twocolumn \@outputdblcol 
+                                       \else \@outputpage \fi \global \@mpar...
+<output> ...specialoutput \else \@makecol \@opcol 
+                                                  \@startcolumn \@whilesw \i...
+...
+l.322 T
+       he next step is to multiply these weights by each regular multiplier,...
+ <./TwinkleTwinkleLittleStarCropped.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-<JoinedCropped.png, id=199, 523.4757pt x 379.4175pt>
+<JoinedCropped.png, id=273, 523.4757pt x 379.4175pt>
 File: JoinedCropped.png Graphic file (type png)
  <use JoinedCropped.png>
-Package pdftex.def Info: JoinedCropped.png used on input line 291.
+Package pdftex.def Info: JoinedCropped.png used on input line 348.
 (pdftex.def)             Requested size: 236.88062pt x 171.69154pt.
 
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -591,31 +745,14 @@ has been already used, duplicate ignored
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
 ...
-l.304 U
-       sing the specified weights, the system calculates the complexity by t...
+l.359 R
+       ecall that our system can be parameterized with different complexity ...
  <./JoinedCropped.png>]
-Underfull \vbox (badness 3482) has occurred while \output is active []
+Underfull \vbox (badness 2221) has occurred while \output is active []
 
- [6pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-<to be read again> \AtBegShi@Output 
-                                    \endgroup \set@typeset@protect 
-\@outputpage ...width {\@thefoot }\color@endbox }}
-                                                  \global \let \if@newlist \...
-
-\@outputdblcol ...\@combinedblfloats \@outputpage 
-                                                  \begingroup \@dblfloatplac...
-
-\@opcol ->\if@twocolumn \@outputdblcol 
-                                       \else \@outputpage \fi \global \@mpar...
-<output> ...specialoutput \else \@makecol \@opcol 
-                                                  \@startcolumn \@whilesw \i...
-l.382 
-      ] [7pdfTeX warning (ext4): destination with the same identifier (name{tab
-le.2}) has been already used, duplicate ignored
+ [8]
+[9pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -631,9 +768,11 @@ le.2}) has been already used, duplicate ignored
                                        \else \@outputpage \fi \global \@mpar...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.503 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.3
-}) has been already used, duplicate ignored
+...
+l.509 B
+       ased on this assumption, experts, musicians, and educators seem to ha...
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
+ been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -649,9 +788,11 @@ l.503
                                        \else \@outputpage \fi \global \@mpar...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.503 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.4
-}) has been already used, duplicate ignored
+...
+l.509 B
+       ased on this assumption, experts, musicians, and educators seem to ha...
+pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
+ been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -667,9 +808,11 @@ l.503
                                        \else \@outputpage \fi \global \@mpar...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.503 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.5
-}) has been already used, duplicate ignored
+...
+l.509 B
+       ased on this assumption, experts, musicians, and educators seem to ha...
+pdfTeX warning (ext4): destination with the same identifier (name{table.4}) has
+ been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -685,32 +828,47 @@ l.503
                                        \else \@outputpage \fi \global \@mpar...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.503 
-      ] <GradesVsComplexityScores.png, id=280, 680.5425pt x 463.7325pt>
+...
+l.509 B
+       ased on this assumption, experts, musicians, and educators seem to ha...
+pdfTeX warning (ext4): destination with the same identifier (name{table.5}) has
+ been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+<to be read again> \AtBegShi@Output 
+                                    \endgroup \set@typeset@protect 
+\@outputpage ...width {\@thefoot }\color@endbox }}
+                                                  \global \let \if@newlist \...
+
+\@outputdblcol ...\@combinedblfloats \@outputpage 
+                                                  \begingroup \@dblfloatplac...
+
+\@opcol ->\if@twocolumn \@outputdblcol 
+                                       \else \@outputpage \fi \global \@mpar...
+<output> ...specialoutput \else \@makecol \@opcol 
+                                                  \@startcolumn \@whilesw \i...
+...
+l.509 B
+       ased on this assumption, experts, musicians, and educators seem to ha...
+] <GradesVsComplexityScores.png, id=361, 680.5425pt x 463.7325pt>
 File: GradesVsComplexityScores.png Graphic file (type png)
 
 <use GradesVsComplexityScores.png>
-Package pdftex.def Info: GradesVsComplexityScores.png used on input line 506.
+Package pdftex.def Info: GradesVsComplexityScores.png used on input line 563.
 (pdftex.def)             Requested size: 236.88062pt x 161.41014pt.
 
-<GradesVsAverageComplexityScoresSTD.png, id=281, 680.5425pt x 463.7325pt>
+<GradesVsAverageComplexityScoresSTD.png, id=362, 680.5425pt x 463.7325pt>
 File: GradesVsAverageComplexityScoresSTD.png Graphic file (type png)
 
 <use GradesVsAverageComplexityScoresSTD.png>
 Package pdftex.def Info: GradesVsAverageComplexityScoresSTD.png used on input l
-ine 513.
+ine 570.
 (pdftex.def)             Requested size: 236.88062pt x 161.41014pt.
 
-Overfull \hbox (3.51784pt too wide) in paragraph at lines 529--539
- [][] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/03/04 1.5c listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/03/04 1.5c listings language file
-) [8pdfTeX warning (ext4): destination with the same identifier (name{table.6})
+ [10pdfTeX warning (ext4): destination with the same identifier (name{table.6})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -727,9 +885,12 @@ File: lstlang1.sty 2014/03/04 1.5c listings language file
                                        \else \@outputpage \fi \global \@mpar...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.556 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-3}) has been already used, duplicate ignored
+l.663 
+      ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11pdfTeX warning (ext4): destination with the same identifier (name{figure.4}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -745,56 +906,7 @@ l.556
                                        \else \@outputpage \fi \global \@mpar...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.556 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-4}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-<to be read again> \AtBegShi@Output 
-                                    \endgroup \set@typeset@protect 
-\@outputpage ...width {\@thefoot }\color@endbox }}
-                                                  \global \let \if@newlist \...
-
-\@outputdblcol ...\@combinedblfloats \@outputpage 
-                                                  \begingroup \@dblfloatplac...
-
-\@opcol ->\if@twocolumn \@outputdblcol 
-                                       \else \@outputpage \fi \global \@mpar...
-<output> ...specialoutput \else \@makecol \@opcol 
-                                                  \@startcolumn \@whilesw \i...
-l.556 
-       <./GradesVsComplexityScores.png> <./GradesVsAverageComplexityScoresSTD.p
-ng>] <DifferenceOCR.png, id=300, 678.3744pt x 462.528pt>
-File: DifferenceOCR.png Graphic file (type png)
-
-<use DifferenceOCR.png>
-Package pdftex.def Info: DifferenceOCR.png used on input line 574.
-(pdftex.def)             Requested size: 236.88062pt x 161.5061pt.
- <PercentageOCR.png, id=301, 678.3744pt x 462.528pt>
-File: PercentageOCR.png Graphic file (type png)
-
-<use PercentageOCR.png>
-Package pdftex.def Info: PercentageOCR.png used on input line 581.
-(pdftex.def)             Requested size: 236.88062pt x 161.5061pt.
- [9pdfTeX warning (ext4): destination with the same identifier (name{table.7}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-<to be read again> \AtBegShi@Output 
-                                    \endgroup \set@typeset@protect 
-\@outputpage ...width {\@thefoot }\color@endbox }}
-                                                  \global \let \if@newlist \...
-
-\@outputdblcol ...\@combinedblfloats \@outputpage 
-                                                  \begingroup \@dblfloatplac...
-
-\@opcol ->\if@twocolumn \@outputdblcol 
-                                       \else \@outputpage \fi \global \@mpar...
-<output> ...specialoutput \else \@makecol \@opcol 
-                                                  \@startcolumn \@whilesw \i...
-l.607 
+l.699 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 5}) has been already used, duplicate ignored
 
@@ -812,52 +924,18 @@ l.607
                                        \else \@outputpage \fi \global \@mpar...
 <output> ...specialoutput \else \@makecol \@opcol 
                                                   \@startcolumn \@whilesw \i...
-l.607 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-6}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-<to be read again> \AtBegShi@Output 
-                                    \endgroup \set@typeset@protect 
-\@outputpage ...width {\@thefoot }\color@endbox }}
-                                                  \global \let \if@newlist \...
-
-\@outputdblcol ...\@combinedblfloats \@outputpage 
-                                                  \begingroup \@dblfloatplac...
-
-\@opcol ->\if@twocolumn \@outputdblcol 
-                                       \else \@outputpage \fi \global \@mpar...
-<output> ...specialoutput \else \@makecol \@opcol 
-                                                  \@startcolumn \@whilesw \i...
-l.607 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-7}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-<to be read again> \AtBegShi@Output 
-                                    \endgroup \set@typeset@protect 
-\@outputpage ...width {\@thefoot }\color@endbox }}
-                                                  \global \let \if@newlist \...
-
-\@outputdblcol ...\@combinedblfloats \@outputpage 
-                                                  \begingroup \@dblfloatplac...
-
-\@opcol ->\if@twocolumn \@outputdblcol 
-                                       \else \@outputpage \fi \global \@mpar...
-<output> ...specialoutput \else \@makecol \@opcol 
-                                                  \@startcolumn \@whilesw \i...
-l.607 
-       <./DifferenceOCR.png> <./PercentageOCR.png>] [10] [11]
-Underfull \vbox (badness 2189) has occurred while \output is active []
-
-
-(./HolderOnward2015.bbl
+l.699 
+       <./GradesVsComplexityScores.png> <./GradesVsAverageComplexityScoresSTD.p
+ng>] [12] (./HolderOnward2015.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no „ in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[13]
 Underfull \hbox (badness 5175) in paragraph at lines 85--88
 []\OT1/ptm/m/n/9 E. Holder.  Mu-sic-scor-ing.  []$\OT1/cmtt/m/n/9 https : / / g
 ithub . com /
@@ -869,10 +947,6 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
-
-[12]
 Underfull \hbox (badness 10000) in paragraph at lines 113--116
 []\OT1/ptm/m/n/9 Makemusic Inc.  Fi-nale notepad.  []$\OT1/cmtt/m/n/9 http : / 
 / www .
@@ -903,25 +977,134 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--159
 \OT1/cmtt/m/n/9 org / sites / default / files / files / S42 _ Clarinet %
  []
 
+
+Underfull \vbox (badness 1097) has occurred while \output is active []
+
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 722.
- [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 722.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.9255pt too high) has occurred while \output is active []
+
+
+[14]
+Overfull \hbox (3.51784pt too wide) in paragraph at lines 797--807
+ [][] 
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+<DifferenceOCR.png, id=474, 678.3744pt x 462.528pt>
+File: DifferenceOCR.png Graphic file (type png)
+ <use DifferenceOCR.png>
+Package pdftex.def Info: DifferenceOCR.png used on input line 842.
+(pdftex.def)             Requested size: 236.88062pt x 161.5061pt.
+
+<PercentageOCR.png, id=475, 678.3744pt x 462.528pt>
+File: PercentageOCR.png Graphic file (type png)
+ <use PercentageOCR.png>
+Package pdftex.def Info: PercentageOCR.png used on input line 849.
+(pdftex.def)             Requested size: 236.88062pt x 161.5061pt.
+
+[15pdfTeX warning (ext4): destination with the same identifier (name{table.7}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+<to be read again> \AtBegShi@Output 
+                                    \endgroup \set@typeset@protect 
+\@outputpage ...width {\@thefoot }\color@endbox }}
+                                                  \global \let \if@newlist \...
+
+\@outputdblcol ...\@combinedblfloats \@outputpage 
+                                                  \begingroup \@dblfloatplac...
+
+\@opcol ->\if@twocolumn \@outputdblcol 
+                                       \else \@outputpage \fi \global \@mpar...
+<output> ...specialoutput \else \@makecol \@opcol 
+                                                  \@startcolumn \@whilesw \i...
+l.861 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+<to be read again> \AtBegShi@Output 
+                                    \endgroup \set@typeset@protect 
+\@outputpage ...width {\@thefoot }\color@endbox }}
+                                                  \global \let \if@newlist \...
+
+\@outputdblcol ...\@combinedblfloats \@outputpage 
+                                                  \begingroup \@dblfloatplac...
+
+\@opcol ->\if@twocolumn \@outputdblcol 
+                                       \else \@outputpage \fi \global \@mpar...
+<output> ...specialoutput \else \@makecol \@opcol 
+                                                  \@startcolumn \@whilesw \i...
+l.861 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+<to be read again> \AtBegShi@Output 
+                                    \endgroup \set@typeset@protect 
+\@outputpage ...width {\@thefoot }\color@endbox }}
+                                                  \global \let \if@newlist \...
+
+\@outputdblcol ...\@combinedblfloats \@outputpage 
+                                                  \begingroup \@dblfloatplac...
+
+\@opcol ->\if@twocolumn \@outputdblcol 
+                                       \else \@outputpage \fi \global \@mpar...
+<output> ...specialoutput \else \@makecol \@opcol 
+                                                  \@startcolumn \@whilesw \i...
+l.861 
+       <./DifferenceOCR.png>]
+\Changes@OutFile=\write5
+\openout5 = `HolderOnward2015.soc'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 865.
+ [16pdfTeX warning (ext4): destination with the same identifier (name{figure.8}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+<to be read again> \AtBegShi@Output 
+                                    \endgroup \set@typeset@protect 
+\@outputpage ...width {\@thefoot }\color@endbox }}
+                                                  \global \let \if@newlist \...
+
+\@outputdblcol ...\@combinedblfloats \@outputpage 
+                                                  \begingroup \@dblfloatplac...
+
+\@opcol ->\if@twocolumn \@outputdblcol 
+                                       \else \@outputpage \fi \global \@mpar...
+<output> ...specialoutput \else \@makecol \@opcol 
+                                                  \@startcolumn \@whilesw \i...
+...
+l.865 \end{document}
+                     <./PercentageOCR.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 865.
  (./HolderOnward2015.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 722.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 722.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 865.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 865.
 Package rerunfilecheck Info: File `HolderOnward2015.out' has not changed.
-(rerunfilecheck)             Checksum: 84F6EC0C8C2454715704A915A5EF8584;2042.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 722.
+(rerunfilecheck)             Checksum: 1EEC9208C93E00D0E874FF3B5209ED80;2032.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 865.
  ) 
 Here is how much of TeX's memory you used:
- 10096 strings out of 493104
- 142942 string characters out of 6136932
- 303164 words of memory out of 5000000
- 13285 multiletter control sequences out of 15000+600000
- 34890 words of font info for 75 fonts, out of 8000000 for 9000
+ 11249 strings out of 493104
+ 159404 string characters out of 6136932
+ 327943 words of memory out of 5000000
+ 14359 multiletter control sequences out of 15000+600000
+ 34996 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,8n,45p,1211b,1200s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,9n,91p,1364b,1263s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
@@ -934,10 +1117,10 @@ tt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on HolderOnward2015.pdf (13 pages, 1182732 bytes).
+Output written on HolderOnward2015.pdf (16 pages, 1396557 bytes).
 PDF statistics:
- 464 PDF objects out of 1000 (max. 8388607)
- 420 compressed objects within 5 object streams
- 106 named destinations out of 1000 (max. 500000)
- 263 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 569 PDF objects out of 1000 (max. 8388607)
+ 505 compressed objects within 6 object streams
+ 130 named destinations out of 1000 (max. 500000)
+ 268 words of extra memory for PDF output out of 10000 (max. 10000000)
 

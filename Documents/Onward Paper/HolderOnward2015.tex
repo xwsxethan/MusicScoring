@@ -25,6 +25,11 @@
 %\usepackage{caption}
 \usepackage{placeins}
 \usepackage{harmony}
+\usepackage{color}
+\usepackage{changes}
+%\usepackage[final]{changes}
+
+%\setremarkmarkup{(#2)}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \lstset{frame=none, xleftmargin=15pt, stepnumber=1, numbers=left, numbersep=5pt,
@@ -53,6 +58,26 @@ basicstyle=\footnotesize\ttfamily, showstringspaces=false, morecomment=[l], math
 %%%%%%%%%%%%%%%%%%%%%%% END of LaTeX definitions %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+
+%%Changes from revisions. Should be removed following acceptance of revisions.
+
+\section*{Changes to the Paper}
+
+We would like to thank the reviewers for their thoughtful and helpful comments. Having revisited our presentation, we agree that at this stage our research can be most effectively presented as a case study; the limitations of available time and resources make it impossible for us to support the claims of broad applicability and utility of our approach at this phase of the project. Fortunately the expository nature of a case study seems to be well in-line with the stated objectives of the ONWARD! Conference.
+
+Specifically, we have added a concrete use case of using musiplectics to evaluate the complexity of a short, popular piece of music (Section \ref{sec:usecase}). To render the evaluation section more in-line with the changed structure of the paper and to free up space for the use case, we moved the evaluation of OCR out to an appendix. In addition, we have toned down the claims of generality throughout the paper.  Finally, we have addressed the main concerns raised by the reviewers as follows in the list of changes below, which can be found in the main body of the text, outlined in \color{blue} blue \color{black} .
+
+\listofchanges
+
+\vspace{0.2in}
+
+We have found the suggestions of learning the complexity from existing models/resources, as well as conducting a full-blown survey of stakeholders, as excellent future work directions. Although incisive and inspiring, these suggestions would be simply infeasible to follow within the timeline allotted for revisions. However, we do plan to execute the additional research suggested and report the results in a future publication, reporting on the more advanced stages of this project.
+
+Thank you for your time and consideration,\\
+Ethan Holder, Eli Tilevich, and Amy Gillick
+
+
+
 
 \permissiontopublish
 \conferenceinfo{ONWARD~'15}{October 25--30, 2015, Pittsburgh, Pennsylvania, USA} 
@@ -111,7 +136,7 @@ This paper introduces \emph{musiplectics}\footnote{musiplectics = music + plecti
 % \subsection{Motivation} 
 % \label{sec:motiv}
 
-Which piano concerto is more difficult: Rachmaninoff’s Second or Third? A newly appointed band director wonders if this new orchestral score is appropriate for a high school band, given that the clarinet and bassoon sections are quite advanced, while the flute and oboe sections are more novice. Music educators working on pedagogical guidelines for K-12 students are trying to decide whether a given piece belongs in the N or N+1 curricular level. A publisher wonders which audience to target when marketing new works, while the publisher's customers face great uncertainty when determining whether unfamiliar music matches their playing ability. Performers, band directors, educators, and publishers encounter these non-trivial questions throughout their professional careers. 
+Which piano concerto is more difficult: Rachmaninoff's Second or Third? A newly appointed band director wonders if this new orchestral score is appropriate for a high school band, given that the clarinet and bassoon sections are quite advanced, while the flute and oboe sections are more novice. Music educators working on pedagogical guidelines for K-12 students are trying to decide whether a given piece belongs in the N or N+1 curricular level. A publisher wonders which audience to target when marketing new works, while the publisher's customers face great uncertainty when determining whether unfamiliar music matches their playing ability. Performers, band directors, educators, and publishers encounter these non-trivial questions throughout their professional careers. 
 
 
 Unfortunately, determining the relative complexity of music is a non-trivial cognitive task. Additionally, methods in the current state of the art depend solely on individual opinions, a process influenced by personal biases and lacking common criteria. In other words, the only way to answer these questions in a viable way is to carefully analyze music scores by hand, a tedious, error-prone, and time-consuming process. The stakeholders at hand would rather spend their precious time on more creative pursuits.
@@ -175,7 +200,7 @@ By presenting our work, this paper makes the following contributions:
 \subsection{Paper Roadmap} 
 \label{sec:layout}
 
-The remainder of this paper is structured as follows. First, Section \ref{sec:background} presents background information on music to provide a base line for readers. Then, Section \ref{sec:related} highlights related work in this field. Next, Section \ref{sec:scoring} explains our basic model for determining music complexity. Afterwards, Section \ref{sec:proof} details the proof of concept's design and details. This leads into the evaluation Section \ref{sec:eval} which shows how we have tested this system and what preliminary results we have uncovered. Section \ref{sec:discus} interprets the results and discusses how our system compares to the state of the practice. Afterwards, Section \ref{sec:future} gives directions for future work. Finally, Section \ref{sec:conclu} presents our conclusions for this project.
+The remainder of this paper is structured as follows. First, Section \ref{sec:background} presents background information on music to provide a base line for readers. Then, Section \ref{sec:related} highlights related work in this field. Next, Section \ref{sec:scoring} explains our basic model for determining music complexity. \added[remark={Adding lead in text for the use case example section.}]{Using that model, Section \ref{sec:usecase} demonstrates a complexity score manually tabulated from a simple example piece.} Afterwards, Section \ref{sec:proof} explains the proof of concept's design and details. This leads into the evaluation Section \ref{sec:eval} which shows how we have tested this system and what preliminary results we have uncovered. Section \ref{sec:discus} interprets the results and discusses how our system compares to the state of the practice. Afterwards, Section \ref{sec:future} gives directions for future work. Finally, Section \ref{sec:conclu} presents our conclusions for this project.
 
 \section{Background} 
 \label{sec:background}
@@ -228,11 +253,11 @@ Multiple prior research efforts study various facets of music. Although relative
 \subsection{Complexity Analysis}
 \label{sec:relcom}
 
-The most relevant works to musiplectics are those that also seek to analyze the complexity of music in some way. A representative example is presented in reference \cite{Chiu2012}. This work seeks to automatically generate or predict the difficulty of a piano music piece. The authors apply regression theory over a set of features that cause difficulties for that specific instrument. Musiplectics leverages similar musical concepts to build up an aggregate measure of difficulty or complexity. However, our approach has a wider range of applicability, both in terms of musical instruments and playing proficiency, as well as portability, by embracing uniform types of complexity parameters. In other words complexity parameters in musiplectics encompass the cognitive and mechanical complexities for a given instrument. So all instruments have the same types of complexity parameters, which may take upon vastly different values.
+The most relevant works to musiplectics are those that also seek to analyze the complexity of music in some way. A representative example is presented in reference \cite{Chiu2012}. This work seeks to automatically generate or predict the difficulty of a piano music piece. The authors apply regression theory over a set of features \added[remark={Listing the features.}]{(playing speed, pitch entropy, distinct stroke rate, hand displacement rate, hand stretch, fingering complexity, polyphony rate, and altered note rate)} that cause difficulties for that specific instrument. Musiplectics leverages similar musical concepts to build up an aggregate measure of difficulty or complexity. However, our approach has a wider range of applicability, both in terms of musical instruments and playing proficiency, as well as portability, by embracing uniform types of complexity parameters. In other words complexity parameters in musiplectics encompass the cognitive and mechanical complexities for a given instrument, \added[remark={Explaining the difference with \cite{Chiu2012}'s features.}]{but the parameter types are agnostic to any basic instrument, rather than specific to piano}. So all instruments under musiplectics have the same types of complexity parameters, which may take upon vastly different values.
 
-Similar to \cite{Chiu2012}, \cite{Heijink2002} studies the complexity of playing guitar. Their work extracts features that determine difficulty when playing guitar. However, their focus lies more on the mechanical difficulties specifically associated with that instrument rather than broad ranging complexities of playing music on any instrument. Musiplectics also takes into account the playing proficiency of the player at hand.
+Similar to \cite{Chiu2012}, \cite{Heijink2002} studies the complexity of playing guitar. Their work extracts features that determine difficulty when playing guitar. However, their focus lies more on the mechanical difficulties specifically associated with \replaced[remark={Specifying guitar.}]{guitar (hand position, hand reposition, and finger span),}{ that instrument} rather than broad-ranging complexities of playing music on any instrument. Musiplectics also takes into account the playing proficiency of the player at hand.
 
-Another related approach to ours is \cite{Liou2010}. The authors analyze the complexity of the rhythmic components of various pieces of music. They utilize the L-system to breakdown the rhythm of a piece into a tree structure and then apply tree analysis algorithms to generate a score. Although musiplectics avoids complex algorithms for examining the rhythmic structure of a piece, it considers a full array of the elements of music scores rather than rhythm alone.
+Another related approach to ours is \cite{Liou2010}. The authors analyze the complexity of the rhythmic components of various pieces of music. They utilize the L-system to breakdown the rhythm of a piece into a tree structure and then apply tree analysis algorithms to generate a score. Although musiplectics avoids complex algorithms for examining the rhythmic structure of a piece, it considers a full array of the elements of music scores \added[remark={Specifying music elements.}]{including rhythm, along with intervals, dynamics, and other parameters} rather than rhythm alone.
 
 State organizations, such as \cite{VBODA} in Virginia and \cite{NYSSMA} in New York as well as others, similarly analyze music scores by hand, an activity which we hope to automate. These organizations govern K-12 schools in their respective states. They also list music pieces and their respective difficulty grades for district, regional, or state competitions for each K-12 grade level. Other organizations, such as the Royal Conservatory Music Development Program \cite{RoyalSyllabus}, offer similar pieces and respective grades as part of their level requirements and assessment regulations. Unlike state organizations, Royal Conservatory publishes their pieces and scores to the public, a provision that enables us to leverage them in evaluating our work.
 
@@ -248,7 +273,7 @@ Another area of overlap between musiplectics and music scanning is in translatio
 \subsection{Music Classification}
 \label{sec:relclass}
 
-Music classification presents another area of potential research overlap. Much research has previously dealt with using computers to understand music and thus classify into various genres. While the efforts of music classification are not the same as determining complexity, the approaches taken to classify certain pieces via machine learning and statistical methods are important, because they present means of automatically analyzing music. At some point musiplectics could potentially apply similar machine learning concepts to interpret what makes music complex (rather than decomposing music scores into individual elements and calculating their summary complexity) as well as leverage genre classification as another source of potential complexity.
+Music classification presents another area of potential research overlap. Much research has previously dealt with using computers to understand music and thus classify into various genres. While the efforts of music classification are not the same as determining complexity, the approaches taken to classify certain pieces via machine learning and statistical methods are important, because they present means of automatically analyzing music. At some point musiplectics could potentially apply similar machine learning concepts to interpret what makes music complex \added[remark={Part 1, leading into why we don't learn the model.}]{and generate our own model} (rather than decomposing music scores into individual elements and calculating their summary complexity) as well as leverage genre classification as another source of potential complexity. \added[remark={Part 2, why we didn't learn the model.}]{For now however, we focus on building our own model so as to first prove the viability of this approach and leave improving its accuracy as future work.}
 
 Cuthbert, Friza, and Friedland \cite{Cuthbert2011} for example focused heavily on using machine learning to classify different types of music. The authors can extract multiple features from a variety of input types and apply their theorem to successfully classify the genre of several inputs.
 
@@ -266,7 +291,7 @@ In Section \ref{sec:background} above, we discussed several fundamental music co
 
 The most straightforward approach to calculating an overall score is to assign whole number weights to each element perceived to be especially important (i.e., notes, intervals, dynamics, articulations, key signatures, and note durations) and add all the weights up. This scheme, however viable, fails to adequately reflect the experience of playing music. At their core, notes and intervals present distinct difficulties on their own, whereas dynamics, articulations, key signatures, and note durations only modify those difficulties. For instance, a small interval may seem easy on its own, but with changing dynamics, with differing articulations, in a strange key, or at a high tempo, that interval could become much more difficult.
 
-Hence, a more authentic approach to calculating an overall score is to only assign whole numbers weights to notes and intervals. These are still counted and summed up into a final score. However, dynamics, articulations, key signatures, and note durations become multipliers onto notes and intervals. Each dynamic, articulation, and key signature thus receives a multiplier weight that is a decimal (typically between 0 and 2). Those multipliers are applied to every occurrence of a note or interval.
+Hence, a more authentic approach to calculating an overall score is to only assign whole numbers weights to notes and intervals. These are still counted and summed up into a final score. However, dynamics, articulations, key signatures, and note durations become multipliers onto notes and intervals. Each dynamic, articulation, and key signature thus receives a multiplier weight that is a decimal (typically between 0 and 2). Those multipliers are applied to every occurrence of a note or interval. \added[remark={Added lead in text for the use case from the model.}]{An example of this process in action can be found in Section \ref{sec:usecase}.}
 
 Note duration is factored into the score as an average over all notes. The total amount of notes and associated duration in seconds is calculated at the end and applied as its own multiplier. The more notes in a given span of time, the higher the multiplier becomes.
 
@@ -275,6 +300,38 @@ This scheme captures the concept we envisioned that makes duration complex, exce
 Thus, our model adapts the note duration multiplier to be a multiplicative or fractional difference from one. If the average of notes per second in the piece is 1.5, then the multiplier remains 1.5. However, in the case of many long notes, the average of notes per second might be something closer to 0.5. In this case (when the average is less than 1), the fraction becomes its reciprocal, 2 in the example.
 
 Users cannot directly change this parameter as it is built into the model. However, they can still influence the degree to which this parameter affects the overall score. To that end, the user can parameterize note durations with a multiplier value that increases or reduces the impact of the note duration parameter. For the cases when the user is content with the built-in setting, the model applies the default value of 1.
+
+\added[remark={In regards to the correlation between complexity and length.}]{The length of a piece can test the performer's endurance boundaries, particularly for wind instruments, and as such, serves as an integral component of the overall complexity. If however, the length is to be disregarded, one can simply divide the complexity score by the music piece's length, thus reporting the average complexity. There can be value in reporting both the overall and average complexity, a proposition to be verified by future research.}
+
+\section{Use Case}
+\label{sec:usecase}
+
+\added[remark={Added this entire section to illustrate the scoring process.}]{Added a use case section.}
+
+To concretely illustrate how one can apply the computational model for music complexity described in Section \ref{sec:scoring}, we next work through a well-known and recognized example piece, Twinkle Twinkle Little Star, to generate its complexity score. The piece's musical score appears in Figure \ref{image:twinkle}. The majority of music educators would agree that this piece is straightforward to play on B$\flat$ Clarinet, even for beginners. Hence, we will use the beginner complexity parameters, defined later in Section \ref{sec:settings}, to calculate the piece's complexity. 
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.47\textwidth]{TwinkleTwinkleLittleStarCropped.png}
+		\caption{Twinkle Twinkle Little Star as an example piece for obtaining a complexity score.}
+		\label{image:twinkle}
+\end{figure}
+
+As step one, we determine the difficulty weights for notes. This piece comprises the following notes: C4, D4, E4, F4, G4, and A4. Based on the beginner settings, all notes but A4 are weighted as 1. A4 is weighted as 2, since its range is higher than that of the other notes.
+
+The next step is to multiply these weights by each regular multiplier, which are articulations, key signature, and dynamics. Since there are no articulations for any notes in this piece, and the no articulation multiplier is 1, the cumulative note weights remain the same. Similarly, since the key signature is C (no sharps or flats), the multiplier is 1, and once again the cumulative note weights remain unchanged.
+
+Since no dynamics are specified, the model assumes that it must have encountered a dynamic not previously accounted for (such as potentially \textbf{fff}). Thus, the multiplier for unknown dynamics is 1.5 across all notes. Now all notes but A4 have a cumulative weight of 1.5. A4 now has a cumulative weight of 3.
+
+The piece contains 38 notes with cumulative weight of 1.5 (C4-G4) and 4 notes with cumulative weight 3 (A4). Thus, the total score for notes is $(38$ $*$ $1.5)$ $+$ $(4$ $*$ $3)$ $=$ $69$. Next, we determine the difficulty weights for intervals.
+
+Interval weights are more complex, since they are not only based on the distance between notes, but also in which range of pitches that interval occurs. Ignoring gradations, this piece presents the following intervals on the first line: 1, 5, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2. The second line presents slightly different intervals as follows: 5, 1, 2, 1, 2, 1, 2, 4, 1, 2, 1, 2, 1, 2. Finally, the last line follows the same pattern as the first, with a 2 joining the second line to the last line. Based on where each interval occurs and the weights for beginner settings, all but 4 intervals receive weights identical to their distance. The 4 which do not receive this weight are major seconds to and from the note A4 on the first and last lines. These receive weights of 8, once again since A4 is in a higher range than the rest.
+
+Following the same steps as above, the articulation and key signature multipliers have no effect on the intervals. The dynamics multiplier increases each interval's cumulative weight by a factor of 1.5. Adding these up yields a total score for intervals of 148.5.
+
+Finally, the totals from notes (69) and intervals (148.5) must be modified by the note duration multiplier. The note duration multiplier represents the amount of notes played per second. It is calculated by dividing the total amount of notes (42) by the total amount of beats (48) and multiplying that total by the beats per second (2). In this case the note duration multiplier is 1.75. Thus, the total score from notes is $69 * 1.75 = 120.75$, and the total score from intervals is $148.5 * 1.75 = 259.875$. The overall complexity score is simply their sum, $120.75 + 259.875 = 380.625$ or simply 380, as shown in the online reference implementation.
+
+As mentioned before, one way to compute a complexity metric that is independent of the piece's length is to express the total complexity as an average over its length. For example, one may want to know the average complexity per second. In this piece, calculating this average would require dividing 380.625 by 24 seconds (48 beats / 2 beats per second = 24 seconds), yielding 15.859375 or simply 16. Whether such average complexity provides meaningful insights remains to be investigated as a future research direction.
 
 \section{Proof of Concept} 
 \label{sec:proof}
@@ -324,9 +381,9 @@ The frontend code is written in Javascript, HTML, and CSS. To minimize the amoun
 \section{Evaluation} 
 \label{sec:eval}
 
-The goal of our evaluation is to demonstrate that the reference implementation of musiplectics can be a useful tool for music educators. To that end, we ran our system with different parameterizations on a set of music scores, used in educational settings. Music educators have also ranked these same scores by hand, producing a baseline for comparison. As expected, even though the general trends reported by our tool corresponds to that provided by music educators, we have also observed some outliers. Some pieces turned out to have been much more complex on the relative scale than the pieces immediately preceding and following them in the rankings. These discrepancies can be explained either by immaturities of our implementation or by inaccuracies of ranking of music scores by hand. It is easy to overlook some really complex parts in the middle of a score when trying to assess its suitability for a given playing proficiency. While an automated tool analyzes scores in their entirety, producing the results based on an exhaustive analysis of each and every element.
+The goal of our evaluation is to demonstrate that the reference implementation of musiplectics can become a useful tool for music educators. To that end, we ran our system with different parameterizations on a set of music scores, used in educational settings. Music educators have also ranked these same scores by hand, producing a baseline for comparison. As expected, even though the general trends reported by our tool corresponds to that provided by music educators, we have also observed some outliers. Some pieces turned out to have been much more complex on the relative scale than the pieces immediately preceding and following them in the rankings. These discrepancies can be explained either by immaturities of our implementation or by inaccuracies of ranking of music scores by hand. It is easy to overlook some really complex parts in the middle of a score when trying to assess its suitability for a given playing proficiency. While an automated tool analyzes scores in their entirety, producing the results based on an exhaustive analysis of each and every element.
 
-We first specify the complexity parameters used in the experiments in \ref{sec:settings}. Then, we unveil the strategies one can follow to obtain the settings that represent a consensus among musicians in \ref{sec:survey}. Next, we describe the test pieces selected in \ref{sec:pieces}. Finally, we discuss the accuracy of the OCR program tested for suitability in musiplectics in \ref{sec:ocr}.
+We first specify the complexity parameters used in the experiments in \ref{sec:settings}. Then, we unveil the strategies one can follow to obtain the settings that represent a consensus among musicians in \ref{sec:survey}. Next, we describe the test pieces selected in \ref{sec:pieces}. \replaced[remark={Fixing the lead in text since the OCR section was moved.}]{Additionally, we discuss the accuracy of the OCR program tested for suitability in musiplectics as an appendix in \ref{sec:ocr}.}{ Finally, we discuss the accuracy of the OCR program tested for suitability in musiplectics in \ref{sec:ocr}.} 
 
 %Describe the preliminary settings used to score pieces based on clarinet and how we plan to refine them. Also talk about usability
 
@@ -335,9 +392,9 @@ We first specify the complexity parameters used in the experiments in \ref{sec:s
 
 Section \ref{sec:scoring} above explains the rationale behind complexity parameters. In particular, it differentiates between parameters, expressed as whole number weights and those which are decimal number multipliers. In that presentation, we did not link the parameters to any particular instrument. By contrast, in this Section, we discuss their specific application for a specific instrument, the B$\flat$ Clarinet.
 
-We decided to focus specifically on the clarinet, because it exhibits many forms of complexity and relates to many similar woodwind and brass instruments. Additionally, our own musical expertise favors this instrument above all others, making it possible for us to define our own complexity parameters with confidence and not requiring external confirmation.
+We decided to focus specifically on the clarinet, because it exhibits many forms of complexity and relates to many similar woodwind and brass instruments. Additionally, our own musical expertise favors this instrument above all others, making it possible for us to define our own complexity parameters with confidence and not requiring external confirmation. \added[remark={In regards to validating current settings and performing an in-depth survey.}]{We provide these parameters simply as an example used to realize our proof-of-concept, thus allowing us to begin initial testing with the overall system. Moving forward, we plan to parameterize our system with the parameters derived from surveying experts, as discussed in more detail in sections \ref{sec:survey} and \ref{sec:parameters}.}
 
-The initial complexity settings for B$\flat$ Clarinet were for beginners. Based on these values, complexity settings for other levels of B$\flat$ Clarinet were later adapted, but those levels largely changed only the associated weights. Because we utilized only the beginner settings in our tests, they are the only ones discussed below.
+The initial complexity settings for B$\flat$ Clarinet were for beginners. Based on these values, complexity settings for other levels of B$\flat$ Clarinet were later adapted, but those levels largely changed only the associated weights. \replaced[remark={In regards to utilizing more settings or instruments.}]{It would be trivial enough to test with all our levels, but for the sake of brevity we only utilized the beginner level and only B$\flat$ Clarinet in our tests. Section \ref{sec:parameters} discusses areas of future work with more settings and more instruments. Additionally, the online reference implementation features music pieces with multiple instruments and the ability to generate complexity scores for each level to further showcase this possibility.}{ Because we utilized only the beginner settings in our tests, they are the only ones discussed below.}
 
 Note complexities were broken up into the ranges and assigned weights, as shown in Table \ref{table:notes}. Intervals were similarly broken up further and assigned weights, as shown in Table \ref{table:intervals}.  
 
@@ -445,7 +502,7 @@ Dynamics and articulations were specified for those specific types mentioned pre
 \subsection{External Survey} 
 \label{sec:survey}
 
-Although the complexity parameterization presented in \ref{sec:settings} may be accurate, one would not be able to validate them empirically, as they reflect one's subjective personal experiences and beliefs. However, musiplectics this subjectivity, enabling individual musicians to specify the parameterizations that reflect their own individual understanding of their own or their students' proficiency.
+Although the complexity parameterization presented in \ref{sec:settings} may be accurate, one would not be able to validate them empirically, as they reflect one's subjective personal experiences and beliefs. However, musiplectics \added[remark={Left out the word embraces.}]{embraces} this subjectivity, enabling individual musicians to specify the parameterizations that reflect their own individual understanding of their own or their students' proficiency.
 
 As a logical consequence of the previous observation, it would be equally impossible to empirically validate the ``correctness'' of the computed complexity score of an analyzed piece. However, if stakeholders in a score can generally agree on its relative complexity, the resulting consensus can serve as a viable form of validation.
 
@@ -515,83 +572,85 @@ Figure \ref{image:gradecomplexity} displays the complexity score of each piece b
 		\label{image:gradeaverage}
 \end{figure}
 
-\subsection{Optical Character Recognition (OCR)}
-\label{sec:ocr}
+% \subsection{Optical Character Recognition (OCR)}
+% \label{sec:ocr}
 
-The ability to use music scores in PDF format would greatly enhance the usability of our reference implementation. However, this ability hinges on the accuracy of the music OCR software that can translate PDF into MusicXML. Hence, we empirically evaluated the accuracy of a widely used music OCR application to assess its suitability for our system. 
+% The ability to use music scores in PDF format would greatly enhance the usability of our reference implementation. However, this ability hinges on the accuracy of the music OCR software that can translate PDF into MusicXML. Hence, we empirically evaluated the accuracy of a widely used music OCR application \replaced[remark={In regards to what is being evaluated where.}]{separately from our evaluation of the system as a whole to assess OCR's suitability and reliability}{to assess its suitability} for our system.
 
-In our experiments, we used freely available music OCR software from Audiveris \cite{Audiveris}. We evaluated the reliability of this process as follows: find pre-matched PDF files with the correct MusicXML, convert the PDF files into a new MusicXML, and finally compare the correct and converted MusicXML to each other.
+% In our experiments, we used freely available music OCR software from Audiveris \cite{Audiveris}. We evaluated the reliability of this process as follows: find pre-matched PDF files with the correct MusicXML, convert the PDF files into a new MusicXML, and finally compare the correct and converted MusicXML to each other.
 
-The pre-matched PDF and MusicXML files we used are all from MuseScore \cite{MuseScore} and are listed in Table \ref{table:matched}. They were selected randomly from the list of single part pieces for clarinet. The MusicXML files came in .mxl (compressed MusicXML) format from MuseScore, and they were uniformly imported into Finale Notepad 2012 \cite{FinaleNotepad} to then export the uncompressed format for comparison. For this test we use only Audiveris for conversion.
-
-\begin{table}[ht!]
-	\centering
-    \begin{tabular}{| l | l |}
-        \hline
-    Title & Comp./Arr. \\ \hline
-    Dancing Clarinet & KRM \\ \hline
-	Mi Razon De Ser & Banda Central \\ \hline
-	Rudy & Jerry Goldsmith \\ \hline
-	The Hobbit: The Desolation of Smaug & Howard Shore \\ \hline
-	The Rose & Dan White \\
-        \hline
-    \end{tabular}
-	\caption{The works with matched PDF and MusicXML files from MuseScore chosen for testing OCR reliability along with their composer or arranger.}
-	\label{table:matched}
-\end{table} 
-
-         % Set your language (you can change the language for each code-block optionally)
-
-\begin{figure}[ht!]
-	\centering
-	\lstset{language=bash} 
-    \begin{lstlisting}
-    sdiff -B -b -s Original.xml OCR.xml | wc
-    \end{lstlisting}
-    \caption{The comparison command for MusicXML files.}
-    \label{image:sdiff}
-\end{figure}
-
-We make use of a file differencing tool with counts of words, lines, and characters as shown in Figure \ref{image:sdiff}, as well as a comparison of complexity scores to highlight the potential effects of the OCR process. We show the difference measurements for select pieces in Figure \ref{image:difference}. We also present the average across pieces for each difference in the same figure. Figure \ref{image:percentage} shows the difference expressed as the percentage of change from the values of the original MusicXML file. It also presents the average across pieces in the same figure.
+% The pre-matched PDF and MusicXML files we used are all from MuseScore \cite{MuseScore} and are listed in Table \ref{table:matched}. They were selected randomly from the list of single part pieces for clarinet. The MusicXML files came in .mxl (compressed MusicXML) format from MuseScore, and they were uniformly imported into Finale Notepad 2012 \cite{FinaleNotepad} to then export the uncompressed format for comparison. For this test we use only Audiveris for conversion.
 
 % \begin{table}[ht!]
 % 	\centering
-%     \begin{tabular}{| l | l | l | l | l |}
+%     \begin{tabular}{| l | l |}
 %         \hline
-%         Type & Words & Lines & Char's & Score \\ \hline
-%         Original & 20964 & 27451 & 580569 & 215546 \\ \hline
-%         Converted & 21584 & 30825 & 783894 & 298655 \\ \hline
-%         Difference & 10202 & 38200 & 736456 & 83109 \\ \hline
-%         Normalized & 0.4866 & 1.3916 & 1.2685 & 0.3856 \\
+%     Title & Comp./Arr. \\ \hline
+%     Dancing Clarinet & KRM \\ \hline
+% 	Mi Razon De Ser & Banda Central \\ \hline
+% 	Rudy & Jerry Goldsmith \\ \hline
+% 	The Hobbit: The Desolation of Smaug & Howard Shore \\ \hline
+% 	The Rose & Dan White \\
 %         \hline
 %     \end{tabular}
-% 	\caption{The words, lines, and characters of the original MusicXML, the OCR converted MusicXML, the difference between them, and the normalized difference based on the original.}
-% 	\label{table:difference}
+% 	\caption{The works with matched PDF and MusicXML files from MuseScore chosen for testing OCR reliability along with their composer or arranger.}
+% 	\label{table:matched}
 % \end{table} 
 
-\begin{figure}
-	\centering
-		\includegraphics[width=0.47\textwidth]{DifferenceOCR.png}
-		\caption{The difference between matched and OCR generated MusicXML files in words, lines, and characters via sdiff as well as the positive difference in complexity score.}
-		\label{image:difference}
-\end{figure}
+%          % Set your language (you can change the language for each code-block optionally)
 
-\begin{figure}
-	\centering
-		\includegraphics[width=0.47\textwidth]{PercentageOCR.png}
-		\caption{The percentage difference between matched and OCR generated MusicXML files in words, lines, and characters via sdiff as well as the positive percentage difference in complexity score.}
-		\label{image:percentage}
-\end{figure}
+% \begin{figure}[ht!]
+% 	\centering
+% 	\lstset{language=bash} 
+%     \begin{lstlisting}
+%     sdiff -B -b -s Original.xml OCR.xml | wc
+%     \end{lstlisting}
+%     \caption{The comparison command for MusicXML files.}
+%     \label{image:sdiff}
+% \end{figure}
 
-%\section{Results} 
-%\label{sec:results}
+% We make use of a file differencing tool with counts of words, lines, and characters as shown in Figure \ref{image:sdiff}, as well as a comparison of complexity scores to highlight the potential effects of the OCR process. We show the difference measurements for select pieces in Figure \ref{image:difference}. We also present the average across pieces for each difference in the same figure. Figure \ref{image:percentage} shows the difference expressed as the percentage of change from the values of the original MusicXML file. It also presents the average across pieces in the same figure.
 
-%Talk about our scores for various pieces and graph the results.  Also cover any results we may have from the survey at that time (if any).
+% % \begin{table}[ht!]
+% % 	\centering
+% %     \begin{tabular}{| l | l | l | l | l |}
+% %         \hline
+% %         Type & Words & Lines & Char's & Score \\ \hline
+% %         Original & 20964 & 27451 & 580569 & 215546 \\ \hline
+% %         Converted & 21584 & 30825 & 783894 & 298655 \\ \hline
+% %         Difference & 10202 & 38200 & 736456 & 83109 \\ \hline
+% %         Normalized & 0.4866 & 1.3916 & 1.2685 & 0.3856 \\
+% %         \hline
+% %     \end{tabular}
+% % 	\caption{The words, lines, and characters of the original MusicXML, the OCR converted MusicXML, the difference between them, and the normalized difference based on the original.}
+% % 	\label{table:difference}
+% % \end{table} 
+
+% \begin{figure}
+% 	\centering
+% 		\includegraphics[width=0.47\textwidth]{DifferenceOCR.png}
+% 		\caption{The difference between matched and OCR generated MusicXML files in words, lines, and characters via sdiff as well as the positive difference in complexity score.}
+% 		\label{image:difference}
+% \end{figure}
+
+% \begin{figure}
+% 	\centering
+% 		\includegraphics[width=0.47\textwidth]{PercentageOCR.png}
+% 		\caption{The percentage difference between matched and OCR generated MusicXML files in words, lines, and characters via sdiff as well as the positive percentage difference in complexity score.}
+% 		\label{image:percentage}
+% \end{figure}
+
+% %\section{Results} 
+% %\label{sec:results}
+
+% %Talk about our scores for various pieces and graph the results.  Also cover any results we may have from the survey at that time (if any).
 
 \section{Discussion} 
 \label{sec:discus}
 
-We discuss our findings as follows: Subsection \ref{sec:grades} covers our results from assessing previously graded pieces from Royal Conservatory; Subsection \ref{sec:disocr} talks about our results from comparing matched and OCR generated MusicXML files; and Subsection \ref{sec:usability} discusses our findings with regards to the website's usability.
+We discuss our findings as follows: Subsection \ref{sec:grades} covers our results from assessing previously graded pieces from Royal Conservatory \deleted[remark={Removing the lead in text for OCR since it was moved out to the appendix.}]{Subsection \ref{sec:ocr} talks about our results from comparing matched and OCR generated MusicXML files;} and Subsection \ref{sec:usability} discusses our findings with regards to the website's usability.
+
+%We discuss our findings as follows: Subsection \ref{sec:grades} covers our results from assessing previously graded pieces from Royal Conservatory and Subsection \ref{sec:usability} discusses our findings with regards to the website's usability.
 
 \subsection{Manually Graded Pieces and Their Calculated Complexity Scores}
 \label{sec:grades}
@@ -603,20 +662,20 @@ One would naturally expect the lowest and highest complexity scores to come from
 The graph reveals that even though the automatically calculated complexity scores follow the overall trend set by their manual rankings, there is a lot of noise in the calculated scores. This noise reflects the discrepancies between the manual (baseline) and automated (evaluated) rankings. Some outliers are worth examining in detail. In particular, the lowest computed complexity score of 514.19 was for ``Variations on a Theme'' by Mozart, a grade 3 piece, while the highest one of 202214.85 was for ``Concerto no. 3,'' 2nd and 3rd Movements by Crussell, a grade 10 piece. Musicians would argue that music by Mozart is known to be deceptively simple. Hence, the low mechanical difficulty calculated by our tool may not truly represent how human experts see this piece by Mozart, which is a well-understood exception in classical music. The Concerto looks deceptively hard due to the presence of a free-form cadenza that uses the very unusual 17/4 time signature and numerous consecutive tuplets, including both common 16th and 32nd note groups as well as unusual 6-tuplets. It is possible that performers would find this piece much less daunting once they make sense of these rhythms. 
 
 
-To further illustrate our correlation with the expectation, Figure \ref{image:gradeaverage} shows the average complexity score of pieces by grade along with the standard deviation. Here, the complexity scores seem to more closely match what one would expect. The average complexity scores roughly increase and are within one standard deviation of consistently increasing. There are still outliers present, including grade 6 pieces having an average complexity less than grade 5 or 4 pieces, and grade 8 pieces having larger average complexity than those of grade 9. However, all of this evidence is simply a testament to the highly subjective nature of complexity assessment. It is likely that experts presented with our automated results would consider revising their ranking recommendations.
+To further illustrate how our calculation results correlate with the expectation, Figure \ref{image:gradeaverage} shows the average complexity score of pieces by grade along with the standard deviation. In general, the complexity scores match what one would expect, with some minor exceptions. The average complexity scores roughly increase and are within one standard deviation of consistently increasing. \added[remark={Adding in linear regression information we found.}]{Specifically, by applying linear regression on the data presented in Figure \ref{image:gradeaverage}, we found a slope of 7630, an intercept of -17910, and an R-squared value of 0.7903.} There are still outliers present, including grade 6 pieces having a smaller average complexity than grade 5 or 4 pieces, and grade 8 pieces having larger average complexity than those of grade 9. However, all of this evidence is a testament to the subjective nature of complexity assessment. Perhaps some experts presented with our automated results would consider revising their ranking recommendations.
 
-\subsection{Matched and OCR Generated MusicXML}
-\label{sec:disocr}
+% \subsection{Matched and OCR Generated MusicXML}
+% \label{sec:disocr}
 
-Another possible explanation for the discrepancies highlighted between graded pieces could be the inaccuracies of our toolchain, specifically music OCR. During our tests, we largely utilized Audiveris \cite{Audiveris} for its simplicity and speed in generating MusicXML as well as its plethora of options for input image formats. However, some files were simply too poor of image quality for it to initially accept. With some manual effort to change image formats and attempts to improve the resolution of scanned images, Audiveris was finally able to catch the remainder of cases.
+% Another possible explanation for the discrepancies highlighted between graded pieces could be the inaccuracies of our toolchain, specifically music OCR. During our tests, we largely utilized Audiveris \cite{Audiveris} for its simplicity and speed in generating MusicXML as well as its plethora of options for input image formats. However, some files were simply too poor of image quality for it to initially accept. With some manual effort to change image formats and attempts to improve the resolution of scanned images, Audiveris was finally able to catch the remainder of cases.
 
-The process of converting PDF's to MusicXML is admittedly an imperfect means of generating accurate MusicXML representations. As Figure \ref{image:difference} shows, there were large differences between our test bed of matched and OCR generated MusicXML files. The difference in characters is the most alarming, however that could be explained by the limited features OCR is able to analyze with respect to the entire set encoded into the matched MusicXML. Nevertheless, the end result of the file differences leads to the associated differences in complexity scores.
+% The process of converting PDF's to MusicXML is admittedly an imperfect means of generating accurate MusicXML representations. As Figure \ref{image:difference} shows, there were large differences between our test bed of matched and OCR generated MusicXML files. The difference in characters is the most alarming, however that could be explained by the limited features OCR is able to analyze with respect to the entire set encoded into the matched MusicXML. Nevertheless, the end result of the file differences leads to the associated differences in complexity scores.
 
-Figure \ref{image:percentage} underscores this difference by showing it as a percentage of the original measure of words, lines, characters, and complexity. While the piece ``Dancing Clarinet'' has only a 6.68\% difference from the original complexity score, the piece ``The Rose'' has over 100\% difference from the original complexity score. Both of these show over 20\% difference in words and over 60\% difference in lines and characters. Interestingly, the pieces ``Rudy'' and ``The Hobbit: The Desolation of Smaug'' both show over 110\% difference in lines and characters, yet the change in underlying MusicXML only causes about 63\% and 25\% difference in complexity for these pieces, respectively.
+% Figure \ref{image:percentage} underscores this difference by showing it as a percentage of the original measure of words, lines, characters, and complexity. While the piece ``Dancing Clarinet'' has only a 6.68\% difference from the original complexity score, the piece ``The Rose'' has over 100\% difference from the original complexity score. Both of these show over 20\% difference in words and over 60\% difference in lines and characters. Interestingly, the pieces ``Rudy'' and ``The Hobbit: The Desolation of Smaug'' both show over 110\% difference in lines and characters, yet the change in underlying MusicXML only causes about 63\% and 25\% difference in complexity for these pieces, respectively.
 
-Therefore, it would seem that the process of using OCR to generate MusicXML from PDF files of music scores is simply not yet mature enough to handle the demands of complex music scores. This conclusion is strengthened by both outside research \cite{byrd2006prospects} and our experience with acquiring such software. Our original intention was to deploy such OCR software at the beginning of our control flow from a web UI to allow users to easily upload PDF files without performing a manual conversion on their own. However, of the 5 different OCR packages we experimented with and nearly purchased, most did not even offer an option for batch execution. Those that did offer this option could not operate in this mode consistently or with a measure of reliability.
+% Therefore, it would seem that the process of using OCR to generate MusicXML from PDF files of music scores is simply not yet mature enough to handle the demands of complex music scores. This conclusion is strengthened by both outside research \cite{byrd2006prospects} and our experience with acquiring such software. Our original intention was to deploy such OCR software at the beginning of our control flow from a web UI to allow users to easily upload PDF files without performing a manual conversion on their own. However, of the 5 different OCR packages we experimented with and nearly purchased, most did not even offer an option for batch execution. Those that did offer this option could not operate in this mode consistently or with a measure of reliability.
 
-While this process is obviously imperfect, its speed and automation allow us much more flexibility in generating MusicXML even outside of batch mode. This process is still absolutely necessary for comparing complexity scores of well-known works, since so many have not previously been rewritten into MusicXML. At this point there is no clear substitute for music OCR, but it is our hope that future efforts will strive to improve both the accuracy and reliability of this process so more research can be performed with sheet music.
+% While this process is obviously imperfect, its speed and automation allow us much more flexibility in generating MusicXML even outside of batch mode. This process is still absolutely necessary for comparing complexity scores of well-known works, since so many have not previously been rewritten into MusicXML. At this point there is no clear substitute for music OCR, but it is our hope that future efforts will strive to improve both the accuracy and reliability of this process so more research can be performed with sheet music.
 
 \subsection{Website Usability} 
 \label{sec:usability}
@@ -717,6 +776,90 @@ We would like to express our gratitude to the members of the Interdisciplinary R
 %\bibliographystyle{abbrvnat}
 \bibliography{HolderOnward2015}
 \bibliographystyle{abbrv}
+
+\pagebreak
+\newpage
+\appendix
+
+\section{Evaluating the Accuracy of Music Optical Character Recognition (OCR) Software}
+\label{sec:ocr}
+
+\added[remark={Moved all OCR evaluation to an appendix since it wasn't part of the core evaluation.}]{This appendix section on OCR was moved out of the main body to create space for a use case.}
+
+The ability to use music scores in PDF format would greatly enhance the usability of our reference implementation. However, this ability hinges on the accuracy of the music OCR software that can translate PDF into MusicXML. Hence, we empirically evaluated the accuracy of a widely used music OCR application \replaced[remark={In regards to what is being evaluated where.}]{separately from our evaluation of the system as a whole to assess OCR's suitability and reliability}{ to assess its suitability} for our system.
+
+In our experiments, we used freely available music OCR software from Audiveris \cite{Audiveris}. We evaluated the reliability of this process as follows: find pre-matched PDF files with the correct MusicXML, convert the PDF files into a new MusicXML, and finally compare the correct and converted MusicXML to each other.
+
+The pre-matched PDF and MusicXML files we used are all from MuseScore \cite{MuseScore} and are listed in Table \ref{table:matched}. They were selected randomly from the list of single part pieces for clarinet. The MusicXML files came in .mxl (compressed MusicXML) format from MuseScore, and they were uniformly imported into Finale Notepad 2012 \cite{FinaleNotepad} to then export the uncompressed format for comparison. For this test we use only Audiveris for conversion.
+
+\begin{table}[ht!]
+	\centering
+    \begin{tabular}{| l | l |}
+        \hline
+    Title & Comp./Arr. \\ \hline
+    Dancing Clarinet & KRM \\ \hline
+	Mi Razon De Ser & Banda Central \\ \hline
+	Rudy & Jerry Goldsmith \\ \hline
+	The Hobbit: The Desolation of Smaug & Howard Shore \\ \hline
+	The Rose & Dan White \\
+        \hline
+    \end{tabular}
+	\caption{The works with matched PDF and MusicXML files from MuseScore chosen for testing OCR reliability along with their composer or arranger.}
+	\label{table:matched}
+\end{table} 
+
+         % Set your language (you can change the language for each code-block optionally)
+
+\begin{figure}[ht!]
+	\centering
+	\lstset{language=bash} 
+    \begin{lstlisting}
+    sdiff -B -b -s Original.xml OCR.xml | wc
+    \end{lstlisting}
+    \caption{The comparison command for MusicXML files.}
+    \label{image:sdiff}
+\end{figure}
+
+We make use of a file differencing tool with counts of words, lines, and characters as shown in Figure \ref{image:sdiff}, as well as a comparison of complexity scores to highlight the potential effects of the OCR process. We show the difference measurements for select pieces in Figure \ref{image:difference}. We also present the average across pieces for each difference in the same figure. Figure \ref{image:percentage} shows the difference expressed as the percentage of change from the values of the original MusicXML file. It also presents the average across pieces in the same figure.
+
+% \begin{table}[ht!]
+% 	\centering
+%     \begin{tabular}{| l | l | l | l | l |}
+%         \hline
+%         Type & Words & Lines & Char's & Score \\ \hline
+%         Original & 20964 & 27451 & 580569 & 215546 \\ \hline
+%         Converted & 21584 & 30825 & 783894 & 298655 \\ \hline
+%         Difference & 10202 & 38200 & 736456 & 83109 \\ \hline
+%         Normalized & 0.4866 & 1.3916 & 1.2685 & 0.3856 \\
+%         \hline
+%     \end{tabular}
+% 	\caption{The words, lines, and characters of the original MusicXML, the OCR converted MusicXML, the difference between them, and the normalized difference based on the original.}
+% 	\label{table:difference}
+% \end{table} 
+
+\begin{figure}[hb]
+	\centering
+		\includegraphics[width=0.47\textwidth]{DifferenceOCR.png}
+		\caption{The difference between matched and OCR generated MusicXML files in words, lines, and characters via sdiff as well as the positive difference in complexity score.}
+		\label{image:difference}
+\end{figure}
+
+\begin{figure}[hb]
+	\centering
+		\includegraphics[width=0.47\textwidth]{PercentageOCR.png}
+		\caption{The percentage difference between matched and OCR generated MusicXML files in words, lines, and characters via sdiff as well as the positive percentage difference in complexity score.}
+		\label{image:percentage}
+\end{figure}
+
+Another possible explanation for the discrepancies highlighted between graded pieces could be the inaccuracies of our toolchain, specifically music OCR. During our tests, we largely utilized Audiveris \cite{Audiveris} for its simplicity and speed in generating MusicXML as well as its plethora of options for input image formats. However, some files were simply too poor of image quality for it to initially accept. With some manual effort to change image formats and attempts to improve the resolution of scanned images, Audiveris was finally able to catch the remainder of cases.
+
+The process of converting PDF's to MusicXML is admittedly an imperfect means of generating accurate MusicXML representations. As Figure \ref{image:difference} shows, there were large differences between our test bed of matched and OCR generated MusicXML files. The difference in characters is the most alarming, however that could be explained by the limited features OCR is able to analyze with respect to the entire set encoded into the matched MusicXML. Nevertheless, the end result of the file differences leads to the associated differences in complexity scores.
+
+Figure \ref{image:percentage} underscores this difference by showing it as a percentage of the original measure of words, lines, characters, and complexity. While the piece ``Dancing Clarinet'' has only a 6.68\% difference from the original complexity score, the piece ``The Rose'' has over 100\% difference from the original complexity score. Both of these show over 20\% difference in words and over 60\% difference in lines and characters. Interestingly, the pieces ``Rudy'' and ``The Hobbit: The Desolation of Smaug'' both show over 110\% difference in lines and characters, yet the change in underlying MusicXML only causes about 63\% and 25\% difference in complexity for these pieces, respectively.
+
+Therefore, it would seem that the process of using OCR to generate MusicXML from PDF files of music scores is simply not yet mature enough to handle the demands of complex music scores. This conclusion is strengthened by both outside research \cite{byrd2006prospects} and our experience with acquiring such software. Our original intention was to deploy such OCR software at the beginning of our control flow from a web UI to allow users to easily upload PDF files without performing a manual conversion on their own. However, of the 5 different OCR packages we experimented with and nearly purchased, most did not even offer an option for batch execution. Those that did offer this option could not operate in this mode consistently or with a measure of reliability.
+
+While this process is obviously imperfect, its speed and automation allow us much more flexibility in generating MusicXML even outside of batch mode. This process is still absolutely necessary for comparing complexity scores of well-known works, since so many have not previously been rewritten into MusicXML. At this point there is no clear substitute for music OCR, but it is our hope that future efforts will strive to improve both the accuracy and reliability of this process so more research can be performed with sheet music.
 
 
 \end{document}
